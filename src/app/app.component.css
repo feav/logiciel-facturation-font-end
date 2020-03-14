@@ -1,0 +1,25 @@
+.header-bar{     
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group{
+    margin: 7px;
+}
+
+div.label{
+    text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+    .header-bar{     
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-bar p-splitButton{
+        margin-top: 10px;
+    }
+}

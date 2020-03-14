@@ -1,51 +1,48 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http'; 
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { TabMenuModule } from 'primeng/tabmenu';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
-import { ToastModule } from 'primeng/toast';
-import { DialogModule } from 'primeng/dialog';
 import { MessageService } from 'primeng/api';
+import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { DropdownModule } from 'primeng/dropdown';
 import { PanelModule } from 'primeng/panel';
 import { CalendarModule } from 'primeng/calendar';
+import { ToastModule } from 'primeng/toast';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RouteurRoutingModule } from './routeur-routing.module';
+import { RouteurComponent } from './routeur.component';
+
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
+    declarations: [RouteurComponent],
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
+        CommonModule,
         ReactiveFormsModule,
         FormsModule,
         HttpClientModule,
-        AppRoutingModule,
-        TabMenuModule,
+        RouteurRoutingModule,
+        SelectButtonModule,
+        TableModule,
         ButtonModule,
         SplitButtonModule,
         MessagesModule,
         MessageModule,
-        ToastModule,
         DialogModule,
         InputTextModule,
         KeyFilterModule,
         DropdownModule,
         PanelModule,
-        CalendarModule
-    ],
-    providers: [MessageService],
-    bootstrap: [AppComponent]
+        CalendarModule,
+        ToastModule
+    ]
 })
-export class AppModule { }
+export class RouteurModule { }

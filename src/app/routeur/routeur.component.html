@@ -1,0 +1,23 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<h3>Résultats par Routeurs</h3>
+<p-table  [value]="routeurs" editMode="row" dataKey="id" [style]="{marginTop: '20px'}" [paginator]="true" [rows]="10" [loading]="loading" [responsive]="true">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Volume envoyé</th>
+            <th>Chiffre d'Affaires</th>
+            <th>Prix d'achat</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-routeur let-editing="editing" let-ri="rowIndex">
+        <tr [pEditableRow]="routeur">
+            <td>{{routeur.nom}}</td>
+            <td>{{routeur.prix}}</td>
+            <td>{{routeur.volume}}</td>
+            <td>{{ routeur.resultat == null ? 0 : routeur.resultat * routeur.rem}} €</td>
+            <td>{{routeur.pa}} €</td>
+        </tr>
+    </ng-template>
+</p-table>
