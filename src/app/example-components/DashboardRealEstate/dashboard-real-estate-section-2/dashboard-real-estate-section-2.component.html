@@ -1,0 +1,429 @@
+<div class="row">
+    <div class="col-xl-7">
+        <div class="card card-box mb-5">
+            <div class="card-header pr-2">
+                <div class="card-header--title">
+                    <small>Tables</small>
+                    <b>This table card has custom content</b>
+                </div>
+                <div class="card-header--actions">
+                    <a [routerLink]="" class="btn btn-sm text-primary btn-link" tooltip="View details">
+                        <fa-icon [icon]="['far', 'keyboard']" class="font-size-lg"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped mb-0">
+                        <thead class="thead-light">
+                        <tr>
+                            <th style="width: 40%;">Employee</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Shanelle
+                                            Wynn</a>
+                                        <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-warning h-auto py-0 px-3">Pending</span>
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                                    <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                            dropdownToggle type="button">
+                                        <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                    </button>
+                                    <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                        <ul class="nav nav-neutral-primary nav-pills flex-column pt-2 pb-3">
+                                            <li class="nav-item nav-item--header px-3">
+                                                <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link active">
+                                                    <span>View details</span>
+                                                    <div class="ml-auto badge badge-first">New</div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                    </div>
+                                                    <span>Download</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                    </div>
+                                                    <span>Export to CSV</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                    </div>
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                                            Simpson</a>
+                                        <span class="text-black-50 d-block">Frontend Developer</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-success h-auto py-0 px-3">Completed</span>
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                                    <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                            dropdownToggle type="button">
+                                        <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                    </button>
+                                    <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                        <ul class="nav nav-neutral-primary nav-pills flex-column pt-2 pb-3">
+                                            <li class="nav-item nav-item--header px-3">
+                                                <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link active">
+                                                    <span>View details</span>
+                                                    <div class="ml-auto badge badge-first">New</div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                    </div>
+                                                    <span>Download</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                    </div>
+                                                    <span>Export to CSV</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                    </div>
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Regan
+                                            Norris</a>
+                                        <span class="text-black-50 d-block">Senior Project Manager</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-danger h-auto py-0 px-3">Declined</span>
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                                    <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                            dropdownToggle type="button">
+                                        <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                    </button>
+                                    <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                        <ul class="nav nav-neutral-primary nav-pills flex-column pt-2 pb-3">
+                                            <li class="nav-item nav-item--header px-3">
+                                                <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link active">
+                                                    <span>View details</span>
+                                                    <div class="ml-auto badge badge-first">New</div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                    </div>
+                                                    <span>Download</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-3">
+                                                <a [routerLink]="" class="nav-link">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                    </div>
+                                                    <span>Export to CSV</span>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                    <div class="nav-link-icon">
+                                                        <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                    </div>
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="divider"></div>
+                <div class="divider"></div>
+                <div class="p-3 d-flex justify-content-center">
+                    <pagination [rotate]="rotate" [totalItems]="30"
+                                class="pagination-icons pagination-primary"></pagination>
+                </div>
+            </div>
+        </div>
+        <div class="card card-box mb-5 pt-4">
+            <div class="card-tr-actions">
+                <div class="custom-checkbox custom-control p-0 mt-3">
+                    <input class="custom-control-input" id="inputCheckbox51" type="checkbox">
+                    <label class="custom-control-label" for="inputCheckbox51">&nbsp;</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center px-4 mb-3">
+                <div class="avatar-icon-wrapper rounded mr-3">
+                    <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                        <div class="rounded overflow-hidden">
+                            <img alt="..." class="img-fluid" src="assets/images/avatars/avatar1.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Kate Winchester</a>
+                    <span class="text-black-50 d-block pb-1">Freelance Designer, Mutual Inc.</span>
+                    <div class="d-flex align-items-center pt-2">
+                        <button class="btn btn-sm btn-primary mr-3 shadow-none">Chat</button>
+                        <button class="btn btn-sm btn-neutral-success">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Email:
+                        </span>
+                    <span class="text-black-50">russotry@russo.com</span>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                        <span class="font-weight-bold">
+                            Job Description:
+                        </span>
+                    <span class="text-black-50">Project Manager</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                    <span class="text-black-50">San Francisco, USA</span>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap mb-1 mx-2">
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-vicious-stance text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                       name="users"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Projects</div>
+                            <div class="font-size-md mb-1 opacity-8">Manage servers</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                       name="layers"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Tasks</div>
+                            <div class="font-size-md mb-1 opacity-8">Pending items</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-5">
+        <div class="card card-box mb-5">
+            <div class="card-header pr-2">
+                <div class="card-header--title py-2 font-size-lg font-weight-bold">
+                    Portfolio performance
+                </div>
+                <div class="card-header--actions">
+                    <a [routerLink]="" class="btn btn-first font-size-lg mr-2 d-40 p-0 border-0"
+                       tooltip="View all participants">
+                        <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="card card-box shadow-none rounded-sm p-3 mt-4 mx-4">
+                <div class="d-flex align-items-center">
+                    <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2" foregroundColor="#1bc943"
+                               max="100" min="0" size="84"
+                               thick="6"
+                               type="full" value="76">
+                    </ngx-gauge>
+                    <div>
+                        <div class="text-black-50">Stocks trading</div>
+                        <div class="font-weight-bold display-4 py-1 text-success">
+                            $<span [countUp]="23874"></span>
+                        </div>
+                        <div class="text-black-50 font-size-sm">
+                            <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm pr-1"></fa-icon>
+                            15% increase compared to 2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-box shadow-none rounded-sm text-danger p-3 mx-4 my-4">
+                <div class="d-flex align-items-center">
+                    <ngx-gauge backgroundColor="#e8bbbf" cap="round" class="img-fluid mr-2" foregroundColor="#f83245"
+                               max="100" min="0" size="84"
+                               thick="6"
+                               type="full" value="35">
+                    </ngx-gauge>
+                    <div>
+                        <div class="text-black-50">Bonds investments</div>
+                        <div class="font-weight-bold display-4 py-1">
+                            $<span [countUp]="284"></span>
+                        </div>
+                        <div class="opacity-7 font-size-sm">
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="font-size-sm pr-1"></fa-icon>
+                            43% lost last quarter
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-box shadow-none rounded-sm p-3 mx-4">
+                <div class="d-flex align-items-center">
+                    <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2" foregroundColor="#4191ff "
+                               max="100" min="0" size="84"
+                               thick="6"
+                               type="full" value="52">
+                    </ngx-gauge>
+                    <div>
+                        <div class="text-black-50">Trading overview</div>
+                        <div class="font-weight-bold text-first display-4 py-1">
+                            $<span [countUp]="75326"></span>
+                        </div>
+                        <div class="opacity-7 font-size-sm">
+                            <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm pr-1"></fa-icon>
+                            22% more profit this year
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center my-4">
+                <div class="btn-group btn-group-sm mx-auto" role="group">
+                    <button class="btn active btn-primary" type="button">Income</button>
+                    <button class="btn btn-primary" type="button">Expenses</button>
+                </div>
+            </div>
+
+            <div class="text-center text-black font-size-xl pb-1 font-weight-bold">
+                Total Sales
+                <small class="d-block text-black-50">Total performance for selected period</small>
+            </div>
+            <div class="p-1">
+                <apx-chart
+                        [chart]="{
+                                type: 'bar',
+                                height: '245',
+                                sparkline: {
+                                  enabled: true
+                                },
+                                stacked: true
+                            }"
+                        [colors]="['#3c44b1', 'rgba(60, 68, 177, 0.35)']"
+                        [dataLabels]="{
+                              enabled: true
+                            }"
+                        [fill]="{
+                              opacity: 1
+                            }"
+
+                        [labels]="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Last week', 'Last month', 'Last year', 'Last quarter']"
+                        [legend]="{ show: false }"
+                        [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                columnWidth: '95%'
+                              }
+                            }"
+
+                        [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                        [stroke]="{
+                              show: true,
+                              width: 2,
+                              colors: ['transparent']
+                            }"
+                ></apx-chart>
+            </div>
+        </div>
+    </div>
+</div>

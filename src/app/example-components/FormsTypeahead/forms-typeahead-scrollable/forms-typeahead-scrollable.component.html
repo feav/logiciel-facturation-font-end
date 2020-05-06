@@ -1,0 +1,18 @@
+<div class="form-group mb-0">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+            </span>
+        </div>
+        <input [(ngModel)]="selected"
+               [isAnimated]="true"
+               [typeaheadOptionsInScrollableView]="5"
+               [typeaheadScrollable]="true"
+               [typeahead]="states"
+               class="form-control"
+               placeholder="Typeahead search ...">
+    </div>
+</div>
+
+<div class="mt-4 text-info font-weight-bold">Model: {{selected | json}}</div>

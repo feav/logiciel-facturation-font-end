@@ -1,0 +1,220 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box p-4 text-center mb-5">
+            <div class="card-tr-actions">
+                <div class="btn-group" dropdown placement="bottom right">
+                    <button class="btn btn-link btn-link-second p-0 text-muted dropdown-toggle no-caret"
+                            dropdownToggle
+                            type="button">
+                        <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+                    </button>
+                    <div *dropdownMenu
+                         class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                        <ul class="nav nav-dark flex-column py-2">
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                    </div>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link active">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                    </div>
+                                    <span>Layouts</span>
+                                    <div class="ml-auto badge badge-warning">512</div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link disabled">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                    </div>
+                                    <span>Reports</span>
+                                </a>
+                            </li>
+                            <li class="nav-item nav-item--header">
+                                <span>Others</span>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                    </div>
+                                    <span>Components</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                    </div>
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h6 class="text-uppercase font-weight-bold mb-1 text-black">Visitors locations</h6>
+
+            <div class="py-3">
+                <apx-chart
+                        [chart]="{
+                                type: 'bar',
+                                height: '325',
+                                sparkline: {
+                                  enabled: false
+                                },
+                                stacked: false,
+                                toolbar: {
+                                    show: false
+                                }
+                            }"
+                        [colors]="['#f83245', '#1bc943']"
+                        [dataLabels]="{
+                              enabled: false
+                            }"
+                        [fill]="{
+                              opacity: 1
+                            }"
+
+                        [labels]="['1 Sep', '2 Sep', '3 Sep', '4 Sep', '5 Sep', '6 Sep', '7 Sep', '8 Sep', '9 Sep', '10 Sep', '11 Sep']"
+                        [legend]="{ show: false }"
+                        [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                endingShape: 'rounded',
+                                columnWidth: '50%'
+                              }
+                            }"
+
+                        [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                        [stroke]="{
+                              show: true,
+                              width: 0,
+                              colors: ['transparent']
+                            }"
+                ></apx-chart>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="divider-v divider-v-lg"></div>
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center text-uppercase text-black-50 pb-3">
+                            <span class="badge badge-circle badge-success mr-2">available</span>
+                            <span>Gross revenue</span>
+                        </div>
+                        <ngx-gauge append="%" backgroundColor="#e8e9ef" cap="round" class="img-fluid"
+                                   foregroundColor="#1bc943" max="200" min="0"
+                                   size="160" thick="10"
+                                   type="full" value="34.8">
+                        </ngx-gauge>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center text-uppercase text-black-50 pb-3">
+                            <span class="badge badge-circle badge-danger mr-2">total</span>
+                            <span>Net Revenue</span>
+                        </div>
+                        <ngx-gauge append="%" backgroundColor="#e8e9ef" cap="round" class="img-fluid"
+                                   foregroundColor="#f83245" max="200" min="0"
+                                   size="160" thick="10"
+                                   type="full" value="65.3">
+                        </ngx-gauge>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box p-4 text-center mb-5">
+            <h6 class="text-uppercase font-weight-bold mb-1 text-black">Total Revenue</h6>
+            <apx-chart
+                    [chart]="{
+                                type: 'line',
+                                height: '350'
+                            }"
+                    [colors]="['#0abcce', '#060918']"
+                    [labels]="
+                  ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001']
+                "
+                    [grid]="{
+                    strokeDashArray: '5',
+                    borderColor: 'rgba(125, 138, 156, 0.3)'
+                }"
+                    [xaxis]="{
+                type: 'datetime'
+        }"
+                    [series]="[
+                    {
+                      name: 'Income',
+                      type: 'column',
+                      data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+                    },
+                    {
+                      name: 'Expenses',
+                      type: 'line',
+                      data: [231, 442, 335, 227, 433, 222, 117, 316, 242, 252, 162, 176]
+                    }
+                  ]"
+
+                    [stroke]="{
+                    curve: 'smooth',
+                    width: [0, 4]
+                  }"
+            ></apx-chart>
+
+            <div class="col-lg-8 mx-auto p-0">
+                <div class="row no-gutters mb-4 font-weight-bold text-uppercase font-size-sm text-center">
+                    <div class="col-lg-6">
+                        Income
+                        <div class="divider bg-danger border-2 mt-2 h-auto border-danger"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        Expenses
+                        <div class="divider bg-first border-2 mt-2 h-auto border-first"></div>
+                    </div>
+                </div>
+                <div class="text-center font-size-sm font-weight-bold text-black-50">
+                    18 February 2020
+                </div>
+                <div class="row no-gutters text-uppercase font-weight-bold text-center font-size-xl">
+                    <div class="col-lg-6 text-danger">
+                        32.5%
+                    </div>
+                    <div class="col-lg-6 text-first">
+                        67.5%
+                    </div>
+                </div>
+                <div class="divider my-4"></div>
+                <div class="text-center font-size-sm font-weight-bold text-black-50">
+                    18 February 2019
+                </div>
+                <div class="row no-gutters text-uppercase font-weight-bold text-center font-size-xl">
+                    <div class="col-lg-6 text-danger">
+                        15.23%
+                    </div>
+                    <div class="col-lg-6 text-first">
+                        84.77%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+<perfect-scrollbar class="card card-box shadow-none scroll-area-sm shadow-overflow" [autoPropagation]="true">
+    <div class="p-3">
+        <ng-container *ngTemplateOutlet="timelineContent"></ng-container>
+    </div>
+</perfect-scrollbar>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+    <div class="btn-group" dropdown dropup="true">
+        <button type="button" class="btn btn-sm mx-1 btn-primary btn-transition-none dropdown-toggle" dropdownToggle>
+            Inside Dropdown
+        </button>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl overflow-hidden p-0">
+            <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+                <div class="p-3">
+                    <ng-container *ngTemplateOutlet="timelineContent"></ng-container>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-sm btn-primary btn-transition-none mx-1" containerClass="popover-custom-wrapper overflow-hidden popover-custom-md" [popover]="timelinePopover" [outsideClick]="true">
+        Inside Popover
+    </button>
+</div>
+
+<ng-template #timelineContent>
+    <div class="timeline-list">
+        <div class="timeline-item timeline-item-icon">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon-wrapper bg-primary text-white">
+                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                </div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">1991</h4>
+                <p>
+                    The World Wide Web goes live with its first web page.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item timeline-item-icon">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon-wrapper bg-danger text-white">
+                    <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                </div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">1998</h4>
+                <p>
+                    Bill Clinton's presidential scandal makes it online.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon"></div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">1991</h4>
+                <p>
+                    The World Wide Web goes live with its first web page.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon"></div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam day</h4>
+                <p>
+                    Bill Clinton's presidential scandal makes it online.
+                </p>
+                <div class="avatar-wrapper-overlap mt-2 mb-1">
+                    <div class="avatar-icon-wrapper avatar-icon-sm">
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar1.jpg" alt="..."></div>
+                    </div>
+                    <div class="avatar-icon-wrapper avatar-icon-sm">
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar7.jpg" alt="..."></div>
+                    </div>
+                    <div class="avatar-icon-wrapper avatar-icon-sm">
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar1.jpg" alt="..."></div>
+                    </div>
+                    <div class="avatar-icon-wrapper avatar-icon-sm">
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar2.jpg" alt="..."></div>
+                    </div>
+                    <div class="avatar-icon-wrapper avatar-icon-sm">
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar6.jpg" alt="..."></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon"></div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">
+                    Business investor meeting
+                    <span class="badge badge-neutral-info text-info ml-2">New</span>
+                </h4>
+                <p>
+                    Mosaic, the first graphical browser, is introduced to the average consumer.
+                </p>
+                <div class="mt-3">
+                    <a [routerLink]=""><img src="assets/images/stock-photos/people-3.jpg" alt="Rounded image" width="70"
+                                     class="img-fluid rounded mr-3 shadow-sm"></a>
+                    <a [routerLink]=""><img src="assets/images/stock-photos/people-2.jpg" alt="Rounded image" width="70"
+                                     class="img-fluid rounded shadow-sm"></a>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item timeline-item-icon">
+            <div class="timeline-item--content">
+                <div class="timeline-item--icon-wrapper bg-amy-crisp text-white">
+                    <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                </div>
+                <h4 class="timeline-item--label mb-2 font-weight-bold">2003</h4>
+                <p>
+                    MySpace becomes the most popular social network.
+                </p>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #timelinePopover>
+    <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+        <div class="p-3">
+            <ng-container *ngTemplateOutlet="timelineContent"></ng-container>
+        </div>
+    </perfect-scrollbar>
+</ng-template>

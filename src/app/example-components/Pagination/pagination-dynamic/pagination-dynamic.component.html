@@ -1,0 +1,7 @@
+<div class="list">
+  <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of collection | paginate: { itemsPerPage: 6, currentPage: p }">{{ item }}</li>
+  </ul>
+</div>

@@ -1,0 +1,100 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+<p-table [columns]="cols" [value]="campagnes" selectionMode="single" [responsive]="true" [loading]="showLoader"
+        [(selection)]="selectedCampagne" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize">
+    <ng-template pTemplate="caption">
+        <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
+            <div>        
+                <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                <input type="text" pInputText placeholder="Filtre par nom" [(ngModel)]="filterText" (input)="onFilterChange($event.target.value)" style="width: auto">
+            </div>
+            <button type="button" pButton icon="pi pi-plus" (click)="showModalToAdd()" label="Ajouteur une Campagne"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>{{rowData.nom}}</td>
+            <td>{{rowData.type_remuneration}}</td>
+            <td>{{rowData.remuneration}}</td>
+            <td>
+                <span *ngIf="rowData.annonceur != null">{{ rowData.annonceur.nom }}</span>
+                <span *ngIf="rowData.annonceur == null" class="text-danger" style="font-style: italic;">
+                    Non-Assigné<br>ou<br>Supprimé
+                </span>
+            </td>
+            <td>{{rowData.cree_le}}</td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+            <td>{{ rowData.modifie_le }}</td>
+            <td>
+                <span *ngIf="rowData.modifie_par != null">{{ rowData.modifie_par }}</span>
+                <span *ngIf="rowData.modifie_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
+    </ng-template>
+</p-table>
+
+<p-dialog [draggable]="false" position="top" [style]="{width: '500px', marginTop: '80px'}" [header]="dialogHeader" 
+        [(visible)]="showCreateCampagneModalForm" [focusOnShow]="false" showEffect="fade" [modal]="true">
+    <form [formGroup]="createCampagneFormGroup">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="nomCampagne">Nom de la Campagne *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="nom" id="nomCampagne"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="type_remuneration">Type de rémuneration *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="type_remuneration" id="type_remuneration"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="remuneration">Rémuneration *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="number" min="0" step="0.01" placeholder="en €" 
+                            formControlName="remuneration" id="remuneration"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="annonceursPourCampagne">Sélectionnez un Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <p-dropdown scrollHeight="150px" id="annonceursPourCampagne" filter="true" [options]="annonceurs" filterPlaceholder="Rechercher..."
+                                appendTo="body" [virtualScroll]="true" itemSize="30" formControlName="annonceur"
+                                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche">
+                    </p-dropdown>
+                </div>
+            </div>
+        </div>
+    </form>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
+            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode" (click)="deleteCampagne()" label="Supprimer"></button>
+            <button type="button" class="ui-button-info" [disabled]="!createCampagneFormGroup.valid" pButton icon="pi pi-refresh" *ngIf="!createMode" (click)="updateCampagne()" label="Modifier"></button>
+            <button type="button" class="ui-button-success" [disabled]="!createCampagneFormGroup.valid" pButton icon="pi pi-check" *ngIf="createMode" (click)="createCampagne()" label="Créer"></button>
+            <button type="button" class="ui-button-secondary" pButton icon="pi pi-times" (click)="showCreateCampagneModalForm = false" label="Annuler"></button>
+        </div>
+    </p-footer>
+</p-dialog>

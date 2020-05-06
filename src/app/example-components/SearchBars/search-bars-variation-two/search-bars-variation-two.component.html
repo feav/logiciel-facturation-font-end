@@ -1,0 +1,58 @@
+<div class="search-wrapper mb-4" [ngClass]="status1 ? 'is-active' : ''">
+  <div class="search-options">
+    <div>
+      <input name="type" type="radio" value="type-audio" id="type-audio">
+      <label for="type-audio">
+        <fa-icon [icon]="['far', 'file-audio']" class="font-size-lg"></fa-icon>
+        <span>Audio</span>
+      </label>
+    </div>
+    <div>
+      <input name="type" type="radio" value="type-video" id="type-video">
+      <label for="type-video">
+        <fa-icon [icon]="['fas', 'film']" class="font-size-lg"></fa-icon>
+        <span>Videos</span>
+      </label>
+    </div>
+    <div>
+      <input name="type" type="radio" value="type-images" id="type-images">
+      <label for="type-images">
+        <fa-icon [icon]="['far', 'images']" class="font-size-lg"></fa-icon>
+        <span>Images</span>
+      </label>
+    </div>
+  </div>
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status1 = true" (blur)="status1 = false; null" placeholder="Search terms..." class="form-control">
+</div>
+<div class="search-wrapper mb-4" [ngClass]="status2 ? 'is-active' : ''">
+  <div class="search-options">
+    <div>
+      <input name="type" type="radio" value="type-audio2" id="type-audio2">
+      <label for="type-audio2">
+        <fa-icon [icon]="['far', 'file-audio']" class="font-size-lg"></fa-icon>
+        <span>Audio</span>
+      </label>
+    </div>
+    <div>
+      <input name="type" type="radio" value="type-video2" id="type-video2">
+      <label for="type-video2">
+        <fa-icon [icon]="['fas', 'film']" class="font-size-lg"></fa-icon>
+        <span>Videos</span>
+      </label>
+    </div>
+    <div>
+      <input name="type" type="radio" value="type-images2" id="type-images2">
+      <label for="type-images2">
+        <fa-icon [icon]="['far', 'images']" class="font-size-lg"></fa-icon>
+        <span>Images</span>
+      </label>
+    </div>
+  </div>
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status2 = true" (blur)="status2 = false; null" placeholder="Search terms..." class="form-control rounded-pill">
+</div>

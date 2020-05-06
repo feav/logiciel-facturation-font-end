@@ -1,0 +1,330 @@
+<div class="text-center">
+    <button [popover]="popoverContent1" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg" placement="auto" type="button">
+        Example I
+    </button>
+    <button [popover]="popoverContent2" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg" placement="auto" type="button">
+        Example II
+    </button>
+    <button [popover]="popoverContent3" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg" placement="auto" type="button">
+        Example III
+    </button>
+    <button [popover]="popoverContent4" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg" placement="auto" type="button">
+        Example IV
+    </button>
+    <button [popover]="popoverContent5" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg bg-night-sky border-0" placement="auto" type="button">
+        Example V
+    </button>
+    <button [popover]="popoverContent6" class="btn btn-transition-none btn-outline-primary m-2" [outsideClick]="true" container="body" containerClass="popover-custom-wrapper popover-custom-lg bg-midnight-bloom border-0" placement="auto" type="button">
+        Example VI
+    </button>
+</div>
+
+
+<ng-template #popoverContent1>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img
+                                alt="..."
+                                src="assets/images/avatars/avatar2.jpg"/></div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe <small class="text-black-50">(john@example.com)</small></span>
+                    <span class="badge badge-success">Active Account</span>
+                </div>
+            </div>
+            <div class="alert alert-warning p-2 mb-1 mt-3 rounded">
+                <div class="align-box-row">
+                    <div>
+                        <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                    </div>
+                    <div class="pl-3">
+                        <small><b class="d-block">Unpaid invoice</b></small>
+                        <small>This account will be disabled starting <b>12 January 2021</b>.</small>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent p-0">
+            <div class="grid-menu grid-menu-2col">
+                <div class="no-gutters row">
+                    <div class="col-sm-6 py-3">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-info"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">$9,693</b>
+                                <span class="text-black-50 d-block">revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-3">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">2,345</b>
+                                <span class="text-black-50 d-block">users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item rounded-bottom p-3 text-center">
+            <a [routerLink]="" class="btn btn-facebook">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                </span>
+            </a>
+            <a [routerLink]="" class="btn btn-dribbble mr-2 ml-2">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'dribbble']"></fa-icon>
+                </span>
+            </a>
+            <a [routerLink]="" class="btn btn-twitter">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                </span>
+            </a>
+        </li>
+    </ul>
+</ng-template>
+
+
+<ng-template #popoverContent2>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item">
+            <div class="align-box-row">
+                <div class="align-self-start">
+                    <div class="bg-premium-dark text-center text-white font-size-lg d-40 rounded-circle">
+                        <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                    </div>
+                </div>
+                <div class="pl-3">
+                    <b>
+                        Blinded by desire
+                    </b>
+                    <p class="text-black-50 mt-1 mb-0">
+                        A wonderful serenity has taken possession.
+                    </p>
+                    <div class="timeline-list mt-3">
+                        <div class="timeline-item timeline-item-icon">
+                            <div class="timeline-item--content">
+                                <div class="timeline-item--icon-wrapper bg-danger text-white">
+                                    <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                                </div>
+                                <h4 class="timeline-item--label mb-2 font-weight-bold">1998</h4>
+                                <p>
+                                    Bill Clinton's presidential scandal makes it online.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-item--content">
+                                <div class="timeline-item--icon"></div>
+                                <h4 class="timeline-item--label mb-2 font-weight-bold">
+                                    Business investor meeting
+                                    <span class="badge badge-neutral-info text-info ml-2">New</span>
+                                </h4>
+                                <p>
+                                    Mosaic, the first graphical browser, is introduced to the average consumer.
+                                </p>
+                                <div class="mt-3">
+                                    <button class="btn btn-sm btn-primary" type="button">Submit Report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="card-footer bg-light p-3 text-center">
+        <a [routerLink]="" class="btn btn-second" type="button">
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+            </span>
+            <span class="btn-wrapper--label">
+                View details
+            </span>
+        </a>
+    </div>
+</ng-template>
+
+
+<ng-template #popoverContent3>
+    <div class="card-body">
+        <div class="chat-wrapper">
+            <div class="chat-item p-2 mb-2">
+                <div class="align-box-row">
+                    <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                        <div class="avatar-icon rounded border-0">
+                            <img alt="..." src="assets/images/avatars/avatar7.jpg"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="chat-box bg-first text-white">
+                            <p>Bye for now, talk to you later.</p>
+                        </div>
+                        <small class="mt-2 d-block text-black-50">
+                            <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                            11:01 AM | Yesterday
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-item chat-item-reverse p-2 mb-2">
+                <div class="align-box-row flex-row-reverse">
+                    <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                        <div class="avatar-icon rounded border-0">
+                            <img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="chat-box bg-first text-white">
+                            <p>Almost forgot about your tasks.</p>
+                            <p><b>Check the links below:</b></p>
+                            <div class="card bg-premium-dark p-2 mt-3 mb-2">
+                                <div class="text-center py-2">
+                                    <a [routerLink]="" class="m-1 btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                    </a>
+                                    <a [routerLink]="" class="m-1 btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                        <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                                    </a>
+                                    <a [routerLink]="" class="m-1 btn btn-link p-0 bg-plum-plate d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                        <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="mt-2 d-block text-black-50">
+                            <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                            11:03 AM | Yesterday
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer bg-white p-3 text-center d-block">
+        <a [routerLink]="" class="btn btn-primary btn-sm">
+            <fa-icon [icon]="['far', 'file-alt']" class="mr-1"></fa-icon>
+            View History
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #popoverContent4>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img
+                                alt="..."
+                                src="assets/images/avatars/avatar2.jpg"/></div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe</span>
+                    <small class="pb-1 text-black-50 d-block">John's bio description here...</small>
+                    <div class="divider my-2"></div>
+                    <small class="text-black-50">
+                        Deadline: <b class="text-danger">12 July 2029</b>
+                    </small>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent py-2">
+            <div class="align-box-row mb-1">
+                <div>
+                    <small class="font-weight-bold">Orders</small>
+                </div>
+                <div class="ml-auto">
+                    <div class="font-weight-bold text-success">
+                        348
+                    </div>
+                </div>
+            </div>
+            <progressbar [animate]="true" [value]="43" class="progress-bar-rounded progress-bar-sm progress-animated-alt" type="success">43%</progressbar>
+            <div class="align-box-row progress-bar--label mt-1 text-muted">
+                <small class="text-dark">0</small>
+                <small class="ml-auto">100%</small>
+            </div>
+        </li>
+    </ul>
+    <div class="card-footer bg-white p-3 text-center d-block">
+        <a [routerLink]="" class="btn btn-sm btn-success mr-1">
+            <fa-icon [icon]="['fas', 'cog']" class="mr-1"></fa-icon>
+            Refresh
+        </a>
+        <a [routerLink]="" class="btn btn-sm btn-danger ml-1">
+            <fa-icon [icon]="['fas', 'times']" class="mr-1"></fa-icon>
+            Remove
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #popoverContent5>
+    <div class="px-3 pt-3 pb-3 text-center">
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'gem']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Tasks</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'building']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Reports</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-arielle-smile d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Stats</div>
+        </div>
+    </div>
+    <div class="divider opacity-2 bg-white mb-1"></div>
+    <div class="text-center">
+        <a [routerLink]="" class="btn btn-link-light text-white">
+            View more items
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #popoverContent6>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item bg-transparent">
+            <div class="card-body p-2">
+                <div class="align-box-row align-items-start">
+                    <div class="font-weight-bold">
+                        <small class="text-white-50 d-block mb-1 text-uppercase">New Accounts</small>
+                        <span class="font-size-xxl mt-1 text-white">586,356</span>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="bg-white text-center text-success font-size-xl d-50 rounded-circle">
+                            <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <fa-icon [icon]="['fas', 'arrow-up']" class="text-success"></fa-icon>
+                    <span class="text-white pr-1">15.4%</span>
+                    <span class="text-white-50">increase this month</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</ng-template>

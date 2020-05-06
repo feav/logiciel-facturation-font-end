@@ -1,0 +1,18 @@
+<div [class]="'app-wrapper app-sidebar-collapsed app-sidebar-fixed app-header-fixed vh-100 ' + globals.contentBackground"
+     [ngClass]="{
+    'app-sidebar-mobile-open' : globals.toggleSidebarMobile,
+    'header-drawer-open' : globals.toggleHeaderDrawer,
+    'search-wrapper-open' : globals.hoverHeaderSearch
+}
+">
+    <app-sidebar-collapsed></app-sidebar-collapsed>
+    <div class="app-main">
+        <app-header></app-header>
+        <div class="app-content">
+            <div class="app-inner-content-layout--main">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    <app-theme-configurator></app-theme-configurator>
+</div>

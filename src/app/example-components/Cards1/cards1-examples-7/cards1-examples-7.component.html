@@ -1,0 +1,259 @@
+<div class="row">
+    <div class="col-lg-4">
+        <a [routerLink]="" class="card mb-5 card-box card-box-border-bottom border-warning">
+            <div class="card-badges">
+                <span class="badge badge-pill badge-neutral-info text-info shadow-none">NEW</span>
+            </div>
+            <div class="card-body pb-1">
+                <div class="align-box-row">
+                    <div class="text-left w-100">
+                        <div class="mt-1">
+                            <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-warning"></fa-icon>
+                        </div>
+                        <div class="mt-3 line-height-sm">
+                            <b class="font-size-lg text-black pr-2">2,345</b>
+                            <span class="text-black-50">users</span>
+                        </div>
+                        <div class="mt-2 pt-3 pr-3">
+                            <apx-chart
+                                    [chart]="{
+                                        type: 'line',
+                                        height: '100',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                    [colors]="['#f4772e']"
+                                    [markers]="{
+                                        size: 0
+                                    }"
+                                    [series]="[
+                                      {
+                                        name: 'Daily visitors',
+                                        data: [47, 38, 56, 24, 45, 54, 38, 47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                                    [stroke]="{
+                                            color: '#4191ff',
+                                            curve: 'smooth',
+                                            width: 4
+                                    }"
+                                    [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                                    [yaxis]="{
+                                        min: 0
+                                    }"
+                            ></apx-chart>
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-4">
+        <div class="card card-box mb-5 card-box-border-bottom border-danger">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-primary p-0 font-size-xl text-primary shadow-none dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body pb-1">
+                <div class="align-box-row">
+                    <div class="text-left w-100">
+                        <div class="mt-1">
+                            <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-danger"></fa-icon>
+                        </div>
+                        <div class="mt-3 line-height-sm">
+                            <b class="font-size-lg pr-2">$9,693</b>
+                            <span class="text-black-50">revenue</span>
+                        </div>
+                        <div class="mt-2 pt-3">
+                            <apx-chart
+                                    [chart]="{
+                                        type: 'line',
+                                        height: '100',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                    [colors]="['#f83245']"
+                                    [markers]="{
+                                        size: 0
+                                    }"
+                                    [series]="[
+                                      {
+                                        name: 'Revenue',
+                                        data: [ 45,56, 24, 56, 54, 38, 47, 38, 56, 24,38, 47, 24, 65]
+                                      }
+                                    ]"
+                                    [stroke]="{
+                                            color: '#f83245',
+                                            curve: 'smooth',
+                                            width: 3
+                                    }"
+                                    [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                                    [yaxis]="{
+                                        min: 0
+                                    }"
+                            ></apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card card-box-alt mb-5 card-border-top border-success">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-primary p-0 font-size-xl text-primary shadow-none dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body pb-1">
+                <div class="align-box-row">
+                    <div class="text-left w-100">
+                        <div class="mt-1">
+                            <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                        </div>
+                        <div class="mt-3 line-height-sm">
+                            <b class="font-size-lg pr-2">489</b>
+                            <span class="text-black-50">users</span>
+                        </div>
+                        <div class="mt-2 pt-3">
+                            <apx-chart
+                                    [chart]="{
+                                        type: 'line',
+                                        height: '100',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                    [colors]="['#1bc943']"
+                                    [markers]="{
+                                        size: 0
+                                    }"
+                                    [series]="[
+                                      {
+                                        name: 'Revenue',
+                                        data: [ 45,56, 24, 54, 38, 47, 38, 56, 24,38, 56, 47, 24, 65]
+                                      }
+                                    ]"
+                                    [stroke]="{
+                                            color: '#f83245',
+                                            curve: 'smooth',
+                                            width: 3
+                                    }"
+                                    [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                                    [yaxis]="{
+                                        min: 0
+                                    }"
+                            ></apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

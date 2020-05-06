@@ -1,0 +1,105 @@
+<form>
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="form-group mb-5">
+                <label for="1">Masked Input using <b>NgModel</b>:</label>
+                <div class="input-group">
+                    <input
+                            [(ngModel)]="myModel"
+                            [textMask]="{mask: mask}"
+                            class="form-control"
+                            id="1"
+                            name="phone"
+                            type="text"
+                    />
+                    <span class="input-group-append">
+                        <span class="input-group-text">
+                            Model value: {{myModel || "empty"}}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="form-group mb-5">
+                <label for="2">
+                    Masked Input using <b>NgModel</b> with initial value:
+                </label>
+                <div class="input-group">
+                    <input
+                            [(ngModel)]="modelWithValue"
+                            [textMask]="{mask: mask}"
+                            class="form-control"
+                            id="2"
+                            name="phoneWithValue"
+                            type="text"
+                    />
+                    <span class="input-group-append">
+                        <span class="input-group-text">
+                            Model value: {{modelWithValue || "empty"}}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group mb-5">
+                <label for="3">US Phone number:</label>
+                <div class="input-group">
+                    <span class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                        </span>
+                    </span>
+                    <input
+                            [textMask]="{mask: maskUSPhone}"
+                            class="form-control"
+                            id="3"
+                            name="phoneus"
+                            type="text"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group mb-5">
+                <label for="5">Credi card number:</label>
+                <div class="input-group">
+                    <span class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                        </span>
+                    </span>
+                    <input
+                            [textMask]="{mask: maskCreditCard}"
+                            class="form-control"
+                            id="5"
+                            name="cc-number"
+                            type="text"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group mb-5">
+                <label for="4">Date mask:</label>
+                <div class="input-group">
+                    <span class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="['far', 'calendar-alt']"></fa-icon>
+                        </span>
+                    </span>
+                    <input
+                            [textMask]="{mask: maskDate}"
+                            class="form-control"
+                            id="4"
+                            name="date-mask"
+                            type="text"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

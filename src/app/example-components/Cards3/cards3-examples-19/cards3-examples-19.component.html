@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col-lg-6 col-xl-3">
+        <div class="card card-box card-box-border-bottom border-danger card-shadow-danger mb-5">
+            <div class="card-tr-actions">
+                <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-danger" type="button">
+                    <small class="font-weight-bold">Add</small>
+                </button>
+            </div>
+            <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+                <div>
+                    <h3 class="font-weight-bold display-4 mb-0 text-black">
+                        <small class="opacity-6 pr-1">$</small>
+                        <span [countUp]="895"></span>
+                    </h3>
+                    <p class="text-black-50 mb-0">sales last month</p>
+                </div>
+            </div>
+            <div class="px-5">
+                <div class="sparkline-full-wrapper">
+                    <canvas [chartType]="'line'"
+                            [colors]="dangerSparklineColor"
+                            [datasets]="sparklineDataset1"
+                            [labels]="sparklineLabels1"
+                            [options]="sparklineOptions1"
+                            baseChart></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-3">
+        <div class="card card-box card-box-border-bottom border-success card-shadow-success mb-5">
+            <div class="card-tr-actions">
+                <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-success" type="button">
+                    <small class="font-weight-bold">Add</small>
+                </button>
+            </div>
+            <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+                <div>
+                    <h3 class="font-weight-bold display-4 mb-0 text-black">
+                        <small class="opacity-6 pr-1">$</small>
+                        <span [countUp]="98245"></span>
+                    </h3>
+                    <p class="text-black-50 mb-0">sales this quarter</p>
+                </div>
+            </div>
+            <div class="px-5">
+                <div class="sparkline-full-wrapper">
+                    <canvas [chartType]="'line'"
+                            [colors]="successSparklineColor"
+                            [datasets]="sparklineDataset2"
+                            [labels]="sparklineLabels1"
+                            [options]="sparklineOptions1"
+                            baseChart></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-3">
+        <div class="card card-box card-box-border-bottom border-warning card-shadow-warning mb-5">
+            <div class="card-tr-actions">
+                <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-warning" type="button">
+                    <small class="font-weight-bold">Add</small>
+                </button>
+            </div>
+            <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+                <div>
+                    <h3 class="font-weight-bold display-4 mb-0 text-black">
+                        <small class="opacity-6 pr-1">$</small>
+                        <span [countUp]="375"></span>
+                    </h3>
+                    <p class="text-black-50 mb-0">sales today</p>
+                </div>
+            </div>
+            <div class="px-5">
+                <div class="sparkline-full-wrapper">
+                    <canvas [chartType]="'line'"
+                            [colors]="warningSparklineColor"
+                            [datasets]="sparklineDataset3"
+                            [labels]="sparklineLabels1"
+                            [options]="sparklineOptions1"
+                            baseChart></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-3">
+        <div class="card card-box card-box-border-bottom border-info card-shadow-info mb-5">
+            <div class="card-tr-actions">
+                <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-info" type="button">
+                    <small class="font-weight-bold">Add</small>
+                </button>
+            </div>
+            <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+                <div>
+                    <h3 class="font-weight-bold display-4 mb-0 text-black">
+                        <small class="opacity-6 pr-1">$</small>
+                        <span [countUp]="4575"></span>
+                    </h3>
+                    <p class="text-black-50 mb-0">total sales</p>
+                </div>
+            </div>
+            <div class="px-5">
+                <div class="sparkline-full-wrapper">
+                    <canvas [chartType]="'line'"
+                            [colors]="infoSparklineColor"
+                            [datasets]="sparklineDataset4"
+                            [labels]="sparklineLabels1"
+                            [options]="sparklineOptions1"
+                            baseChart></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

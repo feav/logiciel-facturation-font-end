@@ -1,0 +1,238 @@
+<div class="row">
+    <div class="col-xl-8">
+        <div class="card card-box mb-5">
+            <div class="no-gutters row">
+                <div class="col-lg-6 p-4">
+                    <div class="divider-v divider-v-lg d-none d-xl-block"></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>Reports</b>
+                                    <div class="text-black-50">Monthly sales reports</div>
+                                </div>
+                                <div class="font-weight-bold text-danger font-size-xl" [countUp]="2363"></div>
+                            </div>
+                            <div class="divider my-3"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>User</b>
+                                    <div class="text-black-50">Visitors last week</div>
+                                </div>
+                                <div class="font-weight-bold text-success font-size-xl" [countUp]="584"></div>
+                            </div>
+                            <div class="divider my-3"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>Sales</b>
+                                    <div class="text-black-50">Total average weekly report</div>
+                                </div>
+                                <div class="font-weight-bold text-warning font-size-xl" [countUp]="483"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-4">
+                    <div class="divider-v divider-v-lg d-none d-xl-block"></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>Stats</b>
+                                    <div class="text-black-50">Last month targets</div>
+                                </div>
+                                <div class="font-weight-bold text-warning font-size-xl">
+                                    $1,23M
+                                </div>
+                            </div>
+                            <div class="divider my-3"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>Payments</b>
+                                    <div class="text-black-50">Week's expenses</div>
+                                </div>
+                                <div class="font-weight-bold text-danger font-size-xl">
+                                    - $123,305
+                                </div>
+                            </div>
+                            <div class="divider my-3"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <b>Orders</b>
+                                    <div class="text-black-50">Total products ordered</div>
+                                </div>
+                                <div class="font-weight-bold text-warning font-size-xl">
+                                    65
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="font-size-lg d-block text-truncate">
+                    <span class="text-black-50 pr-2">#32</span> Global competition
+                </div>
+                <div class="ml-auto d-flex align-items-center align-content-center">
+                    <div class="avatar-wrapper-overlap">
+                        <div class="avatar-icon-wrapper" placement="top"
+                             containerClass="tooltip-secondary" tooltip="Emilee Ryder">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper" placement="top"
+                             containerClass="tooltip-secondary" tooltip="Tobi Esparza">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                    </div>
+                    <a [routerLink]="" class="btn btn-first font-size-lg ml-3 d-40 p-0 rounded-circle border-0"
+
+                       tooltip="View all participants">
+                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Users</span>
+                            <b class="font-size-xxl">2,345</b>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Revenue</span>
+                            <b class="font-size-xxl">$9,693</b>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 align-box-row">
+                        <div class="w-100 mt-3 mt-md-0">
+                            <div class="mb-1">
+                                <span class="text-black-50 pr-1">Progress:</span>
+                                                <span class="text-danger">-12</span>
+                            </div>
+                            <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="43"
+                                     class="progress-bar bg-success" role="progressbar" style="width: 43%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-box mb-5 d-flex flex-row flex-wrap justify-content-center">
+            <div class="py-4 px-5 d-flex align-items-center">
+                <i-feather class="d-50 text-dark opacity-2 mr-3 line-height-1" name="bell"></i-feather>
+                <div>
+                    <span class="d-block opacity-7">Expenses</span>
+                    <span class="font-weight-bold font-size-lg text-danger"><small class="opacity-6 pr-1">$</small>1,693</span>
+                </div>
+            </div>
+            <div class="py-4 px-5 d-flex align-items-center">
+                <i-feather class="d-50 text-dark opacity-2 mr-3 line-height-1" name="settings"></i-feather>
+                <div>
+                    <span class="d-block opacity-7">Revenue</span>
+                    <span class="font-weight-bold font-size-lg"><small class="opacity-6 pr-1">$</small>54,233</span>
+                </div>
+            </div>
+            <div class="py-4 px-5 d-flex align-items-center">
+                <i-feather class="d-50 text-dark opacity-2 mr-3 line-height-1" name="briefcase"></i-feather>
+                <div>
+                    <span class="d-block opacity-7">Income</span>
+                    <span class="font-weight-bold font-size-lg"><small class="opacity-6 pr-1">$</small>3,217</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5 pt-4">
+            <div class="card-tr-actions">
+                <div class="custom-checkbox custom-control p-0 mt-3">
+                    <input type="checkbox" id="inputCheckbox51" class="custom-control-input">
+                    <label class="custom-control-label" for="inputCheckbox51">&nbsp;</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center px-4 mb-3">
+                <div class="avatar-icon-wrapper rounded mr-3">
+                    <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                        <div class="rounded overflow-hidden">
+                            <img alt="..." class="img-fluid" src="assets/images/avatars/avatar1.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Kate Winchester</a>
+                    <span class="text-black-50 d-block pb-1">Freelance Designer, Mutual Inc.</span>
+                    <div class="d-flex align-items-center pt-2">
+                        <button class="btn btn-sm btn-primary mr-3 shadow-none">Chat</button>
+                        <button class="btn btn-sm btn-neutral-success">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Email:
+                        </span>
+                    <span class="text-black-50">russotry@russo.com</span>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                        <span class="font-weight-bold">
+                            Job Description:
+                        </span>
+                    <span class="text-black-50">Project Manager</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                    <span class="text-black-50">San Francisco, USA</span>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap mb-1 mx-2">
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-night-sky text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-warning line-height-1"
+                                       name="settings"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Reports</div>
+                            <div class="font-size-md mb-1 opacity-8">Stats</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-midnight-bloom text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-success line-height-1"
+                                       name="grid"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Statistics</div>
+                            <div class="font-size-md mb-1 opacity-8">Customers</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-vicious-stance text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                       name="users"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Projects</div>
+                            <div class="font-size-md mb-1 opacity-8">Servers</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="w-50 p-3">
+                    <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                       name="layers"></i-feather>
+                            <div class="font-weight-bold font-size-lg">Tasks</div>
+                            <div class="font-size-md mb-1 opacity-8">Items</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

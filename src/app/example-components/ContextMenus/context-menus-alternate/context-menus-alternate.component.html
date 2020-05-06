@@ -1,0 +1,434 @@
+<div class="card card-box mb-5">
+    <div class="card-header pr-2">
+        <div class="card-header--title">
+            <small>Tables</small>
+            <b>Right click context menu in tables</b>
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-sm text-primary btn-link" tooltip="Refresh">
+                <fa-icon [icon]="['fas', 'cog']" [spin]="true"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div class="card-body p-0">
+
+        <div class="px-4 pt-4">
+            <alert type="warning">Right click on any table rows below to see the context menu in action.</alert>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover text-nowrap mb-0">
+                <thead class="thead-light">
+                <tr>
+                    <th class="text-center" style="width: 5%;">
+                        <div class="custom-checkbox custom-control align-self-start">
+                            <input class="custom-control-input" id="inputCheckbox1" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox1">&nbsp;</label>
+                        </div>
+                    </th>
+                    <th>Company</th>
+                    <th>Date</th>
+                    <th class="text-center" style="width: 20%;">Status</th>
+                    <th>Employee</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr [contextMenu]="contextMenuTableExample">
+                    <td class="text-center">
+                        <div class="custom-checkbox custom-control align-self-start">
+                            <input class="custom-control-input" id="inputCheckbox2" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox2">&nbsp;</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-40 p-0 btn-pill btn-facebook mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'facebook']" class="font-size-lg"></fa-icon>
+                                </span>
+                            </button>
+                            <div>
+                                <b>Facebook</b>
+                                <span class="text-black-50 d-block">Social media company</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="align-box-row">
+                            16 September 2020
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-warning h-auto py-0 px-3">Pending</span>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Shanelle Wynn</a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item nav-item--header px-3">
+                                        <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                            </div>
+                                            <span>Download</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                            </div>
+                                            <span>Export to CSV</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr [contextMenu]="contextMenuTableExample">
+                    <td class="text-center">
+                        <div class="custom-checkbox custom-control align-self-start">
+                            <input class="custom-control-input" id="inputCheckbox22" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox22">&nbsp;</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-40 p-0 btn-pill btn-github mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'github']" class="font-size-lg"></fa-icon>
+                                </span>
+                            </button>
+                            <div>
+                                <b>Github</b>
+                                <span class="text-black-50 d-block">Recommended company</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="align-box-row text-danger">
+                            <b>17 September 2020</b>
+                            <span class="badge badge-neutral-info text-info ml-2">Due</span>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-success h-auto py-0 px-3">Completed</span>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Beck Simpson</a>
+                                <span class="text-black-50 d-block">Frontend Developer</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item nav-item--header px-3">
+                                        <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                            </div>
+                                            <span>Download</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                            </div>
+                                            <span>Export to CSV</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr [contextMenu]="contextMenuTableExample">
+                    <td class="text-center">
+                        <div class="custom-checkbox custom-control align-self-start">
+                            <input class="custom-control-input" id="inputCheckbox32" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox32">&nbsp;</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-40 p-0 btn-pill btn-instagram mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'instagram']" class="font-size-lg"></fa-icon>
+                                </span>
+                            </button>
+                            <div>
+                                <b>Instagram</b>
+                                <span class="text-black-50 d-block">Sharing images since 2000</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="align-box-row">
+                            18 September 2020
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-danger h-auto py-0 px-3">Declined</span>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Regan Norris</a>
+                                <span class="text-black-50 d-block">Senior Project Manager</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item nav-item--header px-3">
+                                        <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                            </div>
+                                            <span>Download</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                            </div>
+                                            <span>Export to CSV</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr [contextMenu]="contextMenuTableExample">
+                    <td class="text-center">
+                        <div class="custom-checkbox custom-control align-self-start">
+                            <input class="custom-control-input" id="inputCheckbox42" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox42">&nbsp;</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-40 p-0 btn-pill btn-twitter mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'twitter']" class="font-size-lg"></fa-icon>
+                                </span>
+                            </button>
+                            <div>
+                                <b>Twitter</b>
+                                <span class="text-black-50 d-block">140 characters at a time</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="align-box-row">
+                            19 September 2020
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-info h-auto py-0 px-3">Review</span>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Finnlay Haney</a>
+                                <span class="text-black-50 d-block">Professional Ingineer</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item nav-item--header px-3">
+                                        <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                            </div>
+                                            <span>Download</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                            </div>
+                                            <span>Export to CSV</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="p-3 d-flex justify-content-center">
+            <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-first"></pagination>
+        </div>
+    </div>
+</div>
+
+
+<context-menu #contextMenuTableExample [menuClass]="'nav nav-primary nav-pills dropdown-menu-xl flex-column p-3'" [useBootstrap4]="true">
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <span class="font-weight-bold px-3 py-2 d-block text-first">Generate reports</span>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'file-pdf']"></fa-icon>
+                </div>
+                <span>Export as PDF</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                </div>
+                <span>Export as Excel</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                </div>
+                <span>Download</span>
+            </a>
+        </div>
+    </ng-template>
+</context-menu>

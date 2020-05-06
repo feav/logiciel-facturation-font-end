@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xl-5">
+        <div class="card card-box d-block mb-5 pb-3">
+            <ngx-slick-carousel [config]='
+                {
+                    "slidesToShow": 1,
+                    "slidesToScroll": 1,
+                    "dots": true,
+                    "prevArrow": "<button type=\"button\" class=\"slick-prev\"><i class=\"ion-ios-arrow-back font-size-xl\"></i></button>",
+                    "nextArrow": "<button type=\"button\" class=\"slick-next\"><i class=\"ion-ios-arrow-forward font-size-xl\"></i></fa-icon></button>"
+                }'>
+                <div *ngFor="let slide of slides; let i = index" ngxSlickItem>
+                    <div class="card-body">
+                        <div class="slider-item">{{ i }}</div>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+    <div class="col-xl-7">
+        <div class="card card-box d-block mb-5 pb-3">
+            <ngx-slick-carousel [config]='
+                {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 2,
+                    "dots": true,
+                    "prevArrow": "<button type=\"button\" class=\"slick-prev\"><i class=\"ion-ios-arrow-back font-size-xl\"></i></button>",
+                    "nextArrow": "<button type=\"button\" class=\"slick-next\"><i class=\"ion-ios-arrow-forward font-size-xl\"></i></fa-icon></button>",
+                    "responsive": [{"breakpoint": 1100,"settings": {"slidesToShow": 1,"slidesToScroll": 1}}] }'
+                >
+                <div *ngFor="let slide of slides; let i = index" ngxSlickItem>
+                    <div class="card-body">
+                        <div class="slider-item">{{ i }}</div>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</div>

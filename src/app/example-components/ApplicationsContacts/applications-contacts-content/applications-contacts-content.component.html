@@ -1,0 +1,502 @@
+<div class="app-inner-content-layout bg-white">
+    <div class="d-flex d-lg-none p-4 bg-secondary order-0 justify-content-end align-items-center">
+        <button (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" class="btn btn-sm btn-primary px-3" type="button">
+            <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+        </button>
+    </div>
+    <div class="app-inner-content-layout--main">
+        <div class="p-5">
+            <h5 class="display-3 mb-4 font-weight-bold text-center">Contacts</h5>
+            <tabset [justified]="true" class="nav-line-alt" type="line">
+                <tab>
+                    <ng-template tabHeading>
+                        <span class="d-flex justify-content-center align-items-center pb-3">
+                            <span class="d-inline-block w-auto">Followers</span>
+                            <span class="badge d-none d-sm-inline-flex ml-2 badge-neutral-first text-first">128</span>
+                        </span>
+                        <div class="divider"></div>
+                    </ng-template>
+                    <div class="row mt-5">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/stock-photos/people-1.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar1.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Patrick Hills</h3>
+                                    <p class="card-text mb-3">Junior Software Developer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/stock-photos/people-2.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar2.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Carol Parker</h3>
+                                    <p class="card-text mb-3">Lead UI Designer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/stock-photos/people-3.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar3.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Robert Pose</h3>
+                                    <p class="card-text mb-3">Senior Software Developer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/hero-bg/hero-3.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar6.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Kate Taylor</h3>
+                                    <p class="card-text mb-3">Frontend Developer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/hero-bg/hero-4.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar2.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Napoleon Stacey</h3>
+                                    <p class="card-text mb-3">QA Engineer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card mb-5">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-pill badge-warning">Warning</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top" src="assets/images/hero-bg/hero-8.jpg"/>
+                                </div>
+                                <div class="card-body text-center card-body-avatar">
+                                    <div class="avatar-icon-wrapper avatar-icon-xl">
+                                        <div class="avatar-icon rounded"><img
+                                                alt="..."
+                                                src="assets/images/avatars/avatar1.jpg"/></div>
+                                    </div>
+                                    <h3 class="card-title mt-4 mb-1">Mandy Karol</h3>
+                                    <p class="card-text mb-3">Software Developer</p>
+                                    <div>
+                                        <button class="btn btn-facebook mr-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                        </span>
+                                        </button>
+
+                                        <button class="btn btn-twitter ml-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                        </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span class="d-flex justify-content-center align-items-center pb-3">
+                            <span class="d-inline-block w-auto">Subscribers</span>
+                            <span class="badge d-none d-sm-inline-flex ml-2 badge-neutral-first text-first">2,125</span>
+                        </span>
+                        <div class="divider"></div>
+                    </ng-template>
+                    <div class="row mt-5">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/stock-photos/people-2.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/stock-photos/people-1.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/stock-photos/people-3.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/hero-bg/hero-4.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/hero-bg/hero-3.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card card-transparent mb-5">
+                                <a [routerLink]="" class="card-img-wrapper rounded">
+                                    <div class="img-wrapper-overlay">
+                                        <div class="overlay-btn-wrapper">
+                                            <button class="btn btn-pill btn-outline-secondary shadow-none border-2 mr-1" tooltip="View messages" containerClass="tooltip-secondary" type="button">
+                                                <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-pill shadow-none btn-outline-secondary border-2 ml-1" tooltip="Send email" containerClass="tooltip-first" type="button">
+                                                <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-badges card-badges-bottom">
+                                        <span class="badge badge-danger">Danger</span>
+                                    </div>
+                                    <img alt="..." class="card-img-top rounded" src="assets/images/hero-bg/hero-2.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+            <div class="bg-light p-3 d-block rounded mb-5 d-flex justify-content-center">
+                <pagination [rotate]="true" [totalItems]="30"></pagination>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'layout-sidebar-open' : toggleMobileSidebar2}" class="app-inner-content-layout--sidebar mr-0 rounded-sm my-0 mr-lg-3 my-lg-3 app-inner-content-layout--sidebar__lg pos-r bg-white">
+        <perfect-scrollbar>
+            <div class="p-4">
+                <div class="font-weight-bold font-size-lg d-flex align-items-center mb-3">
+                    <span>Latest subscribers</span>
+                    <div class="ml-auto font-size-xs">
+                        <a [routerLink]="" tooltip="Add new subscriber" placement="left">
+                            <fa-icon [icon]="['fas', 'plus-circle']"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="align-box-row">
+                        <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-md">
+                            <span class="badge badge-circle badge-success">Online</span>
+                            <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </a>
+                        <div class="pl-2">
+                                <span class="d-block">
+                                    <a [routerLink]="">Adella Galen</a>
+                                    <small class="d-block text-black-50">(Galen@example.com)</small>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="align-box-row">
+                        <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-md">
+                            <span class="badge badge-circle badge-danger">Offline</span>
+                            <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                        </a>
+                        <div class="pl-2">
+                                <span class="d-block">
+                                    <a [routerLink]="">Mandy Erle</a>
+                                    <small class="d-block text-black-50">(Mandyrle@gma.com)</small>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="align-box-row">
+                        <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-md">
+                            <span class="badge badge-circle badge-success">Online</span>
+                            <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                        </a>
+                        <div class="pl-2">
+                                <span class="d-block">
+                                    <a [routerLink]="">John Doe</a>
+                                    <small class="d-block text-black-50">(Galen@example.com)</small>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="align-box-row">
+                        <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-md">
+                            <span class="badge badge-circle badge-warning">Idle</span>
+                            <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                        </a>
+                        <div class="pl-2">
+                                <span class="d-block">
+                                    <a [routerLink]="">Napoleon Stacey</a>
+                                    <small class="d-block text-black-50">(Napoleon@test.com)</small>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider my-4"></div>
+                <div class="font-weight-bold font-size-lg d-flex align-items-center mb-3">
+                    <span>Positions</span>
+                    <div class="ml-auto font-size-xs">
+                        <a [routerLink]="" class="btn btn-sm btn-first" placement="left" tooltip="Send new message">
+                            <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="d-flex justify-content-between">
+                            <span class="d-block">
+                                <a [routerLink]="">Software developer</a>
+                            </span>
+                        <span class="badge badge-dark">
+                                22
+                            </span>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="d-flex justify-content-between">
+                            <span class="d-block">
+                                <a [routerLink]="">QA Engineer</a>
+                            </span>
+                        <span class="badge badge-dark">
+                                23
+                            </span>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="d-flex justify-content-between">
+                            <span class="d-block">
+                                <a [routerLink]="">UX Specialist</a>
+                            </span>
+                        <span class="badge badge-dark">
+                                76
+                            </span>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="d-flex justify-content-between">
+                            <span class="d-block">
+                                <a [routerLink]="">Frontend Architect</a>
+                            </span>
+                        <span class="badge badge-dark">
+                                15
+                            </span>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="d-flex justify-content-between">
+                            <span class="d-block">
+                                <a [routerLink]="">DevOps Manager</a>
+                            </span>
+                        <span class="badge badge-dark">
+                                5
+                            </span>
+                    </div>
+                </div>
+                <div class="divider my-4"></div>
+                <div class="card card-box mt-4 bg-midnight-bloom text-light">
+                    <div class="card-body">
+                        <div class="align-box-row align-items-start">
+                            <div class="font-weight-bold">
+                                <small class="text-white-50 d-block mb-1 text-uppercase">Contacts</small>
+                                <span class="font-size-xxl mt-1">23,274</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="bg-white text-center text-primary font-size-xl d-50 rounded-circle">
+                                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <fa-icon [icon]="['fas', 'arrow-up']" class="text-warning"></fa-icon>
+                            <span class="text-warning px-1">7.4%</span>
+                            <span class="text-white-50">same as before</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" [ngClass]="{'active' : toggleMobileSidebar2}" class="sidebar-inner-layout-overlay"></div>
+</div>

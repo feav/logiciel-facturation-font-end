@@ -1,0 +1,184 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<p-table [columns]="cols" [value]="resultats" selectionMode="single" [loading]="showLoader"
+    [(selection)]="selectedResultat" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
+    [scrollable]="true" [style]="{width:'900px'}">
+    <ng-template pTemplate="caption">
+        <div class="d-flex mb-1 flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
+            <div id="reportrange">
+                <i class="pi pi-calendar"></i>&nbsp;
+                <span>{{ cb() }}</span>
+                <i class="pi pi-caret-down"></i>
+            </div>
+            <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltre()">Valider Filtre</button>
+        </div>
+        <div class="d-flex mt-2 mb-2 flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
+            <p-dropdown scrollHeight="150px" filter="true" [options]="routeurs" filterPlaceholder="Rechercher..."
+                appendTo="body" [virtualScroll]="true" itemSize="30" [(ngModel)]="filter_data.filtre_routeur"
+                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche"
+                (onChange)="onRouteurChange()" placeholder="Routeurs...">
+            </p-dropdown>
+            <p-dropdown scrollHeight="150px" filter="true" [options]="basesPourResultat" filterPlaceholder="Rechercher..."
+                appendTo="body" [virtualScroll]="true" itemSize="30" [(ngModel)]="filter_data.filtre_base"
+                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche"
+                placeholder="Bases...">
+            </p-dropdown>
+            <p-dropdown scrollHeight="150px" filter="true" [options]="annonceurs" filterPlaceholder="Rechercher..."
+                appendTo="body" [virtualScroll]="true" itemSize="30" [(ngModel)]="filter_data.filtre_annonceur"
+                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche"
+                (onChange)="onAnnonceurChange()" placeholder="Annonceurs...">
+            </p-dropdown>
+            <p-dropdown scrollHeight="150px" filter="true" [options]="campagnesPourResultat" filterPlaceholder="Rechercher..."
+                appendTo="body" [virtualScroll]="true" itemSize="30" [(ngModel)]="filter_data.filtre_campagne"
+                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche"
+                placeholder="Campagnes...">
+            </p-dropdown>
+        </div>
+        <div class="d-flex mt-1 flex-md-row flex-sm-column justify-content-md-end justify-content-sm-around">
+            <button type="button" class="ui-button-secondary" pButton icon="pi pi-replay"
+            (click)="viderFiltre()" label="Vider les champs"></button>
+            <button type="button" pButton icon="pi pi-filter"
+            (click)="validerFiltre()" label="Filtrer"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:100px">
+        </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>{{rowData.date}}</td>
+            <td>{{rowData.heure}}</td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.routeur }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Non-Assigné<br>ou<br>Supprimé
+                </span>
+            </td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.base }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Non-Assignée<br>ou<br>Supprimée
+                </span>
+            </td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.annonceur }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Non-Assigné<br>ou<br>Supprimé
+                </span>
+            </td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.campagne }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Non-Assignée<br>ou<br>Supprimée
+                </span>
+            </td>
+            <td>{{rowData.volume}}</td>
+            <td>{{rowData.resultat}}</td>
+            <td>{{rowData.cree_le}}</td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+            <td>{{ rowData.modifie_le }}</td>
+            <td>
+                <span *ngIf="rowData.modifie_par != null">{{ rowData.modifie_par }}</span>
+                <span *ngIf="rowData.modifie_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize"
+            [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
+    </ng-template>
+</p-table>
+
+<p-dialog [draggable]="false" position="top" [style]="{width: '500px', marginTop: '80px', maxHeight: '450px'}" [header]="dialogHeader"
+    [(visible)]="showResultatModalForm" [focusOnShow]="false" showEffect="fade" [modal]="true">
+    <form [formGroup]="resultatFormGroup">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="annonceur">Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="annonceur" id="annonceur"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="campagne">Campagne *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="campagne" id="campagne"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="routeur">Routeur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="routeur" id="routeur"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="base">Base *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="base" id="base"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="volume">Volume envoyé *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="number" formControlName="volume" min="0" id="volume"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="resultat">Résultat *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="number" formControlName="resultat" min="0" id="resultat"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="date_envoi">Date d'envoi *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="date_envoi" id="date_envoi"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="heure_envoi">Heure d'envoi *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="heure_envoi" id="heure_envoi"/>
+                </div>
+            </div>
+        </div>
+    </form>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
+            <button type="button" class="ui-button-info" [disabled]="!resultatFormGroup.valid" pButton
+                icon="pi pi-refresh" (click)="updateResultat()" label="Modifier"></button>
+            <button type="button" class="ui-button-secondary" pButton icon="pi pi-times"
+                (click)="showResultatModalForm = false" label="Annuler"></button>
+        </div>
+    </p-footer>
+</p-dialog>

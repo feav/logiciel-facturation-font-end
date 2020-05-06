@@ -1,0 +1,163 @@
+<button type="button" class="btn btn-primary m-2" (click)="exampleModal.show()">Open example</button>
+<div bsModal #exampleModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Example Modal</h6>
+                <button type="button" class="close" aria-label="Close" (click)="exampleModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-link-dark" (click)="exampleModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary ml-auto" (click)="exampleModal.hide()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary m-2" (click)="innerScrollModal.show()">Inner scroll</button>
+<div bsModal #innerScrollModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Inner scroll modal</h6>
+                <button type="button" class="close" aria-label="Close" (click)="innerScrollModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-link-dark" (click)="innerScrollModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary ml-auto" (click)="innerScrollModal.hide()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary m-2" (click)="lgModal.show()">Large modal</button>
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
+     role="dialog" aria-labelledby="dialog-sizes-name1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Large modal</h6>
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-link-dark" (click)="lgModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary ml-auto" (click)="lgModal.hide()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary m-2" (click)="smModal.show()">Small modal</button>
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Small modal</h6>
+                <button type="button" class="close" aria-label="Close" (click)="smModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-link btn-link-dark" (click)="smModal.hide()">Close</button>
+                <button type="button" class="btn btn-sm btn-primary ml-auto" (click)="smModal.hide()">Save changes</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary m-2" (click)="formModal.show()">Form modal</button>
+<div bsModal #formModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="card bg-secondary shadow-none border-0">
+                    <div class="card-header d-block bg-white pt-4 pb-5">
+                        <div class="text-muted text-center mb-3">
+                            <small>Sign in with</small>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-facebook mr-2" type="button">
+                                <span class="btn-wrapper--icon">
+                                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                </span>
+                                <span class="btn-wrapper--label">
+                                    Facebook
+                                </span>
+                            </button>
+                            <button class="btn btn-twitter ml-2" type="button">
+                                <span class="btn-wrapper--icon">
+                                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                </span>
+                                <span class="btn-wrapper--label">
+                                    Twitter
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <small>Or sign in with credentials</small>
+                        </div>
+                        <form>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <fa-icon [icon]="['fas', 'unlock-alt']"></fa-icon>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" placeholder="Password" type="password">
+                                </div>
+                            </div>
+                            <div class="custom-control custom-control-alternative custom-checkbox">
+                                <input class="custom-control-input" id="customCheckLogin" type="checkbox">
+                                <label class="custom-control-label" for="customCheckLogin">
+                                    <span>Remember me</span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-second mt-4">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

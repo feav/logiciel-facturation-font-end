@@ -1,0 +1,16 @@
+<div class="d-block">
+  <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+  </canvas>
+</div>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+  <button class="btn btn-primary" (click)="randomize()">Update</button>
+</div>

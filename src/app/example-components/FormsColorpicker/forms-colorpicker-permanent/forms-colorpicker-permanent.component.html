@@ -1,0 +1,15 @@
+<div class="mb-5 d-flex justify-content-center position-relative" style="z-index: 5;">
+    <span [style.background]="arrayColors[selectedColor]"
+          [cpToggle]="true"
+          [cpDialogDisplay]="'inline'"
+          [cpCancelButton]="true"
+          [(colorPicker)]="arrayColors[selectedColor]"></span>
+</div>
+<div class="divider my-4"></div>
+<div class="text-center">
+    <button class="btn btn-outline-secondary text-white btn-lg m-2" [style.background]="arrayColors['color1']"
+         (click)="selectedColor='color1'">Change color to {{arrayColors.color1}}</button>
+
+    <button class="btn btn-outline-secondary text-white btn-lg m-2" [style.background]="arrayColors['color2']"
+         (click)="selectedColor='color2'">Change color to {{arrayColors.color2}}</button>
+</div>

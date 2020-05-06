@@ -1,0 +1,7 @@
+<ngx-slick-carousel [config]="slideConfig">
+    <div *ngFor="let slide of slides; let i = index" ngxSlickItem>
+        <div class="card-body">
+            <div class="slider-item">{{ i }}</div>
+        </div>
+    </div>
+</ngx-slick-carousel>

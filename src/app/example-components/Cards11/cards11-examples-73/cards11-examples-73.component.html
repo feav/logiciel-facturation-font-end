@@ -1,0 +1,167 @@
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="font-weight-bold font-size-md m-0">
+                        Bandwidth allocation
+                    </div>
+                    <div class="btn-group btn-group-sm" dropdown>
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-dark" dropdownToggle
+                                type="button">
+                            Export
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-neutral-dark nav-pills flex-column px-3">
+                                <li class="nav-item nav-item--header px-0">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>View all reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>View active items</span>
+                                        <div class="ml-auto badge badge-success">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-4 nav-item--header">
+                                    <span class="text-black font-weight-bold">Options</span>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                        </div>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                        </div>
+                                        <span>Export to CSV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <span class="display-3 text-primary font-weight-bold d-block">12,56k</span>
+                    <span class="text-black-50">Successful production deployments</span>
+                </div>
+            </div>
+            <div class="sparkline-full-wrapper sparkline-full-wrapper--sm">
+                <canvas [chartType]="'line'"
+                        [colors]="successSparklineColor"
+                        [datasets]="sparklineDataset1"
+                        [labels]="sparklineLabels1"
+                        [options]="sparklineOptions1"
+                        baseChart></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="font-weight-bold font-size-md m-0">
+                        Production servers
+                    </div>
+                    <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-danger" dropdownToggle
+                                type="button">
+                            Export
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-neutral-danger nav-pills flex-column px-3">
+                                <li class="nav-item nav-item--header px-0">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>View all reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>View active items</span>
+                                        <div class="ml-auto badge badge-success">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-4 nav-item--header">
+                                    <span class="text-black font-weight-bold">Options</span>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                        </div>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                        </div>
+                                        <span>Export to CSV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <span [countUp]="583" class="display-3 text-danger font-weight-bold d-block"></span>
+                    <span class="text-black-50">Returning clients reports</span>
+                </div>
+            </div>
+            <div class="sparkline-full-wrapper">
+                <canvas [chartType]="'line'"
+                        [colors]="dangerSparklineColor"
+                        [datasets]="sparklineDataset2"
+                        [labels]="sparklineLabels1"
+                        [options]="sparklineOptions1"
+                        baseChart></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="font-weight-bold font-size-md m-0">
+                        Returning customers
+                    </div>
+                    <button class="btn btn-sm btn-first text-uppercase font-weight-bold font-size-xs" type="button">
+                        <fa-icon [icon]="['far', 'chart-bar']" class="opacity-8 mr-1"></fa-icon>
+                        Generate
+                    </button>
+                </div>
+                <div class="mt-5">
+                    <span [countUp]="1253" class="display-3 text-warning font-weight-bold d-block"></span>
+                    <span class="text-warning opacity-7">Pending services integrations</span>
+                </div>
+            </div>
+            <div class="sparkline-full-wrapper sparkline-full-wrapper--lg">
+                <canvas [chartType]="'line'"
+                        [colors]="warningSparklineColor"
+                        [datasets]="sparklineDataset3"
+                        [labels]="sparklineLabels1"
+                        [options]="sparklineOptions1"
+                        baseChart></canvas>
+            </div>
+        </div>
+    </div>
+</div>

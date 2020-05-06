@@ -1,0 +1,156 @@
+<aw-wizard class="wizard-alternate-2 mb-5">
+    <aw-wizard-step>
+        <ng-template awWizardStepSymbol>
+            <div class="d-flex">
+                <div class="font-size-lg d-44 rounded-sm mr-2 stepper-wrapper text-center">
+                    <span class="font-weight-bold">1</span>
+                </div>
+                <div>
+                    <div class="font-weight-bold">Reports</div>
+                    <small class="text-black-50">Try the keyboard navigation</small>
+                </div>
+            </div>
+        </ng-template>
+        <div class="bg-secondary rounded p-4 mb-4 mx-4">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input class="form-control" id="inputEmail4" placeholder="Email" type="email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input class="form-control" id="inputPassword4" placeholder="Password" type="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input class="form-control" id="inputAddress" placeholder="1234 Main St" type="text">
+            </div>
+        </div>
+        <div class="actions px-4 pb-4">
+            <button [awGoToStep]="{stepIndex: 3}" class="btn btn-primary" type="button">Previous</button>
+            <button awNextStep class="btn btn-success" type="button">Continue</button>
+        </div>
+    </aw-wizard-step>
+    <aw-wizard-step awOptionalStep>
+        <ng-template awWizardStepSymbol>
+            <div class="d-flex">
+                <div class="font-size-lg d-44 rounded-sm mr-2 stepper-wrapper text-center">
+                    <span class="font-weight-bold">2</span>
+                </div>
+                <div>
+                    <div class="font-weight-bold">Accounts</div>
+                    <small class="text-black-50">Wonderful transition effects</small>
+                </div>
+            </div>
+        </ng-template>
+        <div class="bg-secondary rounded p-4 mb-4 mx-4">
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input class="form-control" id="inputAddress23" placeholder="Apartment, studio, or floor" type="text">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input class="form-control" id="inputCity3" type="text">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select class="form-control" id="inputStat3e">
+                        <option selected="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input class="form-control" id="input3Zip" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="actions px-4 pb-4">
+            <button awPreviousStep class="btn btn-primary" type="button">Previous</button>
+            <button awNextStep class="btn btn-primary" type="button">Continue</button>
+        </div>
+    </aw-wizard-step>
+    <aw-wizard-step awOptionalStep>
+        <ng-template awWizardStepSymbol>
+            <div class="d-flex">
+                <div class="font-size-lg d-44 rounded-sm mr-2 stepper-wrapper text-center">
+                    <span class="font-weight-bold">3</span>
+                </div>
+                <div>
+                    <div class="font-weight-bold">Payments</div>
+                    <small class="text-black-50">Cicero text generator</small>
+                </div>
+            </div>
+        </ng-template>
+        <div class="bg-secondary rounded p-4 mb-4 mx-4">
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" type="text">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input class="form-control" id="inputCity" type="text">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select class="form-control" id="inputState">
+                        <option selected="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input class="form-control" id="inputZip" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" id="gridCheck" type="checkbox">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="actions px-4 pb-4">
+            <button awPreviousStep class="btn btn-primary" type="button">Previous</button>
+            <button awNextStep class="btn btn-primary" type="button">Continue</button>
+        </div>
+    </aw-wizard-step>
+    <aw-wizard-step>
+        <ng-template awWizardStepSymbol>
+            <div class="d-flex">
+                <div class="font-size-lg d-44 rounded-sm mr-2 stepper-wrapper text-center">
+                    <span class="font-weight-bold">4</span>
+                </div>
+                <div>
+                    <div class="font-weight-bold">Deliveries</div>
+                    <small class="text-black-50">The next and previous buttons</small>
+                </div>
+            </div>
+        </ng-template>
+        <div class="bg-secondary rounded p-4 mb-4 mx-4">
+            <div class="row">
+                <div class="form-group col-12">
+                    <input class="form-control" placeholder="Credit card number" type="text">
+                </div>
+                <div class="col-sm-6">
+                    <input class="form-control mb-3 mb-md-0" placeholder="Name on card" type="text">
+                </div>
+                <div class="col-7 col-sm-3 mg-t-20 mg-sm-t-0 d-flex align-items-end">
+                    <input class="form-control" placeholder="Exp. date" type="text">
+                </div>
+                <div class="col-5 col-sm-3 mg-t-20 mg-sm-t-0 d-flex align-items-end">
+                    <input class="form-control" placeholder="CVC/CVV" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="actions px-4 pb-4">
+            <button awPreviousStep class="btn btn-primary" type="button">Previous Step</button>
+            <button (click)="finishWizard( 'second', 'You\'ve reached the last wizard step successfully!' )" class="btn btn-primary" type="button">Finish</button>
+        </div>
+    </aw-wizard-step>
+</aw-wizard>

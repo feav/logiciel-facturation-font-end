@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box text-center mb-5 p-4">
+            <h5 class="display-4 font-weight-bold">Upload image</h5>
+            <p class="text-black-50 mb-4">Use the file field below to upload a new image to test the crop functionality.</p>
+
+            <div class="rounded-sm bg-light p-3">
+                <div class="input-group text-left mb-0">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" (change)="fileChangeEvent($event)" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+            </div>
+            <div class="divider my-4"></div>
+
+            <h5 class="display-4 font-weight-bold">Example modifiers</h5>
+            <p class="text-black-50">Use the buttons below to modify the behaviour of the cropped image.</p>
+
+            <div>
+                <button (click)="rotateLeft()" class="btn btn-primary btn-sm m-2">Rotate left</button>
+                <button (click)="rotateRight()" class="btn btn-primary btn-sm m-2">Rotate right</button>
+                <button (click)="flipHorizontal()" class="btn btn-primary btn-sm m-2">Flip horizontal</button>
+                <button (click)="flipVertical()" class="btn btn-primary btn-sm m-2">Flip vertical</button>
+            </div>
+
+            <div class="divider my-4"></div>
+
+            <h5 [hidden]="showCropper" class="display-4 mb-3 font-weight-bold">Result</h5>
+
+            <div [hidden]="showCropper">
+                <img [src]="croppedImage" class="rounded-sm"/>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5 p-4">
+            <h5 [hidden]="!showCropper" class="display-4 mb-3 font-weight-bold">Cropped image</h5>
+
+            <image-cropper
+                    class="rounded-sm"
+                    (imageCropped)="imageCropped($event)"
+                    (imageLoaded)="imageLoaded()"
+                    [alignImage]="'center'"
+                    [aspectRatio]="4 / 3"
+                    [cropperMinWidth]="340"
+                    [imageChangedEvent]="imageChangedEvent"
+                    [maintainAspectRatio]="true"
+                    [onlyScaleDown]="true"
+                    [resizeToWidth]="340"
+                    [roundCropper]="false"
+                    [style.display]="showCropper ? null : 'none'"
+                    format="png"
+                    outputType="base64"
+            ></image-cropper>
+            <div class="font-size-lg text-center text-danger p-5" [hidden]="showCropper">
+                <h5 class="display-4 text-black mb-3 font-weight-bold">Cropped image</h5>
+                To see the image cropper in action, upload an image using the left form input.
+            </div>
+        </div>
+    </div>
+</div>

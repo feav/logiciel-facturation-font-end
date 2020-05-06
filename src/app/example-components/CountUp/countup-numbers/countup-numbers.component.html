@@ -1,0 +1,113 @@
+<div class="card card-box mb-5">
+    <div class="no-gutters row">
+        <div class="col-xl-4 p-4">
+            <div class="divider-v divider-v-lg"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Reports</b>
+                            <div class="text-black-50">Monthly sales reports</div>
+                        </div>
+                        <div [countUp]="2363" class="font-weight-bold text-danger font-size-xl"></div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>User</b>
+                            <div class="text-black-50">Visitors last week</div>
+                        </div>
+                        <div [countUp]="584" class="font-weight-bold text-success font-size-xl"></div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Sales</b>
+                            <div class="text-black-50">Total average weekly report</div>
+                        </div>
+                        <div [countUp]="483" class="font-weight-bold text-warning font-size-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 p-4">
+            <div class="divider-v divider-v-lg"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Stats</b>
+                            <div class="text-black-50">Last month targets</div>
+                        </div>
+                        <div [countUp]="2.33" [options]="{
+                                        suffix: 'M',
+                                        prefix: '$ ',
+                                        duration: 6
+                                    }" class="font-weight-bold text-warning font-size-xl">
+                        </div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Payments</b>
+                            <div class="text-black-50">Week's expenses</div>
+                        </div>
+                        <div [countUp]="123305" [options]="{
+                                        suffix: '',
+                                        prefix: '- $',
+                                        duration: 6
+                                    }" class="font-weight-bold text-danger font-size-xl">
+                        </div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Orders</b>
+                            <div class="text-black-50">Total products ordered</div>
+                        </div>
+                        <div [countUp]="65" [options]="{
+                                        suffix: '',
+                                        prefix: '',
+                                        duration: 6
+                                    }" class="font-weight-bold text-warning font-size-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 p-4">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Deliveries</b>
+                            <div class="text-black-50">Deliveries total report</div>
+                        </div>
+                        <div [countUp]="33.1" [options]="{
+                                        suffix: ' k',
+                                        prefix: '$ ',
+                                        duration: 6
+                                    }" class="font-weight-bold text-info font-size-xl">
+                        </div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Tasks</b>
+                            <div class="text-black-50">Pending task actions</div>
+                        </div>
+                        <div [countUp]="34" class="font-weight-bold text-success font-size-xl"></div>
+                    </div>
+                    <div class="divider my-3"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <b>Issues</b>
+                            <div class="text-black-50">Server errors and issues</div>
+                        </div>
+                        <div [countUp]="346" class="font-weight-bold text-danger font-size-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

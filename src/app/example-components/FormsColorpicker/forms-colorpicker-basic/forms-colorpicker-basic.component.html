@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3">
+            <div class="heading-3 text-center">Basic</div>
+            <input [(colorPicker)]="color1" [style.background]="color1"
+                   class="form-control border-0"/>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3">
+            <div class="heading-3 text-center">Grayscale mode</div>
+            <input [(colorPicker)]="color2" [cpColorMode]="'grayscale'" [style.background]="color2"
+                   class="form-control border-0"/>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3">
+            <div class="heading-3 text-center">Show value</div>
+            <input [(colorPicker)]="color3" [style.background]="color3"
+                   [value]="color3"
+                   class="form-control border-0"/>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3 text-center">
+            <div class="heading-3 text-center">Custom trigger</div>
+            <div [(colorPicker)]="color4" [cpPositionOffset]="'50%'"
+                  [cpPositionRelativeToArrow]="true"
+                  [cpPosition]="'bottom'"
+                  [style.color]="color4"
+                  class="bg-neutral-dark py-2 border-dark border-1">Change me!</div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3">
+            <div class="heading-3 text-center">Popup buttons</div>
+            <input [(colorPicker)]="color5" [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                   [cpOKButton]="true"
+                   [cpSaveClickOutside]="false"
+                   [style.background]="color5"
+                   [value]="color5"
+                   class="form-control border-0"/>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="m-3">
+            <div class="heading-3 text-center">Button toggle</div>
+            <div class="input-group">
+                <input #ignoredInput [(colorPicker)]="color1"
+                       [(cpToggle)]="toggle"
+                       [cpIgnoredElements]="[ignoredButton, ignoredInput]"
+                       [style.background]="color1"
+                       class="form-control border-0"/>
+                <div class="input-group-append">
+                    <button #ignoredButton (click)="toggle=!toggle" class="btn btn-primary">
+                        Toggle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,229 @@
+<div [class]="'app-page-title ' + globals.pageTitleStyle + ' ' + globals.pageTitleBackground"
+     [ngClass]="{
+    'app-page-title--shadow' : globals.pageTitleShadow
+    }">
+    <div>
+        <ol *ngIf="globals.pageTitleBreadcrumb" class="app-page-title--breadcrumb breadcrumb">
+            <li class="breadcrumb-item">
+                <a routerLink="/">
+                    <fa-icon [icon]="['fas', 'tachometer-alt']"></fa-icon>
+                </a>
+            </li>
+            <li class="breadcrumb-item"><a routerLink="/dashboard-default">Dashboards</a></li>
+            <li class="breadcrumb-item active">
+                <span>{{titleHeading}}</span>
+            </li>
+        </ol>
+        <div class="app-page-title--first">
+            <div *ngIf="globals.pageTitleIconBox" class="app-page-title--iconbox d-70">
+                <div class="d-70 d-flex gradient-icon align-items-center justify-content-center">
+                    <i class="pe-7s-umbrella display-3 gradient-icon bg-ripe-malin"></i>
+                </div>
+            </div>
+            <div class="app-page-title--heading">
+                <h1>{{titleHeading}}</h1>
+                <div *ngIf="globals.pageTitleDescription" class="app-page-title--description">
+                    {{titleDescription}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <button (click)="openBorderlessModal.show()" class="btn btn-sm text-nowrap btn-primary" type="button">
+            <span class="d-none d-xl-block">Open dialog</span>
+            <span className="btn-wrapper--icon">
+                <fa-icon [icon]="['far', 'object-group']" class="d-block d-xl-none"></fa-icon>
+            </span>
+        </button>
+
+        <div class="btn-group mx-3" dropdown>
+            <button class="btn btn-sm btn-primary dropdown-toggle" dropdownToggle type="button">
+                <span class="btn-wrapper--label pr-2">Actions</span>
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xl p-0">
+                <div class="bg-composed-wrapper bg-vicious-stance mt-0">
+                    <div class="bg-composed-wrapper--image bg-composed-img-5"></div>
+                    <div class="bg-composed-wrapper--content text-light text-center p-4">
+                        <h5 class="mb-1">Scrollable</h5>
+                        <p class="mb-0 opacity-7">This menu box is scrollable (sm)</p>
+                    </div>
+                </div>
+                <perfect-scrollbar [autoPropagation]="true" class="scroll-area-sm shadow-overflow">
+                    <ul class="nav flex-column py-2">
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                </div>
+                                <span>Layouts</span>
+                                <div class="ml-auto badge badge-warning">512</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link disabled">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                </div>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item--header">
+                            <span>Others</span>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                </div>
+                                <span>Components</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                </div>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                </perfect-scrollbar>
+                <div class="card-footer d-flex justify-content-between">
+                    <button class="btn btn-sm btn-neutral-success" type="button">Action</button>
+                    <button class="btn btn-sm btn-link btn-link-success px-0" type="button"><span>View details</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-sm btn-success" tooltip="Add new entry" type="button">
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['fas', 'plus']" class="opacity-8 font-size-xs"></fa-icon>
+            </span>
+        </button>
+    </div>
+</div>
+<div #openBorderlessModal="bs-modal" backdrop="false" bsModal class="modal fade" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 bg-transparent">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <div class="bg-white rounded-left">
+                        <div class="p-4 text-center">
+                            <div class="avatar-icon-wrapper rounded-circle mx-auto">
+                                <div class="d-block p-0 avatar-icon-wrapper rounded-circle m-0 border-3 border-first">
+                                    <div class="rounded-circle border-3 border-white overflow-hidden">
+                                        <img alt="..." class="img-fluid" src="assets/images/avatars/avatar5.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="font-size-lg font-weight-bold my-2">
+                                Marion Devine
+                            </h4>
+                            <div class="text-center my-4">
+                                <span class="badge badge-pill bg-neutral-first text-first mx-1">
+                                    Web developer
+                                </span>
+                                <span class="badge badge-pill bg-neutral-warning text-warning mx-1">
+                                    Javascript
+                                </span>
+                                <span class="badge badge-pill bg-neutral-danger text-danger mx-1">
+                                    Angular
+                                </span>
+                            </div>
+
+                            <p class="text-muted mb-4">I should be incapable of drawing a single stroke at the present moment; and
+                                yet I feel
+                                that I never was a greater artist than now.</p>
+
+                            <div class="divider my-4"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <span class="opacity-6 pb-2">Current month</span>
+                                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            46,362
+                        </span>
+                                        <span class="badge bg-neutral-danger ml-2 text-danger">-8%</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="opacity-6 pb-2">Last year</span>
+                                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            34,546
+                        </span>
+                                        <span class="badge bg-neutral-success ml-2 text-success">+13%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider my-4"></div>
+                            <div class="font-weight-bold text-uppercase text-black-50 text-center mb-3">
+                                Team members
+                            </div>
+                            <div class="avatar-wrapper-overlap d-flex justify-content-center mb-3">
+                                <div class="avatar-icon-wrapper" containerClass="tooltip-danger" tooltip="Chelsey Delaney">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper" containerClass="tooltip-first" tooltip="Laibah Santos">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper" containerClass="tooltip-second" tooltip="Ksawery Weber">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper" containerClass="tooltip-info" tooltip="Killian Magana">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper" containerClass="tooltip-success" tooltip="Kean Banks">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="divider my-4"></div>
+                            <button class="btn btn-outline-first mt-2" type="button">
+                                View complete profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-wrapper bg-composed-wrapper h-100 rounded-right">
+                        <div class="flex-grow-1 w-100 d-flex align-items-end">
+                            <div class="bg-composed-wrapper--image rounded-right opacity-9 bg-composed-filter-rm"
+                                 style="background-image: url('assets/images/stock-photos/people-3.jpg');"></div>
+                            <div class="bg-composed-wrapper--content text-center p-5">
+                                <div class="text-white mt-3">
+                                    <h1 class="display-3 my-3 font-weight-bold">
+                                        Wonderful serenity has possession
+                                    </h1>
+                                    <p class="font-size-lg mb-0 text-white-50">
+                                        A free hour, when our power of choice is untrammelled and when nothing prevents.
+                                    </p>
+                                    <div class="divider border-1 mx-auto my-4 border-light opacity-2 rounded w-25"></div>
+                                    <div>
+                                        <a [routerLink]="" class="btn btn-success btn-lg btn-pill">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                    </span>
+                                            <span class="btn-wrapper--label">
+                                        Get in touch
+                                    </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

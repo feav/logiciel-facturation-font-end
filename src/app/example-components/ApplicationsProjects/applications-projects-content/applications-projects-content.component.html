@@ -1,0 +1,1162 @@
+<div class="card card-box mb-4">
+    <div class="px-4 py-3 d-block d-md-flex justify-content-between align-items-center text-center text-md-left">
+        <div class="d-flex flex-md-row flex-column align-items-center">
+            <div class="font-size-lg font-weight-bold">
+                Projects
+            </div>
+            <div class="mx-3 d-none d-md-block">
+                <div class="divider-v position-relative"></div>
+                <div class="divider-v position-relative"></div>
+            </div>
+            <span class="text-black-50 font-size-md">
+                 345 in total
+            </span>
+            <div [ngClass]="status1 ? 'is-active' : ''" class="search-wrapper search-wrapper--grow my-3 my-md-0 ml-0 ml-md-4">
+              <span class="icon-wrapper text-black">
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+              </span>
+                <input (blur)="status1 = false; null" (focus)="status1 = true" class="form-control" placeholder="Search projects..." type="search">
+            </div>
+        </div>
+        <div class="d-block d-md-flex align-items-center">
+            <button class="btn btn-neutral-primary btn-sm font-weight-bold">
+                Add project
+            </button>
+            <button class="btn btn-neutral-danger ml-3 btn-sm" tooltip="Remove" type="button">
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['far', 'trash-alt']"></fa-icon>
+            </span>
+            </button>
+        </div>
+    </div>
+</div>
+<tabset class="tabs-animated tabs-rm-padding tabs-responsive tabs-animated-shadow" type="tabs">
+    <tab customClass="pl-0 pr-1 py-2">
+        <ng-template tabHeading>
+            <span class="font-weight-bold text-uppercase font-size-xs text-dark px-1">List columns 1</span>
+        </ng-template>
+        <div class="row mt-4">
+            <div class="col-xl-6">
+                <div class="card card-box mb-5 pt-4">
+                    <div class="card-tr-actions">
+                        <div class="custom-checkbox custom-control p-0 mt-3">
+                            <input class="custom-control-input" id="inputCheckbox255" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox255">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center px-4 mb-3">
+                        <div class="avatar-icon-wrapper rounded mr-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <div class="rounded overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-1.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Build stuff</a>
+                            <span class="text-black-50 d-block pb-1">Project description here...</span>
+                            <div class="d-flex align-items-center pt-2">
+                                <button class="btn btn-sm btn-primary mr-3 shadow-none">View</button>
+                                <button class="btn btn-sm btn-neutral-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                        <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Deadline:
+                        </span>
+                            <span class="text-black-50">23 August 2020</span>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                            <span class="text-black-50">San Francisco, USA</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap mb-1 mx-2">
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-night-sky text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                               name="users"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Members</div>
+                                    <div class="font-size-md mb-1 opacity-8">Active users</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                               name="layers"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Tasks</div>
+                                    <div class="font-size-md mb-1 opacity-8">Pending items</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="card card-box mb-5 pt-4">
+                    <div class="card-tr-actions">
+                        <div class="custom-checkbox custom-control p-0 mt-3">
+                            <input class="custom-control-input" id="inputCheckbox133" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox133">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center px-4 mb-3">
+                        <div class="avatar-icon-wrapper rounded mr-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <div class="rounded overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-2.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Create new business</a>
+                            <span class="text-black-50 d-block pb-1">Project description here...</span>
+                            <div class="d-flex align-items-center pt-2">
+                                <button class="btn btn-sm btn-primary mr-3 shadow-none">View</button>
+                                <button class="btn btn-sm btn-neutral-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                        <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Deadline:
+                        </span>
+                            <span class="text-black-50">26 August 2021</span>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                            <span class="text-black-50">London, UK</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap mb-1 mx-2">
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-night-sky text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                               name="users"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Members</div>
+                                    <div class="font-size-md mb-1 opacity-8">Active users</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                               name="layers"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Tasks</div>
+                                    <div class="font-size-md mb-1 opacity-8">Pending items</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="card card-box mb-5 pt-4">
+                    <div class="card-tr-actions">
+                        <div class="custom-checkbox custom-control p-0 mt-3">
+                            <input class="custom-control-input" id="inputCheckbox3" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox3">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center px-4 mb-3">
+                        <div class="avatar-icon-wrapper rounded mr-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <div class="rounded overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-3.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Upload documents</a>
+                            <span class="text-black-50 d-block pb-1">Project description here...</span>
+                            <div class="d-flex align-items-center pt-2">
+                                <button class="btn btn-sm btn-primary mr-3 shadow-none">View</button>
+                                <button class="btn btn-sm btn-neutral-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                        <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Deadline:
+                        </span>
+                            <span class="text-black-50">15 June 2023</span>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                            <span class="text-black-50">Barcelona, Spain</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap mb-1 mx-2">
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-night-sky text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                               name="users"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Members</div>
+                                    <div class="font-size-md mb-1 opacity-8">Active users</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                               name="layers"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Tasks</div>
+                                    <div class="font-size-md mb-1 opacity-8">Pending items</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="card card-box mb-5 pt-4">
+                    <div class="card-tr-actions">
+                        <div class="custom-checkbox custom-control p-0 mt-3">
+                            <input class="custom-control-input" id="inputCheckbox2333" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox2333">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center px-4 mb-3">
+                        <div class="avatar-icon-wrapper rounded mr-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <div class="rounded overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-1.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Generate reports</a>
+                            <span class="text-black-50 d-block pb-1">Project description here...</span>
+                            <div class="d-flex align-items-center pt-2">
+                                <button class="btn btn-sm btn-primary mr-3 shadow-none">View</button>
+                                <button class="btn btn-sm btn-neutral-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 font-size-sm p-3 mx-4 bg-secondary rounded-sm">
+                        <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Deadline:
+                        </span>
+                            <span class="text-black-50">17 August 2024</span>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                            <span class="text-black-50">Bucharest, Romania</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap mb-1 mx-2">
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-night-sky text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                                               name="users"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Members</div>
+                                    <div class="font-size-md mb-1 opacity-8">Active users</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="w-50 p-3">
+                            <button class="btn btn-gradient bg-royal text-left px-4 py-3 w-100 rounded-lg" type="button">
+                                <div>
+                                    <i-feather class="h1 d-block mb-4 text-first line-height-1"
+                                               name="layers"></i-feather>
+                                    <div class="font-weight-bold font-size-lg">Tasks</div>
+                                    <div class="font-size-md mb-1 opacity-8">Pending items</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-3 mt-4 bg-secondary rounded d-flex justify-content-center">
+            <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-primary"></pagination>
+        </div>
+    </tab>
+    <tab customClass="px-1 py-2">
+        <ng-template tabHeading>
+            <span class="font-weight-bold text-uppercase font-size-xs text-dark px-1">List columns 2</span>
+        </ng-template>
+        <div class="row mt-4">
+            <div class="col-xl-4">
+                <div class="card card-box p-4 mb-5">
+                    <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-dark p-0 font-size-xl text-dark opacity-8 dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                            <ul class="nav nav-pills flex-column p-3">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>My Account</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header text-first font-weight-bold">
+                                    <span>Heading</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="avatar-icon-wrapper rounded-circle m-0">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-90">
+                                <div class="rounded-circle overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-2.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-weight-bold mt-3">Build stuff</h3>
+                        <span class="badge mt-1 mb-4 badge-neutral-success text-success font-weight-normal font-size-lg px-4 py-1 h-auto"><span class="font-weight-bold pr-1">25</span> active tasks</span>
+                        <p class="mb-0 text-black-50">A wonderful serenity has taken possession of my entire soul.</p>
+                        <div class="pt-3">
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View tasks" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['fas', 'bars']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View members" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'user']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View reports" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card card-box p-4 mb-5">
+                    <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-dark p-0 font-size-xl text-dark opacity-8 dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                            <ul class="nav nav-pills flex-column p-3">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>My Account</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header text-first font-weight-bold">
+                                    <span>Heading</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="avatar-icon-wrapper rounded-circle m-0">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-90">
+                                <div class="rounded-circle overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-1.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-weight-bold mt-3">Create new business</h3>
+                        <span class="badge mt-1 mb-4 badge-neutral-danger text-danger font-weight-normal font-size-lg px-4 py-1 h-auto"><span class="font-weight-bold pr-1">99+</span> pending tasks</span>
+                        <p class="mb-0 text-black-50">A wonderful serenity has taken possession of my entire soul.</p>
+                        <div class="pt-3">
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View tasks" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['fas', 'bars']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View members" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'user']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View reports" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card card-box p-4 mb-5">
+                    <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-dark p-0 font-size-xl text-dark opacity-8 dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                            <ul class="nav nav-pills flex-column p-3">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>My Account</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header text-first font-weight-bold">
+                                    <span>Heading</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Profile settings</span>
+                                        <div class="ml-auto badge badge-first">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Active tasks</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="avatar-icon-wrapper rounded-circle m-0">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-90">
+                                <div class="rounded-circle overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/stock-photos/people-4.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-weight-bold mt-3">Upload documents</h3>
+                        <span class="badge mt-1 mb-4 badge-neutral-success text-success font-weight-normal font-size-lg px-4 py-1 h-auto"><span class="font-weight-bold pr-1">5</span> active tasks</span>
+                        <p class="mb-0 text-black-50">A wonderful serenity has taken possession of my entire soul.</p>
+                        <div class="pt-3">
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View tasks" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['fas', 'bars']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View members" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'user']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                            <button class="btn d-50 m-2 p-0 btn-pill btn-outline-primary" tooltip="View reports" type="button">
+                        <span class="btn-wrapper--icon">
+                          <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+                        </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="p-3 mt-4 bg-secondary rounded d-flex justify-content-center">
+            <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-primary"></pagination>
+        </div>
+    </tab>
+    <tab customClass="px-1 py-2">
+        <ng-template tabHeading>
+            <span class="font-weight-bold text-uppercase font-size-xs text-dark px-1">List columns 3</span>
+        </ng-template>
+        <div class="mt-4">
+            <div class="card card-box">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item text-center text-md-left p-4 d-block d-md-flex justify-content-between align-items-center">
+                        <a [routerLink]="" class="avatar-icon-wrapper mr-0 mr-md-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <span class="badge badge-circle badge-success p-top-a">Online</span>
+                                <div class="rounded overflow-hidden">
+                                    <img alt="..." class="img-fluid" src="assets/images/avatars/avatar6.jpg"/>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-grow-1 pl-1 flex-column">
+                            <div class="d-flex flex-column flex-xl-row justify-content-between">
+                                <div>
+                                    <a [routerLink]="" class="font-size-lg mx-0 my-3 my-xl-0 font-weight-bold btn text-black p-0">Trystan
+                                        Russo</a>
+                                    <div class="d-block d-md-flex align-items-center my-2">
+                                        <fa-icon [icon]="['far', 'envelope']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50 pr-4">russotry@russo.com</span>
+
+                                        <fa-icon [icon]="['far', 'address-card']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50 pr-4">Project Manager</span>
+
+                                        <fa-icon [icon]="['far', 'map']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50">San Francisco, USA</span>
+                                    </div>
+                                </div>
+                                <div class="pb-3 pt-1 py-xl-0">
+                                    <button class="btn btn-primary shadow-none btn-sm mr-2 text-uppercase font-size-xs font-weight-bold">
+                                        Chat
+                                    </button>
+                                    <button class="btn btn-neutral-danger btn-sm text-uppercase font-size-xs font-weight-bold">
+                                        Profile
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-block d-xl-flex justify-content-between align-items-center">
+                                <p class="text-black-50 mb-0 font-size-sm pr-0 pr-xl-4">
+                                    McClintock's eye for detail certainly helped narrow the whereabouts.
+                                </p>
+                                <div class="d-flex flex-grow-1 pl-0 pl-xl-5 align-items-center">
+                                    <div class="text-black-50">Progress</div>
+                                    <progressbar [animate]="true" [value]="56"
+                                                 class="progress-bar-rounded progress-xs progress-animated-alt mx-2"
+                                                 type="danger"></progressbar>
+                                    <div class="font-weight-bold font-size-lg">56%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item text-center text-md-left p-4 d-block d-md-flex justify-content-between align-items-center">
+                        <a [routerLink]="" class="avatar-icon-wrapper mr-0 mr-md-3">
+                            <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                                <span class="badge badge-position badge-position--bottom-right badge-circle badge-info">Offline</span>
+                                <div class="rounded overflow-hidden bg-neutral-danger font-size-lg text-center font-weight-bold text-danger d-flex justify-content-center flex-column">
+                                    <span>HS</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-grow-1 pl-1 flex-column">
+                            <div class="d-flex flex-column flex-xl-row justify-content-between">
+                                <div>
+                                    <a [routerLink]="" class="font-size-lg mx-0 my-3 my-xl-0 font-weight-bold btn text-black p-0">Zara
+                                        Wagstaff</a>
+                                    <div class="d-block d-md-flex align-items-center my-2">
+                                        <fa-icon [icon]="['far', 'envelope']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50 pr-4">zara@wags.com</span>
+
+                                        <fa-icon [icon]="['far', 'address-card']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50 pr-4">UX Consultant</span>
+
+                                        <fa-icon [icon]="['far', 'map']" class="mr-2"></fa-icon>
+                                        <span class="text-black-50">London, UK</span>
+                                    </div>
+                                </div>
+                                <div class="pb-3 pt-1 py-xl-0">
+                                    <button class="btn btn-primary shadow-none btn-sm mr-2 text-uppercase font-size-xs font-weight-bold">
+                                        Chat
+                                    </button>
+                                    <button class="btn btn-neutral-danger btn-sm text-uppercase font-size-xs font-weight-bold">
+                                        Profile
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-block d-xl-flex justify-content-between align-items-center">
+                                <p class="text-black-50 mb-0 font-size-sm pr-0 pr-xl-4">
+                                    A 1914 English translation by Harris Rackham reads.
+                                </p>
+                                <div class="d-flex flex-grow-1 pl-0 pl-xl-5 align-items-center">
+                                    <div class="text-black-50">Progress</div>
+                                    <progressbar [animate]="true" [value]="32"
+                                                 class="progress-bar-rounded progress-xs progress-animated-alt mx-2"
+                                                 type="warning"></progressbar>
+                                    <div class="font-weight-bold font-size-lg">32%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-3 mt-4 bg-secondary rounded d-flex justify-content-center">
+            <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-primary"></pagination>
+        </div>
+    </tab>
+    <tab customClass="px-1 py-2">
+        <ng-template tabHeading>
+            <span class="font-weight-bold text-uppercase font-size-xs text-dark px-1">Tables examples</span>
+        </ng-template>
+        <div class="card card-box p-2 mb-5 mt-4">
+            <div class="table-responsive">
+                <table class="table table-striped text-nowrap table-bordered table-hover mb-0">
+                    <thead class="thead-light">
+                    <tr>
+                        <th class="text-center" style="width: 5%;">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="inputCheckbox1" type="checkbox">
+                                <label class="custom-control-label" for="inputCheckbox1">&nbsp;</label>
+                            </div>
+                        </th>
+                        <th>Company</th>
+                        <th>Date</th>
+                        <th class="text-center" style="width: 20%;">Status</th>
+                        <th>Employee</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="inputCheckbox2" type="checkbox">
+                                <label class="custom-control-label" for="inputCheckbox2">&nbsp;</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <button class="btn d-40 p-0 btn-pill btn-facebook mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'facebook']" class="font-size-lg"></fa-icon>
+                                </span>
+                                </button>
+                                <div>
+                                    <b>Facebook</b>
+                                    <span class="text-black-50 d-block">Social media company</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="align-box-row">
+                                16 September 2020
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge badge-warning h-auto py-0 px-3">Pending</span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-icon-wrapper mr-2">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                                </div>
+                                <div>
+                                    <a [routerLink]="" class="font-weight-bold text-black" title="...">Shanelle Wynn</a>
+                                    <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                                <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                        dropdownToggle type="button">
+                                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                </button>
+                                <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                    <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                        <li class="nav-item nav-item--header px-3">
+                                            <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link active">
+                                                <span>View details</span>
+                                                <div class="ml-auto badge badge-first">New</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                </div>
+                                                <span>Download</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                </div>
+                                                <span>Export to CSV</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                </div>
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="inputCheckbox22" type="checkbox">
+                                <label class="custom-control-label" for="inputCheckbox22">&nbsp;</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <button class="btn d-40 p-0 btn-pill btn-github mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'github']" class="font-size-lg"></fa-icon>
+                                </span>
+                                </button>
+                                <div>
+                                    <b>Github</b>
+                                    <span class="text-black-50 d-block">Recommended company</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="align-box-row text-danger">
+                                <b>17 September 2020</b>
+                                <span class="badge badge-neutral-info text-info ml-2">Due</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge badge-success h-auto py-0 px-3">Completed</span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-icon-wrapper mr-2">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                                </div>
+                                <div>
+                                    <a [routerLink]="" class="font-weight-bold text-black" title="...">Beck Simpson</a>
+                                    <span class="text-black-50 d-block">Frontend Developer</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                                <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                        dropdownToggle type="button">
+                                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                </button>
+                                <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                    <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                        <li class="nav-item nav-item--header px-3">
+                                            <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link active">
+                                                <span>View details</span>
+                                                <div class="ml-auto badge badge-first">New</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                </div>
+                                                <span>Download</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                </div>
+                                                <span>Export to CSV</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                </div>
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="inputCheckbox32" type="checkbox">
+                                <label class="custom-control-label" for="inputCheckbox32">&nbsp;</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <button class="btn d-40 p-0 btn-pill btn-instagram mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'instagram']" class="font-size-lg"></fa-icon>
+                                </span>
+                                </button>
+                                <div>
+                                    <b>Instagram</b>
+                                    <span class="text-black-50 d-block">Sharing images since 2000</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="align-box-row">
+                                18 September 2020
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge badge-danger h-auto py-0 px-3">Declined</span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-icon-wrapper mr-2">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                                </div>
+                                <div>
+                                    <a [routerLink]="" class="font-weight-bold text-black" title="...">Regan Norris</a>
+                                    <span class="text-black-50 d-block">Senior Project Manager</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                                <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                        dropdownToggle type="button">
+                                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                </button>
+                                <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                    <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                        <li class="nav-item nav-item--header px-3">
+                                            <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link active">
+                                                <span>View details</span>
+                                                <div class="ml-auto badge badge-first">New</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                </div>
+                                                <span>Download</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                </div>
+                                                <span>Export to CSV</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                </div>
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="inputCheckbox42" type="checkbox">
+                                <label class="custom-control-label" for="inputCheckbox42">&nbsp;</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <button class="btn d-40 p-0 btn-pill btn-twitter mr-3" tooltip="View details">
+                                <span class="btn-wrapper--icon">
+                                     <fa-icon [icon]="['fab', 'twitter']" class="font-size-lg"></fa-icon>
+                                </span>
+                                </button>
+                                <div>
+                                    <b>Twitter</b>
+                                    <span class="text-black-50 d-block">140 characters at a time</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="align-box-row">
+                                19 September 2020
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge badge-info h-auto py-0 px-3">Review</span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-icon-wrapper mr-2">
+                                    <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                                </div>
+                                <div>
+                                    <a [routerLink]="" class="font-weight-bold text-black" title="...">Finnlay Haney</a>
+                                    <span class="text-black-50 d-block">Professional Ingineer</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                                <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-neutral-first"
+                                        dropdownToggle type="button">
+                                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                                </button>
+                                <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                    <ul class="nav nav-neutral-first nav-pills flex-column pt-2 pb-3">
+                                        <li class="nav-item nav-item--header px-3">
+                                            <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link active">
+                                                <span>View details</span>
+                                                <div class="ml-auto badge badge-first">New</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                                </div>
+                                                <span>Download</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a [routerLink]="" class="nav-link">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                                </div>
+                                                <span>Export to CSV</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="" class="nav-link text-danger mx-3">
+                                                <div class="nav-link-icon">
+                                                    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                                </div>
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="divider"></div>
+            <div class="p-3 mt-4 bg-secondary rounded d-flex justify-content-center">
+                <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-primary"></pagination>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header-alt p-4">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Projects status</h6>
+                <p class="text-black-50 mb-0">Reports regarding the status of all available projects.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="card-body pt-2 px-4 pb-4">
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-alternate table-hover mb-0 table-borderless">
+                        <thead>
+                        <tr>
+                            <th>Software</th>
+                            <th class="text-center">Income</th>
+                            <th class="text-center">Expenses</th>
+                            <th class="text-left">Status</th>
+                            <th class="text-center" style="width: 15%">Trends</th>
+                            <th class="text-right">Totals</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Isaiah
+                                    Ruiz</a><span
+                                        class="text-black-50 d-block">Senior Web Developer</span></div>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold text-danger">-$254</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="text-danger font-weight-bold">-2,374</span>
+                            </td>
+                            <td class="text-left">
+                                <span class="badge badge-danger">Overdue</span>
+                            </td>
+                            <td>
+                                <ngx-trend [data]="[0, 10, 5, 22, 3.6, 11]" autoDraw="true" autoDrawDuration="3000"
+                                           autoDrawEasing="ease-in"
+                                           radius="15" smooth="true"
+                                           stroke="var(--danger)" strokeLinecap="round" strokeWidth="5"></ngx-trend>
+                            </td>
+                            <td class="text-right">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div [countUp]="2363" class="font-weight-bold font-size-lg pr-2"></div>
+                                    <fa-icon [icon]="['fas', 'arrow-down']"
+                                             class="font-size-sm opacity-5"></fa-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Inez
+                                    Conley</a><span
+                                        class="text-black-50 d-block">Project Manager</span></div>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold">$18,386</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="text-danger font-weight-bold">-6,310</span>
+                            </td>
+                            <td class="text-left">
+                                <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>
+                                <ngx-trend [data]="[3, 12, 5, 9, 8, 19, 4.6, 5]" autoDraw="true" autoDrawDuration="3000"
+                                           autoDrawEasing="ease-in"
+                                           radius="15" smooth="true"
+                                           stroke="var(--success)" strokeLinecap="round" strokeWidth="5"></ngx-trend>
+                            </td>
+                            <td class="text-right">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div [countUp]="584" class="font-weight-bold font-size-lg pr-2"></div>
+                                    <fa-icon [icon]="['fas', 'arrow-down']"
+                                             class="font-size-sm opacity-5"></fa-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Adyan
+                                    Sosa</a><span
+                                        class="text-black-50 d-block">User Experience Designer</span></div>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold">$6,356</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="text-warning">-374</span>
+                            </td>
+                            <td class="text-left">
+                                <span class="badge badge-first">Waiting</span>
+                            </td>
+                            <td>
+                                <ngx-trend [data]="[0, 10, 12, 14, 5, 22, 3.6, 11]" autoDraw="true" autoDrawDuration="3000"
+                                           autoDrawEasing="ease-in"
+                                           radius="15" smooth="true"
+                                           stroke="var(--warning)" strokeLinecap="round" strokeWidth="5"></ngx-trend>
+                            </td>
+                            <td class="text-right">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div [countUp]="483" class="font-weight-bold font-size-lg pr-2"></div>
+                                    <fa-icon [icon]="['fas', 'arrow-up']"
+                                             class="font-size-sm opacity-5"></fa-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                                    Simpson</a><span class="text-black-50 d-block">Senior Consultant</span></div>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold">$16,281</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="text-success">+684</span>
+                            </td>
+                            <td class="text-left">
+                                <span class="badge badge-success">Done</span>
+                            </td>
+                            <td>
+                                <ngx-trend [data]="[9, 8, 19, 4.6,3, 12, 5, 5]" autoDraw="true" autoDrawDuration="3000"
+                                           autoDrawEasing="ease-in"
+                                           radius="15" smooth="true"
+                                           stroke="var(--first)" strokeLinecap="round" strokeWidth="5"></ngx-trend>
+                            </td>
+                            <td class="text-right">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div class="font-weight-bold font-size-lg pr-2"> $12,23M</div>
+                                    <fa-icon [icon]="['fas', 'arrow-up']"
+                                             class="font-size-sm opacity-5"></fa-icon>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </tab>
+</tabset>

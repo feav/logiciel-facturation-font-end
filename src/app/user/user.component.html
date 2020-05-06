@@ -1,0 +1,102 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<p-table [columns]="cols" [value]="users" selectionMode="single" [responsive]="true" [loading]="showLoader"
+        [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize">
+    <ng-template pTemplate="caption">
+        <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
+            <div>        
+                <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                <input type="text" pInputText placeholder="Filtre par nom" [(ngModel)]="filterText" (input)="onFilterChange($event.target.value)" style="width: auto">
+            </div>
+            <button type="button" pButton icon="pi pi-plus" (click)="showModalToAdd()" label="Ajouteur un Utilisateur"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>{{rowData.nom}}</td>
+            <td>{{rowData.email}}</td>
+            <td>{{rowData.role.intitule}}</td>
+            <td>{{rowData.cree_le}}</td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+            <td>{{ rowData.modifie_le }}</td>
+            <td>
+                <span *ngIf="rowData.modifie_par != null">{{ rowData.modifie_par }}</span>
+                <span *ngIf="rowData.modifie_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
+    </ng-template>
+</p-table>
+
+<p-dialog [draggable]="false" position="center" [style]="{width: '500px', marginTop: '10px'}" [header]="dialogHeader" 
+            [(visible)]="showCreateUserModalForm" [focusOnShow]="false" showEffect="fade" [modal]="true">
+    <form [formGroup]="createMode ? createUserFormGroup : updateUserFormGroup">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="name">Nom de l'Utilisateur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="name" id="name"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="email">Adresse e-mail *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="email" formControlName="email" id="email"/>
+                </div>
+            </div>
+            <div class="ui-g-12" *ngIf="createMode">
+                <div class="ui-g-4">
+                    <label for="password">Mot de passe *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText [required]="createMode" type="password" formControlName="password" id="password"/>
+                </div>
+            </div>
+            <div class="ui-g-12" *ngIf="createMode">
+                <div class="ui-g-4">
+                    <label for="password2">Saisissez de nouveau le mot de passe *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText [required]="createMode" type="password" formControlName="password2" id="password2"/>
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="roles">Sélectionnez un Poste *</label>
+                </div>
+                <div class="ui-g-8">
+                    <p-dropdown scrollHeight="150px" id="roles" filter="true" [options]="roles" filterPlaceholder="Rechercher..."
+                                appendTo="body" [virtualScroll]="true" itemSize="30" formControlName="role"
+                                resetFilterOnHide="true" emptyFilterMessage="Aucune correspondance pour votre recherche">
+                    </p-dropdown>
+                </div>
+            </div>
+        </div>
+    </form>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
+            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode" (click)="deleteUser()" label="Supprimer"></button>
+            <button type="button" class="ui-button-info" [disabled]="!updateUserFormGroup.valid" pButton icon="pi pi-refresh" *ngIf="!createMode" (click)="updateUser()" label="Modifier"></button>
+            <button type="button" class="ui-button-success" [disabled]="!createUserFormGroup.valid" pButton icon="pi pi-check" *ngIf="createMode" (click)="createUser()" label="Créer"></button>
+            <button type="button" class="ui-button-secondary" pButton icon="pi pi-times" (click)="showCreateUserModalForm = false" label="Annuler"></button>
+        </div>
+    </p-footer>
+</p-dialog>

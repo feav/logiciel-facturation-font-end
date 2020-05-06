@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="font-weight-bold font-size-lg mb-3">
+            Content source
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <div class="flex-grow-1 mr-3">
+                <input #inputTarget class="form-control form-control-lg" value="Input value to be copied here..."/>
+            </div>
+            <button (cbOnSuccess)="showNotification( 'danger', 'Text has been copied from a form input element.' )" [ngxClipboard]="inputTarget" class="btn btn-warning">Copy content from input</button>
+        </div>
+        <div class="divider my-4"></div>
+        <div class="form-group">
+            <div class="input-group">
+                <input #inputTarget2 class="form-control form-control-sm" value="Input with side button & icon"/>
+                <div class="input-group-append">
+                    <button (cbOnSuccess)="showNotification( 'info', 'Text has been copied from the second input element.' )" [ngxClipboard]="inputTarget2" class="btn btn-sm btn-info btn-transition-none" tooltip="Click to copy">
+                        <fa-icon [icon]="['fas', 'save']"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="font-weight-bold font-size-lg mb-3">
+            Test copy
+        </div>
+        <alert type="warning">
+            Paste here the content you copied when you clicked the "Copy" button.
+        </alert>
+        <textarea class="form-control font-size-sm" id="" name="" rows="2"></textarea>
+    </div>
+</div>
+
+<notifier-container></notifier-container>

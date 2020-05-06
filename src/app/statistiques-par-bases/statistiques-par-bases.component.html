@@ -1,0 +1,54 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<div class="row mb-3">
+    <div class="col-lg-3 col-sm-12">
+        <button class="btn btn-gradient btn-gradient-inverse bg-sunny-morning" style="width: 100%;">
+            Total Volume:<br>{{ totalVolume }}
+        </button>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+        <button class="btn btn-gradient bg-grow-early" style="width: 100%;">
+            Total Chiffre d'Affaires:<br>{{ totalCA.toFixed(2) }} €
+        </button>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+        <button class="btn btn-gradient bg-love-kiss" style="width: 100%;">
+            Total Prix d'Achat:<br>{{ totalPA.toFixed(2) }} €
+        </button>
+    </div>
+    <div class="col-lg-3 col-sm-12">
+        <button class="btn btn-gradient bg-night-sky" style="width: 100%;">
+            Total Prix Marge:<br>{{ totalMarge.toFixed(2) }} €
+        </button>
+    </div>
+</div>
+
+<p-table [columns]="cols" [value]="tab" [paginator]="true" [responsive]="true"
+        [rows]="pagingOptions.pageSize" [loading]="showLoader">
+    <ng-template pTemplate="caption">
+        <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
+            <div id="reportrange">
+                <i class="pi pi-calendar"></i>&nbsp;
+                <span>{{ cb() }}</span>
+                <i class="pi pi-caret-down"></i>
+            </div>
+            <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltre()">Valider Filtre</button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>{{ rowData.nom }}</td>
+            <td>{{ rowData.resultat == null ? '0' : (rowData.resultat*rowData.rem).toFixed(2) }} €</td>
+            <td>{{ rowData.pa.toFixed(2) }} €</td>
+            <td>{{ ((rowData.resultat*rowData.rem) - rowData.pa).toFixed(2) }} €</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <!-- <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator> -->
+    </ng-template>
+</p-table>

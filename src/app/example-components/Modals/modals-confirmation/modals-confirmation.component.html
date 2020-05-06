@@ -1,0 +1,103 @@
+<button (click)="openModal(successModal)" class="btn btn-primary m-2" type="button">Success confirm modal</button>
+<ng-template #successModal>
+    <div class="text-center p-5">
+        <div class="avatar-icon-wrapper rounded-circle m-0">
+            <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-neutral-success text-success m-0 d-130">
+                <fa-icon [icon]="['far', 'lightbulb']" class="d-flex align-self-center display-3"></fa-icon>
+            </div>
+        </div>
+        <h4 class="font-weight-bold mt-4">Do you want to create this?</h4>
+        <p class="mb-0 font-size-lg text-muted">You can later review your options.</p>
+        <div class="pt-4">
+            <button (click)="decline()" class="btn btn-pill btn-neutral-dark mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Cancel
+                </span>
+            </button>
+            <button (click)="confirm()" class="btn btn-pill btn-success mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Create
+                </span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+<button (click)="openModal(errorModal)" class="btn btn-primary m-2" type="button">Error confirm modal</button>
+<ng-template #errorModal>
+    <div class="text-center p-5">
+        <div class="avatar-icon-wrapper rounded-circle m-0">
+            <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-neutral-danger text-danger m-0 d-130">
+                <fa-icon [icon]="['fas', 'times']" class="d-flex align-self-center display-3"></fa-icon>
+            </div>
+        </div>
+        <h4 class="font-weight-bold mt-4">Are you sure you want to delete this entry?</h4>
+        <p class="mb-0 font-size-lg text-muted">You cannot undo this operation.</p>
+        <div class="pt-4">
+            <button (click)="decline()" class="btn btn-pill btn-neutral-secondary mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Cancel
+                </span>
+            </button>
+            <button (click)="confirm()" class="btn btn-pill btn-danger mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Delete
+                </span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+<button (click)="openModal(warningModal)" class="btn btn-primary m-2" type="button">Warning confirm modal</button>
+<ng-template #warningModal>
+    <div class="text-center p-5">
+        <div class="avatar-icon-wrapper rounded-circle m-0">
+            <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-warning text-white m-0 d-130">
+                <fa-icon [icon]="['far', 'dot-circle']" class="d-flex align-self-center display-3"></fa-icon>
+            </div>
+        </div>
+        <div class="font-weight-bold font-size-lg mt-4">Double checking you options?</div>
+        <p class="mb-0 mt-2 text-muted">Use the helper classes to style these paragraphs!</p>
+        <div class="pt-4">
+            <button (click)="decline()" class="btn btn-pill btn-neutral-secondary mx-1" type="button">
+                    <span class="btn-wrapper--label">
+                        Cancel
+                    </span>
+            </button>
+            <button (click)="confirm()" class="btn btn-pill btn-outline-warning mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Yes, do it
+                </span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+<button (click)="openModal(infoModal)" class="btn btn-primary m-2" type="button">Info confirm modal</button>
+<ng-template #infoModal>
+    <div class="text-center p-5">
+        <div class="avatar-icon-wrapper rounded-circle m-0">
+            <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-neutral-first text-first m-0 d-130">
+                <fa-icon [icon]="['far', 'keyboard']" class="d-flex align-self-center display-3"></fa-icon>
+            </div>
+        </div>
+        <h4 class="font-weight-bold mt-4">Are you sure?</h4>
+        <p class="mb-0 text-black-50">You can change your mind later.</p>
+        <div class="pt-4">
+            <button (click)="decline()" class="btn btn-pill btn-neutral-secondary text-danger mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Cancel
+                </span>
+            </button>
+            <button (click)="confirm()" class="btn btn-pill btn-first mx-1" type="button">
+                <span class="btn-wrapper--label">
+                    Add
+                </span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+<div class="alert alert-info mt-4 mb-0 text-center">
+    {{message}}
+</div>

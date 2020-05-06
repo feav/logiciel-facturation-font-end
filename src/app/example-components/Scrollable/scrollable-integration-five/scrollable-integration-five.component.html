@@ -1,0 +1,151 @@
+<div class="card card-box shadow-none">
+    <div class="card-header bg-light">
+        <div class="card-header--title">
+            <small class="d-block text-uppercase mt-1">Targets</small>
+            <b>Monthly Stats</b>
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-link btn-link-primary btn-transition-none p-0 text-primary"
+              tooltip="View options">
+                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-xl"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+        <ng-container *ngTemplateOutlet="progressbarContent"></ng-container>
+    </perfect-scrollbar>
+    <div class="card-footer bg-light text-center">
+        <button class="btn btn-sm btn-first" type="button">
+            <span class="btn-wrapper--icon">
+                 <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+            </span>
+            <span class="btn-wrapper--label">
+                Generate reports
+            </span>
+        </button>
+    </div>
+</div>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+    <div class="btn-group" dropdown>
+        <button type="button" class="btn btn-sm mx-1 btn-primary btn-transition-none dropdown-toggle" dropdownToggle>
+            Inside Dropdown
+        </button>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl overflow-hidden p-0">
+            <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+                    <ng-container *ngTemplateOutlet="progressbarContent"></ng-container>
+            </perfect-scrollbar>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-sm btn-primary btn-transition-none mx-1"
+            containerClass="popover-custom-wrapper overflow-hidden popover-custom-md" [popover]="progressbarPopover"
+            [outsideClick]="true">
+        Inside Popover
+    </button>
+</div>
+
+<ng-template #progressbarContent>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="align-box-row">
+                <div class="mr-4">
+                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                      tooltip="View details" placement="right">
+                        <div class="dot-badge"></div>
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar7.jpg" alt="..."></div>
+                    </a>
+                </div>
+                <div class="flex-grow-1">
+                    <progressbar type="success" [animate]="true" [value]="61"
+                                 class="progress-bar-rounded progress-animated-alt">61%
+                    </progressbar>
+                </div>
+                <div class="line-height-sm text-center ml-4">
+                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                    <b class="font-size-lg text-success">
+                        <small class="text-black-50">$</small>
+                        1,628
+                    </b>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="align-box-row">
+                <div class="mr-4">
+                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                      tooltip="View details" placement="right">
+                        <div class="dot-badge"></div>
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar5.jpg" alt="..."></div>
+                    </a>
+                </div>
+                <div class="flex-grow-1">
+                    <progressbar type="info" [animate]="true" [value]="44"
+                                 class="progress-bar-rounded progress-animated-alt">44%
+                    </progressbar>
+                </div>
+                <div class="line-height-sm text-center ml-4">
+                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                    <b class="font-size-lg text-info">
+                        <small class="text-black-50">$</small>
+                        7,389
+                    </b>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="align-box-row">
+                <div class="mr-4">
+                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                      tooltip="View details" placement="right">
+                        <div class="dot-badge"></div>
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar1.jpg" alt="..."></div>
+                    </a>
+                </div>
+                <div class="flex-grow-1">
+                    <progressbar type="danger" [animate]="true" [value]="29"
+                                 class="progress-bar-rounded progress-animated-alt">29%
+                    </progressbar>
+                </div>
+                <div class="line-height-sm text-center ml-4">
+                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                    <b class="font-size-lg text-danger">
+                        <small class="text-black-50">$</small>
+                        8,493
+                    </b>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="align-box-row">
+                <div class="mr-4">
+                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                      tooltip="View details" placement="right">
+                        <div class="dot-badge"></div>
+                        <div class="avatar-icon"><img src="assets/images/avatars/avatar2.jpg" alt="..."></div>
+                    </a>
+                </div>
+                <div class="flex-grow-1">
+                    <progressbar type="warning" [animate]="true" [value]="38"
+                                 class="progress-bar-rounded progress-animated-alt">38%
+                    </progressbar>
+                </div>
+                <div class="line-height-sm text-center ml-4">
+                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                    <b class="font-size-lg text-warning">
+                        <small class="text-black-50">$</small>
+                        2,594
+                    </b>
+                </div>
+            </div>
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #progressbarPopover>
+    <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+            <ng-container *ngTemplateOutlet="progressbarContent"></ng-container>
+    </perfect-scrollbar>
+</ng-template>

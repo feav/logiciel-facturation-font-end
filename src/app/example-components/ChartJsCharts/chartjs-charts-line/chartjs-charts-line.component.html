@@ -1,0 +1,31 @@
+<div class="d-block" style="height: 200px;">
+    <canvas height="200" (chartClick)="chartClicked($event)" (chartHover)="chartHovered($event)" [chartType]="lineChartType"
+            [colors]="lineChartColors"
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [legend]="lineChartLegend"
+            [options]="lineChartOptions"
+            [plugins]="lineChartPlugins"
+            baseChart></canvas>
+</div>
+
+<div class="table-responsive mt-4">
+    <table class="table table-bordered table-hover table-striped table-condensed mb-0">
+        <tr>
+            <th *ngFor="let label of lineChartLabels">{{label}}</th>
+        </tr>
+        <tr *ngFor="let d of lineChartData; let i=index" [class]="'line-'+i">
+            <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+    <button (click)="randomize()" class="btn btn-sm btn-primary m-2">Randomize</button>
+    <button (click)="pushOne()" class="btn btn-sm btn-primary m-2">Push</button>
+    <button (click)="changeColor()" class="btn btn-sm btn-primary m-2">Recolor</button>
+    <button (click)="hideOne()" class="btn btn-sm btn-primary m-2">Toggle Series B</button>
+    <button (click)="changeLabel()" class="btn btn-sm btn-primary m-2">Change Label</button>
+</div>

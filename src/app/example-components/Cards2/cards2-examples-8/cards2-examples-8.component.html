@@ -1,0 +1,181 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-body p-0">
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">2,345</b>
+                                <span class="text-black-50 d-block">users</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'keyboard']" class="font-size-xxl text-danger"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">3,568</b>
+                                <span class="text-black-50 d-block">clicks</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-info"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">$9,693</b>
+                                <span class="text-black-50 d-block">revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider mt-4"></div>
+                <div class="text-center py-4">
+                    <button class="btn btn-sm btn-primary" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                        </span>
+                        <span class="btn-wrapper--label">
+                            Generate reports
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer bg-light text-center">
+                <div class="pt-4 pr-4 pl-4">
+                    <apx-chart
+                            [chart]="{
+                                        type: 'line',
+                                        height: '100',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                            [colors]="['#3c44b1']"
+                            [markers]="{
+                                        size: 0
+                                    }"
+                            [series]="[
+                                      {
+                                        name: 'Customers',
+                                        data: [47, 38, 56, 24, 45, 54, 38, 47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                            [stroke]="{
+                                            color: '#4191ff',
+                                            curve: 'smooth',
+                                            width: 4
+                                    }"
+                            [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                            [yaxis]="{
+                                        min: 0
+                                    }"
+                    ></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-body pb-1">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">2,345</b>
+                                <span class="text-black-50 d-block">users</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'keyboard']" class="font-size-xxl text-danger"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">3,568</b>
+                                <span class="text-black-50 d-block">clicks</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-info"></fa-icon>
+                            </div>
+                            <div class="mt-3 line-height-sm">
+                                <b class="font-size-lg">$9,693</b>
+                                <span class="text-black-50 d-block">revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 pr-4 pl-4">
+                    <apx-chart
+                            [chart]="{
+                                        type: 'line',
+                                        height: '100',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                            [colors]="['#f4772e']"
+                            [markers]="{
+                                        size: 0
+                                    }"
+                            [series]="[
+                                      {
+                                        name: 'Sales',
+                                        data: [47, 38, 56, 24, 45, 54, 38, 47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                            [stroke]="{
+                                            color: '#4191ff',
+                                            curve: 'smooth',
+                                            width: 3
+                                    }"
+                            [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                            [yaxis]="{
+                                        min: 0
+                                    }"
+                    ></apx-chart>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="my-2 text-center">
+                <fa-icon [icon]="['fas', 'arrow-up']" class="text-danger"></fa-icon>
+                <span class="text-danger px-1">15.4%</span>
+                <span class="text-black-50">new sales today</span>
+            </div>
+            <div class="card-footer bg-light p-4 text-center">
+                <button class="btn btn-first" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                        </span>
+                    <span class="btn-wrapper--label">
+                        View latest sales
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

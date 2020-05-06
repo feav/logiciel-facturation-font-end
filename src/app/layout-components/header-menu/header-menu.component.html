@@ -1,0 +1,213 @@
+<div class="app-header-menu">
+	<span class="position-relative" dropdown>
+	<button class="btn mr-3 btn-transition-none btn-sm btn-neutral-dark" dropdownToggle type="button">
+		Mega menu
+	</button>
+	<div
+            *dropdownMenu
+            class="dropdown-menu dropdown-menu-xxl overflow-hidden p-0 mt-2"
+    >
+		<div class="dropdown-mega-menu-lg">
+			<div class="no-gutters row">
+			<div class="col-xl-4 col-md-6 p-2">
+				<div class="divider-v divider-v-lg"></div>
+				<ul class="nav nav-pills nav-neutral-first flex-column p-2">
+					<li class="nav-item nav-item-header pb-2 text-capitalize text-first font-size-lg">
+						<span>Dashboards</span>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/dashboard-analytics']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Analytics</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/dashboard-reports']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Reports Management</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/dashboard-real-estate']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Real Estate</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/dashboard-server-status']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Server Status</span>
+							<div class="ml-auto badge badge-first">23</div>
+						</a>
+					</li>
+					<li class="dropdown-divider mb-3"></li>
+					<li class="nav-item pt-1">
+						<a [routerLink]="['/dashboard-default']" class="btn btn-block btn-outline-first btn-sm">
+							<span class="btn-wrapper--label">Learn more</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xl-4 col-md-6 p-2">
+				<div class="divider-v divider-v-lg"></div>
+				<ul class="nav nav-pills nav-neutral-success flex-column p-2">
+					<li class="nav-item nav-item-header pb-2 text-capitalize text-success font-size-lg">
+						<span>Applications</span>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/applications-calendar']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Calendar</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/applications-chat']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Chat</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/applications-contacts']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Contacts</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/applications-file-manager']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>File Manager</span>
+						</a>
+					</li>
+					<li class="dropdown-divider mb-3"></li>
+					<li class="nav-item pt-1">
+						<a [routerLink]="['/applications-mail']" class="btn btn-block btn-outline-success btn-sm">
+							<span class="btn-wrapper--label">Learn more</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xl-4 d-none d-xl-block p-2">
+				<ul class="nav nav-pills nav-neutral-danger flex-column p-2">
+					<li class="nav-item nav-item-header pb-2 text-capitalize text-danger font-size-lg">
+						<span>Components</span>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/cards-4']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Cards examples</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/regular-tables-2']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Tables examples</span>
+							<div class="ml-auto badge badge-pill badge-neutral-danger text-danger">New</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/forms-wizard']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Form wizards</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/pricing-tables']" class="nav-link pl-3" routerLinkActive="active">
+							<div class="nav-link-icon w-auto mr-2">
+								<fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xs opacity-3"></fa-icon>
+							</div>
+							<span>Pricing tables</span>
+						</a>
+					</li>
+					<li class="dropdown-divider mb-3"></li>
+					<li class="nav-item pt-1">
+						<a [routerLink]="['/navigation-menus']" class="btn btn-block btn-outline-danger btn-sm">
+							<span class="btn-wrapper--label">Learn more</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+</span>
+    <span class="position-relative" dropdown>
+	<button class="btn mr-3 btn-transition-none btn-sm btn-neutral-dark" dropdownToggle type="button">
+		Dashboards
+	</button>
+	<div
+            *dropdownMenu
+            class="dropdown-menu overflow-hidden border-0 bg-midnight-bloom p-3 mt-2"
+    >
+		<div class="dropdown-mega-menu-md">
+		<div class="text-center">
+	  <div class="font-weight-bold font-size-lg mb-1 text-white">Dashboards</div>
+	  <p class="text-white-50 mb-3">There are currently <b class="text-white">12</b> dashboard layouts available!</p>
+	</div>
+		<div class="d-flex flex-wrap">
+		<div class="w-50 p-2">
+			<a [routerLink]="['/dashboard-projects']" class="btn card card-box text-left d-flex justify-content-center px-3 py-2 w-100 border-0" routerLinkActive="active" title="">
+				<div>
+					<i-feather class="h1 d-block mb-4 text-success line-height-1"
+                               name="grid"></i-feather>
+					<div class="font-weight-bold font-size-lg text-black">Projects</div>
+					<div class="font-size-md mb-1 text-black-50">Dashboard 9</div>
+				</div>
+			</a>
+		</div>
+		<div class="w-50 p-2">
+			<a [routerLink]="['/dashboard-helpdesk']" class="btn card card-box text-left d-flex justify-content-center px-3 py-2 w-100 border-0" routerLinkActive="active" title="">
+				<div>
+					<i-feather class="h1 d-block mb-4 text-danger line-height-1"
+                               name="users"></i-feather>
+					<div class="font-weight-bold font-size-lg text-black">Helpdesk</div>
+					<div class="font-size-md mb-1 text-black-50">Dashboard 4</div>
+				</div>
+			</a>
+		</div>
+		<div class="w-50 p-2">
+			<a [routerLink]="['/dashboard-crm-manager']" class="btn card card-box text-left d-flex justify-content-center px-3 py-2 w-100 border-0" routerLinkActive="active" title="">
+				<div>
+					<i-feather class="h1 d-block mb-4 text-warning line-height-1"
+                               name="settings"></i-feather>
+					<div class="font-weight-bold font-size-lg text-black">CRM UI</div>
+					<div class="font-size-md mb-1 text-black-50">Dashboard 6</div>
+				</div>
+			</a>
+		</div>
+		<div class="w-50 p-2">
+			<a [routerLink]="['/dashboard-customers']" class="btn card card-box text-left d-flex justify-content-center px-3 py-2 w-100 border-0" routerLinkActive="active" title="">
+				<div>
+					<i-feather class="h1 d-block mb-4 text-first line-height-1"
+                               name="layers"></i-feather>
+					<div class="font-weight-bold font-size-lg text-black">Customers</div>
+					<div class="font-size-md mb-1 text-black-50">Dashboard 12</div>
+				</div>
+			</a>
+		</div>
+	</div>
+		</div>
+	</div>
+</span>
+</div>

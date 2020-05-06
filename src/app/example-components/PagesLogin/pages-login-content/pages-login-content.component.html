@@ -1,0 +1,76 @@
+<div class="app-main">
+    <a class="btn btn-lg btn-go-back btn-outline-first" href="javascript:history.back()">
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+            </span>
+        <span class="btn-wrapper--label">Back to previous page</span>
+    </a>
+    <div class="app-content p-0">
+        <div class="app-content--inner d-flex align-items-center">
+            <div class="flex-grow-1 w-100 d-flex align-items-center">
+                <div class="bg-composed-wrapper--content py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 d-none d-lg-flex align-items-center">
+                                <img alt="..." class="w-100 mx-auto d-block img-fluid" src="assets/images/illustrations/login.svg">
+                            </div>
+                            <div class="col-lg-7 col-sm-12 d-flex align-items-center">
+                                <div class="pl-0 pl-md-5">
+                                    <div class="text-black mt-3">
+                                        <span class="text-left text-sm-center">
+                                            <h1 class="display-3 text-lg-left text-center mb-3 font-weight-bold">
+                                                Login to your account
+                                            </h1>
+                                            <p class="font-size-lg text-lg-left text-center mb-0 text-black-50">
+                                                We're glad you're glad crunching on your dashboard. Login in below to continue.
+                                            </p>
+                                        </span>
+                                        <div class="bg-white rounded p-4 my-4">
+                                            <div class="text-black-50 text-center mb-3">
+                                                Sign in with
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button class="btn btn-facebook btn-block" tooltip="Facebook" type="button">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                                            </span>
+                                                    </button>
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn btn-twitter btn-block" tooltip="Twitter" type="button">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                                            </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Email address</label>
+                                                    <input class="form-control" placeholder="yourname@yourmail.com" type="email">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Password</label>
+                                                        <a [routerLink]="['/pages-recover-password']">Forgot password?</a>
+                                                    </div>
+                                                    <input class="form-control" placeholder="Enter your password" type="password">
+                                                </div>
+
+                                                <button class="btn btn-lg btn-second btn-block">Login</button>
+                                            </form>
+                                        </div>
+                                        <div class="text-center pt-4 text-black-50">Don't have an account? <a [routerLink]="['/pages-register']">Create an Account</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,160 @@
+<alert type="info" class="font-size-sm font-weight-bold">
+    Drag files in the sections below to start the upload process.
+</alert>
+<div class="row">
+    <div class="col-xl-6">
+        <div class="dropzone dropzone-container dz-single dz-clickable">
+            <div (fileOver)="fileOverBase($event)"
+                 [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+                 [uploader]="uploader"
+                 class="dz-default dz-message"
+                 ng2FileDrop>
+                Base drop zone
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="dropzone dropzone-container dz-single dz-clickable">
+            <div (fileOver)="fileOverAnother($event)"
+                 [ngClass]="{'another-file-over-class': hasAnotherDropZoneOver}"
+                 [uploader]="uploader"
+                 class="dz-default dz-message"
+                 ng2FileDrop>
+                Another drop zone
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="divider my-5"></div>
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="rounded-sm bg-secondary p-4 mb-3">
+            <div class="font-weight-bold pb-2">Multiple files upload</div>
+            <div class="custom-file">
+                <input [uploader]="uploader" class="custom-file-input" id="multipleFileUpload" multiple ng2FileSelect type="file">
+                <label class="custom-file-label" for="multipleFileUpload">Choose file</label>
+            </div>
+            <div class="divider my-3"></div>
+            <div class="font-weight-bold pb-2">Single file upload</div>
+            <div class="custom-file">
+                <input [uploader]="uploader" class="custom-file-input" id="singleFileUpload" ng2FileSelect type="file">
+                <label class="custom-file-label" for="singleFileUpload">Choose file</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <div class="d-flex justify-content-between mb-2">
+            <h3 class="font-weight-bold mb-0 display-5">Upload queue</h3>
+            <p class="font-size-lg text-black-50">Queue length: <b>{{ uploader?.queue?.length }}</b></p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th width="30%">Name</th>
+                    <th>Size</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of uploader.queue">
+                    <td><strong>{{ item?.file?.name }}</strong></td>
+                    <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+                    <td *ngIf="uploader.options.isHTML5">
+                        <div class="progress">
+                            <div [ngStyle]="{ 'width': item.progress + '%' }" class="progress-bar" role="progressbar"></div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span *ngIf="item.isSuccess" class="badge badge-success">Success</span>
+                        <span *ngIf="item.isCancel" class="badge badge-warning">Cancel</span>
+                        <span *ngIf="item.isError" class="badge badge-danger">Error</span>
+                    </td>
+                    <td nowrap>
+                        <button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess" class="btn btn-success btn-sm mx-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fas', 'upload']"></fa-icon>
+                        </span>
+                            <span class="btn-wrapper--label">
+                            Upload
+                        </span>
+                        </button>
+                        <button (click)="item.cancel()" [disabled]="!item.isUploading" class="btn btn-warning btn-sm mx-1" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                        </span>
+                            <span class="btn-wrapper--label">
+                            Cancel
+                        </span>
+                        </button>
+                        <button (click)="item.remove()" class="btn btn-danger mx-1 btn-sm" type="button" tooltip="Remove">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['far', 'trash-alt']"></fa-icon>
+                        </span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="uploader?.queue?.length === 0">
+                    <td colspan="5">
+                        <div class="text-center font-size-lg py-3 text-black-50">
+                            There are no files uploaded yet!
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="pr-4 font-weight-bold display-5">Queue progress:</div>
+                <div class="progress flex-grow-1">
+                    <div [ngStyle]="{ 'width': uploader.progress + '%' }" class="progress-bar" role="progressbar"></div>
+                </div>
+            </div>
+            <button (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" class="btn btn-success btn-sm mx-2" type="button">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fas', 'upload']"></fa-icon>
+                </span>
+                <span class="btn-wrapper--label">
+                    Upload all
+                </span>
+            </button>
+            <button (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading" class="btn btn-warning btn-sm mx-2" type="button">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                </span>
+                <span class="btn-wrapper--label">
+                    Cancel all
+                </span>
+            </button>
+            <button (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length" class="btn btn-outline-danger btn-sm mx-2" type="button">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['far', 'trash-alt']"></fa-icon>
+                </span>
+                <span class="btn-wrapper--label">
+                    Remove all
+                </span>
+            </button>
+        </div>
+        <div class="card card-box shadow-none mb-5">
+            <div class="card-header">
+                <h5 class="card-header--title">Response</h5>
+            </div>
+            <div class="card-body text-center">
+
+                <div [hidden]="response" class="text-center font-size-lg text-warning">
+                    Upload some dummy files to see a response in this section!
+                </div>
+
+                {{ response }}
+            </div>
+        </div>
+    </div>
+</div>
+

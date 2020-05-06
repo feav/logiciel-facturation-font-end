@@ -1,0 +1,27 @@
+<div class="text-center">
+  <button [swal]="['Success', 'This is a success notification alert box!', 'success']" type="button" class="btn-lg btn m-2 btn-success">Success</button>
+  <button [swal]="['Info', 'This is an info notification alert box!', 'info']" type="button" class="btn-lg btn m-2 btn-info">Info</button>
+  <button [swal]="['Warning', 'This is an warning notification alert box!', 'warning']" type="button" class="btn-lg btn m-2 btn-warning">Warning</button>
+  <button [swal]="['Error', 'This is an error notification alert box!', 'error']" type="button" class="btn-lg btn m-2 btn-danger">Danger</button>
+
+  <div class="divider my-4"></div>
+
+  <button type="button" class="btn m-2 btn-primary" [swal]="deleteSwal">Confirmation Button</button>
+  <button class="btn m-2 btn-primary"
+          [swal]="{ title: 'Enter your email', input: 'email' }"
+          (confirm)="saveEmail($event)"
+          (cancel)="handleRefusalToSetEmail($event)">
+
+    Input Validation
+  </button>
+</div>
+
+<swal
+        #deleteSwal
+        title="Delete this file?"
+        text="This cannot be undone"
+        type="question"
+        [showCancelButton]="true"
+        [focusCancel]="true"
+        (confirm)="saveEmail($event)">
+</swal>

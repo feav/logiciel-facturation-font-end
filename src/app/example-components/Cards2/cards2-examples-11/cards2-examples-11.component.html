@@ -1,0 +1,267 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header-alt d-flex justify-content-between p-4">
+                <div>
+                    <h6 class="font-weight-bold font-size-lg mb-1 text-black">Weekly Sales</h6>
+                    <p class="text-black-50 mb-0">Reports for what we sold this week.</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="btn-group" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-second p-0 font-size-xl text-muted dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                        </button>
+                        <div *dropdownMenu
+                             class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                            <div class="grid-menu grid-menu-2col">
+                                <div class="no-gutters row">
+                                    <div class="col-sm-6">
+                                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                                type="button">
+                                            <fa-icon [icon]="['far', 'file-excel']"
+                                                     class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                            <div class="font-weight-bold text-black">Statistics</div>
+                                            <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                                type="button">
+                                            <fa-icon [icon]="['far', 'chart-bar']"
+                                                     class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                            <div class="font-weight-bold text-black">Tasks</div>
+                                            <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="sparkline-full-wrapper px-5 pt-3 m-0 bg-secondary">
+                <canvas [chartType]="'line'"
+                        [colors]="chartSuccessColor"
+                        [datasets]="chartDataset1"
+                        [labels]="chartLabels1"
+                        [options]="chartOptions1"
+                        baseChart></canvas>
+            </div>
+            <div class="divider"></div>
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1 font-weight-bold font-size-xl">76%</div>
+                        <progressbar [animate]="true" [value]="76" class="progress-xs"
+                                     type="danger">
+                        </progressbar>
+                        <div class="text-muted pt-1">
+                            Sales
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1 font-weight-bold font-size-xl">23%</div>
+                        <progressbar [animate]="true" [value]="23" class="progress-xs"
+                                     type="info">
+                        </progressbar>
+                        <div class="text-muted pt-1">
+                            Profiles
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1 font-weight-bold font-size-xl">51%</div>
+                        <progressbar [animate]="true" [value]="51" class="progress-xs"
+                                     type="warning">
+                        </progressbar>
+                        <div class="text-muted pt-1">
+                            Tickets
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Finance statistics</h6>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <apx-chart
+                            [chart]="{
+                                type: 'area',
+                                height: '265'
+                            }"
+                            [colors]="['#4191ff', '#f83245']"
+                            [dataLabels]="{
+                              enabled: false
+                            }"
+                            [fill]="{
+                              opacity: 1,
+                              colors: ['#4191ff', '#f83245']
+                            }"
+                            [grid]="{
+                    strokeDashArray: '5',
+                    borderColor: 'rgba(125, 138, 156, 0.3)'
+                }"
+                            [series]="[
+                    {
+                      name: 'Net Profit',
+                      data: [31, 40, 28, 51, 42, 109, 100]
+                    },
+                    {
+                      name: 'Net Loss',
+                      data: [11, 32, 45, 32, 34, 52, 41]
+                    }
+                  ]"
+
+                            [stroke]="{
+                    curve: 'smooth'
+                  }"
+                    ></apx-chart>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mb-4 pr-4">
+                        <div class="font-size-xl font-weight-bold">
+                            $3485
+                        </div>
+                        <div class="font-size-md font-weight-bold text-black-50">Income</div>
+                        <apx-chart
+                                [chart]="{
+                                        type: 'bar',
+                                        height: 60,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                [colors]="['#f4772e']"
+                                [markers]="{
+                                        size: 0
+                                    }"
+                                [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [47, 38, 56, 24,43, 24, 56, 56, 24, 65]
+                                      }
+                                    ]"
+                                [stroke]="{
+                                            color: '#4191ff',
+                                            width: 0
+                                    }"
+                                [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                                [yaxis]="{
+                                        min: 0
+                                    }"
+                        ></apx-chart>
+                    </div>
+                    <div class="mb-4 pr-4">
+                        <div class="font-size-xl font-weight-bold">
+                            $784
+                        </div>
+                        <div class="font-size-md font-weight-bold text-black-50">Expenses</div>
+                        <apx-chart
+                                [chart]="{
+                                        type: 'bar',
+                                        height: 60,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                [colors]="['#1bc943']"
+                                [markers]="{
+                                        size: 0
+                                    }"
+                                [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [ 38, 43, 24, 56,43, 24, 56, 35, 56, 65]
+                                      }
+                                    ]"
+                                [stroke]="{
+                                            color: '#1bc943',
+                                            width: 0
+                                    }"
+                                [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                                [yaxis]="{
+                                        min: 0
+                                    }"
+                        ></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h6 class="font-size-xl mb-3 text-dark">Sales statistics</h6>
+            </div>
+            <div class="sparkline-full-wrapper sparkline-full-wrapper--xxl px-4 m-0">
+                <canvas [chartType]="'line'"
+                        [colors]="chartColor2"
+                        [datasets]="chartDataset2"
+                        [labels]="chartLabels2"
+                        [options]="chartOptions2"
+                        baseChart></canvas>
+            </div>
+            <div class="bg-neutral-dark mt-4 text-center">
+                <div aria-label="Basic example" class="btn-group btn-group-sm m-4" role="group">
+                    <button class="btn btn-primary active" type="button">Last week</button>
+                    <button class="btn btn-primary" type="button">Last month</button>
+                    <button class="btn btn-primary" type="button">Last year</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Performance</h6>
+                <p class="text-black-50 mb-0">Portfolio performance for selected period.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="font-weight-bold">Orders</div>
+                            <div class="font-size-lg font-weight-bold text-danger">
+                                345
+                            </div>
+                        </div>
+                        <div>
+                            <progressbar [animate]="true" [value]="65" type="danger">65%</progressbar>
+                            <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                <div>Target</div>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="font-weight-bold">Customers</div>
+                            <div class="font-size-lg font-weight-bold text-warning">
+                                435
+                            </div>
+                        </div>
+                        <div>
+                            <progressbar [animate]="true" [value]="44" type="warning">44%</progressbar>
+                            <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                <div>Target</div>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

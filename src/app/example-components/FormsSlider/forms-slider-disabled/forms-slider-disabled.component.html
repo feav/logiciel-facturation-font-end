@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-lg-6">
+    <nouislider [min]="0" [max]="50" [step]="1" [(ngModel)]="someValue" disabled></nouislider>
+  </div>
+  <div class="col-lg-6">
+    <nouislider [connect]="true" [min]="0" [max]="15" [step]="1" [(ngModel)]="someRange" disabled></nouislider>
+  </div>
+</div>

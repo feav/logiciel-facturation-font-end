@@ -1,0 +1,528 @@
+<div class="row">
+  <div class="col-lg-6 col-xl-3">
+    <div class="card card-box card-box-border-bottom border-danger card-shadow-danger mb-5">
+      <div class="card-tr-actions">
+        <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-danger" type="button">
+          <small class="font-weight-bold">Add</small>
+        </button>
+      </div>
+      <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+        <div>
+          <h3 class="font-weight-bold display-4 mb-0 text-black">
+            <small class="opacity-6 pr-1">$</small>
+            <span [countUp]="895"></span>
+          </h3>
+          <p class="text-black-50 mb-0">sales last month</p>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="sparkline-full-wrapper">
+          <canvas [chartType]="'line'"
+                  [colors]="dangerSparklineColor"
+                  [datasets]="sparklineDataset1"
+                  [labels]="sparklineLabels1"
+                  [options]="sparklineOptions1"
+                  baseChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-xl-3">
+    <div class="card card-box card-box-border-bottom border-success card-shadow-success mb-5">
+      <div class="card-tr-actions">
+        <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-success" type="button">
+          <small class="font-weight-bold">Add</small>
+        </button>
+      </div>
+      <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+        <div>
+          <h3 class="font-weight-bold display-4 mb-0 text-black">
+            <small class="opacity-6 pr-1">$</small>
+            <span [countUp]="98245"></span>
+          </h3>
+          <p class="text-black-50 mb-0">sales this quarter</p>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="sparkline-full-wrapper">
+          <canvas [chartType]="'line'"
+                  [colors]="successSparklineColor"
+                  [datasets]="sparklineDataset2"
+                  [labels]="sparklineLabels1"
+                  [options]="sparklineOptions1"
+                  baseChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-xl-3">
+    <div class="card card-box card-box-border-bottom border-warning card-shadow-warning mb-5">
+      <div class="card-tr-actions">
+        <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-warning" type="button">
+          <small class="font-weight-bold">Add</small>
+        </button>
+      </div>
+      <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+        <div>
+          <h3 class="font-weight-bold display-4 mb-0 text-black">
+            <small class="opacity-6 pr-1">$</small>
+            <span [countUp]="375"></span>
+          </h3>
+          <p class="text-black-50 mb-0">sales today</p>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="sparkline-full-wrapper">
+          <canvas [chartType]="'line'"
+                  [colors]="warningSparklineColor"
+                  [datasets]="sparklineDataset3"
+                  [labels]="sparklineLabels1"
+                  [options]="sparklineOptions1"
+                  baseChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-xl-3">
+    <div class="card card-box card-box-border-bottom border-info card-shadow-info mb-5">
+      <div class="card-tr-actions">
+        <button class="btn btn-sm text-uppercase px-4 font-size-xs btn-pill btn-neutral-info" type="button">
+          <small class="font-weight-bold">Add</small>
+        </button>
+      </div>
+      <div class="card-header-alt px-5 pt-5 pb-0 d-flex align-items-start justify-content-between">
+        <div>
+          <h3 class="font-weight-bold display-4 mb-0 text-black">
+            <small class="opacity-6 pr-1">$</small>
+            <span [countUp]="4575"></span>
+          </h3>
+          <p class="text-black-50 mb-0">total sales</p>
+        </div>
+      </div>
+      <div class="px-5">
+        <div class="sparkline-full-wrapper">
+          <canvas [chartType]="'line'"
+                  [colors]="infoSparklineColor"
+                  [datasets]="sparklineDataset4"
+                  [labels]="sparklineLabels1"
+                  [options]="sparklineOptions1"
+                  baseChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase font-weight-bold font-size-xs mb-2">
+            Customers
+          </div>
+          <div class="font-weight-bold">
+            <div class="font-size-xxl mb-1">345</div>
+            <div class="text-success">
+              <span>54%</span>
+              <fa-icon [icon]="['fas', 'angle-up']" class="ml-2"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'bar',
+                                        height: 104,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#f4772e']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#4191ff',
+                                            width: 0
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card pl-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase font-weight-bold font-size-xs mb-2">
+            Orders
+          </div>
+          <div class="font-weight-bold">
+            <div class="font-size-xxl mb-1">54</div>
+            <div class="text-success">
+              <span>67%</span>
+              <fa-icon [icon]="['fas', 'angle-up']" class="ml-2"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2">
+          <apx-chart
+                  [chart]="{
+                                        type: 'area',
+                                        height: 104,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#11c5db']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [ 0, 10, 22,46,47, 26, 24, 45]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#11c5db',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase font-weight-bold font-size-xs mb-2">
+            Growth
+          </div>
+          <div class="font-weight-bold">
+            <div class="font-size-xxl mb-1">$456</div>
+            <div class="text-danger">
+              <span>32%</span>
+              <fa-icon [icon]="['fas', 'angle-down']" class="ml-2"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'bar',
+                                        height: 104,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#1bc943']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [ 38, 43, 24, 56, 35, 56, 65]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#1bc943',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card pl-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase font-weight-bold font-size-xs mb-2">
+            Expenses
+          </div>
+          <div class="font-weight-bold">
+            <div class="font-size-xxl mb-1">$674</div>
+            <div class="text-danger">
+              <span>21%</span>
+              <fa-icon [icon]="['fas', 'angle-down']" class="ml-2"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2">
+          <apx-chart
+                  [chart]="{
+                                        type: 'area',
+                                        height: 104,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#4191ff']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [0, 7, 18, 28, 23, 24, 65, 43 ]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#4191ff',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase text-muted font-weight-bold font-size-sm mb-2">
+            Bitcoin
+          </div>
+          <div class="font-weight-bold">
+            <div class="text-success">
+              <span>54%</span>
+              <fa-icon [icon]="['fas', 'angle-up']" class="ml-2"></fa-icon>
+            </div>
+            <div class="font-size-xl mb-0">$8,764</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'line',
+                                        height: 90,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#f4772e']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#4191ff',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase text-muted font-weight-bold font-size-sm mb-2">
+            Cardano
+          </div>
+          <div class="font-weight-bold">
+            <div class="text-success">
+              <span>67%</span>
+              <fa-icon [icon]="['fas', 'angle-up']" class="ml-2"></fa-icon>
+            </div>
+            <div class="font-size-xl mb-0">$6,324</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'line',
+                                        height: 90,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#11c5db']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [ 38, 44,56,47, 26, 24, 45]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#11c5db',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase text-muted font-weight-bold font-size-sm mb-2">
+            Ethereum
+          </div>
+          <div class="font-weight-bold">
+            <div class="text-danger">
+              <span>32%</span>
+              <fa-icon [icon]="['fas', 'angle-down']" class="ml-2"></fa-icon>
+            </div>
+            <div class="font-size-xl mb-0">$456</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'line',
+                                        height: 90,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#1bc943']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [ 38, 43, 24, 56, 35, 56, 65]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#1bc943',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card px-3 pt-3 mb-5">
+      <div class="d-flex justify-content-between">
+        <div class="pr-5 flex-grow-1 text-nowrap">
+          <div class="text-uppercase text-muted font-weight-bold font-size-sm mb-2">
+            Ripple
+          </div>
+          <div class="font-weight-bold">
+            <div class="text-danger">
+              <span>21%</span>
+              <fa-icon [icon]="['fas', 'angle-down']" class="ml-2"></fa-icon>
+            </div>
+            <div class="font-size-xl mb-0">$674</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center pt-2 px-3">
+          <apx-chart
+                  [chart]="{
+                                        type: 'line',
+                                        height: 90,
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                  [colors]="['#4191ff']"
+                  [markers]="{
+                                        size: 0
+                                    }"
+                  [series]="[
+                                      {
+                                        name: 'Orders',
+                                        data: [33, 56, 24, 23, 24, 65, 43 ]
+                                      }
+                                    ]"
+                  [stroke]="{
+                                            color: '#4191ff',
+                                            width: 3
+                                    }"
+                  [xaxis]="{
+                                        crosshairs: {
+                                            width: 0
+                                        }
+                                    }"
+                  [yaxis]="{
+                                        min: 0
+                                    }"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

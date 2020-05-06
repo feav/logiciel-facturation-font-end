@@ -1,0 +1,67 @@
+<form class="was-validated">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="form-2-first-name">First name</label>
+      <input type="text" class="form-control is-valid" id="form-2-first-name" placeholder="First name" value="John" required="">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="form-2-last-name">Last name</label>
+      <input type="text" class="form-control is-valid" id="form-2-last-name" placeholder="Last name" value="Doe" required="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="form-2-city">City</label>
+      <input type="text" class="form-control is-invalid" id="form-2-city" placeholder="City" required="">
+      <div class="invalid-feedback">Invalid city</div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="form-2-state">State</label>
+      <input type="text" class="form-control is-invalid" id="form-2-state" placeholder="State" required="">
+      <div class="invalid-feedback">Invalid state</div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="form-2-zip">Zip</label>
+      <input type="text" class="form-control is-invalid" id="form-2-zip" placeholder="Zip" required="">
+      <div class="invalid-feedback">Invalid ZIP code</div>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-6 mb-3">
+      <label for="form-file-4">Photo ID Scan</label>
+      <div class="custom-file w-100">
+        <input type="file" class="custom-file-input" id="customFile2" required="">
+        <label class="custom-file-label" for="customFile2">Choose file...</label>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="d-block" for="form-3-select">Favourite Number</label>
+      <select class="custom-select w-100" id="form-3-select" required="">
+        <option value="">Invalid select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="form-3-terms" required="">
+        <label class="custom-control-label" for="form-3-terms">Do you agree to our terms &amp; conditions?</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="custom-controls-stacked d-block">
+        <div class="custom-control custom-radio mb-1">
+          <input type="radio" id="radioStacked1" name="radio-stacked" class="custom-control-input" required="">
+          <label class="custom-control-label" for="radioStacked1">Subscribe me</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio5" name="radio-stacked" class="custom-control-input" required="">
+          <label class="custom-control-label" for="customRadio5">Don't subscribe me</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

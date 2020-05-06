@@ -1,0 +1,229 @@
+<div class="card card-box mb-5">
+  <div class="card-header py-3">
+    <div class="card-header--title font-size-lg">
+      Support board
+    </div>
+    <div class="card-header--actions">
+      <button class="btn btn-sm btn-neutral-secondary" type="button">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fas', 'plus-circle']" class="text-success"></fa-icon>
+                </span>
+        <span class="btn-wrapper--label">
+                    Add ticket
+                </span>
+      </button>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between px-4 py-3">
+    <div class="d-flex align-items-center">
+      <span>Show</span>
+      <select class="mx-1 form-control form-control-sm" id="" name="">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+      </select>
+      <span>entries</span>
+    </div>
+    <div class="search-wrapper">
+          <span class="icon-wrapper text-black">
+            <fa-icon [icon]="['fas', 'search']"></fa-icon>
+          </span>
+      <input class="form-control form-control-sm rounded-pill" placeholder="Search terms..." type="search">
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="table-responsive">
+    <table class="table table-hover text-nowrap mb-0">
+      <thead>
+      <tr>
+        <th class="bg-white text-left">ID</th>
+        <th class="bg-white">Requester</th>
+        <th class="bg-white text-left">Subject</th>
+        <th class="bg-white text-center">Assignee</th>
+        <th class="bg-white text-center">Priority</th>
+        <th class="bg-white text-center">Status</th>
+        <th class="bg-white text-center">Created date</th>
+        <th class="bg-white text-center">Due date</th>
+        <th class="bg-white text-center">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="font-weight-bold">
+          #453
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+              <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+            </div>
+            <div>
+              Shanelle Wynn
+            </div>
+          </div>
+        </td>
+        <td>
+          When, while the lovely valley teems
+        </td>
+        <td class="text-center">
+          <div class="avatar-icon-wrapper avatar-icon-sm" tooltip="Lili Pemberton">
+            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+          </div>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-danger text-danger">High</span>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-dark text-dark">Closed</span>
+        </td>
+        <td class="text-center text-muted">
+          12/12/2020
+        </td>
+        <td class="text-center text-muted">
+          08/30/2021
+        </td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-link" tooltip="Actions menu" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold">
+          #584
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+              <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+            </div>
+            <div>
+              Brody Dixon
+            </div>
+          </div>
+        </td>
+        <td>
+          I am so happy, my dear friend
+        </td>
+        <td class="text-center">
+          <div class="avatar-icon-wrapper avatar-icon-sm" tooltip="Arvin Weston">
+            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+          </div>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-warning text-warning">Low</span>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-success text-success">Open</span>
+        </td>
+        <td class="text-center text-muted">
+          06/08/2022
+        </td>
+        <td class="text-center text-muted">
+          07/25/2023
+        </td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-link" tooltip="Actions menu" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold">
+          #764
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+              <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/></div>
+            </div>
+            <div>
+              Milton Ayala
+            </div>
+          </div>
+        </td>
+        <td>
+          His own image, and the breath
+        </td>
+        <td class="text-center">
+          <div class="avatar-icon-wrapper avatar-icon-sm" tooltip="Mali Rosario">
+            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+          </div>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-info text-info">Medium</span>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-dark text-dark">Closed</span>
+        </td>
+        <td class="text-center text-muted">
+          12/12/2020
+        </td>
+        <td class="text-center text-muted">
+          08/30/2021
+        </td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-link" tooltip="Actions menu" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-weight-bold">
+          #453
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="avatar-icon-wrapper avatar-icon-sm mr-2">
+              <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+            </div>
+            <div>
+              Kane Gentry
+            </div>
+          </div>
+        </td>
+        <td>
+          When I hear the buzz
+        </td>
+        <td class="text-center">
+          <div class="avatar-icon-wrapper avatar-icon-sm" tooltip="Marion Devine">
+            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+          </div>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-warning text-warning">Low</span>
+        </td>
+        <td class="text-center">
+          <span class="badge bg-neutral-success text-success">Open</span>
+        </td>
+        <td class="text-center text-muted">
+          12/12/2020
+        </td>
+        <td class="text-center text-muted">
+          08/30/2021
+        </td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-link" tooltip="Actions menu" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer py-3 d-flex justify-content-between">
+    <pagination [rotate]="rotate" [totalItems]="30" class="pagination-icons pagination-second"></pagination>
+    <div class="d-flex align-items-center">
+      <span>Show</span>
+      <select class="mx-1 form-control form-control-sm" id="" name="">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+      </select>
+      <span>entries</span>
+    </div>
+  </div>
+</div>
+

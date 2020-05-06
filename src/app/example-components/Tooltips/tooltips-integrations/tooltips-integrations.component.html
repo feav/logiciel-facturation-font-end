@@ -1,0 +1,281 @@
+<div class="text-center">
+    <button [tooltip]="tooltipContent1" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-secondary" placement="auto" type="button">
+        Example I
+    </button>
+    <button [tooltip]="tooltipContent2" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-secondary" placement="auto" type="button">
+        Example II
+    </button>
+    <button [tooltip]="tooltipContent3" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-secondary" placement="auto" type="button">
+        Example III
+    </button>
+    <button [tooltip]="tooltipContent4" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-light" placement="auto" type="button">
+        Example IV
+    </button>
+    <button [tooltip]="tooltipContent5" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-dark border-0" placement="auto" type="button">
+        Example V
+    </button>
+    <button [tooltip]="tooltipContent6" class="btn btn-transition-none btn-second m-2" triggers="focus" container="body" containerClass="tooltip-lg tooltip-second border-0" placement="auto" type="button">
+        Example VI
+    </button>
+</div>
+
+<ng-template #tooltipContent1>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img
+                                alt="..."
+                                src="assets/images/avatars/avatar2.jpg"/></div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe <small class="text-black-50">(john@example.com)</small></span>
+                    <span class="badge badge-success">Active Account</span>
+                </div>
+            </div>
+            <div class="alert alert-warning p-2 mb-1 mt-3 rounded">
+                <div class="align-box-row">
+                    <div>
+                        <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                    </div>
+                    <div class="pl-3">
+                        <small><b class="d-block">Unpaid invoice</b></small>
+                        <small>This account will be disabled starting <b>12 January 2021</b>.</small>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent p-0">
+            <div class="grid-menu grid-menu-2col">
+                <div class="no-gutters row">
+                    <div class="col-sm-6 py-3">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-info"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">$9,693</b>
+                                <span class="text-black-50 d-block">revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-3">
+                        <div class="text-center">
+                            <div>
+                                <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">2,345</b>
+                                <span class="text-black-50 d-block">users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item rounded-bottom p-3 text-center">
+            <a [routerLink]="" class="btn btn-facebook">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                </span>
+            </a>
+            <a [routerLink]="" class="btn btn-dribbble mr-2 ml-2">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'dribbble']"></fa-icon>
+                </span>
+            </a>
+            <a [routerLink]="" class="btn btn-twitter">
+                <span class="btn-wrapper--icon">
+                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                </span>
+            </a>
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #tooltipContent2>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe <small class="text-black-50">(john@example.com)</small></span>
+                    <span class="badge badge-success">Active</span>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent p-0">
+            <div class="grid-menu grid-menu-2col">
+                <div class="no-gutters row">
+                    <div class="col-sm-6 py-3">
+                        <div class="line-height-sm text-center">
+                            <b class="font-size-lg">2,345</b>
+                            <span class="text-black-50 d-block">users</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-3">
+                        <div class="line-height-sm text-center">
+                            <b class="font-size-lg">$9,693</b>
+                            <span class="text-black-50 d-block">revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #tooltipContent3>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe</span>
+                    <small class="pb-1 text-black-50 d-block">John's bio description here...</small>
+                    <div class="divider my-2"></div>
+                    <small class="text-black-50">
+                        Deadline: <b class="text-danger">12 July 2029</b>
+                    </small>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent py-2">
+            <div class="align-box-row mb-1">
+                <div>
+                    <small class="font-weight-bold">Orders</small>
+                </div>
+                <div class="ml-auto">
+                    <div class="font-weight-bold text-success">
+                        348
+                    </div>
+                </div>
+            </div>
+            <progressbar [animate]="true" [value]="43" class="progress-bar-rounded progress-bar-sm progress-animated-alt" type="success">43%</progressbar>
+            <div class="align-box-row progress-bar--label mt-1 text-muted">
+                <small class="text-dark">0</small>
+                <small class="ml-auto">100%</small>
+            </div>
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #tooltipContent4>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle"><img
+                                alt="..."
+                                src="assets/images/avatars/avatar2.jpg"/></div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">John Doe</span>
+                    <small class="pb-1 text-black-50 d-block">John's bio description here...</small>
+                    <div class="divider my-2"></div>
+                    <small class="text-black-50">
+                        Deadline: <b class="text-danger">12 July 2029</b>
+                    </small>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent py-2">
+            <div class="align-box-row mb-1">
+                <div>
+                    <small class="font-weight-bold">Orders</small>
+                </div>
+                <div class="ml-auto">
+                    <div class="font-weight-bold text-success">
+                        348
+                    </div>
+                </div>
+            </div>
+            <progressbar [animate]="true" [value]="54" class="progress-bar-rounded progress-bar-sm progress-animated-alt" type="danger">54%</progressbar>
+            <div class="align-box-row progress-bar--label mt-1 text-muted">
+                <small class="text-dark">0</small>
+                <small class="ml-auto">100%</small>
+            </div>
+        </li>
+    </ul>
+    <div class="card-footer bg-white p-3 text-center d-block">
+        <a [routerLink]="" class="btn btn-sm btn-success mr-1">
+            <fa-icon [icon]="['fas', 'cog']" class="mr-1"></fa-icon>
+            Refresh
+        </a>
+        <a [routerLink]="" class="btn btn-sm btn-danger ml-1">
+            <fa-icon [icon]="['fas', 'times']" class="mr-1"></fa-icon>
+            Remove
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #tooltipContent5>
+    <div class="px-3 pt-3 pb-3 text-center">
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'gem']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Tasks</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'building']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Reports</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]=""
+               class="btn btn-link p-0 bg-arielle-smile d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Stats</div>
+        </div>
+    </div>
+    <div class="divider opacity-2 bg-white mb-1"></div>
+    <div class="text-center">
+        <a [routerLink]="" class="btn btn-link-light text-white">
+            View more items
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #tooltipContent6>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item bg-transparent">
+            <div class="card-body p-2">
+                <div class="align-box-row align-items-start">
+                    <div class="font-weight-bold">
+                        <small class="text-white-50 d-block mb-1 text-uppercase">New Accounts</small>
+                        <span class="font-size-xxl mt-1">586,356</span>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="bg-white text-center text-success font-size-xl d-50 rounded-circle">
+                            <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <fa-icon [icon]="['fas', 'arrow-up']" class="text-success"></fa-icon>
+                    <span class="text-success">15.4%</span>
+                    <span class="text-white-50">increase this month</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</ng-template>

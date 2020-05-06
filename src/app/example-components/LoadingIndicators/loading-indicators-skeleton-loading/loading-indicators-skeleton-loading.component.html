@@ -1,0 +1,146 @@
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Line skeleton loading
+                </div>
+            </div>
+            <div class="card-body">
+                <ngx-skeleton-loader count="5"></ngx-skeleton-loader>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Skeleton with custom colors
+                </div>
+            </div>
+            <div class="card-body">
+                <ngx-skeleton-loader
+                        [theme]="{
+                          'border-radius': '0.5rem',
+                          height: '40px',
+                          'background-color': 'rgba(122, 123, 151, 0.15)',
+                          border: '1px solid rgba(122, 123, 151, 0.25)'
+                        }"
+                        count="3"
+                ></ngx-skeleton-loader>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Custom settings skeleton
+                </div>
+            </div>
+            <div class="card-body">
+                <ngx-skeleton-loader
+                        [theme]="{ 'border-radius': '.25rem', height: '50px' }"
+                        count="4"
+                ></ngx-skeleton-loader>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Custom circle skeleton
+                </div>
+            </div>
+            <div class="card-body">
+                <ngx-skeleton-loader
+                        [theme]="{
+                  width: '70px',
+                  height: '70px',
+                  'border-radius': '10px'
+                }"
+                        appearance="circle"
+                        count="5"
+                >
+                </ngx-skeleton-loader>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Article skeleton example
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="first-section-wrapper">
+                    <div class="gravatar">
+                        <ngx-skeleton-loader [theme]="{ width: '80px', height: '80px' }" appearance="circle">
+                        </ngx-skeleton-loader>
+                    </div>
+                    <div class="gravatar-title">
+                        <div>
+                            <ngx-skeleton-loader
+                                    [theme]="{
+                                    width: '200px',
+                                    'border-radius': '0',
+                                    height: '15px',
+                                    'margin-bottom': '10px'
+                                  }"
+                            ></ngx-skeleton-loader>
+                        </div>
+                        <div>
+                            <ngx-skeleton-loader
+                                    [theme]="{
+                                width: '170px',
+                                'border-radius': '0',
+                                height: '15px'
+                              }"
+                            ></ngx-skeleton-loader>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-section-wrapper">
+                    <div class="wrapper">
+                        <ngx-skeleton-loader
+                                [theme]="{
+                              width: '80%',
+                              'border-radius': '0',
+                              height: '15px',
+                              'margin-bottom': '10px'
+                            }"
+                        ></ngx-skeleton-loader>
+                    </div>
+                    <div class="wrapper">
+                        <ngx-skeleton-loader
+                                [theme]="{
+                              width: '90%',
+                              'border-radius': '0',
+                              height: '15px',
+                              'margin-bottom': '10px'
+                            }"
+                        ></ngx-skeleton-loader>
+                    </div>
+                    <div class="wrapper">
+                        <ngx-skeleton-loader
+                                [theme]="{
+                              width: '60%',
+                              'border-radius': '0',
+                              height: '15px',
+                              'margin-bottom': '10px'
+                            }"
+                        ></ngx-skeleton-loader>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    Circle skeleton loading
+                </div>
+            </div>
+            <div class="card-body">
+                <ngx-skeleton-loader appearance="circle" count="5"></ngx-skeleton-loader>
+            </div>
+        </div>
+    </div>
+</div>

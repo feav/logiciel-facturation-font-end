@@ -1,0 +1,325 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    <b>Monthly targets</b>
+                    <small class="d-block text-capitalize mt-1">Card with progress bars list items.</small>
+                </div>
+                <div class="card-header--actions">
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button (click)="selectTab(0)" class="btn btn-primary" type="button">Tab 1</button>
+                        <button (click)="selectTab(1)" class="btn btn-primary" type="button">Tab 2</button>
+                    </div>
+                </div>
+            </div>
+            <tabset #staticTabs class="header-tabs">
+                <tab>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-2">
+                            <div class="align-box-row mb-1">
+                                <div>
+                                    <div class="font-weight-bold">Orders</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="font-size-xl font-weight-bold text-success">
+                                        348
+                                    </div>
+                                </div>
+                            </div>
+                            <progressbar [animate]="true" [value]="34" class="progress-animated-alt" type="success">34%
+                            </progressbar>
+                            <div class="align-box-row mt-1 text-muted">
+                                <small class="text-dark">0</small>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item py-2">
+                            <div class="align-box-row mb-1">
+                                <div>
+                                    <div class="font-weight-bold">Sales</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="font-size-xl font-weight-bold text-danger">
+                                        <small>$</small>
+                                        2.3M
+                                    </div>
+                                </div>
+                            </div>
+                            <progressbar [animate]="true" [value]="39" class="progress-animated-alt" type="danger">39%
+                            </progressbar>
+                            <div class="align-box-row mt-1 text-muted">
+                                <small class="text-dark">0</small>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item py-2">
+                            <div class="align-box-row mb-1">
+                                <div>
+                                    <div class="font-weight-bold">Users</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="font-size-xl font-weight-bold text-info">
+                                        <small>#</small>
+                                        87
+                                    </div>
+                                </div>
+                            </div>
+                            <progressbar [animate]="true" [value]="51" class="progress-animated-alt" type="info">51%
+                            </progressbar>
+                            <div class="align-box-row mt-1 text-muted">
+                                <small class="text-dark">0</small>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </li>
+                    </ul>
+                </tab>
+                <tab>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="align-box-row">
+                                <div class="mr-4">
+                                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                                       placement="right" tooltip="View details">
+                                        <div class="dot-badge"></div>
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <progressbar [animate]="true" [value]="61"
+                                                 class="progress-bar-rounded progress-animated-alt"
+                                                 type="success">61%
+                                    </progressbar>
+                                </div>
+                                <div class="line-height-sm text-center ml-4">
+                                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                                    <b class="font-size-lg text-success">
+                                        <small class="text-black-50">$</small>
+                                        1,628
+                                    </b>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="align-box-row">
+                                <div class="mr-4">
+                                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                                       placement="right" tooltip="View details">
+                                        <div class="dot-badge"></div>
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <progressbar [animate]="true" [value]="44"
+                                                 class="progress-bar-rounded progress-animated-alt"
+                                                 type="info">44%
+                                    </progressbar>
+                                </div>
+                                <div class="line-height-sm text-center ml-4">
+                                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                                    <b class="font-size-lg text-info">
+                                        <small class="text-black-50">$</small>
+                                        7,389
+                                    </b>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="align-box-row">
+                                <div class="mr-4">
+                                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                                       placement="right" tooltip="View details">
+                                        <div class="dot-badge"></div>
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <progressbar [animate]="true" [value]="29"
+                                                 class="progress-bar-rounded progress-animated-alt"
+                                                 type="danger">29%
+                                    </progressbar>
+                                </div>
+                                <div class="line-height-sm text-center ml-4">
+                                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                                    <b class="font-size-lg text-danger">
+                                        <small class="text-black-50">$</small>
+                                        8,493
+                                    </b>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="align-box-row">
+                                <div class="mr-4">
+                                    <a [routerLink]="" class="avatar-icon-wrapper avatar-icon-lg m-0"
+                                       placement="right" tooltip="View details">
+                                        <div class="dot-badge"></div>
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <progressbar [animate]="true" [value]="38"
+                                                 class="progress-bar-rounded progress-animated-alt"
+                                                 type="warning">38%
+                                    </progressbar>
+                                </div>
+                                <div class="line-height-sm text-center ml-4">
+                                    <small class="text-black-50 d-block text-uppercase">Totals</small>
+                                    <b class="font-size-lg text-warning">
+                                        <small class="text-black-50">$</small>
+                                        2,594
+                                    </b>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </tab>
+            </tabset>
+
+            <div class="card-footer bg-light p-4 text-center">
+                <button class="btn btn-sm btn-second" type="button">
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                    </span>
+                    <span class="btn-wrapper--label">
+                        View details
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="list-group-item border-top-0 border-left-0 border-right-0 d-flex justify-content-between bg-light align-items-center">
+                <div class="avatar-icon-wrapper avatar-icon-lg">
+                    <div class="avatar-icon rounded"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                </div>
+                <div class="flex-grow-1 pl-2">
+                    <h5 class="mt-0 mb-1">Kate Middleton</h5>
+                    <p class="card-text mb-0">
+                        This is a short profile bio description...
+                    </p>
+                </div>
+                <span class="pl-3">
+                    <button class="btn btn-sm btn-second pl-2 pr-2" type="button">
+                        <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fas', 'cog']"></fa-icon>
+                        </span>
+                    </button>
+                </span>
+            </div>
+            <div class="card-header bg-white card-header-tab py-2 px-2">
+                <div class="card-header--title">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item p-2">
+                            <button (click)="selectTab2(0)" class="btn btn-block rounded-pill btn-outline-primary">
+                                Earnings
+                            </button>
+                        </li>
+                        <li class="nav-item p-2">
+                            <button (click)="selectTab2(1)" class="btn btn-block rounded-pill btn-outline-primary">
+                                Sales
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <tabset #staticTabs2 class="header-tabs">
+                    <tab>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="text-center">
+                                    <div>
+                                        <fa-icon [icon]="['far', 'keyboard']" class="font-size-xxl text-success"></fa-icon>
+                                    </div>
+                                    <div class="mt-2 line-height-sm">
+                                        <b class="font-size-lg">2,345</b>
+                                        <span class="text-black-50 d-block">users</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <div>
+                                        <fa-icon [icon]="['far', 'gem']" class="font-size-xxl text-info"></fa-icon>
+                                    </div>
+                                    <div class="mt-2 line-height-sm">
+                                        <b class="font-size-lg">$9,693</b>
+                                        <span class="text-black-50 d-block">revenue</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider mt-3 mb-2"></div>
+                        <div class="text-center pb-1">
+                            <a class="m-3 btn btn-primary p-0 d-inline-block text-center font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl"></fa-icon>
+                            </a>
+                            <a class="m-3 btn btn-success p-0 d-inline-block text-center font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'keyboard']" class="font-size-xxl"></fa-icon>
+                            </a>
+                            <a class="m-3 btn btn-danger p-0 d-inline-block text-center font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'lightbulb']" class="font-size-xxl"></fa-icon>
+                            </a>
+                        </div>
+                    </tab>
+                    <tab>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="text-center">
+                                    <div>
+                                        <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                                    </div>
+                                    <div class="mt-2 line-height-sm">
+                                        <b class="font-size-lg">565</b>
+                                        <span class="text-black-50 d-block">users</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center">
+                                    <div>
+                                        <fa-icon [icon]="['far', 'gem']" class="font-size-xxl text-danger"></fa-icon>
+                                    </div>
+                                    <div class="mt-2 line-height-sm">
+                                        <b class="font-size-lg">3,568</b>
+                                        <span class="text-black-50 d-block">clicks</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider mt-3 mb-2"></div>
+                        <div class="text-center pb-1">
+                            <a class="m-3 btn btn-primary border-0 p-0 shadow-sm bg-sunny-morning d-inline-block text-center text-white font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'bell']" class="font-size-xxl"></fa-icon>
+                            </a>
+                            <a class="m-3 btn btn-primary border-0 p-0 shadow-sm bg-strong-bliss d-inline-block text-center text-white font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'gem']" class="font-size-xxl"></fa-icon>
+                            </a>
+                            <a class="m-3 btn btn-primary border-0 p-0 shadow-sm bg-night-sky d-inline-block text-center text-white font-size-xxl d-70 rounded"
+                               [routerLink]=""
+                              tooltip="Menu Example">
+                                <fa-icon [icon]="['far', 'building']" class="font-size-xxl"></fa-icon>
+                            </a>
+                        </div>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>

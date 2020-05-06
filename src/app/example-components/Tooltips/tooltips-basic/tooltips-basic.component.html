@@ -1,0 +1,24 @@
+<div class="text-center">
+    <button type="button" class="btn btn-outline-primary m-2" placement="top" tooltip="Tooltip on top">
+       tooltip on top
+    </button>
+    <button type="button" class="btn btn-outline-primary m-2" placement="right" tooltip="Tooltip on right">
+       tooltip on right
+    </button>
+    <button type="button" class="btn btn-outline-primary m-2" placement="auto" tooltip="Tooltip auto">
+       tooltip auto
+    </button>
+    <button type="button" class="btn btn-outline-primary m-2" placement="bottom" tooltip="Tooltip on bottom">
+       tooltip on bottom
+    </button>
+    <button type="button" class="btn btn-outline-primary m-2" placement="left" tooltip="Tooltip on left">
+       tooltip on left
+    </button>
+    <button type="button" class="btn btn-outline-primary m-2" html="true" [tooltip]="htmlTooltipTemplate">
+       tooltip with HTML
+    </button>
+</div>
+
+<ng-template #htmlTooltipTemplate>
+    <em>Tooltip</em> <u>with</u> <b>HTML</b>
+</ng-template>

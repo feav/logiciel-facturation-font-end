@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xl-6">
+    <div class="form-group">
+      <label>Input toggle:</label>
+      <div class="input-group input-group-lg mb-5">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="['far', 'calendar-alt']" class="mx-auto"></fa-icon></span>
+        </div>
+        <input [bsConfig]="{ containerClass: 'theme-primary', isAnimated: true }" bsDaterangepicker class="form-control" placeholder="Select date" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6">
+    <div class="form-group">
+      <label>Button toggle:</label>
+      <div class="input-group input-group-lg mb-5">
+        <input #drp="bsDaterangepicker" [bsConfig]="{ containerClass: 'theme-second', isAnimated: true, dateInputFormat: 'MMMM Do YYYY' }" [(ngModel)]="bsRangeValue" bsDaterangepicker class="form-control" placeholder="Select date" type="text">
+        <div class="input-group-append">
+          <button (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen" class="btn btn-second py-0">
+            <fa-icon [icon]="['far', 'calendar-alt']" class="font-size-lg"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mb-5">
+  <div class="heading-3 text-center">Inline daterangepicker</div>
+  <bs-daterangepicker-inline [bsConfig]="{ containerClass: 'theme-primary' }" [bsValue]="bsInlineRangeValue" class="mx-auto"></bs-daterangepicker-inline>
+</div>

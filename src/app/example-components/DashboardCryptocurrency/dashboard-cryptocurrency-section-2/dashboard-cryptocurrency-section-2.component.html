@@ -1,0 +1,282 @@
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card card-box p-3 mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link p-0 text-black-50 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-sm"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black-50 font-size-lg pb-3">
+                Customers
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <ngx-gauge backgroundColor="rgba(248, 50, 69, 0.15)" cap="round" class="mt-1 img-fluid"
+                               foregroundColor="#f83245"
+                               max="100" min="0" size="80"
+                               thick="5"
+                               type="full" value="34">
+                    </ngx-gauge>
+                </div>
+                <div class="text-right">
+                    <h3 [countUp]="547" class="font-weight-bold display-4 mb-1 text-black"></h3>
+                    <span class="text-muted">Last week</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card card-box p-3 mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link p-0 text-black-50 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-sm"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black-50 font-size-lg pb-3">
+                Orders
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <ngx-gauge backgroundColor="rgba(27, 201, 67, 0.15)" cap="round" class="mt-1 img-fluid"
+                               foregroundColor="#1bc943"
+                               max="100" min="0" size="80"
+                               thick="5"
+                               type="full" value="43">
+                    </ngx-gauge>
+                </div>
+                <div class="text-right">
+                    <h3 [countUp]="456" class="font-weight-bold display-4 mb-1 text-black"></h3>
+                    <span class="text-muted">Last month</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card card-box p-3 mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link p-0 text-black-50 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-sm"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black-50 font-size-lg pb-3">
+                Visitors
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <ngx-gauge backgroundColor="rgba(244, 119, 46, 0.15)" cap="round" class="mt-1 img-fluid"
+                               foregroundColor="#f4772e"
+                               max="100" min="0" size="80"
+                               thick="5"
+                               type="full" value="71">
+                    </ngx-gauge>
+                </div>
+                <div class="text-right">
+                    <h3 [countUp]="362" class="font-weight-bold display-4 mb-1 text-black"></h3>
+                    <span class="text-muted">Last year</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card card-box p-3 mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link p-0 text-black-50 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-sm"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black-50 font-size-lg pb-3">
+                Deliveries
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <ngx-gauge backgroundColor="rgba(17, 197, 219, 0.15)" cap="round" class="mt-1 img-fluid"
+                               foregroundColor="#11c5db"
+                               max="100" min="0" size="80"
+                               thick="5"
+                               type="full" value="56">
+                    </ngx-gauge>
+                </div>
+                <div class="text-right">
+                    <h3 [countUp]="43" class="font-weight-bold display-4 mb-1 text-black"></h3>
+                    <span class="text-muted">Last day</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

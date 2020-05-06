@@ -1,0 +1,139 @@
+<div class="bg-premium-dark py-3 py-xl-5">
+    <div class="container py-3 py-xl-5">
+        <div class="mb-5 text-center">
+            <h1 class="display-3 text-white mb-2 font-weight-bold">
+                Plans & pricing
+            </h1>
+            <p class="font-size-lg text-white-50">
+                Indignation and dislike men who are so beguiled and demoralized.
+            </p>
+            <div role="group" class="btn-group mt-3">
+                <a [routerLink]="" class="active btn shadow-none btn-outline-secondary">Monthly plans</a>
+                <a [routerLink]="" class="btn shadow-none btn-outline-secondary">Yearly plans</a>
+            </div>
+        </div>
+        <div class="col-md-9 mx-auto">
+            <div class="row no-gutters">
+                <div class="col-xl-6 order-2 order-xl-1 d-flex align-items-center">
+                    <div class="card bg-secondary w-100 p-5 br-xl-right-0">
+                        <h5 class="font-size-xl">
+                            Standard License
+                            <strong class="pt-2 font-weight-bold d-block">
+                                $69
+                                <small class="opacity-5">one time fee</small>
+                            </strong>
+                        </h5>
+                        <ul class="list-unstyled text-left my-4 font-weight-bold">
+                            <li class="px-4 py-2">
+                                <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+
+                                Unlimited Tasks
+                            </li>
+                            <li class="px-4 py-2">
+                                <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+                                Unlimited Teams
+                            </li>
+                            <li class="px-4 py-2">
+                                <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+                                All Integrations
+                            </li>
+                            <li class="px-4 py-2">
+                                <fa-icon [icon]="['far', 'times-circle']" class="text-danger font-size-lg mr-2"></fa-icon>
+                                Premium support
+                            </li>
+                        </ul>
+                        <a class="btn btn-lg btn-block btn-primary" [routerLink]="">
+                            Buy now
+                        </a>
+                        <div class="mt-3">
+                            <button class="btn btn-link" (click)="licensesDetailsModal.show()" title="Licenses Details">
+                                <span className="btn-wrapper--icon">
+                                    <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                </span>
+                                <span className="btn-wrapper--label">
+                                    Licenses Details
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 order-1 mb-5 mb-xl-0 order-xl-2">
+                    <div class="card w-100 shadow-lg p-5 text-white p-5 bg-plum-plate">
+                        <div class="py-4">
+                            <h5 class="font-size-xl">
+                                Extended License
+                                <strong class="pt-2 font-weight-bold d-block">
+                                    $99
+                                    <small class="opacity-5">one time fee</small>
+                                </strong>
+                            </h5>
+                            <ul class="list-unstyled text-left my-4 font-weight-bold">
+                                <li class="px-4 py-2">
+                                    <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+
+                                    Unlimited Tasks
+                                </li>
+                                <li class="px-4 py-2">
+                                    <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+                                    Unlimited Teams
+                                </li>
+                                <li class="px-4 py-2">
+                                    <fa-icon [icon]="['far', 'check-circle']" class="text-success font-size-lg mr-2"></fa-icon>
+                                    All Integrations
+                                </li>
+                                <li class="px-4 py-2">
+                                    <fa-icon [icon]="['far', 'times-circle']" class="text-danger font-size-lg mr-2"></fa-icon>
+                                    Premium support
+                                </li>
+                            </ul>
+                            <a class="btn btn-lg btn-block btn-warning" [routerLink]="">
+                                Buy now
+                            </a>
+                            <div class="mt-3">
+                                <button class="btn btn-link text-white" (click)="licensesDetailsModal.show()" title="Licenses Details">
+                                    <span className="btn-wrapper--icon">
+                                        <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                    </span>
+                                        <span className="btn-wrapper--label">
+                                        Licenses Details
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #licensesDetailsModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-4">
+                        <img src="assets/images/stock-photos/stock-3.jpg" class="rounded-left img-fit-container" alt="...">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="p-5">
+                            <img src="assets/images/illustrations/business_plan.svg" class="w-25 d-block img-fluid" alt="...">
+                            <h1 class="display-4 my-3 font-weight-bold">
+                                License details
+                            </h1>
+                            <p class="font-size-lg text-black">
+                                A free hour, when our power of choice is untrammelled and when nothing prevents.
+                            </p>
+                            <p class="font-size-sm mb-3 text-black-50">
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics
+                            </p>
+                            <button (click)="licensesDetailsModal.show()" class="btn btn-primary btn-block">
+                                Close this window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

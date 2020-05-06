@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center mb-4">
+    <timepicker [(ngModel)]="myTime" [showMinutes]="showMin" [showSeconds]="showSec"></timepicker>
+</div>
+
+<alert class="text-center mb-3 font-size-sm" type="info">
+    Time is: {{myTime}}<br>showMinutes: {{showMin}}<br>showSeconds: {{showSec}}
+</alert>
+
+<div class="text-center">
+    <button (click)="toggleMinutes()" class="btn btn-primary m-2">
+        {{showMin? 'Hide minutes' : 'Show minutes'}}
+    </button>
+    <button (click)="toggleSeconds()" class="btn btn-primary m-2">
+        {{showSec? 'Hide seconds' : 'Show seconds'}}
+    </button>
+</div>

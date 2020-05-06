@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-box mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0 d-flex align-items-start justify-content-between">
+                <div>
+                    <h3 [countUp]="895" class="font-weight-bold display-4 mb-0 text-black"></h3>
+                    <p class="font-size-lg text-black-50 mb-0">Total Orders</p>
+                </div>
+                <button class="btn btn-sm text-uppercase font-size-xs btn-outline-primary" type="button">
+                    <small class="font-weight-bold">Details</small>
+                </button>
+            </div>
+            <div class="pr-5 pb-3">
+                <ngx-trend [data]="[5, 10, 5, 13, 5.6,8, 5, 5.6, 11]" autoDraw="true" autoDrawDuration="3000"
+                           autoDrawEasing="ease-in" height="100"
+                           radius="15" smooth="true"
+                           stroke="var(--primary)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+            </div>
+        </div>
+        <div class="card card-box bg-midnight-bloom mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h3 [countUp]="586" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                <p class="font-size-lg text-white-50 mb-0">Total Visitors</p>
+            </div>
+            <div class="pr-5 pb-3">
+                <ngx-trend [data]="[6, 8, 5, 5, 5.6,13, 5.6, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                           autoDrawEasing="ease-in" height="100"
+                           radius="15" smooth="true"
+                           stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-box bg-danger mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h3 [countUp]="183954" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                <p class="font-size-lg text-white-50 mb-0">Total Deliveries</p>
+            </div>
+            <div class="pr-5 pb-3">
+                <ngx-trend [data]="[5, 8, 5.6,13, 5.6,8, 6, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                           autoDrawEasing="ease-in" height="100"
+                           radius="15" smooth="true"
+                           stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+            </div>
+        </div>
+        <div class="card card-box bg-night-sky mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h3 [countUp]="13253" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                <p class="font-size-lg text-white-50 mb-0">Total Budget</p>
+            </div>
+            <div class="pr-5 pb-3">
+                <ngx-trend [data]="[5, 5.6,13, 5.6,8, 6, 8, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                           autoDrawEasing="ease-in" height="100"
+                           radius="15" smooth="true"
+                           stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+            </div>
+        </div>
+    </div>
+</div>

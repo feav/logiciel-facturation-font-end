@@ -1,0 +1,158 @@
+<div class="card card-box mb-5">
+    <div class="card-header pr-2">
+        <div class="card-header--title">
+            Employees status
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-sm text-primary btn-link" tooltip="Refresh">
+                <fa-icon [icon]="['fas', 'cog']" [spin]="true"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover text-nowrap mb-0 table-borderless">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="text-left">Name</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Progress</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        12
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="badge bg-neutral-warning text-warning px-4">Pending</div>
+                    </td>
+                    <td>
+                        <progressbar [value]="55" class="progress-bar-rounded" type="info">55%</progressbar>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-neutral-dark" tooltip="View details" type="button">
+                            <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        12
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="badge bg-neutral-warning text-warning px-4">Pending</div>
+                    </td>
+                    <td>
+                        <progressbar [value]="55" class="progress-bar-rounded" type="info">55%</progressbar>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-neutral-dark" tooltip="View details" type="button">
+                            <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        12
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Regan Norris
+                                </a>
+                                <span class="text-black-50 d-block">Senior Project Manager</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="badge bg-neutral-danger text-danger px-4">Failed</div>
+                    </td>
+                    <td>
+                        <progressbar [value]="67" class="progress-bar-rounded" type="danger">67%</progressbar>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-neutral-dark" tooltip="View details" type="button">
+                            <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        33
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Beck Simpson
+                                </a>
+                                <span class="text-black-50 d-block">Frontend Developer</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="badge bg-neutral-success text-success px-4">Completed</div>
+                    </td>
+                    <td>
+                        <progressbar [value]="39" class="progress-bar-rounded" type="dark">39%</progressbar>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-neutral-dark" tooltip="View details" type="button">
+                            <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button class="btn btn-outline-danger btn-sm" type="button">
+            Delete
+        </button>
+        <div>
+            <button class="btn btn-sm btn-link-primary" type="button">
+                View all
+            </button>
+            <button class="btn btn-sm btn-primary" type="button">
+                Add new entry
+            </button>
+        </div>
+    </div>
+</div>

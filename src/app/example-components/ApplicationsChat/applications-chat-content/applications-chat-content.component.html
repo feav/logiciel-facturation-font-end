@@ -1,0 +1,553 @@
+<div class="app-inner-content-layout app-inner-content-layout-fixed">
+    <div class="d-flex d-lg-none p-4 order-0 justify-content-between align-items-center">
+        <button (click)="toggleMobileSidebar1 = !toggleMobileSidebar1" class="btn btn-sm btn-primary px-3" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+        </button>
+        <button (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" class="btn btn-sm btn-primary px-3" type="button">
+            <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+        </button>
+    </div>
+    <div [ngClass]="{'layout-sidebar-open' : toggleMobileSidebar1}" class="app-inner-content-layout--sidebar bg-white app-inner-content-layout--sidebar__lg order-1">
+        <perfect-scrollbar [autoPropagation]="true">
+            <div class="px-4 pt-4">
+                <ul class="nav nav-primary nav-pills flex-column">
+                    <li class="nav-item d-flex pt-1 pb-3 justify-content-between">
+                        <div class="text-uppercase font-size-sm text-muted">
+                            Channels tags
+                        </div>
+                        <div class="ml-auto font-size-xs">
+                            <a [routerLink]="" tooltip="Add new channel">
+                                <fa-icon [icon]="['fas', 'plus-circle']"></fa-icon>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link active">
+                            # development
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            # angular_themes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <span># react_templates</span>
+                            <div class="ml-auto badge badge-first">23</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            # vue_dashboards
+                        </a>
+                    </li>
+                </ul>
+                <div class="divider my-3"></div>
+                <ul class="nav nav-neutral-primary nav-pills flex-column">
+                    <li class="nav-item pt-1 pb-3">
+                        <div class="text-uppercase font-size-sm text-muted">
+                            Members list
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="align-box-row w-100">
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <span class="badge badge-circle badge-success">Online</span>
+                                    <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar1.jpg"></div>
+                                </div>
+                                <div class="pl-2">
+                                        <span class="d-block">
+                                            Adella Galen
+                                            <small class="d-block text-black-50">(Galen@example.com)</small>
+                                        </span>
+                                </div>
+                                <div class="ml-auto font-size-xs">
+                                    <fa-icon [icon]="['fas', 'angle-right']" class="d-40 text-right d-block"></fa-icon>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="align-box-row w-100">
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <span class="badge badge-circle badge-danger">Offline</span>
+                                    <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"></div>
+                                </div>
+                                <div class="pl-2">
+                                        <span class="d-block">
+                                            Mandy Erle
+                                            <small class="d-block text-black-50">(Mandyrle@gma.com)</small>
+                                        </span>
+                                </div>
+                                <div class="ml-auto font-size-xs">
+                                    <fa-icon [icon]="['fas', 'angle-right']" class="d-40 text-right d-block"></fa-icon>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="align-box-row w-100">
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <span class="badge badge-circle badge-success">Online</span>
+                                    <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar3.jpg"></div>
+                                </div>
+                                <div class="pl-2">
+                                        <span class="d-block">
+                                            John Doe
+                                            <small class="d-block text-black-50">(Galen@example.com)</small>
+                                        </span>
+                                </div>
+                                <div class="ml-auto font-size-xs">
+                                    <fa-icon [icon]="['fas', 'angle-right']" class="d-40 text-right d-block"></fa-icon>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="align-box-row w-100">
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <span class="badge badge-circle badge-warning">Idle</span>
+                                    <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar4.jpg"></div>
+                                </div>
+                                <div class="pl-2">
+                                        <span class="d-block">
+                                            Napoleon Stacey
+                                            <small class="d-block text-black-50">(Napoleon@test.com)</small>
+                                        </span>
+                                </div>
+                                <div class="ml-auto font-size-xs">
+                                    <fa-icon [icon]="['fas', 'angle-right']" class="d-40 text-right d-block"></fa-icon>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="divider my-3"></div>
+                <ul class="nav nav-neutral-primary nav-pills flex-column">
+                    <li class="nav-item pt-1 pb-3">
+                        <div class="text-uppercase font-size-sm text-muted">
+                            Stats
+                        </div>
+                    </li>
+                </ul>
+                <div class="row font-size-xs">
+                    <div class="col-lg-6">
+                        <div class="card bg-secondary text-center mb-4 p-3">
+                            <div>
+                                <fa-icon [icon]="['far', 'user']" class="font-size-xxl text-success"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">345</b>
+                                <span class="text-black-50 d-block">friends</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card bg-secondary text-center mb-4 p-3">
+                            <div>
+                                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-danger"></fa-icon>
+                            </div>
+                            <div class="mt-2 line-height-sm">
+                                <b class="font-size-lg">2,693</b>
+                                <span class="text-black-50 d-block">messages</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-secondary card-box mb-4">
+                    <div class="card-indicator bg-first"></div>
+                    <div class="card-body px-4 py-3">
+                        <div class="pb-3 d-flex justify-content-between">
+                            <a [routerLink]="">
+                                Presentation site design
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="badge badge-first px-3">On hold</div>
+                            <div class="font-size-sm text-danger px-2">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1"></fa-icon>
+                                14:22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-secondary card-box mb-4">
+                    <div class="card-indicator bg-success"></div>
+                    <div class="card-body px-4 py-3">
+                        <div class="pb-3 d-flex justify-content-between">
+                            <a [routerLink]="">
+                                Create UI mockups
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <div class="badge badge-success px-3">Fixed</div>
+                            <div class="font-size-sm text-dark px-2">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1"></fa-icon>
+                                09:41
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div class="app-inner-content-layout--main order-3 order-lg-2 card-box bg-secondary">
+        <div class="app-inner-content-layout--main__header rounded-0 card-header bg-white p-4 border-bottom">
+            <div class="card-header--title">
+                <small>Messenger</small>
+                <b>Talking to Kate</b>
+            </div>
+            <div class="card-header--actions">
+                <a [routerLink]="" class="btn btn-sm btn-first" tooltip="Send new message">
+                    <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+                </a>
+            </div>
+        </div>
+        <perfect-scrollbar [autoPropagation]="false">
+            <div class="chat-wrapper p-3">
+                <div class="chat-item p-2 mb-2">
+                    <div class="align-box-row">
+                        <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                            <div class="avatar-icon rounded border-0">
+                                <img alt="..." src="assets/images/avatars/avatar7.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="chat-box bg-first text-white">
+                                <p>Hello, John.</p>
+                                <p>This is Kenny. How are you?</p>
+                            </div>
+                            <small class="mt-2 d-block text-black-50">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                11:01 AM | Yesterday
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item chat-item-reverse p-2 mb-2">
+                    <div class="align-box-row flex-row-reverse">
+                        <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                            <div class="avatar-icon rounded border-0">
+                                <img alt="..." src="assets/images/avatars/avatar3.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="chat-box bg-first text-white">
+                                <p>Hey, Kate.</p>
+                                <p>I'm attaching the pictures you requested below:</p>
+                                <div class="card mt-3 mb-2 py-2 text-center">
+                                    <div>
+                                        <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded m-1 shadow-sm" src="assets/images/stock-photos/people-1.jpg" width="54"></a>
+                                        <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded m-1 shadow-sm" src="assets/images/stock-photos/people-2.jpg" width="54"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="mt-2 d-block text-black-50">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                11:01 AM | Yesterday
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item p-2 mb-2">
+                    <div class="align-box-row">
+                        <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                            <div class="avatar-icon rounded border-0">
+                                <img alt="..." src="assets/images/avatars/avatar7.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="chat-box bg-first text-white">
+                                <p>Thanks.</p>
+                                <p>Really appreciate it!</p>
+                            </div>
+                            <small class="mt-2 d-block text-black-50">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                11:01 AM | Yesterday
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item p-2 mb-2">
+                    <div class="align-box-row">
+                        <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                            <div class="avatar-icon rounded border-0">
+                                <img alt="..." src="assets/images/avatars/avatar7.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="chat-box bg-first text-white">
+                                <p>Bye for now, talk to you later.</p>
+                            </div>
+                            <small class="mt-2 d-block text-black-50">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                11:01 AM | Yesterday
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item chat-item-reverse p-2 mb-2">
+                    <div class="align-box-row flex-row-reverse">
+                        <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                            <div class="avatar-icon rounded border-0">
+                                <img alt="..." src="assets/images/avatars/avatar3.jpg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="chat-box bg-first text-white">
+                                <p>Almost forgot about your tasks.</p>
+                                <p><b>Check the links below:</b></p>
+                                <div class="card bg-premium-dark p-2 mt-3 mb-2">
+                                    <div class="text-center py-2">
+                                        <a [routerLink]="" class="m-1 btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                            <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                        </a>
+                                        <a [routerLink]="" class="m-1 btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                            <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                                        </a>
+                                        <a [routerLink]="" class="m-1 btn btn-link p-0 bg-plum-plate d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt" tooltip="Menu Example">
+                                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="mt-2 d-block text-black-50">
+                                <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                11:03 AM | Yesterday
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </perfect-scrollbar>
+        <div class="app-content--inner__footer bg-white p-4 border-top">
+            <div>
+                <input class="form-control" placeholder="Write your message and hit enter to send...">
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex align-items-center">
+                    <a [routerLink]="" class="btn btn-link btn-link-primary px-2 py-1 text-success" tooltip="Add audio file">
+                        <fa-icon [icon]="['far', 'file-audio']" class="font-size-xl"></fa-icon>
+                    </a>
+                    <a [routerLink]="" class="btn btn-link btn-link-primary px-2 py-1 mr-2 ml-2 text-danger" tooltip="Add video file">
+                        <fa-icon [icon]="['far', 'file-video']" class="font-size-xl"></fa-icon>
+                    </a>
+                    <a [routerLink]="" class="btn btn-link btn-link-primary px-2 py-1 text-info" tooltip="Upload documents">
+                        <fa-icon [icon]="['far', 'file-excel']" class="font-size-xl"></fa-icon>
+                    </a>
+                </div>
+                <a [routerLink]="" class="btn btn-primary">
+                    Send
+                </a>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'layout-sidebar-open' : toggleMobileSidebar2}" class="app-inner-content-layout--sidebar pos-r order-2 order-lg-3 bg-white app-inner-content-layout--sidebar__sm">
+        <div class="font-weight-bold text-black-50 p-2 font-size-lg">
+            Friends list
+        </div>
+        <perfect-scrollbar [autoPropagation]="true">
+            <ul class="nav nav-neutral-primary nav-pills flex-column">
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-danger">Offline</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Mandy Erle
+                                    <div class="d-block text-black-50">3 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-success">Online</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar3.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    John Doe
+                                    <div class="d-block text-black-50">2 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-warning">Idle</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar4.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Napoleon Stacey
+                                    <small class="d-block text-black-50">(Napoleon@test.com)</small>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-danger">Offline</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar6.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Mandy Erle
+                                    <div class="d-block text-black-50">3 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-success">Online</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar1.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Adella Galen
+                                    <div class="d-block text-black-50">5 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-danger">Offline</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar2.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Mandy Erle
+                                    <div class="d-block text-black-50">3 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-success">Online</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar3.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    John Doe
+                                    <div class="d-block text-black-50">2 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-warning">Idle</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar4.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Napoleon Stacey
+                                    <small class="d-block text-black-50">(Napoleon@test.com)</small>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-danger">Offline</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar6.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    Mandy Erle
+                                    <div class="d-block text-black-50">3 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <div class="align-box-row">
+                            <div class="avatar-icon-wrapper avatar-icon-md">
+                                <span class="badge badge-circle badge-success">Online</span>
+                                <div class="avatar-icon rounded-circle"><img alt="..." src="assets/images/avatars/avatar5.jpg"></div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="d-block text-black">
+                                    John Doe
+                                    <div class="d-block text-black-50">2 hours ago</div>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+        <div class="app-content--sidebar__footer p-2 d-none d-lg-block">
+                <ul class="nav nav-neutral-primary nav-pills flex-column">
+                    <li class="nav-header text-uppercase font-size-sm text-muted">
+                        Quick actions
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'file-alt']"></fa-icon>
+                            </div>
+                            <span>Receive files</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                            </div>
+                            <span>Recent messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'trash-alt']" class="text-danger"></fa-icon>
+                            </div>
+                            <span>Clear conversation</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <div (click)="toggleMobileSidebar1 = !toggleMobileSidebar1" [ngClass]="{'active' : toggleMobileSidebar1}" class="sidebar-inner-layout-overlay"></div>
+    <div (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" [ngClass]="{'active' : toggleMobileSidebar2}" class="sidebar-inner-layout-overlay"></div>
+</div>

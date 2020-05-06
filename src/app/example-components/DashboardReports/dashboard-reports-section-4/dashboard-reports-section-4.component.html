@@ -1,0 +1,269 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5 px-4 pt-4 text-center">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-dark p-0 text-dark opacity-8 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                    <ul class="nav nav-pills flex-column p-3">
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>My Account</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item--header text-first font-weight-bold">
+                            <span>Heading</span>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-header-alt">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">
+                    Financial year
+                </div>
+                <p class="text-black-50">Expenses statistics to date</p>
+            </div>
+            <div class="divider my-4"></div>
+            <h3 class="mb-0 display-3 mt-1 font-weight-bold">
+                $
+                <span [countUp]="458695"></span>
+            </h3>
+            <div class="divider my-4"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Current month</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            46,362
+                        </span>
+                        <span class="badge bg-neutral-danger ml-2 text-danger">-8%</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Last year</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            34,546
+                        </span>
+                        <span class="badge bg-neutral-success ml-2 text-success">+13%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="font-weight-bold font-size-lg mt-4 text-black">
+                Monthly report
+            </div>
+            <apx-chart
+                    [chart]="{
+                                type: 'bar',
+                                height: '280',
+                                sparkline: {
+                                  enabled: false
+                                },
+                                toolbar: {
+                                    show: false
+                                }
+                            }"
+                    [colors]="['#f4772e', '#4191ff']"
+                    [dataLabels]="{
+                              enabled: false
+                            }"
+                    [fill]="{
+                              opacity: 0.85,
+                              colors: ['#f4772e', '#4191ff']
+                            }"
+                    [grid]="{
+                            strokeDashArray: '5',
+                            borderColor: 'rgba(125, 138, 156, 0.3)'
+                        }"
+                    [labels]="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
+                    [legend]="{ show: false }"
+                    [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [3.3, 3.1, 4.0, 5.8, 2.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 2.8, 2.8, 4.3, 2.7, 1.4]
+                              }
+                            ]"
+
+                    [stroke]="{
+                              show: true,
+                              width: 2,
+                              colors: ['transparent']
+                            }"
+            ></apx-chart>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box p-4 text-center mb-5">
+            <div class="card-tr-actions">
+                <div class="btn-group" dropdown placement="bottom right">
+                    <button class="btn btn-link btn-link-second p-0 text-muted dropdown-toggle no-caret"
+                            dropdownToggle
+                            type="button">
+                        <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+                    </button>
+                    <div *dropdownMenu
+                         class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                        <ul class="nav nav-dark flex-column py-2">
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                    </div>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link active">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                    </div>
+                                    <span>Layouts</span>
+                                    <div class="ml-auto badge badge-warning">512</div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link disabled">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                    </div>
+                                    <span>Reports</span>
+                                </a>
+                            </li>
+                            <li class="nav-item nav-item--header">
+                                <span>Others</span>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                    </div>
+                                    <span>Components</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    <div class="nav-link-icon">
+                                        <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                    </div>
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h6 class="text-uppercase font-weight-bold mb-1 text-black">Total Revenue</h6>
+
+            <div class="py-3">
+                <apx-chart
+                        [chart]="{
+                                type: 'bar',
+                                height: '315',
+                                sparkline: {
+                                  enabled: false
+                                },
+                                stacked: false,
+                                toolbar: {
+                                    show: false
+                                }
+                            }"
+                        [colors]="['#f83245', '#1bc943']"
+                        [dataLabels]="{
+                              enabled: false
+                            }"
+                        [fill]="{
+                              opacity: 1
+                            }"
+
+                        [labels]="['1 Sep', '2 Sep', '3 Sep', '4 Sep', '5 Sep', '6 Sep', '7 Sep', '8 Sep', '9 Sep', '10 Sep', '11 Sep']"
+                        [legend]="{ show: false }"
+                        [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                endingShape: 'rounded',
+                                columnWidth: '50%'
+                              }
+                            }"
+
+                        [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                        [stroke]="{
+                              show: true,
+                              width: 0,
+                              colors: ['transparent']
+                            }"
+                ></apx-chart>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="divider-v divider-v-lg"></div>
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center text-uppercase text-black-50 pb-3">
+                            <span class="badge badge-circle badge-success mr-2">available</span>
+                            <span>Gross revenue</span>
+                        </div>
+                        <ngx-gauge append="%" backgroundColor="#e8e9ef" cap="round" class="img-fluid"
+                                   foregroundColor="#1bc943" max="200" min="0"
+                                   size="160" thick="10"
+                                   type="full" value="34.8">
+                        </ngx-gauge>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center text-uppercase text-black-50 pb-3">
+                            <span class="badge badge-circle badge-danger mr-2">total</span>
+                            <span>Net Revenue</span>
+                        </div>
+                        <ngx-gauge append="%" backgroundColor="#e8e9ef" cap="round" class="img-fluid"
+                                   foregroundColor="#f83245" max="200" min="0"
+                                   size="160" thick="10"
+                                   type="full" value="65.3">
+                        </ngx-gauge>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

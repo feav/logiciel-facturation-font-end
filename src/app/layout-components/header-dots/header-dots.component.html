@@ -1,0 +1,287 @@
+<div class="d-flex align-items-center">
+    <button [outsideClick]="true" [popover]="alertsPopover" [adaptivePosition]="false" class="btn bg-neutral-success text-success font-size-lg p-0 d-inline-block shadow-none border-0 text-center d-44 mr-2 rounded position-relative btn-transition-none" containerClass="popover-custom-wrapper popover-custom-md" placement="bottom" type="button">
+        <span class="badge badge-circle badge-success">New notifications</span>
+        <i-feather class="line-height-1" name="bell"></i-feather>
+    </button>
+    <button [outsideClick]="true" [popover]="settingsPopover" [adaptivePosition]="false" class="btn bg-neutral-danger text-danger font-size-lg p-0 d-inline-block shadow-none border-0 text-center d-44 mr-2 rounded position-relative btn-transition-none" containerClass="popover-custom-wrapper popover-custom-lg" placement="bottom" type="button">
+        <span class="badge badge-circle badge-danger badge-header-alt">Online</span>
+        <i-feather class="line-height-1" name="grid"></i-feather>
+    </button>
+    <button [outsideClick]="true" [popover]="dotsMenuPopover" [adaptivePosition]="false" class="btn bg-neutral-first text-first font-size-lg p-0 d-inline-block shadow-none border-0 text-center d-44 mr-2 rounded btn-transition-none" containerClass="popover-second popover-custom-wrapper popover-custom-lg shadow-lg" placement="bottom" type="button">
+        <i-feather class="line-height-1" name="users"></i-feather>
+    </button>
+</div>
+
+<ng-template #alertsPopover>
+    <div class="bg-composed-wrapper bg-midnight-bloom mx-3 mt-3 border-0 text-center rounded-sm">
+        <div class="bg-composed-img-3 bg-composed-wrapper--image"></div>
+        <div class="bg-composed-wrapper--content text-light px-2 py-4">
+            <h4 class="font-size-xl font-weight-bold mb-2">Notifications</h4>
+            <p class="opacity-8 mb-0">You have <b class="text-success">472</b> new messages</p>
+        </div>
+    </div>
+    <tabset [justified]="true" class="tabs-animated tabs-animated-shadow tabs-bordered" type="tabs">
+        <tab>
+            <ng-template tabHeading>
+                <span>Timeline</span>
+            </ng-template>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area scroll-area-sm shadow-overflow">
+                <div class="timeline-list timeline-list-offset timeline-list-offset-dot">
+                    <div class="timeline-item">
+                        <div class="timeline-item-offset">
+                            9:25
+                        </div>
+                        <div class="timeline-item--content">
+                            <div class="timeline-item--icon"></div>
+                            <h4 class="timeline-item--label mb-2 font-weight-bold">1991</h4>
+                            <p>
+                                The World Wide Web goes live with its first web page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-offset">
+                            9:25
+                        </div>
+                        <div class="timeline-item--content">
+                            <div class="timeline-item--icon"></div>
+                            <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam day</h4>
+                            <p>
+                                Bill Clinton's presidential scandal makes it online.
+                            </p>
+                            <div class="avatar-wrapper-overlap mt-2 mb-1">
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar1.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar2.jpg"/></div>
+                                </div>
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar6.jpg"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-offset">
+                            9:25
+                        </div>
+                        <div class="timeline-item--content">
+                            <div class="timeline-item--icon"></div>
+                            <h4 class="timeline-item--label mb-2 font-weight-bold">Business investor
+                                meeting</h4>
+                            <p>
+                                Mosaic, the first graphical browser, is introduced to the average consumer.
+                            </p>
+                            <div class="mt-3">
+                                <a [routerLink]=""><img alt="Rounded image"
+                                                        class="img-fluid rounded mr-3 shadow-sm"
+                                                        src="assets/images/stock-photos/people-1.jpg"
+                                                        width="70"></a>
+                                <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded shadow-sm"
+                                                        src="assets/images/stock-photos/people-3.jpg"
+                                                        width="70"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-offset">
+                            9:25
+                        </div>
+                        <div class="timeline-item--content">
+                            <div class="timeline-item--icon"></div>
+                            <h4 class="timeline-item--label mb-2 font-weight-bold">Learning round table
+                                gathering</h4>
+                            <p>
+                                First ever iPod launches.
+                            </p>
+                            <div class="mt-2">
+                                <button class="btn btn-sm btn-primary" type="button">Submit Report</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-offset">
+                            9:25
+                        </div>
+                        <div class="timeline-item--content">
+                            <div class="timeline-item--icon"></div>
+                            <h4 class="timeline-item--label mb-2 font-weight-bold">2003</h4>
+                            <p>
+                                MySpace becomes the most popular social network.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </perfect-scrollbar>
+        </tab>
+        <tab>
+            <ng-template tabHeading>
+                <span>Tasks</span>
+            </ng-template>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area scroll-area-sm shadow-overflow">
+                <div class="text-center my-5">
+                    <div class="avatar-icon-wrapper rounded-circle m-0">
+                        <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-neutral-danger text-danger m-0 d-130">
+                            <fa-icon [icon]="['fas', 'times']" class="d-flex align-self-center display-3"></fa-icon>
+                        </div>
+                    </div>
+                    <h6 class="font-weight-bold font-size-lg mb-1 mt-4 text-black">Incoming messages</h6>
+                    <p class="text-black-50 mb-0">You have pending actions to take care of.</p>
+                </div>
+            </perfect-scrollbar>
+        </tab>
+        <tab>
+            <ng-template tabHeading>
+                <span>Reports</span>
+            </ng-template>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area scroll-area-sm shadow-overflow">
+                <div class="text-center my-3">
+                    <div class="btn-group btn-group-sm mx-auto" role="group">
+                        <button class="btn active btn-outline-second" type="button">Income</button>
+                        <button class="btn btn-outline-second" type="button">Expenses</button>
+                    </div>
+                </div>
+                <div class="text-center text-black font-size-lg pb-1 font-weight-bold">
+                    Total Sales
+                    <small class="d-block text-black-50">Total performance for selected period</small>
+                </div>
+                <div class="px-2 pb-3 pt-2">
+                    <apx-chart
+                            [chart]="{
+                                type: 'bar',
+                                height: '180',
+                                sparkline: {
+                                  enabled: true
+                                },
+                                stacked: true
+                            }"
+                            [colors]="['#7a7b97', 'rgba(122, 123, 151, 0.15)']"
+                            [dataLabels]="{
+                              enabled: true
+                            }"
+                            [fill]="{
+                              opacity: 1
+                            }"
+
+                            [labels]="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Last week', 'Last month', 'Last year', 'Last quarter']"
+                            [legend]="{ show: false }"
+                            [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                columnWidth: '65%'
+                              }
+                            }"
+
+                            [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                            [stroke]="{
+                              show: false,
+                              width: 0,
+                              colors: ['transparent']
+                            }"
+                    ></apx-chart>
+                </div>
+            </perfect-scrollbar>
+        </tab>
+    </tabset>
+    <div class="text-center py-3">
+        <button class="btn px-4 btn-gradient badge-wrapper bg-midnight-bloom">
+                    <span class="badge badge-position badge-position--top-right badge-circle-inner badge-warning"
+                          tooltip="You have 472 new messages">New notifications</span>
+            <span class="btn-wrapper--label">Learn more</span>
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+            </span>
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #settingsPopover>
+    <ul class="list-group list-group-flush text-left bg-transparent">
+        <li class="list-group-item rounded-top">
+            <div class="align-box-row">
+                <div>
+                    <div class="avatar-icon-wrapper avatar-icon-md">
+                        <div class="avatar-icon rounded-circle">
+                            <img alt="..." src="assets/images/avatars/avatar7.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-2">
+                    <span class="pb-1 d-block">Emma Taylor</span>
+                    <small class="pb-1 text-black-50 d-block">This is an accountant profile</small>
+                    <div class="divider my-2"></div>
+                    <small class="text-black-50">
+                        Status: <b class="text-danger">Overdue</b>
+                    </small>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item bg-transparent py-2">
+            <div class="align-box-row mb-1">
+                <div>
+                    <small class="font-weight-bold">Profile completion</small>
+                </div>
+            </div>
+            <div class="progress-bar-sm progress-bar-animated-alt progress w-100">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="43" class="progress-bar bg-success w-43" role="progressbar"></div>
+            </div>
+            <div class="align-box-row progress-bar--label mt-1 text-muted">
+                <small class="text-dark">0</small>
+                <small class="ml-auto">100%</small>
+            </div>
+        </li>
+    </ul>
+    <div class="card-footer bg-white p-3 text-center d-block">
+        <a [routerLink]="" class="btn btn-sm btn-dark mr-1">
+            <fa-icon [icon]="['far', 'keyboard']" class="mr-1"></fa-icon>
+            Tasks
+        </a>
+        <a [routerLink]="" class="btn btn-sm btn-outline-danger ml-1" tooltip="Sign out">
+            <fa-icon [icon]="['fas', 'sign-out-alt']" class="mr-1"></fa-icon>
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #dotsMenuPopover>
+    <div class="px-3 pt-3 pb-3 text-center">
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]="" class="btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'gem']" class="font-size-xl"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Tasks</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]="" class="btn btn-link p-0 bg-grow-early d-inline-block text-center text-white d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'building']" class="font-size-xl"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Reports</div>
+        </div>
+        <div class="m-3 d-inline-block text-center">
+            <a [routerLink]="" class="btn btn-link p-0 bg-arielle-smile d-inline-block text-center text-white d-50 rounded border-0 mb-2">
+                <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xl"></fa-icon>
+            </a>
+            <div class="d-block text-white-50">Stats</div>
+        </div>
+    </div>
+    <div class="divider opacity-2 bg-white mb-1"></div>
+    <div class="text-center">
+        <a [routerLink]="" class="btn btn-link-light text-white">
+            View more items
+        </a>
+    </div>
+</ng-template>
+

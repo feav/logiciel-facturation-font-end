@@ -1,0 +1,68 @@
+<div class="app-wrapper bg-white">
+    <div class="app-main">
+        <a href="javascript:history.back()" class="btn btn-lg btn-success btn-go-back">
+            <span class="btn-wrapper--icon">
+                <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+            </span>
+            <span class="btn-wrapper--label">Back to previous page</span>
+        </a>
+        <div class="app-content p-0">
+            <div class="app-inner-content-layout--main">
+                <div class="flex-grow-1 w-100 d-flex align-items-center">
+                    <div class="bg-composed-wrapper--content">
+                        <div class="hero-wrapper bg-composed-wrapper min-vh-100">
+                            <div class="flex-grow-1 w-100 d-flex align-items-center">
+                                <div class="col-lg-6 col-md-9 px-4 px-lg-0 mx-auto text-center text-black">
+                                    <img src="assets/images/illustrations/404.svg" class="w-50 mx-auto d-block my-5 img-fluid" alt="...">
+
+                                    <h3 class="font-size-xxl line-height-sm font-weight-light d-block px-3 mb-3 text-black-50">
+                                        The page you were looking for doesn't exist.
+                                    </h3>
+                                    <p>
+                                        You may have mistyped the address or the page may have moved. Try searching below.
+                                    </p>
+                                    <div class="row no-gutters">
+                                        <div class="col-sm-12 col-md-8 mt-4 mt-lg-3 px-2">
+                                            <input type="text" class="form-control form-control-lg" placeholder="Search terms here...">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 mt-4 mt-lg-3 px-2">
+                                            <button class="btn d-block w-100 btn-first btn-lg">
+                                                <span class="btn-wrapper--label">
+                                                    Search
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-footer py-4">
+                                <ul class="nav nav-neutral-first">
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded-sm font-size-lg text-black-50" [routerLink]="" tooltip="Facebook">
+                                            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded-sm font-size-lg text-black-50" [routerLink]="" tooltip="Twitter">
+                                            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded-sm font-size-lg text-black-50" [routerLink]="" tooltip="Google">
+                                            <fa-icon [icon]="['fab', 'google']"></fa-icon>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded-sm font-size-lg text-black-50" [routerLink]="" tooltip="Instagram">
+                                            <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

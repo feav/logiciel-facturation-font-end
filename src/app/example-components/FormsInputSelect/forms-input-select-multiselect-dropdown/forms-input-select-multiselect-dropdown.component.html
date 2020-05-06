@@ -1,0 +1,5 @@
+<ng-select [(ngModel)]="selectedCars" [multiple]="true">
+    <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+    <ng-option [value]="'custom'">Custom</ng-option>
+    <ng-option [value]="'custom'">Other car make</ng-option>
+</ng-select>

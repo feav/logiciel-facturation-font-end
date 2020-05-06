@@ -1,0 +1,189 @@
+<div class="app-wrapper bg-white">
+    <div class="app-main">
+        <div class="app-content p-0">
+            <div class="app-inner-content-layout--main">
+                <div class="flex-grow-1 w-100 d-flex align-items-center">
+                    <div class="bg-composed-wrapper--content">
+                        <div class="row min-vh-100 no-gutters">
+                            <div class="col-lg-5 order-2 order-lg-1 d-flex">
+                                <div class="hero-wrapper w-100 bg-composed-wrapper bg-plum-plate min-vh-lg-100">
+                                    <div class="flex-grow-1 w-100 d-flex align-items-center">
+                                        <div class="bg-composed-wrapper--image" style="background-image: url('assets/images/hero-bg/hero-9.jpg');"></div>
+                                        <div class="bg-composed-wrapper--bg bg-premium-dark opacity-5"></div>
+                                        <div class="bg-composed-wrapper--content p-5">
+                                            <div class="d-flex align-items-center">
+                                                <span class="badge badge-pill badge-second px-4 h-auto py-1">Register page</span>
+                                                <span class="text-white-50 pl-3" placement="right" tooltip="Create your own register or login pages using the included elements.">
+                                                        <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                                    </span>
+                                            </div>
+                                            <div class="text-white mt-3">
+                                                <h1 class="display-4 my-3 font-weight-bold">
+                                                    Why should you create an account?
+                                                </h1>
+                                                <p class="font-size-md mb-0 text-white-50">
+                                                    A free hour, when our power of choice is untrammelled and when nothing prevents.
+                                                </p>
+                                                <div class="divider border-2 my-5 border-light opacity-2 rounded w-25"></div>
+                                                <div>
+                                                    <a class="btn btn-lg btn-warning" href="javascript:history.back()">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+                                                            </span>
+                                                        <span class="btn-wrapper--label">Back to previous page</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-footer pb-4">
+                                        <ul class="nav nav-pills nav-neutral-secondary">
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link font-size-lg text-white-50" tooltip="Facebook">
+                                                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link font-size-lg text-white-50" tooltip="Twitter">
+                                                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link font-size-lg text-white-50" tooltip="Google">
+                                                    <fa-icon [icon]="['fab', 'google']"></fa-icon>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a [routerLink]="" class="nav-link font-size-lg text-white-50" tooltip="Instagram">
+                                                    <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center">
+                                <div class="col-xl-7 col-lg-10 col-md-11 mx-auto px-xl-0">
+                                    <tabset class="py-5" type="line">
+                                        <tab>
+                                            <ng-template tabHeading>
+                                                <span>Create an account</span>
+                                                <div class="divider"></div>
+                                            </ng-template>
+                                            <div class="px-3 pb-3 pt-4">
+                                                <h3 class="display-4 mb-2 font-weight-bold">
+                                                    Create account
+                                                </h3>
+                                                <p class="font-size-lg mb-5 text-black-50">
+                                                    Fill in the fields below and you'll be good to go.
+                                                </p>
+                                                <div class="form-group">
+                                                    <label>Email address</label>
+                                                    <input class="form-control" placeholder="Enter your email address" type="email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="d-flex justify-content-between mg-b-5">
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <input class="form-control" placeholder="Enter your password" type="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Firstname</label>
+                                                    <input class="form-control" placeholder="Enter your firstname" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Lastname</label>
+                                                    <input class="form-control" placeholder="Enter your lastname" type="text">
+                                                </div>
+                                                <div class="form-group mb-5">
+                                                    By clicking the <strong>Create account</strong> button below you agree to our terms of service and privacy statement.
+                                                </div>
+
+                                                <button class="btn btn-primary btn-lg btn-block mb-5">Create Account</button>
+                                            </div>
+                                        </tab>
+                                        <tab>
+                                            <ng-template tabHeading>
+                                                <span>Sign in</span>
+                                                <div class="divider"></div>
+                                            </ng-template>
+                                            <div class="px-3 pb-3 pt-4">
+                                                <div class="card m-0 shadow-none border-0">
+                                                    <h3 class="display-4 mb-2 font-weight-bold">
+                                                        Existing account
+                                                    </h3>
+                                                    <p class="font-size-lg mb-5 text-black-50">
+                                                        You already have an account? Fill in the fields below to login into your existing dashboard.
+                                                    </p>
+                                                    <div class="card-header p-3 pt-0 rounded bg-light">
+                                                        <div class="text-black-50 text-center mb-3">
+                                                            <small>Sign in with</small>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <button class="btn btn-facebook mr-2" type="button">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                                            </span>
+                                                                <span class="btn-wrapper--label">
+                                                                Facebook
+                                                            </span>
+                                                            </button>
+                                                            <button class="btn btn-twitter ml-2" type="button">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                                            </span>
+                                                                <span class="btn-wrapper--label">
+                                                                Twitter
+                                                            </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="text-center text-black-50 mb-3">
+                                                            <small>Or sign in with credentials</small>
+                                                        </div>
+                                                        <form>
+                                                            <div class="form-group mb-3">
+                                                                <div class="input-group input-group-alternative">
+                                                                    <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                                                    </span>
+                                                                    </div>
+                                                                    <input class="form-control" placeholder="Email" type="email">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="input-group input-group-alternative">
+                                                                    <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <fa-icon [icon]="['fas', 'unlock-alt']"></fa-icon>
+                                                                    </span>
+                                                                    </div>
+                                                                    <input class="form-control" placeholder="Password" type="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-control custom-control-alternative custom-checkbox">
+                                                                <input class="custom-control-input" id="customCheckLogin" type="checkbox">
+                                                                <label class="custom-control-label" for="customCheckLogin">
+                                                                    <span>Remember me</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="text-center mb-5">
+                                                                <button class="btn btn-second my-2" type="button">Sign in</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </tab>
+                                    </tabset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

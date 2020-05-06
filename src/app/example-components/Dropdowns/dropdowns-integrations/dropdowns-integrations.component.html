@@ -1,0 +1,874 @@
+<div class="row">
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Grid menus</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-lg p-0">
+                <div class="grid-menu grid-menu-2col">
+                    <div class="no-gutters row">
+                        <div class="col-sm-6 p-3">
+                            <button class="btn border-0 w-100 btn-outline-primary">
+                                <i class="ion-ios-flame font-size-xxl d-block mb-2"></i>
+                                <span>Primary</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-6 p-3">
+                            <button class="btn border-0 w-100 btn-outline-info">
+                                <i class="ion-ios-images font-size-xxl d-block mb-2"></i>
+                                <span>Info</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-6 p-3">
+                            <button class="btn border-0 w-100 btn-outline-success">
+                                <i class="ion-ios-people font-size-xxl d-block mb-2"></i>
+                                <span>Success</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-6 p-3">
+                            <button class="btn border-0 w-100 btn-outline-danger">
+                                <i class="ion-ios-rocket font-size-xxl d-block mb-2"></i>
+                                <span>Danger</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Grid menus alternate</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-lg overflow-hidden p-0">
+                <div class="grid-menu grid-menu-2col">
+                    <div class="no-gutters row">
+                        <div class="col-sm-6">
+                            <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                    type="button">
+                                <fa-icon [icon]="['far', 'bell']" class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                                <div class="font-weight-bold text-black">Reports</div>
+                                <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                    type="button">
+                                <fa-icon [icon]="['far', 'file-excel']"
+                                         class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                                <div class="font-weight-bold text-black">Statistics</div>
+                                <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                    type="button">
+                                <fa-icon [icon]="['far', 'eye']" class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                                <div class="font-weight-bold text-black">Projects</div>
+                                <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                    type="button">
+                                <fa-icon [icon]="['far', 'chart-bar']"
+                                         class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                                <div class="font-weight-bold text-black">Tasks</div>
+                                <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Bullets menu</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu bg-slick-carbon border-0 dropdown-menu-xxl">
+                <div class="p-2 text-center">
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-love-kiss d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'question-circle']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-ripe-malin d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'building']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-grow-early d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'bell']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-arielle-smile d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'file-excel']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-night-fade d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'eye']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                    <a [routerLink]=""
+                       class="m-3 btn btn-link p-0 border-0 bg-strong-bliss d-inline-block text-center d-70 rounded-circle card-box-hover-rise-alt"
+                      tooltip="Menu Example">
+                        <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-white"></fa-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Vertical menu</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'building']"></fa-icon>
+                            </div>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link active">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                            </div>
+                            <span>Layouts</span>
+                            <div class="ml-auto badge badge-warning">512</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link disabled">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                            </div>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item--header">
+                        <span>Others</span>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                            </div>
+                            <span>Components</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                            </div>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Vertical danger menu</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl">
+                <ul class="nav nav-danger nav-pills flex-column p-3">
+                    <li class="nav-item nav-item--header">
+                        <span class="text-primary font-weight-bold">Navigation</span>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <span>My Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link active">
+                            <span>Profile settings</span>
+                            <div class="ml-auto badge badge-first">23</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <span>Active tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item--header">
+                        <span>Heading</span>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                            </div>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">
+                            <div class="nav-link-icon">
+                                <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                            </div>
+                            <span>Statistics</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Vertical headers menu</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0">
+                <div class="bg-composed-wrapper bg-vicious-stance mt-0">
+                    <div class="bg-composed-wrapper--image bg-composed-img-5"></div>
+                    <div class="bg-composed-wrapper--content text-light text-center p-4">
+                        <h5 class="mb-1">Scrollable</h5>
+                        <p class="mb-0 opacity-7">This menu box is scrollable (sm)</p>
+                    </div>
+                </div>
+                <perfect-scrollbar [autoPropagation]="true" class="scroll-area-sm shadow-overflow">
+                    <ul class="nav flex-column py-2">
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                </div>
+                                <span>Layouts</span>
+                                <div class="ml-auto badge badge-warning">512</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link disabled">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                </div>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item--header">
+                            <span>Others</span>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                </div>
+                                <span>Components</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                </div>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                </perfect-scrollbar>
+                <div class="card-footer d-flex justify-content-between">
+                    <button class="btn btn-sm btn-neutral-success" type="button">Action</button>
+                    <button class="btn btn-sm btn-link btn-link-success px-0" type="button"><span>View details</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">List groups</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0">
+                <div class="bg-composed-wrapper bg-dark mt-0">
+                    <div class="bg-composed-wrapper--image bg-composed-img-1"></div>
+                    <div class="bg-composed-wrapper--content text-light px-4 py-3">
+                        <h5 class="mb-1">Composed backgrounds</h5>
+                        <p class="mb-0 opacity-7">Highly configurable & easy to integrate.</p>
+                    </div>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a [routerLink]="" class="list-group-item list-group-item-action align-box-row">
+                        <div class="d-flex align-items-center">
+                            <fa-icon [icon]="['far', 'file-pdf']" class="text-black-50 font-size-xl mr-3"></fa-icon>
+                            Adobe_file.pdf
+                            <span class="badge text-info badge-neutral-info ml-2">New</span>
+                        </div>
+                        <div class="ml-auto">
+                            <fa-icon [icon]="['fas', 'angle-right']" class="text-primary"></fa-icon>
+                        </div>
+                    </a>
+                    <a [routerLink]="" class="list-group-item list-group-item-action align-box-row">
+                        <div class="d-flex align-items-center">
+                            <fa-icon [icon]="['far', 'file-word']" class="text-black-50 font-size-xl mr-3"></fa-icon>
+                            Word_file.docx
+                        </div>
+                        <div class="ml-auto">
+                            <fa-icon [icon]="['fas', 'angle-right']" class="text-primary"></fa-icon>
+                        </div>
+                    </a>
+                    <a [routerLink]="" class="list-group-item list-group-item-action align-box-row">
+                        <div class="d-flex align-items-center">
+                            <fa-icon [icon]="['far', 'file-excel']" class="text-black-50 font-size-xl mr-3"></fa-icon>
+                            Excel_doc.csv
+                            <span class="badge badge-neutral-success text-success ml-2">Draft</span>
+                        </div>
+                        <div class="ml-auto">
+                            <fa-icon [icon]="['fas', 'angle-right']" class="text-primary"></fa-icon>
+                        </div>
+                    </a>
+                    <a [routerLink]="" class="list-group-item list-group-item-action align-box-row">
+                        <div class="d-flex align-items-center">
+                            <fa-icon [icon]="['far', 'file-alt']" class="text-black-50 font-size-xl mr-3"></fa-icon>
+                            Archive_docs.zip
+                        </div>
+                        <div class="ml-auto">
+                            <fa-icon [icon]="['fas', 'angle-right']" class="text-primary"></fa-icon>
+                        </div>
+                    </a>
+                    <a [routerLink]="" class="list-group-item list-group-item-action text-center">
+                        <fa-icon [icon]="['fas', 'chevron-down']" class="text-muted mr-3"></fa-icon>
+                        <small class="text-primary">Show all files <b>(93)</b></small>
+                        <fa-icon [icon]="['fas', 'chevron-down']" class="text-muted ml-3"></fa-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Blocks</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl p-0">
+                <div class="card-body p-0">
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="text-center">
+                                <div>
+                                    <fa-icon [icon]="['far', 'chart-bar']" class="font-size-xxl text-danger"></fa-icon>
+                                </div>
+                                <div class="mt-3 line-height-sm">
+                                    <b class="font-size-lg">3,568</b>
+                                    <span class="text-black-50 d-block">sales</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="text-center">
+                                <div>
+                                    <fa-icon [icon]="['far', 'object-group']" class="font-size-xxl text-info"></fa-icon>
+                                </div>
+                                <div class="mt-3 line-height-sm">
+                                    <b class="font-size-lg">$9,693</b>
+                                    <span class="text-black-50 d-block">revenue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider mt-4"></div>
+                    <div class="text-center py-4">
+                        <button class="btn btn-sm btn-primary" type="button">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                            </span>
+                            <span class="btn-wrapper--label">
+                                Generate reports
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-footer bg-light text-center">
+                    <div class="pt-4 pr-2 pl-2">
+                        <apx-chart
+                                [chart]="{
+                                        type: 'line',
+                                        height: '80',
+                                        sparkline: {
+                                            enabled: true
+                                        }
+                                    }"
+                                [colors]="['#3c44b1']"
+                                [markers]="{
+                                        size: 0
+                                    }"
+                                [series]="[
+                                      {
+                                        name: 'Customers',
+                                        data: [47, 38, 56, 24, 45, 54, 38, 47, 38, 56, 24, 56, 24, 65]
+                                      }
+                                    ]"
+                                [stroke]="{
+                                            color: '#4191ff',
+                                            curve: 'smooth',
+                                            width: 4
+                                    }"
+                                [xaxis]="{
+                                        crosshairs: {
+                                            width: 1
+                                        }
+                                    }"
+                                [yaxis]="{
+                                        min: 0
+                                    }"
+                        ></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Alternate menu</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item rounded-top">
+                        <ul class="nav nav-neutral-primary nav-pills flex-column">
+                            <li class="nav-header d-flex text-primary pt-0 pb-2 font-weight-bold align-items-center">
+                                <div>
+                                    Profile options
+                                </div>
+                                <div class="ml-auto font-size-xs">
+                                    <a [routerLink]="" >
+                                        <fa-icon [icon]="['fas', 'plus-circle']"></fa-icon>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    My Account
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    Profile settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="" class="nav-link">
+                                    Active tasks
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item bg-light p-0">
+                        <div class="grid-menu grid-menu-2col">
+                            <div class="py-3">
+                                <div class="d-flex justify-content-center">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <fa-icon [icon]="['far', 'chart-bar']"
+                                                     class="font-size-xxl text-info"></fa-icon>
+                                        </div>
+                                        <div class="pl-3 line-height-sm">
+                                            <b class="font-size-lg">$9,693</b>
+                                            <span class="text-black-50 d-block">revenue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item rounded-bottom p-3 text-center">
+                        <a [routerLink]="" class="btn btn-facebook" title="Facebook">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                            </span>
+                        </a>
+                        <a [routerLink]="" class="btn btn-dribbble mr-2 ml-2" title="Dribbble">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'dribbble']"></fa-icon>
+                            </span>
+                        </a>
+                        <a [routerLink]="" class="btn btn-twitter" title="Twitter">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Profile block</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item rounded-top">
+                        <div class="align-box-row">
+                            <div>
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <div class="avatar-icon rounded-circle">
+                                        <img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="pb-1 d-block">John Doe <small
+                                        class="text-black-50">(john@example.com)</small></span>
+                                <span class="badge badge-success">Active Account</span>
+                            </div>
+                        </div>
+                        <div class="alert alert-warning p-2 mb-1 mt-3 rounded">
+                            <div class="align-box-row">
+                                <div>
+                                    <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                                </div>
+                                <div class="pl-3">
+                                    <small><b class="d-block">Unpaid invoice</b></small>
+                                    <small>This account will be disabled starting <b>12 January 2021</b>.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-transparent p-0">
+                        <div class="grid-menu grid-menu-2col">
+                            <div class="no-gutters row">
+                                <div class="col-sm-6 py-3">
+                                    <div class="text-center">
+                                        <div>
+                                            <fa-icon [icon]="['far', 'chart-bar']"
+                                                     class="font-size-xxl text-info"></fa-icon>
+                                        </div>
+                                        <div class="mt-2 line-height-sm">
+                                            <b class="font-size-lg">$9,693</b>
+                                            <span class="text-black-50 d-block">revenue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 py-3">
+                                    <div class="text-center">
+                                        <div>
+                                            <fa-icon [icon]="['far', 'user']"
+                                                     class="font-size-xxl text-success"></fa-icon>
+                                        </div>
+                                        <div class="mt-2 line-height-sm">
+                                            <b class="font-size-lg">2,345</b>
+                                            <span class="text-black-50 d-block">users</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item rounded-bottom p-3 text-center">
+                        <a [routerLink]="" class="btn btn-facebook">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                            </span>
+                        </a>
+                        <a [routerLink]="" class="btn btn-dribbble mr-2 ml-2">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'dribbble']"></fa-icon>
+                            </span>
+                        </a>
+                        <a [routerLink]="" class="btn btn-twitter">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Timeline block</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl overflow-hidden p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item">
+                        <div class="align-box-row">
+                            <div class="align-self-start">
+                                <div class="bg-premium-dark text-center text-white font-size-lg d-40 rounded-circle">
+                                    <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <b>
+                                    Blinded by desire
+                                </b>
+                                <p class="text-black-50 mt-1 mb-0">
+                                    A wonderful serenity has taken possession.
+                                </p>
+                                <div class="timeline-list mt-3">
+                                    <div class="timeline-item timeline-item-icon">
+                                        <div class="timeline-item--content">
+                                            <div class="timeline-item--icon-wrapper bg-danger text-white">
+                                                <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                                            </div>
+                                            <h4 class="timeline-item--label mb-2 font-weight-bold">1998</h4>
+                                            <p>
+                                                Bill Clinton's presidential scandal makes it online.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item--content">
+                                            <div class="timeline-item--icon"></div>
+                                            <h4 class="timeline-item--label mb-2 font-weight-bold">
+                                                Business investor meeting
+                                                <span class="badge badge-neutral-info text-info ml-2">New</span>
+                                            </h4>
+                                            <p>
+                                                Mosaic, the first graphical browser, is introduced to the average
+                                                consumer.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Chat block</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl pb-0">
+                <div class="card-body">
+                    <div class="chat-wrapper">
+                        <div class="chat-item p-2 mb-2">
+                            <div class="align-box-row">
+                                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                                    <div class="avatar-icon rounded border-0">
+                                        <img alt="..." src="assets/images/avatars/avatar7.jpg"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="chat-box bg-first text-white">
+                                        <p>Bye for now, talk to you later.</p>
+                                    </div>
+                                    <small class="mt-2 d-block text-black-50">
+                                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                        11:01 AM | Yesterday
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-item chat-item-reverse p-2 mb-2">
+                            <div class="align-box-row flex-row-reverse">
+                                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                                    <div class="avatar-icon rounded border-0">
+                                        <img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="chat-box bg-first text-white">
+                                        <p>Almost forgot about your tasks.</p>
+                                        <p><b>Check the links below:</b></p>
+                                        <div class="card bg-premium-dark p-2 mt-3 mb-2">
+                                            <div class="text-center py-2">
+                                                <a [routerLink]=""
+                                                   class="m-1 btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                                   >
+                                                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                                </a>
+                                                <a [routerLink]=""
+                                                   class="m-1 btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                                   >
+                                                    <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                                                </a>
+                                                <a [routerLink]=""
+                                                   class="m-1 btn btn-link p-0 bg-plum-plate d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                                   >
+                                                    <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <small class="mt-2 d-block text-black-50">
+                                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                                        11:03 AM | Yesterday
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white p-3 text-center d-block">
+                    <a [routerLink]="" class="btn btn-primary btn-sm">
+                        <fa-icon [icon]="['far', 'object-group']" class="mr-1"></fa-icon>
+                        View History
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Profile alternate block</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item rounded-top">
+                        <div class="align-box-row">
+                            <div>
+                                <div class="avatar-icon-wrapper avatar-icon-md">
+                                    <div class="avatar-icon rounded-circle"><img
+                                            alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="pl-2">
+                                <span class="pb-1 d-block">John Doe</span>
+                                <small class="pb-1 text-black-50 d-block">John's bio description here...</small>
+                                <div class="divider my-2"></div>
+                                <small class="text-black-50">
+                                    Deadline: <b class="text-danger">12 July 2029</b>
+                                </small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-transparent py-2">
+                        <div class="align-box-row mb-1">
+                            <div>
+                                <small class="font-weight-bold">Orders</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="font-weight-bold text-success">
+                                    348
+                                </div>
+                            </div>
+                        </div>
+                        <progressbar [animate]="true" [value]="75" class="progress-animated-alt progress-bar-rounded progress-sm"
+                                     type="success"></progressbar>
+                        <div class="align-box-row mt-1 text-muted">
+                            <small class="text-dark">0</small>
+                            <small class="ml-auto">100%</small>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-footer bg-white p-3 text-center d-block">
+                    <a [routerLink]="" class="btn btn-sm btn-success mr-1">
+                        <fa-icon [icon]="['fas', 'cog']" [spin]="true" class="mr-1"></fa-icon>
+                        Refresh
+                    </a>
+                    <a [routerLink]="" class="btn btn-sm btn-danger ml-1">
+                        Remove
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Bullets alternate</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl bg-slick-carbon p-0">
+                <div class="px-3 pt-3 pb-3 text-center">
+                    <div class="m-3 d-inline-block text-center">
+                        <a [routerLink]=""
+                           class="btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                            <fa-icon [icon]="['far', 'gem']" class="font-size-lg"></fa-icon>
+                        </a>
+                        <div class="d-block text-white-50">Tasks</div>
+                    </div>
+                    <div class="m-3 d-inline-block text-center">
+                        <a [routerLink]=""
+                           class="btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                            <fa-icon [icon]="['far', 'building']" class="font-size-lg"></fa-icon>
+                        </a>
+                        <div class="d-block text-white-50">Reports</div>
+                    </div>
+                    <div class="m-3 d-inline-block text-center">
+                        <a [routerLink]=""
+                           class="btn btn-link p-0 bg-arielle-smile d-inline-block text-center text-white font-size-xl d-50 rounded border-0 mb-2">
+                            <fa-icon [icon]="['far', 'chart-bar']" class="font-size-lg"></fa-icon>
+                        </a>
+                        <div class="d-block text-white-50">Stats</div>
+                    </div>
+                </div>
+                <div class="divider opacity-2 bg-white mb-1"></div>
+                <div class="text-center">
+                    <a [routerLink]="" class="btn btn-link-light text-white">
+                        View more items
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+        <div class="heading-3 text-center">Chart box</div>
+        <div class="btn-group btn-block mb-5" dropdown>
+            <button class="btn btn-outline-first dropdown-toggle btn-block" dropdownToggle type="button">
+                Open menu
+            </button>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl bg-vicious-stance overflow-hidden p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item bg-transparent">
+                        <div class="card-body p-2">
+                            <div class="align-box-row align-items-start">
+                                <div class="font-weight-bold">
+                                    <small class="text-white-50 d-block mb-1 text-uppercase">New Accounts</small>
+                                    <span class="font-size-xxl mt-1 text-white">586,356</span>
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="bg-white text-center text-success font-size-xl d-50 rounded-circle">
+                                        <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <fa-icon [icon]="['fas', 'arrow-up']" class="text-success pr-1"></fa-icon>
+                                <span class="text-white pr-1">15.4%</span>
+                                <span class="text-white-50">increase this month</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

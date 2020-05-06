@@ -1,0 +1,53 @@
+<div class="hero-wrapper bg-composed-wrapper bg-slick-carbon">
+    <div class="header-nav-wrapper header-nav-wrapper-xl w-100 navbar-dark">
+        <div class="text-center w-100 d-block font-weight-bold text-white-50 text-uppercase">Header menu placeholder</div>
+    </div>
+    <div class="flex-grow-1 w-100 d-flex align-items-center">
+        <div class="bg-composed-wrapper--image opacity-3" style="background-image: url('assets/images/hero-bg/hero-9.jpg');"></div>
+        <div class="bg-composed-wrapper--bg bg-second opacity-5"></div>
+        <div class="bg-composed-wrapper--content py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-xl-8 px-0 mx-auto text-center">
+                        <div class="text-white mt-3">
+                            <h1 class="display-2 mb-3 px-4 font-weight-bold">
+                                Pleasure rationally encounter consequences
+                            </h1>
+                            <h3 class="font-size-lg line-height-md font-weight-light d-block px-3 mb-5 text-white-50">
+                                On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.
+                            </h3>
+                            <div class="pb-5">
+                                <a (click)="exampleModal.show()" [routerLink]="" class="btn rounded-circle btn-lg p-0 d-80 btn-first" containerClass="tooltip-first" tooltip="Play video">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'play-circle']" class="font-size-xxl"></fa-icon>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-indicator animated font-size-xxl text-white opacity-10">
+        <fa-icon [icon]="['fas', 'arrow-down']"></fa-icon>
+    </div>
+</div>
+
+<div bsModal #exampleModal="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Example Modal</h6>
+                <button type="button" class="close" aria-label="Close" (click)="exampleModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe allowfullscreen class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

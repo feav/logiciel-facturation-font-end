@@ -1,0 +1,11 @@
+<div class="d-block">
+    <canvas (chartClick)="chartClicked($event)" (chartHover)="chartHovered($event)" [chartType]="barChartType" [datasets]="barChartData"
+            [labels]="barChartLabels" [legend]="barChartLegend" [options]="barChartOptions"
+            baseChart></canvas>
+</div>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+    <button (click)="randomize()" class="btn btn-primary">Update</button>
+</div>

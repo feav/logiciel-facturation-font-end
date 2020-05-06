@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center mb-4">
+    <timepicker [(ngModel)]="mytime" [hourStep]="hstep" [minuteStep]="mstep" [secondsStep]="sstep" [showSeconds]="true"></timepicker>
+</div>
+<alert class="text-center mb-0 font-size-sm" type="info">
+    Based on selection, time is: <b>{{mytime}}</b>
+</alert>
+
+<div class="divider my-4"></div>
+
+<div class="row">
+    <div class="col">
+        <label for="">Hours step is:</label>
+        <select [(ngModel)]="hstep" class="form-control  form-control-sm">
+            <option *ngFor="let opt of options.hstep" [value]="opt">{{opt}}</option>
+        </select>
+    </div>
+    <div class="col">
+        <label for="">Minutes step is:</label>
+        <select [(ngModel)]="mstep" class="form-control form-control-sm">
+            <option *ngFor="let opt of options.mstep" [value]="opt">{{opt}}</option>
+        </select>
+    </div>
+    <div class="col">
+        <label for="">Seconds step is:</label>
+        <select [(ngModel)]="sstep" class="form-control form-control-sm">
+            <option *ngFor="let opt of options.sstep" [value]="opt">{{opt}}</option>
+        </select>
+    </div>
+</div>

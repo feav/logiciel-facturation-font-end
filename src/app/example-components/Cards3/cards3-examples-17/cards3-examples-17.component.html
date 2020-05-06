@@ -1,0 +1,247 @@
+<div class="row">
+    <div class="col-xl-5">
+        <div class="card mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-first p-0 font-size-xl text-first dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Weekly Sales</h6>
+                <p class="text-black-50 mb-0">Reports for what we sold this week.</p>
+            </div>
+            <apx-chart
+                    [chart]="{
+                        type: 'area',
+                        height: '150',
+                        sparkline: {
+                          enabled: true
+                        }
+                    }"
+                    [colors]="['#4191ff']"
+                    [fill]="{
+                        color: '#4191ff',
+                        gradient: {
+                            shade: 'light',
+                            type: 'vertical',
+                            shadeIntensity: 0.7,
+                            inverseColors: true,
+                            opacityFrom: 1,
+                            opacityTo: 0,
+                            stops: [0, 100]
+                        }
+                    }"
+                    [series]="[
+                      {
+                        name: 'Weekly sales',
+                        data: [47, 38, 56, 24, 45, 54, 38, 56, 24, 65]
+                      }
+                    ]"
+                    [stroke]="{
+                        color: '#4191ff',
+                        curve: 'smooth',
+                        width: 2
+                    }"
+                    [xaxis]="{
+                        crosshairs: {
+                            width: 1
+                        }
+                    }"
+                    [yaxis]="{
+                        min: 0
+                    }"
+            ></apx-chart>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area-sm shadow-overflow">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Akeem Griffith
+                                </a>
+                                <span class="text-black-50 d-block">Manager, Google Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Abigayle Hicks
+                                </a>
+                                <span class="text-black-50 d-block">Project Manager, Spotify</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Reece Corbett
+                                </a>
+                                <span class="text-black-50 d-block">Senior Designer, Amazon Inc.</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Reece Corbett
+                                </a>
+                                <span class="text-black-50 d-block">Senior Designer, Amazon Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                </ul>
+            </perfect-scrollbar>
+            <div class="card-footer p-3 text-center">
+                <button class="btn btn-sm btn-primary" type="button">
+                    <span class="btn-wrapper--label">
+                        View all employees
+                    </span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-box mb-5">
+                    <div class="card-header-alt px-4 pt-4 pb-0 d-flex align-items-start justify-content-between">
+                        <div>
+                            <h3 [countUp]="895" class="font-weight-bold display-4 mb-0 text-black"></h3>
+                            <p class="font-size-lg text-black-50 mb-0">Total Orders</p>
+                        </div>
+                        <button class="btn btn-sm text-uppercase font-size-xs btn-outline-primary" type="button">
+                            <small class="font-weight-bold">Details</small>
+                        </button>
+                    </div>
+                    <div class="pr-5 pb-3">
+                        <ngx-trend [data]="[5, 10, 5, 13, 5.6,8, 5, 5.6, 11]" autoDraw="true" autoDrawDuration="3000"
+                                   autoDrawEasing="ease-in" height="120"
+                                   radius="15" smooth="true"
+                                   stroke="var(--primary)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+                    </div>
+                </div>
+                <div class="card card-box bg-midnight-bloom mb-5">
+                    <div class="card-header-alt px-4 pt-4 pb-0">
+                        <h3 [countUp]="586" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                        <p class="font-size-lg text-white-50 mb-0">Total Visitors</p>
+                    </div>
+                    <div class="pr-5 pb-3">
+                        <ngx-trend [data]="[6, 8, 5, 5, 5.6,13, 5.6, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                                   autoDrawEasing="ease-in" height="120"
+                                   radius="15" smooth="true"
+                                   stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-box bg-danger mb-5">
+                    <div class="card-header-alt px-4 pt-4 pb-0">
+                        <h3 [countUp]="183954" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                        <p class="font-size-lg text-white-50 mb-0">Total Deliveries</p>
+                    </div>
+                    <div class="pr-5 pb-3">
+                        <ngx-trend [data]="[5, 8, 5.6,13, 5.6,8, 6, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                                   autoDrawEasing="ease-in" height="120"
+                                   radius="15" smooth="true"
+                                   stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+                    </div>
+                </div>
+                <div class="card card-box bg-night-sky mb-5">
+                    <div class="card-header-alt px-4 pt-4 pb-0">
+                        <h3 [countUp]="13253" class="font-weight-bold display-4 mb-0 text-white"></h3>
+                        <p class="font-size-lg text-white-50 mb-0">Total Budget</p>
+                    </div>
+                    <div class="pr-5 pb-3">
+                        <ngx-trend [data]="[5, 5.6,13, 5.6,8, 6, 8, 12, 10 ]" autoDraw="true" autoDrawDuration="3000"
+                                   autoDrawEasing="ease-in" height="120"
+                                   radius="15" smooth="true"
+                                   stroke="var(--white)" strokeLinecap="round" strokeWidth="4"></ngx-trend>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

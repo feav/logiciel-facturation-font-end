@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xl-6">
+    <div class="font-weight-bold font-size-lg mb-3">
+      Content source
+    </div>
+    <textarea name="" class="form-control" #textareaTarget rows="6">Dummy content to be copied on button click! Write something else here...</textarea>
+
+    <div class="text-center mt-4">
+      <button (cbOnSuccess)="showNotification( 'success', 'Text has been copied successfully.' )" class="btn btn-success" [ngxClipboard]="textareaTarget">Copy content from textarea</button>
+    </div>
+  </div>
+  <div class="col-xl-6">
+    <div class="font-weight-bold font-size-lg mb-3">
+      Test copy
+    </div>
+    <alert type="warning">
+      Paste here the content you copied when you clicked the "Copy" button.
+    </alert>
+    <textarea name="" class="form-control font-size-sm" rows="2"></textarea>
+  </div>
+</div>

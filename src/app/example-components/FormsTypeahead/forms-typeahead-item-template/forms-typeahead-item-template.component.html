@@ -1,0 +1,21 @@
+<ng-template #customItemTemplate let-model="item" let-index="index">
+  <div class="font-weight-bold font-size-sm text-dark">This is: {{model | json}} Index: {{ index }}</div>
+</ng-template>
+
+<div class="form-group mb-0">
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+            <span class="input-group-text">
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+            </span>
+    </div>
+    <input [(ngModel)]="selected"
+           [typeahead]="states"
+           [typeaheadItemTemplate]="customItemTemplate"
+           [isAnimated]="true"
+           [typeaheadScrollable]="true"
+           class="form-control"
+           placeholder="Typeahead search ...">
+  </div>
+</div>
+<div class="mt-4 text-info font-weight-bold">Model: {{selected | json}}</div>

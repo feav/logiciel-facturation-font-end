@@ -1,0 +1,609 @@
+<div class="app-inner-content-layout app-inner-content-layout-fixed">
+    <div class="d-flex bg-secondary d-lg-none p-4 order-0 justify-content-between align-items-center">
+        <button (click)="toggleMobileSidebar1 = !toggleMobileSidebar1" class="btn btn-sm btn-primary px-3" type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+        </button>
+        <button (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" class="btn btn-sm btn-primary px-3" type="button">
+            <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+        </button>
+    </div>
+    <div [ngClass]="{'layout-sidebar-open' : toggleMobileSidebar1}" class="app-inner-content-layout--sidebar bg-white app-inner-content-layout--sidebar__sm">
+        <div class="p-4">
+            <button class="btn btn-block btn-sm btn-success" type="button">
+                  <span class="btn-wrapper--icon">
+                      <fa-icon [icon]="['fas', 'upload']"></fa-icon>
+                  </span>
+                <span class="btn-wrapper--label">Upload</span>
+            </button>
+        </div>
+        <perfect-scrollbar [autoPropagation]="true" class="px-4">
+            <ul class="nav nav-neutral-primary nav-pills flex-column">
+                <li class="nav-header text-uppercase font-size-sm text-muted pb-2">
+                    My storage drive
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link active">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-alt']" class="mx-auto"></fa-icon></span>
+                        All files
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'building']" class="mx-auto"></fa-icon></span>
+                        Connected devices
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'keyboard']" class="mx-auto"></fa-icon></span>
+                        Recent files
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'trash-alt']" class="mx-auto"></fa-icon></span>
+                        Deleted files
+                    </a>
+                </li>
+                <li class="nav-header text-uppercase font-size-sm text-muted pb-2">
+                    Content library
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-image']" class="mx-auto"></fa-icon></span>
+                        Images
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-alt']" class="mx-auto"></fa-icon></span>
+                        Documents
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-video']" class="mx-auto"></fa-icon></span>
+                        Videos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-archive']" class="mx-auto"></fa-icon></span>
+                        Archive files
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="" class="nav-link">
+                        <span class="nav-link-icon opacity-6"><fa-icon [icon]="['far', 'file-audio']" class="mx-auto"></fa-icon></span>
+                        Audio
+                    </a>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+        <div class="app-content--sidebar__footer px-4 py-2">
+            <ul class="nav nav-neutral-primary nav-pills flex-column">
+                <li class="nav-header text-uppercase font-size-sm text-muted pb-2">
+                    Available storage
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <div class="display-3">
+                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                        </div>
+                        <div class="pl-3">
+                            <small class="d-block mb-2"><b>5GB</b> used out of <b>25GB</b></small>
+                            <progressbar [animate]="true" [value]="87" class="progress-bar-rounded progress-animated-alt" type="warning">87%</progressbar>
+                        </div>
+                    </div>
+                    <small class="d-block mt-2">
+                                <span class="d-block pb-2">
+                                    Get <b>1 GB</b> of free storage if you take advantage of our premium plans.
+                                </span>
+                        <a [routerLink]="" class="btn p-0 font-weight-bold font-size-xs btn-link btn-link-first" title="Learn more">View details</a>
+                    </small>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="app-inner-content-layout--main bg-secondary">
+        <div>
+            <div class="px-5 py-4 bg-light text-center text-xl-left">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div>
+                            <h5 class="display-4 mt-1 mb-2 font-weight-bold">File manager</h5>
+                            <p class="text-black-50 mb-0">This is an example page created with this template!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 d-flex align-items-center justify-content-start mt-4 mt-xl-0 justify-content-xl-end">
+                        <div class="mx-auto mx-xl-0">
+                            <a [routerLink]="" class="btn btn-warning d-block d-sm-inline-block" title="Upload">
+                                <span class="btn-wrapper--label">
+                                    Upload
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider bg-dark opacity-2"></div>
+        </div>
+        <perfect-scrollbar [autoPropagation]="true">
+            <div class="px-5">
+                <h5 class="font-size-sm text-uppercase text-black-50 font-weight-bold my-4">Latest files added</h5>
+                <div class="row">
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-word']" class="display-2 text-first mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>Example_WordFile.doc</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">15.2MB</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">12.06.2020</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-excel']" class="display-2 text-warning mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>Excel_2002.xls</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">3.1MB</small>
+                                        <small class="opacity-6">
+                                            Modified: <span class="text-black-50">5 hours ago</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-archive']" class="display-2 text-danger mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>AllPhotos.zip</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">15.2MB</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">5 January 2000</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-image']" class="display-2 text-info mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>IMG_063037.jpg</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">2.2mb</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">12.06.2020</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-audio']" class="display-2 text-second mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>Audio.mp3</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">745,3 kb</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">22.11.2019</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-word']" class="display-2 text-first mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>Example_WordFile.doc</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">15.2MB</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">12.06.2020</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-archive']" class="display-2 text-danger mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>AllPhotos.zip</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">15.2MB</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">5 January 2000</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="card-img-wrapper">
+                                    <div class="card-badges card-badges-top">
+                                        <button class="btn btn-link p-1 shadow-none btn-link-primary" type="button">
+                                            <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                                        </button>
+                                    </div>
+                                    <div class="rounded py-5 mb-3 bg-secondary d-flex align-items-center align-content-center">
+                                        <fa-icon [icon]="['far', 'file-archive']" class="display-2 text-danger mx-auto"></fa-icon>
+                                    </div>
+                                    <a [routerLink]="">
+                                        <b>AllPhotos.zip</b>
+                                    </a>
+                                    <div>
+                                        <small class="d-block text-black-50 pb-2">15.2MB</small>
+                                        <small class="opacity-6">
+                                            Modified on: <span class="text-black-50">5 January 2000</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-3 d-block rounded mb-5 d-flex justify-content-center">
+                    <pagination [rotate]="true" [totalItems]="30" class="pagination-icons pagination-second"></pagination>
+                </div>
+                <h5 class="font-size-sm text-uppercase text-black-50 font-weight-bold my-4">Recent folders</h5>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-first display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'folder-open']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md">Downloads</span>
+                                        <span class="badge badge-neutral-warning text-warning ml-2">OLD</span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>5 files</b>, 15 mb
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-first display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'folder']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md">Image album</span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>125 files</b>, 564 mb
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-first display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'folder']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md">Reports</span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>45 files</b>, 345 mb
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-warning display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md">Other files</span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>55 files</b>, 2,3 GB
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-first display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'folder-open']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md">Websites</span>
+                                        <span class="badge badge-success ml-2">New</span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>3 directories</b>, 45,23 GB
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6">
+                        <a [routerLink]="" class="card card-box btn rounded text-left mb-5 p-3">
+                            <div class="d-flex align-items-center flex-column flex-sm-row">
+                                <div>
+                                    <div class="text-center text-danger display-2 d-50 rounded-circle mb-3 mb-sm-2">
+                                        <fa-icon [icon]="['far', 'folder']"></fa-icon>
+                                    </div>
+                                </div>
+                                <div class="pl-0 pl-sm-3">
+                                    <div class="d-block text-center d-sm-flex align-items-center">
+                                        <span class="font-size-md text-danger"><b>Overdue</b></span>
+                                    </div>
+                                    <p class="text-black-50 opacity-8 mb-0">
+                                        <b>3 files</b>, 34 mb
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div [ngClass]="{'layout-sidebar-open' : toggleMobileSidebar2}" class="app-inner-content-layout--sidebar app-inner-content-layout--sidebar__lg pos-r bg-white border-right">
+        <perfect-scrollbar [autoPropagation]="true">
+            <tabset [justified]="true" class="tabs-animated tabs-animated-line mt-1" type="tabs">
+                <tab>
+                    <ng-template tabHeading>
+                        <span class="py-2 font-weight-bold">Details</span>
+                    </ng-template>
+                    <div class="p-4">
+                        <div class="text-center pt-1">
+                            <h3 class="font-size-xl line-height-sm my-2 text-black font-weight-bold">
+                                All tasks completed 😀
+                            </h3>
+                            <p class="font-size-md text-black-50 mb-4">
+                                You have no modifications active!
+                            </p>
+                        </div>
+                        <a [routerLink]="" class="card card-box mb-5 card-box-border-bottom border-danger">
+                            <div class="card-body">
+                                <div class="align-box-row align-items-center">
+                                    <div class="mr-3">
+                                        <div class="bg-danger text-center text-white font-size-xl d-50 rounded-circle">
+                                            <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold">
+                                            <small class="text-black-50 d-block mb-1 text-uppercase">Orders</small>
+                                            <span class="font-size-xxl text-danger mt-1">345</span>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <h6 class="font-weight-bold font-size-lg mb-1 text-black">Performance</h6>
+                        <p class="text-black-50 mb-0">Portfolio performance for selected period.</p>
+                        <div class="pt-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <div class="font-weight-bold">Orders</div>
+                                <div class="font-size-lg font-weight-bold text-first">
+                                    345
+                                </div>
+                            </div>
+                            <div>
+                                <progressbar [animate]="true" [value]="65" type="first">65%</progressbar>
+                                <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                    <div>Target</div>
+                                    <div class="ml-auto">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <div class="font-weight-bold">Customers</div>
+                                <div class="font-size-lg font-weight-bold text-warning">
+                                    435
+                                </div>
+                            </div>
+                            <div>
+                                <progressbar [animate]="true" [value]="44" type="warning">44%</progressbar>
+                                <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                    <div>Target</div>
+                                    <div class="ml-auto">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span class="py-2 font-weight-bold">Activity</span>
+                    </ng-template>
+                    <div class="p-4">
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">1991</h4>
+                                    <p>
+                                        The World Wide Web goes live with its first web page.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam day</h4>
+                                    <p>
+                                        Bill Clinton's presidential scandal makes it online.
+                                    </p>
+                                    <div class="avatar-wrapper-overlap mt-2 mb-1">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"></div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"></div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Business investor meeting</h4>
+                                    <p>
+                                        Mosaic, the first graphical browser, is introduced to the average consumer.
+                                    </p>
+                                    <div class="mt-3">
+                                        <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded mr-3 shadow-sm" src="assets/images/stock-photos/people-1.jpg" width="70"></a>
+                                        <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded shadow-sm" src="assets/images/stock-photos/people-3.jpg" width="70"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Learning round table gathering</h4>
+                                    <p>
+                                        First ever iPod launches.
+                                    </p>
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-primary" type="button">Submit Report</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">2003</h4>
+                                    <p>
+                                        MySpace becomes the most popular social network.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </perfect-scrollbar>
+    </div>
+    <div (click)="toggleMobileSidebar1 = !toggleMobileSidebar1" [ngClass]="{'active' : toggleMobileSidebar1}" class="sidebar-inner-layout-overlay"></div>
+    <div (click)="toggleMobileSidebar2 = !toggleMobileSidebar2" [ngClass]="{'active' : toggleMobileSidebar2}" class="sidebar-inner-layout-overlay"></div>
+</div>

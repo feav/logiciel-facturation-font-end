@@ -1,0 +1,6 @@
+<pagination [totalItems]="30" [rotate]="rotate"></pagination>
+<div class="divider my-4"></div>
+<pagination [totalItems]="40" [rotate]="rotate" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event" class="mb-4"></pagination>
+<div class="alert alert-info p-2">The selected page no: {{currentPage}}/{{smallnumPages}}</div>
+<div class="divider my-4"></div>
+<pagination [boundaryLinks]="true" [totalItems]="40" class="pagination-icons"></pagination>

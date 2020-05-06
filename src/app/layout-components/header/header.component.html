@@ -1,0 +1,50 @@
+<div class="app-header" [ngClass]="{
+    'app-header--shadow' : globals.headerShadow,
+    'app-header--opacity-bg' : globals.headerTransparentBg
+    }">
+    <div class="app-header--pane">
+        <button [ngClass]="{'is-active' : globals.toggleSidebarMobile}"
+            class="navbar-toggler hamburger hamburger--elastic toggle-mobile-sidebar-btn"
+            (click)="toggleSidebarMobileOpen()" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <h4>{{getPageTitle()}}</h4>
+    </div>
+    <div class="app-header--pane">
+        <div class="user-box position-relative ml-2" dropdown>
+            <a dropdownToggle [routerLink]="" class="p-0 d-flex align-items-center">
+                <div class="d-block p-0 avatar-icon-wrapper">
+                    <span class="badge badge-circle badge-success p-top-a">Online</span>
+                    <div class="avatar-icon rounded">
+                        <img src="assets/images/avatar.jpg" alt="..." />
+                    </div>
+                </div>
+                <div class="d-block pl-2">
+                    <div class="font-weight-bold">
+                        {{ currentUser.name }}
+                    </div>
+                    <span class="text-black-50">
+                        {{ currentUser.poste }}
+                    </span>
+                </div>
+                <span class="pl-1 pl-xl-3">
+                    <fa-icon [icon]="['fas', 'angle-down']" class="opacity-5"></fa-icon>
+                </span>
+            </a>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0">
+                <ul class="list-group list-group-flush text-left bg-transparent">
+                    <li class="list-group-item bg-transparent p-0 text-center">
+                        <button class="btn m-2 btn-danger" type="button" (click)="logout()">
+                            <span class="btn-wrapper--label">Déconnexion</span>
+                            <span class="btn-wrapper--icon">
+                                <i class="ion-md-log-out"></i>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

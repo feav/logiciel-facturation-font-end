@@ -1,0 +1,45 @@
+<div class="card p-4 mb-5">
+    <div class="row d-flex align-items-center">
+        <div class="col-xl-6">
+            <div class="text-black-50 pb-3">Project management</div>
+            <div class="d-flex justify-content-center">
+                <div>
+                    <div class="text-center font-size-lg px-5">
+                        <span class="font-weight-bold">
+                            456
+                        </span>
+                        <small class="text-black-50 d-block">Visitors</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-center font-size-lg px-5">
+                        <span class="font-weight-bold text-first">
+                            +34
+                        </span>
+                        <small class="text-black-50 d-block">New users</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-center font-size-lg px-5">
+                        <span class="font-weight-bold">
+                            56%
+                        </span>
+                        <small class="text-black-50 d-block">Increase</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="text-black-50 pb-3">Current progress</div>
+            <progressbar [animate]="true" [value]="34" class="progress-animated-alt" type="success">34%</progressbar>
+            <div class="align-box-row mt-1 text-muted">
+                <div class="font-weight-bold">Orders</div>
+                <div class="ml-auto">
+                    <div class="font-size-lg font-weight-bold text-success">
+                        348
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

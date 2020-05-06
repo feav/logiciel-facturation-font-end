@@ -1,0 +1,203 @@
+<div class="card card-box shadow-none">
+    <div class="card-header">
+        <div class="card-header--title">
+            <small>Messenger</small>
+            <b>Talking to Kate</b>
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-sm btn-first btn-transition-none" tooltip="Send new message">
+                <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <perfect-scrollbar class="scroll-area-sm shadow-overflow" [autoPropagation]="true">
+        <div class="card-body">
+            <ng-container *ngTemplateOutlet="chatContent"></ng-container>
+        </div>
+    </perfect-scrollbar>
+    <div class="card-footer bg-light p-3">
+        <div>
+            <input class="form-control form-control-sm" placeholder="Your message here...">
+        </div>
+        <div class="align-box-row mt-3">
+            <div class="align-items-center">
+                <a [routerLink]="" class="btn btn-link btn-link-primary p-0 text-success"
+                  tooltip="Add audio file">
+                    <fa-icon [icon]="['far', 'file-audio']" class="font-size-xxl"></fa-icon>
+                </a>
+                <a [routerLink]="" class="btn btn-link btn-link-primary p-0 mr-2 ml-2 text-danger"
+                  tooltip="Add video file">
+                    <fa-icon [icon]="['far', 'file-video']" class="font-size-xxl"></fa-icon>
+                </a>
+                <a [routerLink]="" class="btn btn-link btn-link-primary p-0 text-info"
+                  tooltip="Upload documents">
+                    <fa-icon [icon]="['far', 'file-excel']" class="font-size-xxl"></fa-icon>
+                </a>
+            </div>
+            <div class="ml-auto">
+                <a [routerLink]="" class="btn btn-sm btn-primary">
+                    Send
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="divider my-4"></div>
+
+<div class="text-center">
+    <div class="btn-group" dropdown dropup="true">
+        <button type="button" class="btn btn-sm mx-1 btn-primary btn-transition-none dropdown-toggle" dropdownToggle>
+            Inside Dropdown
+        </button>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl overflow-hidden p-0">
+            <perfect-scrollbar class="scroll-area shadow-overflow" [autoPropagation]="true">
+                <div class="p-3">
+                    <ng-container *ngTemplateOutlet="chatContent"></ng-container>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-sm btn-primary btn-transition-none mx-1"
+            containerClass="popover-custom-wrapper overflow-hidden popover-custom-xl" [popover]="chatPopover"
+            [outsideClick]="true">
+        Inside Popover
+    </button>
+</div>
+
+<ng-template #chatContent>
+    <div class="chat-wrapper">
+        <div class="chat-item p-2 mb-2">
+            <div class="align-box-row">
+                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                    <div class="avatar-icon rounded border-0">
+                        <img src="assets/images/avatars/avatar7.jpg" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-box bg-first text-white">
+                        <p>Hello, John.</p>
+                        <p>This is Kenny. How are you?</p>
+                    </div>
+                    <small class="mt-2 d-block text-black-50">
+                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                        11:01 AM | Yesterday
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="chat-item chat-item-reverse p-2 mb-2">
+            <div class="align-box-row flex-row-reverse">
+                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                    <div class="avatar-icon rounded border-0">
+                        <img src="assets/images/avatars/avatar3.jpg" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-box bg-first text-white">
+                        <p>Hey, Kate.</p>
+                        <p>I'm attaching the pictures you requested below:</p>
+                        <div class="card mt-3 mb-2 py-2 text-center">
+                            <div>
+                                <a [routerLink]=""><img src="assets/images/stock-photos/people-1.jpg"
+                                                        alt="Rounded image" width="54"
+                                                        class="img-fluid rounded m-1 shadow-sm"></a>
+                                <a [routerLink]=""><img src="assets/images/stock-photos/people-2.jpg"
+                                                        alt="Rounded image" width="54"
+                                                        class="img-fluid rounded m-1 shadow-sm"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="mt-2 d-block text-black-50">
+                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                        11:01 AM | Yesterday
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="chat-item p-2 mb-2">
+            <div class="align-box-row">
+                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                    <div class="avatar-icon rounded border-0">
+                        <img src="assets/images/avatars/avatar7.jpg" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-box bg-first text-white">
+                        <p>Thanks.</p>
+                        <p>Really appreciate it!</p>
+                    </div>
+                    <small class="mt-2 d-block text-black-50">
+                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                        11:01 AM | Yesterday
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="chat-item p-2 mb-2">
+            <div class="align-box-row">
+                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                    <div class="avatar-icon rounded border-0">
+                        <img src="assets/images/avatars/avatar7.jpg" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-box bg-first text-white">
+                        <p>Bye for now, talk to you later.</p>
+                    </div>
+                    <small class="mt-2 d-block text-black-50">
+                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                        11:01 AM | Yesterday
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="chat-item chat-item-reverse p-2 mb-2">
+            <div class="align-box-row flex-row-reverse">
+                <div class="avatar-icon-wrapper avatar-icon-lg align-self-start">
+                    <div class="avatar-icon rounded border-0">
+                        <img src="assets/images/avatars/avatar3.jpg" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-box bg-first text-white">
+                        <p>Almost forgot about your tasks.</p>
+                        <p><b>Check the links below:</b></p>
+                        <div class="card bg-premium-dark p-2 mt-3 mb-2">
+                            <div class="text-center py-2">
+                                <a [routerLink]=""
+                                   class="m-1 btn btn-link p-0 bg-grow-early d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                  tooltip="Menu Example">
+                                    <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                </a>
+                                <a [routerLink]=""
+                                   class="m-1 btn btn-link p-0 bg-ripe-malin d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                  tooltip="Menu Example">
+                                    <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                                </a>
+                                <a [routerLink]=""
+                                   class="m-1 btn btn-link p-0 bg-plum-plate d-inline-block text-center text-white font-size-xl d-40 rounded-circle card-box-hover-rise-alt"
+                                  tooltip="Menu Example">
+                                    <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="mt-2 d-block text-black-50">
+                        <fa-icon [icon]="['far', 'clock']" class="mr-1 opacity-5"></fa-icon>
+                        11:03 AM | Yesterday
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #chatPopover>
+    <perfect-scrollbar class="scroll-area shadow-overflow" [autoPropagation]="true">
+        <div class="p-3">
+            <ng-container *ngTemplateOutlet="chatContent"></ng-container>
+        </div>
+    </perfect-scrollbar>
+</ng-template>

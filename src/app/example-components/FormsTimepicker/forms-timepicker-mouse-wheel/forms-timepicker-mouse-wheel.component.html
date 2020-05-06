@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center mb-4">
+    <timepicker [(ngModel)]="myTime" [mousewheel]="allowMouseWheel"></timepicker>
+</div>
+
+<alert class="text-center mb-3 font-size-sm" type="info">
+    Based on selection, time is: <b>{{myTime}}</b>
+</alert>
+
+<div class="text-center">
+    <button type="button" class="btn btn-primary m-2" (click)="allowMouseWheel = !allowMouseWheel">Toggle mouse wheel</button>
+</div>
+
+

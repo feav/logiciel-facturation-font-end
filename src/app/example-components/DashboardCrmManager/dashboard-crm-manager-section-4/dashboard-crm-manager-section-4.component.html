@@ -1,0 +1,172 @@
+<div class="card card-box mb-5">
+    <div class="card-header">
+        <div class="card-header--title font-size-lg text-dark">
+            Tasks management
+        </div>
+        <div class="card-header--actions">
+            <button class="btn btn-sm btn-link px-1" tooltip="Add new" type="button">
+                <fa-icon [icon]="['fas', 'plus-circle']" class="text-dark font-size-lg"></fa-icon>
+            </button>
+            <button class="btn btn-sm btn-link px-1" tooltip="Close" type="button">
+                <fa-icon [icon]="['fas', 'times']" class="text-danger font-size-lg"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table text-nowrap table-hover mb-0">
+            <thead>
+            <tr>
+                <th class="text-left" style="width: 180px;">Project name</th>
+                <th class="text-center">Due date</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Members</th>
+                <th class="text-center"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="font-weight-bold">
+                    Calendar Application
+                </td>
+                <td class="text-center">
+                    14 Feb 2020
+                </td>
+                <td>
+                    <progressbar [value]="100" class="progress-sm" type="success"></progressbar>
+                    <div class="font-size-sm text-black-50 pt-1">
+                        Completed
+                    </div>
+                </td>
+                <td class="text-center">
+                    <div class="avatar-wrapper-overlap d-flex justify-content-center">
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-link" tooltip="View details" type="button">
+                        <fa-icon [icon]="['fas', 'plus-circle']" class="font-size-lg"></fa-icon>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    File Manager
+                </td>
+                <td class="text-center">
+                    16 Feb 2020
+                </td>
+                <td>
+                    <progressbar [value]="35" class="progress-sm" type="danger"></progressbar>
+                    <div class="font-size-sm text-black-50 pt-1">
+                        Overdue
+                    </div>
+                </td>
+                <td class="text-center">
+                    <div class="avatar-wrapper-overlap d-flex justify-content-center">
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-link" tooltip="View details" type="button">
+                        <fa-icon [icon]="['fas', 'plus-circle']" class="font-size-lg"></fa-icon>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Tasks App
+                </td>
+                <td class="text-center">
+                    18 Feb 2020
+                </td>
+                <td>
+                    <progressbar [value]="51" class="progress-sm" type="warning"></progressbar>
+                    <div class="font-size-sm text-black-50 pt-1">
+                        Pending
+                    </div>
+                </td>
+                <td class="text-center">
+                    <div class="avatar-wrapper-overlap d-flex justify-content-center">
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-link" tooltip="View details" type="button">
+                        <fa-icon [icon]="['fas', 'plus-circle']" class="font-size-lg"></fa-icon>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Tickets Management
+                </td>
+                <td class="text-center">
+                    22 Feb 2020
+                </td>
+                <td>
+                    <progressbar [value]="76" class="progress-sm" type="first"></progressbar>
+                    <div class="font-size-sm text-black-50 pt-1">
+                        In progress
+                    </div>
+                </td>
+                <td class="text-center">
+                    <div class="avatar-wrapper-overlap d-flex justify-content-center">
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-sm btn-link" tooltip="View details" type="button">
+                        <fa-icon [icon]="['fas', 'plus-circle']" class="font-size-lg"></fa-icon>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer py-3 text-center">
+        <button class="btn btn-sm btn-outline-second">
+            View more entries
+        </button>
+    </div>
+</div>

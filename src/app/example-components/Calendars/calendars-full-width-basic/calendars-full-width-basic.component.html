@@ -1,0 +1,80 @@
+<div class="rounded-sm bg-secondary mb-4 p-3">
+    <div class="row">
+        <div class="col-md-4 text-center text-lg-left">
+            <div class="btn-group btn-group-sm">
+                <div
+                        [(viewDate)]="viewDate"
+                        [view]="view"
+                        class="btn btn-outline-primary"
+                        mwlCalendarPreviousView
+                >
+                    <fa-icon [icon]="['fas', 'angle-left']"></fa-icon>
+                </div>
+                <div
+                        [(viewDate)]="viewDate"
+                        class="btn d-flex align-items-center btn-primary"
+                        mwlCalendarToday
+                >
+                    <span class="btn-wrapper--label">Today</span>
+                </div>
+                <div
+                        [(viewDate)]="viewDate"
+                        [view]="view"
+                        class="btn btn-outline-primary"
+                        mwlCalendarNextView
+                >
+                    <fa-icon [icon]="['fas', 'angle-right']"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex text-center justify-content-center align-items-center py-3 py-lg-0">
+            <h3 class="font-weight-bold font-size-lg mb-0">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+        </div>
+        <div class="col-md-4 text-center text-lg-right">
+            <div class="btn-group btn-group-sm">
+                <div
+                        (click)="setView(CalendarView.Month)"
+                        [class.active]="view === CalendarView.Month"
+                        class="btn btn-primary"
+                >
+                    Month
+                </div>
+                <div
+                        (click)="setView(CalendarView.Week)"
+                        [class.active]="view === CalendarView.Week"
+                        class="btn btn-primary"
+                >
+                    Week
+                </div>
+                <div
+                        (click)="setView(CalendarView.Day)"
+                        [class.active]="view === CalendarView.Day"
+                        class="btn btn-primary"
+                >
+                    Day
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [ngSwitch]="view">
+    <mwl-calendar-month-view
+            *ngSwitchCase="'month'"
+            [events]="events"
+            [viewDate]="viewDate"
+    >
+    </mwl-calendar-month-view>
+    <mwl-calendar-week-view
+            *ngSwitchCase="'week'"
+            [events]="events"
+            [viewDate]="viewDate"
+    >
+    </mwl-calendar-week-view>
+    <mwl-calendar-day-view
+            *ngSwitchCase="'day'"
+            [events]="events"
+            [viewDate]="viewDate"
+    >
+    </mwl-calendar-day-view>
+</div>

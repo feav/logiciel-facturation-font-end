@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="heading-3 text-center">Default</div>
+        <div class="d-flex justify-content-center">
+            <div class="m-2">
+                <ui-switch checked></ui-switch>
+            </div>
+            <div class="m-2">
+                <ui-switch [checked]="false"></ui-switch>
+            </div>
+        </div>
+
+        <div class="divider my-4"></div>
+
+        <div class="heading-3 text-center">Disabled</div>
+        <div class="d-flex justify-content-center">
+            <div class="m-2"><ui-switch disabled></ui-switch></div>
+            <div class="m-2"><ui-switch [disabled]="true" checked></ui-switch></div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="heading-3 text-center">Sizing</div>
+        <div class="d-flex justify-content-center">
+            <div class="m-2"><ui-switch checkedLabel="on" size="small" uncheckedLabel="off"></ui-switch></div>
+            <div class="m-2"><ui-switch checkedLabel="on" uncheckedLabel="off"></ui-switch></div>
+            <div class="m-2"><ui-switch checkedLabel="on" size="large" uncheckedLabel="off"></ui-switch></div>
+        </div>
+
+        <div class="divider my-4"></div>
+
+        <div class="heading-3 text-center">Custom labels</div>
+        <div class="d-flex justify-content-center">
+            <div class="m-2"><ui-switch checkedLabel="Enable" size="small" uncheckedLabel="Disable"></ui-switch></div>
+            <div class="m-2"><ui-switch checkedLabel="Online" uncheckedLabel="Offline"></ui-switch></div>
+            <div class="m-2"><ui-switch checkedLabel="SUPERDUPERLONGLABEL" size="large" uncheckedLabel="SUPERDUPERLONGLABEL"></ui-switch></div>
+        </div>
+    </div>
+</div>
+

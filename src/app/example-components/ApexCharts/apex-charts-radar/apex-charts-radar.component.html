@@ -1,0 +1,32 @@
+<apx-chart
+        [chart]="{
+                                type: 'radar',
+                                height: '350'
+                            }"
+        [colors]="['#4191ff', '#f83245']"
+        [dataLabels]="{
+                              enabled: false
+                            }"
+        [fill]="{
+                              opacity: 1,
+                              colors: ['#4191ff', '#f83245']
+                            }"
+        [grid]="{
+                    strokeDashArray: '5',
+                    borderColor: 'rgba(125, 138, 156, 0.3)'
+                }"
+        [series]="[
+                    {
+                      name: 'Net Profit',
+                      data: [31, 40, 28, 51, 42, 109, 100]
+                    },
+                    {
+                      name: 'Net Loss',
+                      data: [11, 32, 45, 32, 34, 52, 41]
+                    }
+                  ]"
+
+        [stroke]="{
+                    curve: 'smooth'
+                  }"
+></apx-chart>

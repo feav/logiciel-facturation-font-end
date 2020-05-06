@@ -1,0 +1,391 @@
+<div class="row">
+    <div class="col-xl-7">
+        <div class="card card-box bg-secondary mb-5">
+            <tabset class="tabs-animated p-4 tabs-animated-line" type="tabs">
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Overview</span>
+                    </ng-template>
+                    <div class="px-1 pt-5 pb-3">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-box text-black-50 mb-5 p-3">
+                                    <div class="display-3 text-black font-weight-bold">
+                                        31
+                                    </div>
+                                    <div class="divider mt-2 mb-3 border-2 w-25 bg-first rounded border-first"></div>
+                                    <div class="font-weight-bold font-size-sm text-uppercase">
+                                        Implemented
+                                        <br>
+                                        bugfixes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-box text-black-50 mb-5 p-3">
+                                    <div class="display-3 text-black font-weight-bold">
+                                        68
+                                    </div>
+                                    <div class="divider mt-2 mb-3 border-2 w-25 bg-success rounded border-success"></div>
+                                    <div class="font-weight-bold font-size-sm text-uppercase">
+                                        Unresolved
+                                        <br>
+                                        tickets
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-box text-black-50 mb-5 p-3">
+                                    <div class="display-3 text-black font-weight-bold">
+                                        57
+                                    </div>
+                                    <div class="divider mt-2 mb-3 border-2 w-25 bg-warning rounded border-warning"></div>
+                                    <div class="font-weight-bold font-size-sm text-uppercase">
+                                        Support
+                                        <br>
+                                        requests
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-box mb-5">
+                            <div class="card-body">
+                                <div class="text-left">
+                                    <div class="mt-1">
+                                        <fa-icon [icon]="['fas', 'lemon']" class="font-size-xxl text-danger"></fa-icon>
+                                    </div>
+                                    <div class="mt-3 line-height-sm">
+                                        <b class="font-size-lg text-black">3,568</b>
+                                        <span class="text-black-50 pl-1">clicks</span>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="progress-bar"
+                                         role="progressbar" style="width: 15%"></div>
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30"
+                                         class="progress-bar bg-success" role="progressbar" style="width: 30%"></div>
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20"
+                                         class="progress-bar bg-info"
+                                         role="progressbar" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary" type="button">
+                            Create new report
+                        </button>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Sign in</span>
+                    </ng-template>
+                    <div class="card m-0 shadow-none bg-white border-0 mb-3 mt-5 mx-1">
+                        <div class="card-header d-block p-3 pt-0 rounded border-0">
+                            <div class="text-muted text-center mb-3">
+                                <small>Sign in with</small>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-facebook mr-2" type="button">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                                    </span>
+                                    <span class="btn-wrapper--label">
+                                        Facebook
+                                    </span>
+                                </button>
+                                <button class="btn btn-twitter ml-2" type="button">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                                    </span>
+                                    <span class="btn-wrapper--label">
+                                        Twitter
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center text-muted mb-3">
+                                <small>Or sign in with credentials</small>
+                            </div>
+                            <form role="form">
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+                                                    </span>
+                                        </div>
+                                        <input class="form-control" placeholder="Email" type="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <fa-icon [icon]="['fas', 'unlock-alt']"></fa-icon>
+                                                        </span>
+                                        </div>
+                                        <input class="form-control" placeholder="Password" type="password">
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-control-alternative custom-checkbox">
+                                    <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                                    <label class="custom-control-label" for=" customCheckLogin">
+                                        <span>Remember me</span>
+                                    </label>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-second my-2" type="button">Sign in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Recent activity</span>
+                    </ng-template>
+                    <div class="py-5 px-1">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card card-box mb-5">
+                                    <div class="card-indicator bg-first"></div>
+                                    <div class="card-body px-4 py-3">
+                                        <div class="pb-3 d-flex justify-content-between">
+                                            <a [routerLink]="">
+                                                Presentation site design
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="badge badge-first px-3">On hold</div>
+                                            <div class="font-size-sm text-danger px-2">
+                                                <fa-icon [icon]="['far', 'clock']" class="mr-1"></fa-icon>
+                                                14:22
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card card-box mb-5">
+                                    <div class="card-indicator bg-success"></div>
+                                    <div class="card-body px-4 py-3">
+                                        <div class="pb-3 d-flex justify-content-between">
+                                            <a [routerLink]="">
+                                                Create UI mockups
+                                            </a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="badge badge-success px-3">Fixed</div>
+                                            <div class="font-size-sm text-dark px-2">
+                                                <fa-icon [icon]="['far', 'clock']" class="mr-1"></fa-icon>
+                                                09:41
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-list">
+                            <div class="timeline-item timeline-item-icon">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon-wrapper bg-danger text-white">
+                                        <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                                    </div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">1998</h4>
+                                    <p>
+                                        Bill Clinton's presidential scandal makes it online.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam day</h4>
+                                    <p>
+                                        Bill Clinton's presidential scandal makes it online.
+                                    </p>
+                                    <div class="avatar-wrapper-overlap mt-2 mb-1">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar1.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar7.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar1.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar2.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar6.jpg"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">
+                                        Business investor meeting
+                                        <span class="badge badge-neutral-info text-info ml-2">New</span>
+                                    </h4>
+                                    <p>
+                                        Mosaic, the first graphical browser, is introduced to the average consumer.
+                                    </p>
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-primary" type="button">Submit Report</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+    <div class="col-xl-5">
+        <div class="card card-box mb-5">
+            <div class="card-header bg-secondary">
+                <div class="card-header--title">
+                    <h5 class="mb-0 py-2 font-weight-bold">
+                        Latest actions
+                    </h5>
+                </div>
+                <div class="card-header--actions">
+                    <div class="btn-group btn-group-sm" dropdown>
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-primary" dropdownToggle
+                                type="button">
+                            Export
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-neutral-dark nav-pills flex-column px-3">
+                                <li class="nav-item nav-item--header px-0">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>View all reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>View active items</span>
+                                        <div class="ml-auto badge badge-success">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-4 nav-item--header">
+                                    <span class="text-black font-weight-bold">Options</span>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                        </div>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                        </div>
+                                        <span>Export to CSV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group mb-2 list-group-flush">
+                    <div class="list-group-item py-3 border-0">
+                        <div class="align-box-row w-100">
+                            <div class="mr-3">
+                                <div class="bg-neutral-dark text-primary text-center font-size-xl d-60 rounded-sm">
+                                    <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-weight-bold d-block opacity-8">Customers</div>
+                                <div class="text-dark opacity-5">
+                                    A wonderful serenity has taken possession of my entire soul.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item py-3 border-0">
+                        <div class="align-box-row w-100">
+                            <div class="mr-3">
+                                <div class="bg-neutral-dark text-primary text-center font-size-xl d-60 rounded-sm">
+                                    <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-weight-bold d-block opacity-8">New articles</div>
+                                <div class="text-dark opacity-5">
+                                    I am alone, and feel the charm of existence in this spot.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="list-group-item py-3 border-0">
+                        <div class="align-box-row w-100">
+                            <div class="mr-3">
+                                <div class="bg-neutral-dark text-primary text-center font-size-xl d-60 rounded-sm">
+                                    <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-weight-bold d-block opacity-8">Blog posts</div>
+                                <div class="text-dark opacity-5">
+                                    When, while the lovely valley teems with vapour around me.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-night-sky border-0 mb-5 p-4 bg-white">
+            <div class="d-flex flex-wrap">
+                <div class="w-50 p-2">
+                    <button class="btn card card-box text-left d-flex justify-content-center px-4 py-3 w-100"
+                            type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-danger line-height-1" name="users"></i-feather>
+                            <div class="font-weight-bold font-size-lg text-black">Projects</div>
+                            <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="w-50 p-2">
+                    <button class="btn card card-box text-left d-flex justify-content-center px-4 py-3 w-100"
+                            type="button">
+                        <div>
+                            <i-feather class="h1 d-block mb-4 text-first line-height-1" name="layers"></i-feather>
+                            <div class="font-weight-bold font-size-lg text-black">Tasks</div>
+                            <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

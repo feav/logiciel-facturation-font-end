@@ -1,0 +1,198 @@
+<div class="text-center">
+    <button [contextMenu]="contextMenuExample1" class="btn m-2 btn-primary">
+        Right click menu 1
+    </button>
+    <button [contextMenu]="contextMenuExample2" class="btn m-2 btn-primary">
+        Right click menu 2
+    </button>
+    <button [contextMenu]="contextMenuExample3" class="btn m-2 btn-primary">
+        Right click menu 3
+    </button>
+    <button [contextMenu]="contextMenuExample4" class="btn m-2 btn-primary">
+        Right click menu 4
+    </button>
+</div>
+
+<context-menu #contextMenuExample1 [menuClass]="'nav flex-column p-2 dropdown-menu-lg'" [useBootstrap4]="true">
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                </div>
+                <span>Dashboard</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'building']"></fa-icon>
+                </div>
+                <span>Accounts</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'keyboard']"></fa-icon>
+                </div>
+                <span>Reports</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                </div>
+                <span>Deliveries</span>
+            </a>
+        </div>
+    </ng-template>
+</context-menu>
+<context-menu #contextMenuExample2 [menuClass]="'nav nav-warning nav-pills dropdown-menu-xl nav-pills-rounded flex-column p-3'" [useBootstrap4]="true">
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item px-3">
+            <a [routerLink]="" class="nav-link">
+                <span>My Account</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item px-3">
+            <a [routerLink]="" class="nav-link active">
+                <span>Profile settings</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item px-3">
+            <a [routerLink]="" class="nav-link">
+                <span>Active tasks</span>
+                <div class="ml-auto badge badge-success">New</div>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item nav-item--header px-3">
+            <span>Heading</span>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item px-3">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                </div>
+                <span>Customers</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item px-3">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                </div>
+                <span>Statistics</span>
+            </a>
+        </div>
+    </ng-template>
+</context-menu>
+<context-menu #contextMenuExample3 [menuClass]="'list-group list-group-flush dropdown-menu-xl'" [useBootstrap4]="true">
+    <ng-template contextMenuItem passive="true">
+        <a [routerLink]="" class="list-group-item list-group-item-action px-2">
+            <div class="align-box-row w-100">
+                <div class="mr-3">
+                    <div class="bg-grow-early text-center text-white font-size-xl d-50 rounded-circle">
+                        <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-weight-bold text-primary d-block">Sales</div>
+                    <small class="text-success">
+                        <fa-icon [icon]="['fas', 'chevron-up']" class="text-success mr-1"></fa-icon>
+                        <span>15.4% increase</span>
+                    </small>
+                </div>
+            </div>
+        </a>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <a [routerLink]="" class="list-group-item list-group-item-action px-2">
+            <div class="align-box-row w-100">
+                <div class="mr-3">
+                    <div class="bg-warning text-center text-white font-size-xl d-50 rounded-circle">
+                        <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-weight-bold text-primary d-block">Expenses</div>
+                    <small class="text-warning">
+                        <fa-icon [icon]="['fas', 'arrow-down']" class="text-warning mr-1"></fa-icon>
+                        <span>5.2% down</span>
+                    </small>
+                </div>
+            </div>
+        </a>
+    </ng-template>
+</context-menu>
+<context-menu #contextMenuExample4 [menuClass]="'nav nav-primary nav-pills dropdown-menu-xl flex-column p-3'" [useBootstrap4]="true">
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <span class="font-weight-bold px-3 py-2 d-block text-first">Reports</span>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a class="nav-link" [routerLink]="">
+                <span>My Account</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a class="nav-link active" [routerLink]="">
+                <span>Profile settings</span>
+                <div class="ml-auto badge badge-first">23</div>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a class="nav-link" [routerLink]="">
+                <span>Active tasks</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <span class="font-weight-bold px-3 py-2 d-block text-first">Reports</span>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                </div>
+                <span>Customers</span>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template contextMenuItem passive="true">
+        <div class="nav-item">
+            <a [routerLink]="" class="nav-link">
+                <div class="nav-link-icon">
+                    <fa-icon [icon]="['far', 'eye']"></fa-icon>
+                </div>
+                <span>Statistics</span>
+            </a>
+        </div>
+    </ng-template>
+</context-menu>

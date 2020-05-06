@@ -1,0 +1,118 @@
+<div class="row text-center">
+  <div class="col-md-6 col-xl-3">
+    <div class="gauge-wrapper">
+      <circle-progress
+              [percent]="34"
+              [radius]="100"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="16"
+              [outerStrokeColor]="'var(--primary)'"
+              [innerStrokeColor]="'var(--secondary)'"
+              [animation]="true"
+              [responsive]="true"
+              [showSubtitle]="false"
+              [titleFontSize]="42"
+              [unitsFontSize]="29"
+              [showBackground]="false"
+              [showSubtitle]="false"
+              [animationDuration]="600"
+      ></circle-progress>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="gauge-wrapper">
+      <circle-progress
+              [percent]="58"
+              [radius]="100"
+              [outerStrokeWidth]="14"
+              [innerStrokeWidth]="11"
+              [outerStrokeColor]="'var(--success)'"
+              [innerStrokeColor]="'var(--secondary)'"
+              [animation]="true"
+              [responsive]="true"
+              [showSubtitle]="false"
+              [titleFontSize]="42"
+              [unitsFontSize]="29"
+              [showBackground]="false"
+              [showSubtitle]="false"
+              [animationDuration]="600"
+      ></circle-progress>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="gauge-wrapper">
+      <circle-progress
+              [percent]="43"
+              [radius]="100"
+              [outerStrokeWidth]="14"
+              [innerStrokeWidth]="12"
+              [space]="-4"
+              [outerStrokeColor]="'var(--danger)'"
+              [innerStrokeColor]="'var(--light)'"
+              [animation]="true"
+              [responsive]="true"
+              [showSubtitle]="false"
+              [titleFontSize]="42"
+              [unitsFontSize]="29"
+              [showBackground]="false"
+              [showSubtitle]="true"
+              [subtitleFontSize]="28"
+              [animationDuration]="600"
+      ></circle-progress>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="gauge-wrapper">
+      <circle-progress
+              [percent]="76"
+              [radius]="100"
+              [outerStrokeWidth]="15"
+              [innerStrokeWidth]="13"
+              [space]="-12"
+              [outerStrokeColor]="'var(--warning)'"
+              [innerStrokeColor]="'var(--light)'"
+              [animation]="true"
+              [responsive]="true"
+              [showSubtitle]="false"
+              [titleFontSize]="42"
+              [unitsFontSize]="29"
+              [showBackground]="false"
+              [showSubtitle]="true"
+              [animationDuration]="600"
+      ></circle-progress>
+    </div>
+  </div>
+</div>
+
+<div class="divider my-3"></div>
+
+<div class="row text-center">
+  <div class="col-md-6 col-xl-3">
+    <ngx-gauge size="160" type="full" thick="10" class="img-fluid"
+               min="0" max="120" value="63"
+               cap="round" label="Speed" append="mph"
+               foregroundColor="#f83245" backgroundColor="#d1d2db">
+    </ngx-gauge>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <ngx-gauge size="190" type="semi" thick="10" class="img-fluid"
+               min="0" max="120" value="36"
+               cap="round" label="Completed" append="%"
+               foregroundColor="#1bc943" backgroundColor="#d1d2db">
+    </ngx-gauge>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <ngx-gauge size="180" type="arch" thick="10" class="img-fluid"
+               min="0" max="120" value="47.5"
+               cap="round" label="Reports"
+               foregroundColor="#f4772e" backgroundColor="#d1d2db">
+    </ngx-gauge>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <ngx-gauge size="160" type="full" thick="10" class="img-fluid"
+               min="0" max="650" value="437"
+               cap="round" label="Users"
+               foregroundColor="#4191ff" backgroundColor="#d1d2db">
+    </ngx-gauge>
+  </div>
+</div>

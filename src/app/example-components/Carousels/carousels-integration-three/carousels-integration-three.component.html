@@ -1,0 +1,206 @@
+<div class="card card-box d-block p-4">
+    <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+        <button class="btn btn-link btn-link-primary p-0 font-size-xl text-dark dropdown-toggle no-caret"
+                dropdownToggle
+                type="button">
+            <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+        </button>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+            <div class="grid-menu grid-menu-2col">
+                <div class="no-gutters row">
+                    <div class="col-sm-6">
+                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                type="button">
+                            <fa-icon [icon]="['far', 'bell']"
+                                     class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                            <div class="font-weight-bold text-black">Reports</div>
+                            <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                type="button">
+                            <fa-icon [icon]="['far', 'file-excel']"
+                                     class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                            <div class="font-weight-bold text-black">Statistics</div>
+                            <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                type="button">
+                            <fa-icon [icon]="['far', 'eye']"
+                                     class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                            <div class="font-weight-bold text-black">Projects</div>
+                            <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                type="button">
+                            <fa-icon [icon]="['far', 'chart-bar']"
+                                     class="h2 d-block mb-2 mt-1 text-success"></fa-icon>
+                            <div class="font-weight-bold text-black">Tasks</div>
+                            <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ngx-slick-carousel [config]='
+                {
+                    "slidesToShow": 1,
+                    "slidesToScroll": 1,
+                    "dots": true,
+                    "prevArrow": "<button type=\"button\" class=\"slick-prev\"><i class=\"ion-ios-arrow-back font-size-xl\"></i></button>",
+                    "nextArrow": "<button type=\"button\" class=\"slick-next\"><i class=\"ion-ios-arrow-forward font-size-xl\"></i></fa-icon></button>"
+                }' class="w-100 p-2">
+        <div ngxSlickItem>
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar-icon-wrapper rounded-circle mr-3">
+                        <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                            <div class="rounded-circle overflow-hidden">
+                                <img alt="..." class="img-fluid" src="assets/images/avatars/avatar6.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Kate Winchester</a>
+                        <span class="text-black-50 d-block">Freelance Designer, Mutual Inc.</span>
+                        <div class="d-flex align-items-center pt-1">
+                            <progressbar [animate]="true" [value]="56"
+                                         class="progress-bar-rounded progress-xs progress-animated-alt"
+                                         type="danger"></progressbar>
+                            <div class="font-weight-bold text-black-50 pl-2">56%</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-black-50 font-size-md mb-0">
+                    From its medieval origins to the digital era, learn everything there is to know about.
+                </p>
+                <div class="my-4 font-size-sm p-3 bg-secondary rounded-sm">
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Email:
+                        </span>
+                        <span class="text-black-50">russotry@russo.com</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                        <span class="font-weight-bold">
+                            Job Description:
+                        </span>
+                        <span class="text-black-50">Project Manager</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                        <span class="text-black-50">San Francisco, USA</span>
+                    </div>
+                </div>
+                <button class="btn btn-neutral-danger btn-block text-uppercase font-size-xs">
+                    <small class="font-weight-bold">View Complete Profile</small>
+                </button>
+            </div>
+        </div>
+        <div ngxSlickItem>
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar-icon-wrapper rounded-circle mr-3" tooltip="Online">
+                        <span class="badge badge-position badge-position--bottom-center badge-circle badge-success">Online</span>
+                        <div class="rounded-circle overflow-hidden d-100 bg-neutral-danger font-size-lg text-center font-weight-bold text-danger d-flex justify-content-center flex-column">
+                            <span>KA</span>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Kris Alexander</a>
+                        <span class="text-black-50 d-block">Project Manager, Apple Inc.</span>
+                        <div class="d-flex align-items-center pt-1">
+                            <progressbar [animate]="true" [value]="42"
+                                         class="progress-bar-rounded progress-xs"
+                                         type="warning"></progressbar>
+                            <div class="font-weight-bold text-black-50 pl-2">42%</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-black-50 font-size-md mb-0">
+                    Creation timelines for the standard lorem ipsum passage vary, with some citing the 20th.
+                </p>
+                <div class="my-4 font-size-sm p-3 bg-secondary rounded-sm">
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Email:
+                        </span>
+                        <span class="text-black-50">russotry@russo.com</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                        <span class="font-weight-bold">
+                            Job Description:
+                        </span>
+                        <span class="text-black-50">Project Manager</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                        <span class="text-black-50">San Francisco, USA</span>
+                    </div>
+                </div>
+                <button class="btn btn-neutral-warning btn-block text-uppercase font-size-xs">
+                    <small class="font-weight-bold">View Complete Profile</small>
+                </button>
+            </div>
+        </div>
+        <div ngxSlickItem>
+            <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar-icon-wrapper rounded-circle mr-3">
+                        <div class="d-block p-0 avatar-icon-wrapper m-0 d-100">
+                            <div class="rounded-circle overflow-hidden">
+                                <img alt="..." class="img-fluid" src="assets/images/avatars/avatar2.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <a [routerLink]="" class="font-weight-bold font-size-lg" title="...">Matteo Mcphee</a>
+                        <span class="text-black-50 d-block">Frontend Developer, Stripe Inc.</span>
+                        <div class="d-flex align-items-center pt-1">
+                            <progressbar [animate]="true" [value]="31"
+                                         class="progress-bar-rounded progress-xs"
+                                         type="first"></progressbar>
+                            <div class="font-weight-bold text-black-50 pl-2">31%</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-black-50 font-size-md mb-0">
+                    So how did the classical Latin become so incoherent? According to McClintock, a 15th century.
+                </p>
+                <div class="my-4 font-size-sm p-3 bg-secondary rounded-sm">
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Email:
+                        </span>
+                        <span class="text-black-50">russotry@russo.com</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                        <span class="font-weight-bold">
+                            Job Description:
+                        </span>
+                        <span class="text-black-50">Project Manager</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="font-weight-bold">
+                            Location:
+                        </span>
+                        <span class="text-black-50">San Francisco, USA</span>
+                    </div>
+                </div>
+                <button class="btn btn-neutral-first btn-block text-uppercase font-size-xs">
+                    <small class="font-weight-bold">View Complete Profile</small>
+                </button>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+</div>

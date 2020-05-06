@@ -1,0 +1,134 @@
+<div class="row">
+    <div class="col-xl-5">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <h4 class="font-size-lg mb-0 py-2 font-weight-bold">
+                    Updates
+                </h4>
+            </div>
+            <div class="card-body p-0">
+                <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                    <div class="d-flex align-items-center">
+                        <fa-icon [icon]="['far', 'comment-dots']"
+                                 class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                        <b class="text-dark">Reports</b>
+                    </div>
+                    <div [countUp]="2363" class="font-weight-bold text-danger font-size-lg"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                    <div class="d-flex align-items-center">
+                        <fa-icon [icon]="['far', 'chart-bar']"
+                                 class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                        <b class="text-dark">User</b>
+                    </div>
+                    <div [countUp]="584" class="font-weight-bold text-success font-size-lg"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                    <div class="d-flex align-items-center">
+                        <fa-icon [icon]="['far', 'address-card']"
+                                 class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                        <b class="text-dark">Sales</b>
+                    </div>
+                    <div [countUp]="483" class="font-weight-bold text-warning font-size-lg"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                    <div class="d-flex align-items-center">
+                        <fa-icon [icon]="['far', 'object-group']"
+                                 class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                        <b class="text-dark">Stats</b>
+                    </div>
+                    <div class="font-weight-bold text-first font-size-lg"> $1,23M</div>
+                </div>
+            </div>
+            <div class="sparkline-full-wrapper sparkline-full-wrapper--lg">
+                <canvas [chartType]="'line'"
+                        [colors]="successSparklineColor"
+                        [datasets]="sparklineDataset1"
+                        [labels]="sparklineLabels1"
+                        [options]="sparklineOptions1"
+                        baseChart></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <h4 class="font-size-lg mb-0 py-2 font-weight-bold">
+                    Reports
+                </h4>
+            </div>
+            <div class="card-body pb-0">
+                <div class="no-gutters row">
+                    <div class="col-md-6">
+                        <div class="divider-v divider-v-md"></div>
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>Reports</b>
+                                <div class="text-black-50">Monthly sales reports</div>
+                            </div>
+                            <div [countUp]="2363" class="font-weight-bold text-danger font-size-xl"></div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>User</b>
+                                <div class="text-black-50">Visitors last week</div>
+                            </div>
+                            <div [countUp]="584" class="font-weight-bold text-success font-size-xl"></div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>Sales</b>
+                                <div class="text-black-50">Total average weekly report</div>
+                            </div>
+                            <div [countUp]="483" class="font-weight-bold text-warning font-size-xl"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>Stats</b>
+                                <div class="text-black-50">Last month targets</div>
+                            </div>
+                            <div class="font-weight-bold text-warning font-size-xl">
+                                $1,23M
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>Payments</b>
+                                <div class="text-black-50">Week's expenses</div>
+                            </div>
+                            <div class="font-weight-bold text-danger font-size-xl">
+                                - $123,305
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <div>
+                                <b>Orders</b>
+                                <div class="text-black-50">Total products ordered</div>
+                            </div>
+                            <div class="font-weight-bold text-warning font-size-xl">
+                                65
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sparkline-full-wrapper mt-2">
+                <canvas [chartType]="'line'"
+                        [colors]="dangerSparklineColor"
+                        [datasets]="sparklineDataset2"
+                        [labels]="sparklineLabels1"
+                        [options]="sparklineOptions1"
+                        baseChart></canvas>
+            </div>
+        </div>
+    </div>
+</div>

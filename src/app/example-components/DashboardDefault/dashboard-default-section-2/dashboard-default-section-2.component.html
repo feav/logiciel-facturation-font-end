@@ -1,0 +1,188 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-5">
+            <div class="card-img-wrapper">
+                <div class="card-badges card-badges-bottom">
+                    <span class="badge badge-pill badge-warning">Warning</span>
+                </div>
+                <div class="bg-composed-wrapper bg-midnight-bloom border-0">
+                    <div class="bg-composed-img-2 bg-composed-wrapper--image rounded"></div>
+                    <div class="bg-composed-wrapper--content text-light text-center text-xl-left p-5"><h4 class="font-size-xl font-weight-bold mb-2">
+                        Knowledge Base Software</h4>
+                        <p class="opacity-6 font-size-md mb-3"> Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem. </p>
+                        <button class="btn btn-danger text-nowrap px-4 text-uppercase font-size-sm mb-4 mb-xl-0">
+                            <small class="font-weight-bold">Contact us</small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body text-center card-body-avatar">
+                <div class="avatar-icon-wrapper d-120">
+                    <div class="avatar-icon rounded-circle">
+                        <img alt="..." class="img-fluid" src="assets/images/avatars/avatar6.jpg"/>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-alternate text-left table-hover mb-0 table-borderless">
+                        <thead class="thead-light">
+                        <tr>
+                            <th class="pt-0" style="width: 40%;">Employee</th>
+                            <th class="pt-0 text-center">Status</th>
+                            <th class="pt-0 text-center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Shanelle
+                                            Wynn</a>
+                                        <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-warning h-auto py-0 px-3">Pending</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-neutral-first" type="button">Chat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                                            Simpson</a>
+                                        <span class="text-black-50 d-block">Frontend Developer</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-success h-auto py-0 px-3">Completed</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-neutral-first" type="button">Chat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Regan
+                                            Norris</a>
+                                        <span class="text-black-50 d-block">Senior Project Manager</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-danger h-auto py-0 px-3">Declined</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-neutral-first" type="button">Chat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-icon-wrapper mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a [routerLink]="" class="font-weight-bold text-black" title="...">Nell Knott</a>
+                                        <span class="text-black-50 d-block">UX Designer</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="badge badge-success h-auto py-0 px-3">Accepted</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-neutral-first" type="button">Chat</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h6 class="font-size-xl mb-3 text-dark">Sales statistics</h6>
+            </div>
+            <div class="sparkline-full-wrapper sparkline-full-wrapper--xl px-4 m-0">
+                <canvas [chartType]="'line'"
+                        [colors]="chartColor2"
+                        [datasets]="chartDataset2"
+                        [labels]="chartLabels2"
+                        [options]="chartOptions2"
+                        baseChart></canvas>
+            </div>
+            <div class="bg-neutral-dark mt-4 text-center">
+                <div aria-label="Basic example" class="btn-group btn-group-sm m-4" role="group">
+                    <button class="btn btn-primary active" type="button">Last week</button>
+                    <button class="btn btn-primary" type="button">Last month</button>
+                    <button class="btn btn-primary" type="button">Last year</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Performance</h6>
+                <p class="text-black-50 mb-0">Portfolio performance for selected period.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="font-weight-bold">Orders</div>
+                            <div class="font-size-lg font-weight-bold text-danger">
+                                345
+                            </div>
+                        </div>
+                        <div>
+                            <progressbar [animate]="true" [value]="65" type="danger">65%</progressbar>
+                            <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                <div>Target</div>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="font-weight-bold">Customers</div>
+                            <div class="font-size-lg font-weight-bold text-warning">
+                                435
+                            </div>
+                        </div>
+                        <div>
+                            <progressbar [animate]="true" [value]="44" type="warning">44%</progressbar>
+                            <div class="align-box-row progress-bar--label mt-2 text-muted">
+                                <div>Target</div>
+                                <div class="ml-auto">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

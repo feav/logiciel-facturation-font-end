@@ -1,0 +1,338 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header bg-white pr-1">
+                <div class="card-header--title">
+                    <small class="d-block text-uppercase mt-1">Targets</small>
+                    <b>Monthly Stats</b>
+                </div>
+                <div class="card-header--actions">
+                    <a [routerLink]="" class="btn btn-sm mr-1 btn-neutral-primary active">Today</a>
+                    <a [routerLink]="" class="btn btn-sm btn-link btn-link-primary">Last week</a>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item py-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <div class="card card-transparent mb-3 mb-sm-0">
+                                    <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                        <img alt="..." class="card-img-top rounded-sm"
+                                             src="assets/images/stock-photos/stock-1.jpg" style="width: 140px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pl-0 pl-sm-4">
+                                <b class="font-weight-bold font-size-lg text-black">
+                                    Meeting minutes
+                                </b>
+                                <p class="text-black-50 mb-0">
+                                    Learn more about these example boxes.
+                                </p>
+                                <small class="text-black-50 pt-1 d-block">
+                                    Created on: <b class="text-first">23 Feb 2021</b>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="text-right pr-3">
+                                <span class="font-weight-bold font-size-lg line-height-1">583</span>
+                                <span class="text-black-50 d-block">customers</span>
+                            </div>
+                            <div class="text-right pl-3">
+                                <span class="font-weight-bold font-size-lg line-height-1">12,349</span>
+                                <span class="text-black-50 d-block">visits</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item py-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <div class="card card-transparent mb-3 mb-sm-0">
+                                    <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                        <img alt="..." class="card-img-top rounded-sm"
+                                             src="assets/images/stock-photos/stock-2.jpg" style="width: 140px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pl-0 pl-sm-4">
+                                <b class="font-weight-bold font-size-lg text-black">
+                                    Sales reports for this week
+                                </b>
+                                <p class="text-black-50 mb-0">
+                                    The passage experienced a surge in popularity during the 1960s.
+                                </p>
+                                <small class="text-black-50 pt-1 d-block">
+                                    Created on: <b class="text-first">24 Feb 2021</b>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="text-right pr-3 pl-3">
+                                <span class="font-weight-bold font-size-lg text-danger line-height-1">345</span>
+                                <span class="text-black-50 d-block">reports</span>
+                            </div>
+                            <div class="text-right pl-3">
+                                <span class="font-weight-bold font-size-lg line-height-1">1,456</span>
+                                <span class="text-black-50 d-block">customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm btn-first" type="button">View details</button>
+                <button class="btn btn-sm btn-neutral-danger" type="button"><span>Delete</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-second p-0 font-size-xl text-second dropdown-toggle no-caret"
+                        dropdownToggle tooltip="Details"
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-xxl dropdown-menu-right p-0">
+                    <ul class="list-group list-group-flush text-left bg-transparent">
+                        <li class="list-group-item rounded-top">
+                            <div class="align-box-row">
+                                <div>
+                                    <div class="avatar-icon-wrapper avatar-icon-md">
+                                        <div class="avatar-icon rounded-circle">
+                                            <img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pl-2">
+                                <span class="pb-1 d-block">John Doe <small
+                                        class="text-black-50">(john@example.com)</small></span>
+                                    <span class="badge badge-success">Active Account</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-warning p-2 mb-1 mt-3 rounded">
+                                <div class="align-box-row">
+                                    <div>
+                                        <fa-icon [icon]="['far', 'bell']"></fa-icon>
+                                    </div>
+                                    <div class="pl-3">
+                                        <small><b class="d-block">Unpaid invoice</b></small>
+                                        <small>This account will be disabled starting <b>12 January 2021</b>.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-transparent p-0">
+                            <div class="grid-menu grid-menu-2col">
+                                <div class="no-gutters row">
+                                    <div class="col-sm-6 py-3">
+                                        <div class="text-center">
+                                            <div>
+                                                <fa-icon [icon]="['far', 'chart-bar']"
+                                                         class="font-size-xxl text-info"></fa-icon>
+                                            </div>
+                                            <div class="mt-2 line-height-sm">
+                                                <b class="font-size-lg">$9,693</b>
+                                                <span class="text-black-50 d-block">revenue</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 py-3">
+                                        <div class="text-center">
+                                            <div>
+                                                <fa-icon [icon]="['far', 'user']"
+                                                         class="font-size-xxl text-success"></fa-icon>
+                                            </div>
+                                            <div class="mt-2 line-height-sm">
+                                                <b class="font-size-lg">2,345</b>
+                                                <span class="text-black-50 d-block">users</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item rounded-bottom p-3 text-center">
+                            <a [routerLink]="" class="btn btn-facebook">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                            </span>
+                            </a>
+                            <a [routerLink]="" class="btn btn-dribbble mr-2 ml-2">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'dribbble']"></fa-icon>
+                            </span>
+                            </a>
+                            <a [routerLink]="" class="btn btn-twitter">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-header-alt d-flex justify-content-center px-4 pt-4">
+                <div class="text-center">
+                    <h6 class="font-weight-bold font-size-lg mb-1 text-black">Shopping Cart</h6>
+                    <p class="text-black-50 mb-0">Checkout is almost done!</p>
+                </div>
+            </div>
+            <div class="divider mt-4"></div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area shadow-overflow">
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <div class="card card-transparent mb-3 mb-sm-0">
+                                <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                    <img alt="..." class="card-img-top rounded-sm"
+                                         src="assets/images/stock-photos/stock-1.jpg" style="width: 120px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pl-3">
+                            <b class="font-weight-bold font-size-lg text-black">
+                                Asus Vivobook
+                            </b>
+                            <div class="d-flex pt-1 align-items-center">
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--success d-30" tooltip="Add">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'plus']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--danger d-30 mr-3"
+                                       tooltip="Remove">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'times']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <b>1</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-weight-bold font-size-xl text-muted">$56</div>
+                </div>
+                <div class="divider opacity-7"></div>
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <div class="card card-transparent mb-3 mb-sm-0">
+                                <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                    <img alt="..." class="card-img-top rounded-sm"
+                                         src="assets/images/stock-photos/stock-2.jpg" style="width: 120px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pl-3">
+                            <b class="font-weight-bold font-size-lg text-black">
+                                Lenovo Laptop
+                            </b>
+                            <div class="d-flex pt-1 align-items-center">
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--success d-30" tooltip="Add">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'plus']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--danger d-30 mr-3"
+                                       tooltip="Remove">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'times']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <b>1</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-weight-bold font-size-xl text-muted">$38</div>
+                </div>
+                <div class="divider opacity-7"></div>
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <div class="card card-transparent mb-3 mb-sm-0">
+                                <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                    <img alt="..." class="card-img-top rounded-sm"
+                                         src="assets/images/stock-photos/stock-3.jpg" style="width: 120px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pl-3">
+                            <b class="font-weight-bold font-size-lg text-black">
+                                Dell Inspire
+                            </b>
+                            <div class="d-flex pt-1 align-items-center">
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--success d-30" tooltip="Add">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'plus']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--danger d-30 mr-3"
+                                       tooltip="Remove">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'times']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <b>1</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-weight-bold font-size-xl text-muted">$21</div>
+                </div>
+                <div class="divider opacity-7"></div>
+                <div class="d-flex p-4 align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <div class="card card-transparent mb-3 mb-sm-0">
+                                <a [routerLink]="" class="card-img-wrapper card-box-hover-rise rounded-sm">
+                                    <img alt="..." class="card-img-top rounded-sm"
+                                         src="assets/images/stock-photos/stock-1.jpg" style="width: 120px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pl-3">
+                            <b class="font-weight-bold font-size-lg text-black">
+                                Asus Vivobook
+                            </b>
+                            <div class="d-flex pt-1 align-items-center">
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--success d-30" tooltip="Add">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'plus']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <button class="btn p-0 btn-animated-icon btn-animated-icon--danger d-30 mr-3"
+                                       tooltip="Remove">
+                                    <span class="btn-wrapper--icon">
+                                        <fa-icon [icon]="['fas', 'times']" class="font-size-sm"></fa-icon>
+                                    </span>
+                                </button>
+                                <b>1</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-weight-bold font-size-xl text-muted">$56</div>
+                </div>
+            </perfect-scrollbar>
+            <div class="divider"></div>
+            <div class="bg-secondary font-size-lg p-4">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        Total
+                    </div>
+                    <div class="font-weight-bold">$456</div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-4">
+                <button class="btn btn-lg btn-primary btn-block" type="button">
+                    Proceed to checkout
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

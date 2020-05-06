@@ -1,0 +1,670 @@
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header pr-2">
+                <div class="card-header--title py-2 font-size-lg font-weight-bold">
+                    Top grossing products
+                </div>
+                <div class="card-header--actions">
+                    <a [routerLink]="" class="btn btn-first font-size-lg mr-2 d-40 p-0 border-0"
+                       tooltip="View all participants">
+                        <fa-icon [icon]="['far', 'lightbulb']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="px-4 pt-4 pb-3">
+                <div class="text-uppercase text-muted">Laptops sales</div>
+                <div class="d-flex align-items-center pt-3 font-weight-bold display-3">
+                    <fa-icon [icon]="['far', 'dot-circle']" class="text-warning mr-2"></fa-icon>
+                    $589
+                    <span class="text-success pl-2 font-size-md">+ 54</span>
+                </div>
+            </div>
+            <apx-chart
+                    [chart]="{
+                        type: 'area',
+                        height: '150',
+                        sparkline: {
+                          enabled: true
+                        }
+                    }"
+                    [colors]="['#f4772e']"
+                    [fill]="{
+                        color: '#f4772e'
+                    }"
+                    [series]="[
+                      {
+                        name: 'Sales',
+                        data: [ 32, 52, 45, 32, 54, 56, 28, 25, 36, 62]
+                      }
+                    ]"
+                    [stroke]="{
+                        color: '#4191ff',
+                        curve: 'smooth',
+                        width: 2
+                    }"
+
+                    [xaxis]="{
+                        crosshairs: {
+                            width: 1
+                        }
+                    }"
+                    [yaxis]="{
+                        min: 0
+                    }"
+            ></apx-chart>
+            <div class="divider bg-warning"></div>
+            <div class="text-uppercase px-3 pt-3 pb-1 text-black-50">Top sellers</div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area shadow-overflow">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#f83245"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="63">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="587"></span>
+                            <span class="text-danger pl-1">
+                                <fa-icon [icon]="['fas', 'chevron-down']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#4491ff"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="34">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shawn Galloway
+                                </a>
+                                <span class="text-black-50 d-block">Frontend Engineer</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="3463"></span>
+                            <span class="text-success pl-1">
+                                <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#1bc943"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="76">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Latisha Allison
+                                </a>
+                                <span class="text-black-50 d-block">UX Designer</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="762"></span>
+                            <span class="text-success pl-1">
+                                <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#4491ff"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="61">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Lilly-Mae White
+                                </a>
+                                <span class="text-black-50 d-block">Frontend Engineer</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="5743"></span>
+                            <span class="text-warning pl-1">
+                                <fa-icon [icon]="['far', 'dot-circle']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#3c44b1"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="87">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Julie Prosser
+                                </a>
+                                <span class="text-black-50 d-block">Frontend Engineer</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="3463"></span>
+                            <span class="text-success pl-1">
+                                <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#f4772e"
+                                       max="100" min="0" size="64"
+                                       thick="4"
+                                       type="arch" value="46">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Amin Hamer
+                                </a>
+                                <span class="text-black-50 d-block">Senior Project Manager</span>
+                            </div>
+                        </div>
+                        <div class="text-black-50 d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="1587"></span>
+                            <span class="text-danger pl-1">
+                                <fa-icon [icon]="['fas', 'chevron-down']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </perfect-scrollbar>
+            <div class="card-footer p-3 text-center">
+                <button class="btn btn-sm btn-primary" type="button">
+                    <span class="btn-wrapper--label">
+                        All products
+                    </span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header pr-2">
+                <div class="card-header--title py-2 font-size-lg font-weight-bold">
+                    Top sellers
+                </div>
+                <div class="card-header--actions">
+                    <button class="btn btn-sm btn-neutral-first mr-3" type="button">View more</button>
+                </div>
+            </div>
+            <div class="px-4 pt-4 pb-3">
+                <div class="text-uppercase text-muted">Stacked columns</div>
+                <div class="d-flex align-items-center pt-3 font-weight-bold display-3">
+                    <fa-icon [icon]="['fas', 'arrow-up']" class="text-success mr-2"></fa-icon>
+                    $<span [countUp]="687"></span>
+                    <span class="text-danger pl-2 font-size-md">- 20%</span>
+                </div>
+            </div>
+            <div class="p-1">
+                <apx-chart
+                        [chart]="{
+                                type: 'bar',
+                                height: '132',
+                                sparkline: {
+                                  enabled: true
+                                },
+                                stacked: true
+                            }"
+                        [colors]="['#4191ff', 'rgba(65, 145, 255, 0.35)']"
+                        [dataLabels]="{
+                              enabled: false
+                            }"
+                        [fill]="{
+                              opacity: 1
+                            }"
+
+                        [labels]="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Last week', 'Last month', 'Last year', 'Last quarter']"
+                        [legend]="{ show: false }"
+                        [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                endingShape: 'rounded',
+                                columnWidth: '90%'
+                              }
+                            }"
+
+                        [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                        [stroke]="{
+                              show: true,
+                              width: 2,
+                              colors: ['transparent']
+                            }"
+                ></apx-chart>
+            </div>
+            <div class="divider mt-2"></div>
+            <div class="text-uppercase px-3 pt-3 pb-1 text-black-50">Top sellers</div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area shadow-overflow">
+                <ul class="list-group list-group-flush">
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#f83245"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="63">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$168</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="587"></span>
+                            <span class="text-danger pl-2">
+                                <fa-icon [icon]="['fas', 'chevron-down']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#4491ff"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="34">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shawn Galloway
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$567</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="3463"></span>
+                            <span class="text-success pl-2">
+                                <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#1bc943"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="76">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Latisha Allison
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$937</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="762"></span>
+                            <span class="text-success pl-2">
+                                <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#4491ff"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="61">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Lilly-Mae White
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$367</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="5743"></span>
+                            <span class="text-warning pl-2">
+                                <fa-icon [icon]="['far', 'dot-circle']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#3c44b1"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="87">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Julie Prosser
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$283</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="3463"></span>
+                            <span class="text-success pl-2">
+                                <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-2 px-3">
+                        <div class="d-flex align-items-center">
+                            <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2"
+                                       foregroundColor="#f4772e"
+                                       max="100" min="0" size="54"
+                                       thick="4"
+                                       type="full" value="46">
+                            </ngx-gauge>
+                            <div class="pb-1">
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Amin Hamer
+                                </a>
+                                <div>
+                                    <span class="badge badge-neutral-dark">$793</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-black font-size-lg d-flex align-items-center">
+                            <small class="opacity-6 pr-1">$</small>
+                            <span [countUp]="1587"></span>
+                            <span class="text-danger pl-2">
+                                <fa-icon [icon]="['fas', 'chevron-down']" class="font-size-sm"></fa-icon>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </perfect-scrollbar>
+            <div class="card-footer p-3 text-center">
+                <button class="btn btn-sm btn-second" type="button">
+                    <span class="btn-wrapper--label">
+                        View details
+                    </span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-first p-0 font-size-xl text-first dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                    <div class="grid-menu grid-menu-2col">
+                        <div class="no-gutters row">
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'bell']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Reports</div>
+                                    <div class="font-size-md mb-1 text-black-50">Monthly Stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'file-excel']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Statistics</div>
+                                    <div class="font-size-md mb-1 text-black-50">Customers stats</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'eye']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Projects</div>
+                                    <div class="font-size-md mb-1 text-black-50">Manage servers</div>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn border-0 w-100 btn-transition-none rounded-0 shadow-none btn-outline-gray py-4 px-1"
+                                        type="button">
+                                    <fa-icon [icon]="['far', 'chart-bar']"
+                                             class="h2 d-block mb-2 mt-1 text-first"></fa-icon>
+                                    <div class="font-weight-bold text-black">Tasks</div>
+                                    <div class="font-size-md mb-1 text-black-50">Pending items</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-header-alt px-4 pt-4 pb-0">
+                <h6 class="font-weight-bold font-size-lg mb-1 text-black">Weekly Sales</h6>
+                <p class="text-black-50 mb-0">Reports for what we sold this week.</p>
+            </div>
+            <apx-chart
+                    [chart]="{
+                        type: 'area',
+                        height: '313',
+                        sparkline: {
+                          enabled: true
+                        }
+                    }"
+                    [colors]="['#4191ff']"
+                    [fill]="{
+                        color: '#4191ff',
+                        gradient: {
+                            shade: 'light',
+                            type: 'vertical',
+                            shadeIntensity: 0.7,
+                            inverseColors: true,
+                            opacityFrom: 1,
+                            opacityTo: 0,
+                            stops: [0, 100]
+                        }
+                    }"
+                    [series]="[
+                      {
+                        name: 'Weekly sales',
+                        data: [47, 38, 56, 24, 45, 54, 38, 56, 24, 65]
+                      }
+                    ]"
+                    [stroke]="{
+                        color: '#4191ff',
+                        curve: 'smooth',
+                        width: 2
+                    }"
+                    [xaxis]="{
+                        crosshairs: {
+                            width: 1
+                        }
+                    }"
+                    [yaxis]="{
+                        min: 0
+                    }"
+            ></apx-chart>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area shadow-overflow">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Shanelle Wynn
+                                </a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Akeem Griffith
+                                </a>
+                                <span class="text-black-50 d-block">Manager, Google Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Abigayle Hicks
+                                </a>
+                                <span class="text-black-50 d-block">Project Manager, Spotify</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Izabela Rodriquez
+                                </a>
+                                <span class="text-black-50 d-block">Manager, Google Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Autumn Ballard
+                                </a>
+                                <span class="text-black-50 d-block">Manager, Google Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar7.jpg"></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Niyah Crossley
+                                </a>
+                                <span class="text-black-50 d-block">Manager, Google Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Reece Corbett
+                                </a>
+                                <span class="text-black-50 d-block">Senior Designer, Amazon Inc.</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"></div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">
+                                    Caspar Hough
+                                </a>
+                                <span class="text-black-50 d-block">Senior Designer, Amazon Inc.</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-neutral-dark ml-4" type="button">View</button>
+                    </li>
+                </ul>
+            </perfect-scrollbar>
+            <div class="card-footer p-3 text-center">
+                <button class="btn btn-sm btn-primary" type="button">
+                    <span class="btn-wrapper--label">
+                        View all employees
+                    </span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

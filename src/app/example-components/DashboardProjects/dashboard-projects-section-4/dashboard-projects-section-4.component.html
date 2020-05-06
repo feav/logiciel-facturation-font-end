@@ -1,0 +1,180 @@
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <h4 class="font-size-lg mb-0 py-2 font-weight-bold">
+                    Latest issues
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <i-feather class="h1 d-block mr-3 text-warning line-height-1" name="settings"></i-feather>
+                        <div>
+                            <b>Reports</b>
+                            <div class="text-black-50">Monthly sales reports</div>
+                        </div>
+                    </div>
+                    <div [countUp]="2363" class="font-weight-bold text-danger font-size-lg"></div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <i-feather class="h1 d-block mr-3 text-success line-height-1" name="grid"></i-feather>
+                        <div>
+                            <b>User</b>
+                            <div class="text-black-50">Visitors last week</div>
+                        </div>
+                    </div>
+                    <div [countUp]="584" class="font-weight-bold text-success font-size-lg"></div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <i-feather class="h1 d-block mr-3 text-danger line-height-1" name="users"></i-feather>
+                        <div>
+                            <b>Sales</b>
+                            <div class="text-black-50">Total average weekly report</div>
+                        </div>
+                    </div>
+                    <div [countUp]="483" class="font-weight-bold text-warning font-size-lg"></div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <i-feather class="h1 d-block mr-3 text-first line-height-1" name="layers"></i-feather>
+                        <div>
+                            <b>Stats</b>
+                            <div class="text-black-50">Last month targets</div>
+                        </div>
+                    </div>
+                    <div class="font-weight-bold text-first font-size-lg"> $1,23M</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title">
+                    <h4 class="font-size-lg mb-0 py-2 font-weight-bold">
+                        Users list
+                    </h4>
+                </div>
+                <div class="card-header--actions">
+                    <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-dark" dropdownToggle
+                                type="button">
+                            Export
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-neutral-dark nav-pills flex-column px-3">
+                                <li class="nav-item nav-item--header px-0">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>View all reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>View active items</span>
+                                        <div class="ml-auto badge badge-success">23</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-4 nav-item--header">
+                                    <span class="text-black font-weight-bold">Options</span>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                        </div>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                        </div>
+                                        <span>Export to CSV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                            </div>
+                            <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Isaiah Ruiz</a><span
+                                    class="text-black-50 d-block">Senior Web Developer</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div [countUp]="2363" class="font-weight-bold text-success font-size-lg pr-2"></div>
+                        <fa-icon [icon]="['fas', 'arrow-down']" class="font-size-sm text-success opacity-5"></fa-icon>
+                    </div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                            </div>
+                            <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Inez Conley</a><span
+                                    class="text-black-50 d-block">Project Manager</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div [countUp]="584" class="font-weight-bold text-danger font-size-lg pr-2"></div>
+                        <fa-icon [icon]="['fas', 'arrow-down']" class="font-size-sm text-danger opacity-5"></fa-icon>
+                    </div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/></div>
+                            </div>
+                            <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Adyan Sosa</a><span
+                                    class="text-black-50 d-block">User Experience Designer</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div [countUp]="483" class="font-weight-bold text-warning font-size-lg pr-2"></div>
+                        <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm text-warning opacity-5"></fa-icon>
+                    </div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/></div>
+                            </div>
+                            <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                                Simpson</a><span class="text-black-50 d-block">Senior Consultant</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="font-weight-bold text-first font-size-lg pr-2"> $12,23M</div>
+                        <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm text-first opacity-5"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

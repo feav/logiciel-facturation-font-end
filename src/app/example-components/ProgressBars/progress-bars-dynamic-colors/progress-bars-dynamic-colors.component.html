@@ -1,0 +1,9 @@
+  <progressbar [max]="max" [value]="dynamic" class="mb-4">
+    <span>{{dynamic}} / {{max}}</span>
+  </progressbar>
+  <progressbar class="mb-4" [animate]="false" [value]="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+  <progressbar class="progress-striped active" [value]="dynamic" [type]="type">{{type}}</progressbar>
+<div class="divider my-4"></div>
+<div class="text-center">
+  <button type="button" class="btn btn-outline-primary" (click)="random()">Randomize</button>
+</div>

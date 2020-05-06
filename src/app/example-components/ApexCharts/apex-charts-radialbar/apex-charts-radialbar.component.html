@@ -1,0 +1,28 @@
+<apx-chart
+        [chart]="{
+                                type: 'radialBar',
+                                height: '350'
+                            }"
+        [plotOptions]="{
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px'
+                    },
+                    value: {
+                        fontSize: '16px'
+                    },
+                    total: {
+                        show: true,
+                        label: 'Total'
+                    }
+                }
+            }
+        }"
+        [series]="[44, 55, 67, 83]"
+        [labels]="['Apples', 'Oranges', 'Bananas', 'Berries']"
+
+        [stroke]="{
+                    curve: 'smooth'
+                  }"
+></apx-chart>

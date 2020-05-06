@@ -1,0 +1,42 @@
+<div class="search-wrapper search-wrapper--grow mb-4" [ngClass]="status1 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status1 = true" (blur)="status1 = false; null" placeholder="Search terms..." class="form-control">
+</div>
+<div class="search-wrapper search-wrapper--grow mb-4" [ngClass]="status2 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status2 = true" (blur)="status2 = false; null" placeholder="Search terms..." class="form-control rounded-pill">
+</div>
+
+<div class="divider mb-4"></div>
+
+<div class="search-wrapper search-wrapper--alternate search-wrapper--grow mb-4" [ngClass]="status3 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status3 = true" (blur)="status3 = false; null" placeholder="Search terms..." class="form-control">
+</div>
+<div class="search-wrapper search-wrapper--alternate search-wrapper--grow mb-4" [ngClass]="status4 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status4 = true" (blur)="status4 = false; null" placeholder="Search terms..." class="form-control rounded-pill">
+</div>
+
+<div class="divider mb-4"></div>
+
+<div class="search-wrapper search-wrapper--alternate mb-4" [ngClass]="status5 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status5 = true" (blur)="status5 = false; null" placeholder="Search terms..." class="form-control">
+</div>
+<div class="search-wrapper search-wrapper--alternate" [ngClass]="status6 ? 'is-active' : ''">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+  <input type="search" (focus)="status6 = true" (blur)="status6 = false; null" placeholder="Search terms..." class="form-control rounded-pill">
+</div>

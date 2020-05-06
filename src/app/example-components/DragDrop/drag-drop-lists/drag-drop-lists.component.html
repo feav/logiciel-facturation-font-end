@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" dragula="VAMPIRES" [(dragulaModel)]="vamps">
+            <div class="card card-box bg-secondary px-4 py-3 my-3 font-weight-bold" *ngFor="let vamp of vamps">{{ vamp.name }}</div>
+        </div>
+
+        <div class="col-md-6" dragula="VAMPIRES" [(dragulaModel)]="vamps2">
+            <div class="card card-box bg-secondary px-4 py-3 my-3 font-weight-bold" *ngFor="let vamp of vamps2">{{ vamp.name }}</div>
+        </div>
+    </div>
+</div>

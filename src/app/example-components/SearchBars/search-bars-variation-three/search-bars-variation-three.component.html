@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-6">
+        <div [ngClass]="status1 ? 'is-active' : ''" class="search-wrapper search-wrapper--expandable mb-4">
+              <span class="icon-wrapper text-black">
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+              </span>
+            <input (blur)="status1 = false; null" (focus)="status1 = true" class="form-control" placeholder="Search terms..." type="search">
+        </div>
+        <div [ngClass]="status2 ? 'is-active' : ''" class="search-wrapper search-wrapper--expandable mb-4">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+            <input (blur)="status2 = false; null" (focus)="status2 = true" class="form-control rounded-pill" placeholder="Search terms..." type="search">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div [ngClass]="status3 ? 'is-active' : ''" class="search-wrapper search-wrapper--expandable search-wrapper--alternate mb-4">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+            <input (blur)="status3 = false; null" (focus)="status3 = true" class="form-control" placeholder="Search terms..." type="search">
+        </div>
+        <div [ngClass]="status4 ? 'is-active' : ''" class="search-wrapper search-wrapper--expandable search-wrapper--alternate mb-4">
+  <span class="icon-wrapper text-black">
+    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+  </span>
+            <input (blur)="status4 = false; null" (focus)="status4 = true" class="form-control rounded-pill" placeholder="Search terms..." type="search">
+        </div>
+    </div>
+</div>

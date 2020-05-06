@@ -1,0 +1,387 @@
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card card-box mb-5">
+            <div class="card-header-alt d-flex justify-content-between p-4">
+                <div>
+                    <h6 class="font-weight-bold font-size-lg mb-1 text-black">Storage status</h6>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="btn-group" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-second p-0 text-muted dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+                        </button>
+                        <div *dropdownMenu
+                             class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                            <ul class="nav nav-dark flex-column py-2">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                        </div>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                        </div>
+                                        <span>Layouts</span>
+                                        <div class="ml-auto badge badge-warning">512</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link disabled">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                        </div>
+                                        <span>Reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header">
+                                    <span>Others</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                        </div>
+                                        <span>Components</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                        </div>
+                                        <span>Services</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto">
+                <ngx-gauge append="%" backgroundColor="#d1d2db" cap="round" class="img-fluid"
+                           foregroundColor="#f4772e" max="120" min="0"
+                           size="210" thick="12"
+                           type="arch" value="68.4">
+                </ngx-gauge>
+            </div>
+
+            <div class="px-4 pb-4">
+                <div class="row no-gutters text-uppercase font-size-sm mb-4">
+                    <div class="col-md-6 d-flex align-items-center justify-content-end">
+                        <span>Available</span>
+                        <span class="badge badge-circle badge-success mx-2">available</span>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center text-left">
+                        <span class="badge badge-circle badge-danger mx-2">total</span>
+                        <span>Total</span>
+                    </div>
+                </div>
+                <button class="btn btn-block btn-primary text-uppercase font-size-sm font-weight-bold">
+                    Increase limit
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box p-4 mb-5">
+            <div class="card-header-alt d-flex justify-content-between pb-4">
+                <div>
+                    <h6 class="font-weight-bold font-size-lg mb-1 text-black">Available storage</h6>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="btn-group" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-second p-0 text-muted dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+                        </button>
+                        <div *dropdownMenu
+                             class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                            <ul class="nav nav-dark flex-column py-2">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                        </div>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                        </div>
+                                        <span>Layouts</span>
+                                        <div class="ml-auto badge badge-warning">512</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link disabled">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                        </div>
+                                        <span>Reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header">
+                                    <span>Others</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                        </div>
+                                        <span>Components</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                        </div>
+                                        <span>Services</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-start">
+                <fa-icon [icon]="['far', 'object-group']" class="display-1"></fa-icon>
+                <div class="flex-grow-1 pl-4">
+                    <div class="d-block mb-2 mt-1"><b>5GB</b> used out of <b>25GB</b></div>
+                    <progressbar [animate]="true" [value]="39" class="progress-animated-alt" type="danger">39%
+                    </progressbar>
+                </div>
+            </div>
+            <small class="d-block mt-3">
+                <span class="d-block pb-3">
+                    Get <b>1 GB</b> of free storage if you take advantage of our premium plans.
+                </span>
+                <a [routerLink]="" class="btn p-0 font-weight-bold font-size-xs btn-link btn-link-first" title="View details">View
+                    details</a>
+            </small>
+        </div>
+        <div class="card card-box p-3 mb-5">
+            <div class="d-flex align-items-center">
+                <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2" foregroundColor="#1bc943"
+                           max="100" min="0" size="74"
+                           thick="6"
+                           type="full" value="76">
+                </ngx-gauge>
+                <div>
+                    <div class="text-black-50">Stocks trading</div>
+                    <div class="font-weight-bold display-4 py-1 text-success">
+                        $<span [countUp]="687"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5 bg-secondary">
+            <div class="card-header-alt d-flex justify-content-between p-4">
+                <div>
+                    <h6 class="font-weight-bold font-size-lg mb-1 text-black">Open tickets</h6>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="btn-group" dropdown placement="bottom right">
+                        <button class="btn btn-link btn-link-second p-0 text-muted dropdown-toggle no-caret"
+                                dropdownToggle
+                                type="button">
+                            <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+                        </button>
+                        <div *dropdownMenu
+                             class="dropdown-menu dropdown-menu-right dropdown-menu-xxl overflow-hidden p-0">
+                            <ul class="nav nav-dark flex-column py-2">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'building']"></fa-icon>
+                                        </div>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'question-circle']"></fa-icon>
+                                        </div>
+                                        <span>Layouts</span>
+                                        <div class="ml-auto badge badge-warning">512</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link disabled">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                                        </div>
+                                        <span>Reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item nav-item--header">
+                                    <span>Others</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                                        </div>
+                                        <span>Components</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+                                        </div>
+                                        <span>Services</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 pb-3">
+                <perfect-scrollbar [autoPropagation]="true" class="scroll-area rounded bg-white shadow-overflow">
+                    <div class="p-3">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        Wrong product price
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Nazim Kidd</a>
+                                    <span class="pl-2 text-muted">opened 20 minutes ago</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-success">Completed</div>
+                            </div>
+                        </div>
+                        <div class="divider my-3"></div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        Active IE8 issues
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Charlton Oconnell</a>
+                                    <span class="pl-2 text-muted">opened two hours ago</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-success">Completed</div>
+                            </div>
+                        </div>
+                        <div class="divider my-3"></div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        My account doesn't work
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Isha Rollins</a>
+                                    <span class="pl-2 text-muted">opened three hours ago</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-info">On Hold</div>
+                            </div>
+                        </div>
+                        <div class="divider my-3"></div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        Unpaid invoice status
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar4.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Celine Goulding</a>
+                                    <span class="pl-2 text-muted">opened 3 days ag0</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-warning">Pending</div>
+                            </div>
+                        </div>
+                        <div class="divider my-3"></div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        Mobile app problems
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar5.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Kush Malone</a>
+                                    <span class="pl-2 text-muted">opened one week ago</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-danger">Rejected</div>
+                            </div>
+                        </div>
+                        <div class="divider my-3"></div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="font-weight-bold">
+                                    <a [routerLink]="" class="text-black">
+                                        Responsive issues on Firefox
+                                    </a>
+                                </div>
+                                <small class="d-flex pt-2 align-items-center">
+                                    <div class="avatar-icon-wrapper avatar-icon-xs mr-2">
+                                        <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="">Celine Goulding</a>
+                                    <span class="pl-2 text-muted">opened one week ago</span>
+                                </small>
+                            </div>
+                            <div>
+                                <div class="badge badge-info">On Hold</div>
+                            </div>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+    </div>
+</div>

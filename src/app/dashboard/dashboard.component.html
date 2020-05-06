@@ -1,0 +1,142 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-night-sky border-0 card-shadow-first p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-night-sky text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-money-bill" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    CHIFFRES D'AFFAIRES JOURNALIER
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.ca_journalier.toFixed(2)}} €
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-danger border-0 card-shadow-success p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-danger text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-money-bill" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    CHIFFRES D'AFFAIRES HEBDOMADAIRE
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.ca_hebdomadaire.toFixed(2)}} €
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-second border-0 card-shadow-danger p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-second text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-money-bill" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    CHIFFRES D'AFFAIRES MENSUEL
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.ca_mensuel.toFixed(2)}} €
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-info border-0 card-shadow-primary p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-info text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-money-bill" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    CHIFFRES D'AFFAIRES ANNUEL
+                </div>
+            </div>
+            <div class="display-4 text-center line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.ca_annuel.toFixed(2)}} €
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-success border-0 card-shadow-first p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-success text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-shopping-cart" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    VOLUME ENVOYÉ JOURNALIER
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.volume_journalier}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-warning border-0 card-shadow-success p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-warning text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-shopping-cart" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    VOLUME ENVOYÉ HEBDOMADAIRE
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.volume_hebdomadaire}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-ripe-malin border-0 card-shadow-danger p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-ripe-malin text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-shopping-cart" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    VOLUME ENVOYÉ MENSUEL
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.volume_mensuel}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-box bg-primary border-0 card-shadow-primary p-4 mb-5">
+            <div class="d-flex align-items-center">
+                <div class="d-40 rounded-circle bg-primary text-white text-center font-size-lg mr-3">
+                    <i class="pi pi-shopping-cart" style="font-size: 3em"></i>
+                </div>
+                <div class="text-white">
+                    VOLUME ENVOYÉ ANNUEL
+                </div>
+            </div>
+            <div class="display-4 line-height-sm text-white text-center d-flex align-items-center pt-3 justify-content-center">
+                <div>
+                    {{stats.volume_annuel}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

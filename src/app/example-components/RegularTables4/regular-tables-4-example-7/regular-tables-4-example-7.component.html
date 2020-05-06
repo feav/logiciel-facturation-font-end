@@ -1,0 +1,365 @@
+<div class="card card-box mb-5">
+    <div class="card-header pr-2">
+        <div class="card-header--title">
+            <small>Tables</small>
+            <b>This table card has custom content</b>
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-sm text-primary btn-link" tooltip="View details">
+                <fa-icon [icon]="['far', 'keyboard']" class="font-size-lg"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover text-nowrap table-striped mb-0">
+                <thead class="thead-light">
+                <tr>
+                    <th style="width: 40%;">Employee</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar2.jpg"/>
+                                </div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Shanelle
+                                    Wynn</a>
+                                <span class="text-black-50 d-block">UI Engineer, Apple Inc.</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-warning h-auto py-0 px-3">Pending</span>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-primary nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                </div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                                    Simpson</a>
+                                <span class="text-black-50 d-block">Frontend Developer</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-success h-auto py-0 px-3">Completed</span>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-primary nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-icon-wrapper mr-2">
+                                <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar3.jpg"/>
+                                </div>
+                            </div>
+                            <div>
+                                <a [routerLink]="" class="font-weight-bold text-black" title="...">Regan
+                                    Norris</a>
+                                <span class="text-black-50 d-block">Senior Project Manager</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span class="badge badge-danger h-auto py-0 px-3">Declined</span>
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                            <button class="btn btn-sm px-2 py-0 dropdown-toggle no-caret btn-primary"
+                                    dropdownToggle type="button">
+                                <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                            </button>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-xl p-0 dropdown-menu-right">
+                                <ul class="nav nav-primary nav-pills flex-column pt-2 pb-3">
+                                    <li class="nav-item px-3">
+                                        <a [routerLink]="" class="nav-link active">
+                                            <span>View details</span>
+                                            <div class="ml-auto badge badge-first">New</div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a [routerLink]="" class="nav-link text-danger mx-3">
+                                            <div class="nav-link-icon">
+                                                <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                                            </div>
+                                            <span>Delete</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="p-3 d-flex justify-content-center">
+            <pagination [rotate]="rotate" [totalItems]="30"
+                        class="pagination-icons pagination-primary"></pagination>
+        </div>
+    </div>
+</div>
+
+<div class="card card-box mb-5">
+    <div class="card-header">
+        <div class="card-header--title">
+            <h4 class="font-size-lg mb-0 py-2 font-weight-bold">
+                Users list
+            </h4>
+        </div>
+        <div class="card-header--actions">
+            <div class="btn-group btn-group-sm" dropdown placement="bottom right" container="body">
+                <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-success" dropdownToggle
+                        type="button">
+                    Actions
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                    <ul class="nav nav-neutral-dark nav-pills flex-column px-3">
+                                <li class="nav-item nav-item--header px-0">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Export menu</span>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>View all reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <span>View active items</span>
+                                <div class="ml-auto badge badge-success">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item pt-4 nav-item--header">
+                            <span class="text-black font-weight-bold">Options</span>
+                        </li>
+
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                </div>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <div class="nav-link-icon">
+                                    <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                </div>
+                                <span>Export to CSV</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body px-0 pt-2 pb-3">
+        <table class="table table-alternate text-nowrap table-hover mb-0 table-borderless">
+            <thead>
+            <tr>
+                <th>Software</th>
+                <th class="text-center">Income</th>
+                <th class="text-center">Expenses</th>
+                <th class="text-center">Status</th>
+                <th class="text-right">Totals</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="d-flex">
+                        <div class="custom-checkbox custom-control align-self-center">
+                            <input class="custom-control-input" id="inputCheckbox199" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox199">&nbsp;</label>
+                        </div>
+                        <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Isaiah
+                            Ruiz</a><span
+                                class="text-black-50 d-block">Senior Web Developer</span></div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <span class="font-weight-bold text-danger">-$254</span>
+                </td>
+                <td class="text-center">
+                    <span class="text-danger font-weight-bold">-2,374</span>
+                </td>
+                <td class="text-center">
+                    <span class="badge badge-danger">Overdue</span>
+                </td>
+                <td class="text-right">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="font-weight-bold font-size-lg pr-2">2363</div>
+                        <fa-icon [icon]="['fas', 'arrow-down']"
+                                 class="font-size-sm opacity-5"></fa-icon>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex">
+                        <div class="custom-checkbox custom-control align-self-center">
+                            <input class="custom-control-input" id="inputCheckbox188" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox188">&nbsp;</label>
+                        </div>
+                        <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Inez
+                            Conley</a><span
+                                class="text-black-50 d-block">Project Manager</span></div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <span class="font-weight-bold">$18,386</span>
+                </td>
+                <td class="text-center">
+                    <span class="text-danger font-weight-bold">-6,310</span>
+                </td>
+                <td class="text-center">
+                    <span class="badge badge-warning">Pending</span>
+                </td>
+                <td class="text-right">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="font-weight-bold font-size-lg pr-2">584</div>
+                        <fa-icon [icon]="['fas', 'arrow-down']"
+                                 class="font-size-sm opacity-5"></fa-icon>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex">
+                        <div class="custom-checkbox custom-control align-self-center">
+                            <input class="custom-control-input" id="inputCheckbox177" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox177">&nbsp;</label>
+                        </div>
+                        <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Adyan
+                            Sosa</a><span
+                                class="text-black-50 d-block">User Experience Designer</span></div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <span class="font-weight-bold">$6,356</span>
+                </td>
+                <td class="text-center">
+                    <span class="text-warning">-374</span>
+                </td>
+                <td class="text-center">
+                    <span class="badge badge-first">Waiting</span>
+                </td>
+                <td class="text-right">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="font-weight-bold font-size-lg pr-2">483</div>
+                        <fa-icon [icon]="['fas', 'arrow-up']"
+                                 class="font-size-sm opacity-5"></fa-icon>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex">
+                        <div class="custom-checkbox custom-control align-self-center">
+                            <input class="custom-control-input" id="inputCheckbox166" type="checkbox">
+                            <label class="custom-control-label" for="inputCheckbox166">&nbsp;</label>
+                        </div>
+                        <div><a [routerLink]="" class="font-weight-bold text-black" title="...">Beck
+                            Simpson</a><span class="text-black-50 d-block">Senior Consultant</span></div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <span class="font-weight-bold">$16,281</span>
+                </td>
+                <td class="text-center">
+                    <span class="text-success">+684</span>
+                </td>
+                <td class="text-center">
+                    <span class="badge badge-success">Done</span>
+                </td>
+                <td class="text-right">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="font-weight-bold font-size-lg pr-2"> $12,23M</div>
+                        <fa-icon [icon]="['fas', 'arrow-up']"
+                                 class="font-size-sm opacity-5"></fa-icon>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="divider mb-3"></div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="button">
+                <span class="btn-wrapper--label">View details</span>
+                <span class="btn-wrapper--icon">
+                            <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+                        </span>
+            </button>
+        </div>
+    </div>
+</div>

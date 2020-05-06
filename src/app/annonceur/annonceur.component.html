@@ -1,0 +1,151 @@
+<p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+
+<p-table [columns]="cols" [value]="annonceurs" selectionMode="single" [loading]="showLoader"
+    [(selection)]="selectedAnnonceur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
+    [scrollable]="true" [style]="{width:'900px'}">
+    <ng-template pTemplate="caption">
+        <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
+            <div>
+                <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                <input type="text" pInputText placeholder="Filtre par nom" [(ngModel)]="filterText"
+                    (input)="onFilterChange($event.target.value)" style="width: auto">
+            </div>
+            <button type="button" pButton icon="pi pi-plus" (click)="showModalToAdd()"
+                label="Ajouteur un Annonceur"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:200px">
+        </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td>{{rowData.nom}}</td>
+            <td>{{rowData.url}}</td>
+            <td>{{rowData.login}}</td>
+            <td>{{rowData.password}}</td>
+            <td>{{rowData.adresse_facturation}}</td>
+            <td>{{rowData.email_comptabilite}}</td>
+            <td>{{rowData.email_direction}}</td>
+            <td>{{rowData.email_production}}</td>
+            <td>{{rowData.delai_paiement}} jours</td>
+            <td>{{rowData.cree_le}}</td>
+            <td>
+                <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
+                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+            <td>{{ rowData.modifie_le }}</td>
+            <td>
+                <span *ngIf="rowData.modifie_par != null">{{ rowData.modifie_par }}</span>
+                <span *ngIf="rowData.modifie_par == null" class="text-danger" style="font-style: italic;">
+                    Utilisateur Supprimé
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize"
+            [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
+    </ng-template>
+</p-table>
+
+<p-dialog [draggable]="false" position="top" [style]="{width: '500px', marginTop: '80px', maxHeight: '450px'}" [header]="dialogHeader"
+    [(visible)]="showCreateAnnonceurModalForm" [focusOnShow]="false" showEffect="fade" [modal]="true">
+    <form [formGroup]="createAnnonceurFormGroup">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="nomAnnonceur">Nom de l'Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="nom" id="nomAnnonceur" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="urlAnnonceur">URL de l'Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="url" id="urlAnnonceur" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="login">Login de l'Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="login" id="login" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="password">Mot de passe de l'Annonceur *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="password" id="password" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="adresse_facturation">Adresse de Facturation *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="adresse_facturation" id="adresse_facturation" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="email_comptabilite">Email Comptabilité</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="email_comptabilite" id="email_comptabilite" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="email_direction">Email Direction</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="email_direction" id="email_direction" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="email_production">Email Production</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="text" formControlName="email_production" id="email_production" />
+                </div>
+            </div>
+            <div class="ui-g-12">
+                <div class="ui-g-4">
+                    <label for="delai_paiement">Délai de Paiement *</label>
+                </div>
+                <div class="ui-g-8">
+                    <input pInputText type="number" formControlName="delai_paiement" min="0" id="delai_paiement"
+                        placeholder="(Nombre de jours)" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
+            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode"
+                (click)="deleteAnnonceur()" label="Supprimer"></button>
+            <button type="button" class="ui-button-info" [disabled]="!createAnnonceurFormGroup.valid" pButton
+                icon="pi pi-refresh" *ngIf="!createMode" (click)="updateAnnonceur()" label="Modifier"></button>
+            <button type="button" class="ui-button-success" [disabled]="!createAnnonceurFormGroup.valid" pButton
+                icon="pi pi-check" *ngIf="createMode" (click)="createAnnonceur()" label="Créer"></button>
+            <button type="button" class="ui-button-secondary" pButton icon="pi pi-times"
+                (click)="showCreateAnnonceurModalForm = false" label="Annuler"></button>
+        </div>
+    </p-footer>
+</p-dialog>

@@ -1,0 +1,30 @@
+<div class="mb-3 d-flex justify-content-between align-items-center">
+    <div *ngIf="config.filtering" [ngClass]="filterStatus ? 'is-active' : ''" class="search-wrapper search-wrapper--grow">
+        <span class="icon-wrapper text-black">
+            <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        </span>
+        <input (blur)="filterStatus = false; null" (focus)="filterStatus = true" (tableChanged)="onChangeTable(config)" [ngTableFiltering]="config.filtering" class="form-control" placeholder="Filter results..." type="search">
+    </div>
+    <div *ngIf="config.paging" class="d-flex align-items-center">
+        <span>Page: <b>{{page}} / {{numPages}}</b></span>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <ng-table (tableChanged)="onChangeTable(config)"
+              [columns]="columns"
+              [config]="config.sorting" [rows]="rows">
+    </ng-table>
+</div>
+<div class="d-flex mt-2 justify-content-center">
+    <pagination (numPages)="numPages = $event"
+                (pageChanged)="onChangeTable(config, $event)"
+                *ngIf="config.paging"
+                [(ngModel)]="page"
+                [boundaryLinks]="true"
+                [itemsPerPage]="itemsPerPage"
+                [maxSize]="maxSize"
+                [rotate]="false"
+                [totalItems]="length">
+    </pagination>
+</div>

@@ -1,0 +1,106 @@
+<button class="btn m-2 btn-primary btn-spinner" type="button" disabled>
+    <span class="btn-wrapper--icon spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <span class="sr-only">Loading...</span>
+</button>
+<button class="btn m-2 btn-primary btn-spinner" type="button" disabled>
+    <span class="btn-wrapper--icon spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span class="sr-only">Loading...</span>
+</button>
+<button class="btn m-2 btn-primary btn-spinner" type="button" disabled>
+    <span class="btn-wrapper--icon spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <span class="btn-wrapper--label">Loading...</span>
+</button>
+<button class="btn m-2 btn-primary btn-spinner" type="button" disabled>
+    <span class="btn-wrapper--icon spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span class="btn-wrapper--label">Loading...</span>
+</button>
+
+<div class="divider my-2"></div>
+
+<div class="text-center">
+    <div class="row">
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()">Ladda Button</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-spinner-size="30">Submit
+                Size : 30
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-spinner-size="45">Spinner
+                Size : 45
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-spinner-color="#8A9D1F">
+                Spinner Color Chage
+            </button>
+        </div>
+    </div>
+
+    <div class="divider my-2"></div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="expand-right">
+                Expand-Right
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="expand-left">
+                Expand-Left
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="expand-up">
+                Expand-Up
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="expand-down">
+                Expand-Down
+            </button>
+        </div>
+    </div>
+
+    <div class="divider my-2"></div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="slide-down"
+                    data-spinner-size="30">Slide-Down
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="slide-up"
+                    data-spinner-size="30">Slide-Up
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="slide-left"
+                    data-spinner-size="30">Slide-Left
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn m-2 btn-primary" [ladda]="isLoading" (click)="Submit()" data-style="slide-right"
+                    data-spinner-size="30">Slide-Right
+            </button>
+        </div>
+    </div>
+
+    <div class="divider my-2"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn m-2 btn-primary" [ladda]="isLoadingProgessLeft" data-style="expand-left"
+                    (click)="progressClick('left')">Progress Button Left
+            </button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn m-2 btn-primary" [ladda]="isLoadingProgessRight" data-style="expand-right"
+                    (click)="progressClick('right')">Progress Button Right
+            </button>
+        </div>
+    </div>
+</div>

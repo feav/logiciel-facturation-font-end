@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="form-group">
+            <label>Input toggle:</label>
+            <div class="input-group input-group-lg mb-5">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]="['far', 'calendar-alt']" class="mx-auto"></fa-icon></span>
+                </div>
+                <input [bsConfig]="{ containerClass: 'theme-primary', isAnimated: true }" bsDatepicker class="form-control" placeholder="Select date" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="form-group">
+            <label>Button toggle:</label>
+            <div class="input-group input-group-lg mb-5">
+                <input #dp="bsDatepicker" [bsConfig]="{ containerClass: 'theme-second', isAnimated: true, dateInputFormat: 'MMMM Do YYYY' }" [bsValue]="bsValue" bsDatepicker class="form-control" placeholder="Select date" type="text">
+                <div class="input-group-append">
+                    <button (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen" class="btn btn-second py-0">
+                        <fa-icon [icon]="['far', 'calendar-alt']" class="font-size-lg"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mb-5">
+    <div class="heading-3 text-center">Inline datepicker</div>
+    <bs-datepicker-inline [bsConfig]="{ containerClass: 'theme-primary' }" [bsValue]="bsInlineValue" class="mx-auto"></bs-datepicker-inline>
+</div>

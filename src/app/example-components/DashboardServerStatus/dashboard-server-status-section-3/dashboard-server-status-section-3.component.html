@@ -1,0 +1,374 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5 px-4 pt-4 text-center">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-dark p-0 text-dark opacity-8 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                    <ul class="nav nav-pills flex-column p-3">
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>My Account</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item--header text-first font-weight-bold">
+                            <span>Heading</span>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-header-alt">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">
+                    Financial year
+                </div>
+                <p class="text-black-50">Expenses statistics to date</p>
+            </div>
+            <div class="divider mb-4 mt-3"></div>
+            <h3 class="mb-0 display-3 mt-1 font-weight-bold">
+                $
+                <span [countUp]="458695"></span>
+            </h3>
+            <div class="divider my-4"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Current month</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            46,362
+                        </span>
+                        <span class="badge bg-neutral-danger ml-2 text-danger">-8%</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Last year</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            34,546
+                        </span>
+                        <span class="badge bg-neutral-success ml-2 text-success">+13%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="font-weight-bold font-size-lg mt-4 text-black">
+                Monthly report
+            </div>
+            <apx-chart
+                    [chart]="{
+                                type: 'bar',
+                                height: '270',
+                                sparkline: {
+                                  enabled: false
+                                },
+                                toolbar: {
+                                    show: false
+                                }
+                            }"
+                    [colors]="['#f4772e', '#4191ff']"
+                    [dataLabels]="{
+                              enabled: false
+                            }"
+                    [fill]="{
+                              opacity: 0.85,
+                              colors: ['#f4772e', '#4191ff']
+                            }"
+                    [grid]="{
+                            strokeDashArray: '5',
+                            borderColor: 'rgba(125, 138, 156, 0.3)'
+                        }"
+                    [labels]="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
+                    [legend]="{ show: false }"
+                    [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [3.3, 3.1, 4.0, 5.8, 2.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 2.8, 2.8, 4.3, 2.7, 1.4]
+                              }
+                            ]"
+
+                    [stroke]="{
+                              show: true,
+                              width: 2,
+                              colors: ['transparent']
+                            }"
+            ></apx-chart>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header border-0">
+                <div class="card-header--title py-2 font-size-lg">
+                    Tasks for today
+                </div>
+                <div class="card-header--actions">
+                    <div class="btn-group btn-group-sm" dropdown>
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-first" dropdownToggle
+                                type="button">
+                            Actions
+                            <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-first flex-column">
+                                <li class="nav-item nav-item--header">
+                                    <span class="text-capitalize text-black font-size-md font-weight-bold">Menu</span>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>View all reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>View active items</span>
+                                        <div class="ml-auto badge badge-second">23</div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['fas', 'download']"></fa-icon>
+                                        </div>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <div class="nav-link-icon">
+                                            <fa-icon [icon]="['far', 'file-excel']"></fa-icon>
+                                        </div>
+                                        <span>Export to CSV</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="bg-composed-wrapper bg-midnight-bloom border-0">
+                    <div class="bg-composed-img-3 bg-composed-wrapper--image"></div>
+                    <div class="bg-composed-wrapper--content text-light px-2 py-4">
+                        <h4 class="font-size-xl font-weight-bold mb-2">Notifications</h4>
+                        <p class="opacity-8 mb-0">You have <b class="text-success">472</b> new messages</p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <tabset [justified]="true" class="tabs-animated tabs-animated-shadow tabs-bordered" type="tabs">
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Timeline</span>
+                    </ng-template>
+                    <perfect-scrollbar [autoPropagation]="true" class="scroll-area shadow-overflow">
+                        <div class="timeline-list timeline-list-offset timeline-list-offset-dot">
+                            <div class="timeline-item">
+                                <div class="timeline-item-offset">
+                                    9:25
+                                </div>
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">1991</h4>
+                                    <p>
+                                        The World Wide Web goes live with its first web page.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item-offset">
+                                    9:25
+                                </div>
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam day</h4>
+                                    <p>
+                                        Bill Clinton's presidential scandal makes it online.
+                                    </p>
+                                    <div class="avatar-wrapper-overlap mt-2 mb-1">
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar1.jpg"/></div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar2.jpg"/></div>
+                                        </div>
+                                        <div class="avatar-icon-wrapper avatar-icon-sm">
+                                            <div class="avatar-icon"><img alt="..."
+                                                                          src="assets/images/avatars/avatar6.jpg"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item-offset">
+                                    9:25
+                                </div>
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Business investor
+                                        meeting</h4>
+                                    <p>
+                                        Mosaic, the first graphical browser, is introduced to the average consumer.
+                                    </p>
+                                    <div class="mt-3">
+                                        <a [routerLink]=""><img alt="Rounded image"
+                                                                class="img-fluid rounded mr-3 shadow-sm"
+                                                                src="assets/images/stock-photos/people-1.jpg"
+                                                                width="70"></a>
+                                        <a [routerLink]=""><img alt="Rounded image" class="img-fluid rounded shadow-sm"
+                                                                src="assets/images/stock-photos/people-3.jpg"
+                                                                width="70"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item-offset">
+                                    9:25
+                                </div>
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">Learning round table
+                                        gathering</h4>
+                                    <p>
+                                        First ever iPod launches.
+                                    </p>
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-primary" type="button">Submit Report</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item-offset">
+                                    9:25
+                                </div>
+                                <div class="timeline-item--content">
+                                    <div class="timeline-item--icon"></div>
+                                    <h4 class="timeline-item--label mb-2 font-weight-bold">2003</h4>
+                                    <p>
+                                        MySpace becomes the most popular social network.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </perfect-scrollbar>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Tasks</span>
+                    </ng-template>
+                    <div class="text-center my-5">
+                        <div class="avatar-icon-wrapper rounded-circle m-0">
+                            <div class="d-inline-flex justify-content-center p-0 rounded-circle avatar-icon-wrapper bg-neutral-danger text-danger m-0 d-130">
+                                <fa-icon [icon]="['fas', 'times']" class="d-flex align-self-center display-3"></fa-icon>
+                            </div>
+                        </div>
+                        <h6 class="font-weight-bold font-size-lg mb-1 mt-4 text-black">Incoming messages</h6>
+                        <p class="text-black-50 mb-0">You have pending actions to take care of.</p>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        <span>Reports</span>
+                    </ng-template>
+                    <div class="text-center my-4">
+                        <div class="btn-group mx-auto" role="group">
+                            <button class="btn active btn-outline-second" type="button">Income</button>
+                            <button class="btn btn-outline-second" type="button">Expenses</button>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-black font-size-xl pb-2 font-weight-bold">
+                        Total Sales
+                        <small class="d-block text-black-50">Total performance for selected period</small>
+                    </div>
+                    <div class="px-2 pb-3 pt-2">
+                        <apx-chart
+                                [chart]="{
+                                type: 'bar',
+                                height: '210',
+                                sparkline: {
+                                  enabled: true
+                                },
+                                stacked: true
+                            }"
+                                [colors]="['#7a7b97', 'rgba(122, 123, 151, 0.15)']"
+                                [dataLabels]="{
+                              enabled: true
+                            }"
+                                [fill]="{
+                              opacity: 1
+                            }"
+
+                                [labels]="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Last week', 'Last month', 'Last year', 'Last quarter']"
+                                [legend]="{ show: false }"
+                                [plotOptions]="{
+                              bar: {
+                                horizontal: false,
+                                columnWidth: '65%'
+                              }
+                            }"
+
+                                [series]="[
+                              {
+                                name: 'Net Profit',
+                                data: [2.3, 3.1, 4.0, 3.8, 5.1, 3.6,4.0, 3.8, 5.1, 3.6, 3.2]
+                              },
+                              {
+                                name: 'Net Loss',
+                                data: [2.1, 2.1, 3.0, 2.8, 4.0, 3.8, 5.1, 3.6,4.1, 2.6, 1.2]
+                              }
+                            ]"
+
+                                [stroke]="{
+                              show: false,
+                              width: 0,
+                              colors: ['transparent']
+                            }"
+                        ></apx-chart>
+                    </div>
+                </tab>
+            </tabset>
+            <div class="text-center py-3">
+                <button class="btn px-4 btn-gradient badge-wrapper bg-midnight-bloom">
+                    <span class="badge badge-position badge-position--top-right badge-circle-inner badge-warning"
+                          tooltip="You have 472 new messages">New notifications</span>
+                    <span class="btn-wrapper--label">Learn more</span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

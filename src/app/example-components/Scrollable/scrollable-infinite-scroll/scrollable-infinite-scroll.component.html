@@ -1,0 +1,18 @@
+<div class="card card-box shadow-none overflow-hidden">
+    <div class="card-header bg-light p-3">
+        Items: <b class="text-first">{{sum}}</b>, now triggering scroll: <b class="text-first">{{direction}}</b>
+    </div>
+    <perfect-scrollbar class="scroll-area shadow-overflow" [autoPropagation]="true">
+        <ul class="list-group list-group-flush"
+            infinite-scroll
+            [infiniteScrollDistance]="scrollDistance"
+            [infiniteScrollUpDistance]="scrollUpDistance"
+            [infiniteScrollThrottle]="throttle"
+            (scrolled)="onScrollDown()"
+            (scrolledUp)="onUp()">
+            <li class="list-group-item" *ngFor="let i of array">
+                {{ i }}
+            </li>
+        </ul>
+    </perfect-scrollbar>
+</div>

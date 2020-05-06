@@ -1,0 +1,18 @@
+<alert type="warning">
+  This example does not actually upload any of the selected files, only simulates the upload process!
+</alert>
+
+<dropzone *ngIf="type === 'component'" class="dropzone-container" [config]="config" [disabled]="disabled" [message]="'Click or drag images here to upload'" (init)="onUploadInit()" (error)="onUploadError()" (success)="onUploadSuccess()"></dropzone>
+<div *ngIf="type === 'directive'" class="dropzone dropzone-container" [dropzone]="config" [disabled]="disabled" (init)="onUploadInit()" (error)="onUploadError()" (success)="onUploadSuccess()"></div>
+
+<div class="divider my-4"></div>
+<div class="text-center">
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='toggleType()'>{{(type == "component") ? "Switch to directive" : "Switch to component"}}</button>
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='toggleDisabled()'>Toggle disabled state</button>
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='toggleMultiUpload()'>{{(config.maxFiles !== 1) ? "Upload single file" : "Upload multiple files"}}</button>
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='toggleAutoReset()'>{{config.autoReset ? "Turn off auto reset" : "Turn on auto reset"}}</button>
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='toggleClickAction()'>{{config.clickable ? "Turn off click action" : "Turn on click action"}}</button>
+  <button type="button" class="btn btn-sm btn-primary m-2" (click)='resetDropzoneUploads()'>Reset upload area</button>
+</div>
+
+<notifier-container></notifier-container>

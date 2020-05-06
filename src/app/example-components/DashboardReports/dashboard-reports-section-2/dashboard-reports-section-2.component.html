@@ -1,0 +1,319 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title font-weight-bold">
+                    Analytics
+                </div>
+                <div class="card-header--actions">
+                    <div class="btn-group btn-group-sm" dropdown placement="bottom right">
+                        <button class="btn btn-sm dropdown-toggle no-caret btn-neutral-success" dropdownToggle
+                                type="button">
+                            <span class="btn-wrapper--label">Select period</span>
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['fas', 'chevron-down']" class="opacity-8 font-size-xs ml-1"></fa-icon>
+                            </span>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                            <ul class="nav nav-neutral-success nav-pills flex-column px-3">
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Last day</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link active">
+                                        <span>Last month</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="" class="nav-link">
+                                        <span>Last year</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="divider mt-3"></div>
+                            <div class="pt-3 pb-2 text-center">
+                                <button class="btn btn-sm btn-outline-first" type="button">
+                                    Custom period
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area-sm mb-2">
+                <div class="table-responsive">
+                    <table class="table table-hover table-borderless mb-0">
+                        <tbody>
+                        <tr>
+                            <td class="text-center font-size-lg">
+                                1 August
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">Returning visitors</small>
+                                    <span class="text-warning">
+                                    596
+                                </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">New visits</small>
+                                    <span class="text-success">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-1"></fa-icon>
+                                    45%
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-size-lg">
+                                2 August
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">Returning visitors</small>
+                                    <span class="text-success">
+                                    3,465
+                                </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">New visits</small>
+                                    <span class="text-danger">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-1"></fa-icon>
+                                    35%
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-size-lg">
+                                3 August
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">Returning visitors</small>
+                                    <span class="text-success">
+                                    12,364
+                                </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">New visits</small>
+                                    <span class="text-success">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-1"></fa-icon>
+                                    45%
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-size-lg">
+                                4 August
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">Returning visitors</small>
+                                    <span class="text-warning">
+                                    346
+                                </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">New visits</small>
+                                    <span class="text-success">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-1"></fa-icon>
+                                    66%
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-size-lg">
+                                5 August
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">Returning visitors</small>
+                                    <span class="text-success">
+                                    765
+                                </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-left font-size-lg">
+                                    <small class="text-black-50 d-block">New visits</small>
+                                    <span class="text-danger">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-1"></fa-icon>
+                                    64%
+                                </span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title font-weight-bold">
+                    Countries
+                </div>
+                <div class="card-header--actions">
+                    <div class="badge badge-pill my-1 badge-neutral-first">
+                        Updates available
+                    </div>
+                </div>
+            </div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area-sm mb-2">
+                <div class="table-responsive">
+                    <table class="table table-hover table-borderless mb-0">
+                        <thead>
+                        <tr>
+                            <th style="width: 150px;">Country</th>
+                            <th>Visits</th>
+                            <th>% Visits</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="us"></flag-icon>
+                                    <span>USA</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 t2xt-success"></fa-icon>
+                                    <small class="text-black-50 d-block">45,235</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="55"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">55%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="it"></flag-icon>
+                                    <span>Italy</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 2ext-success"></fa-icon>
+                                    <small class="text-black-50 d-block">3,772</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="65"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">65%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="fr"></flag-icon>
+                                    <span>France</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-2 text-danger"></fa-icon>
+                                    <small class="text-black-50 d-block">56,235</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="87"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">87%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="ch"></flag-icon>
+                                    <span>Switzerland</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-2 text-warning"></fa-icon>
+                                    <small class="text-black-50 d-block">6,346</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="29"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">29%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="de"></flag-icon>
+                                    <span>Germany</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 t2xt-success"></fa-icon>
+                                    <small class="text-black-50 d-block">15,366</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="33"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">33%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+</div>

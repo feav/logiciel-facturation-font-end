@@ -1,0 +1,18 @@
+<div class="form-group mb-0">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+            </span>
+        </div>
+        <input [(ngModel)]="groupSelected"
+               [typeahead]="statesComplex"
+               typeaheadOptionField="name"
+               typeaheadGroupField="region"
+               [isAnimated]="true"
+               class="form-control"
+               placeholder="Typeahead search ...">
+    </div>
+</div>
+
+<div class="mt-4 text-info font-weight-bold">Model: {{groupSelected | json}}</div>

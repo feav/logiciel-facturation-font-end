@@ -1,0 +1,65 @@
+<div class="promo-section-wrapper">
+    <div class="promo-section-buttons-wrapper">
+        <div class="promo-section-buttons">
+            <span class="d-inline-block" containerClass="text-nowrap" placement="top" tooltip="Stay up to date">
+                <button [outsideClick]="true" [popover]="sharePopover" class="btn btn-transition-none bg-neutral-first text-first p-0 d-inline-block shadow-none text-center btn-squared rounded-sm" containerClass="popover-share-box popover-custom-wrapper popover-custom-xl" placement="left" type="button">
+                    <fa-icon [icon]="['fas', 'share-square']" class="font-size-lg"></fa-icon>
+                </button>
+            </span>
+            <a class="btn btn-transition-none bg-neutral-danger text-danger p-0 d-inline-block shadow-none text-center btn-squared rounded-sm" containerClass="text-nowrap" href="https://docs.uifort.com/bamburgh-angular-admin-dashboard-ngx-bootstrap-pro-docs" placement="left" target="_blank" tooltip="View documentation">
+                <fa-icon [icon]="['far', 'life-ring']" class="font-size-lg"></fa-icon>
+            </a>
+            <a class="btn btn-transition-none bg-neutral-success text-success p-0 d-inline-block shadow-none text-center btn-squared rounded-sm" containerClass="text-nowrap" href="https://uifort.com/template/bamburgh-angular-admin-dashboard-ngx-bootstrap-pro" placement="left" target="_blank" tooltip="View product details">
+                <fa-icon [icon]="['fas', 'info-circle']" class="font-size-lg"></fa-icon>
+            </a>
+        </div>
+    </div>
+</div>
+<ng-template #sharePopover>
+    <div class="px-5 font-size-lg pb-3 text-center pt-1 font-weight-bold">
+        Subscribe to stay up to date with our latest releases and updates!
+    </div>
+    <div class="text-center">
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-facebook" href="https:&#x2F;&#x2F;www.facebook.com&#x2F;UiFort" rel="nofollow" target="_blank" tooltip="Facebook">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'facebook']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-twitter" href="https:&#x2F;&#x2F;twitter.com&#x2F;uifort1" rel="nofollow" target="_blank" tooltip="Twitter">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'twitter']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-instagram" href="https:&#x2F;&#x2F;www.instagram.com&#x2F;uifort1" rel="nofollow" target="_blank" tooltip="Instagram">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'instagram']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-first" href="https:&#x2F;&#x2F;discord.gg&#x2F;mddFBQX" rel="nofollow" target="_blank" tooltip="Discord">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'discord']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-dribbble" href="https:&#x2F;&#x2F;dribbble.com&#x2F;UiFort" rel="nofollow" target="_blank" tooltip="Dribbble">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'dribbble']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+        <a class="m-2 btn d-40 p-0 rounded-sm btn-github" href="https:&#x2F;&#x2F;github.com&#x2F;uifort" rel="nofollow" target="_blank" tooltip="Github">
+                        <span class="btn-wrapper--icon">
+                             <fa-icon [icon]="['fab', 'github']" class="font-size-lg"></fa-icon>
+                        </span>
+        </a>
+    </div>
+    <div class="divider my-3"></div>
+    <div class="text-center">
+        <a class="btn btn-sm btn-outline-primary" href="https://uifort.com" target="_blank" title="Powerful admin dashboard templates & ui kits that are easy to use and customize.">
+        <span class="btn-wrapper--label">
+            Visit UiFort.com
+        </span>
+            <span class="btn-wrapper--icon">
+            <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+        </span>
+        </a>
+    </div>
+</ng-template>

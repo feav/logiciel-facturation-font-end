@@ -1,0 +1,337 @@
+<div class="app-drawer-wrapper">
+    <button (click)="toggleHeaderDrawerOpen()" [ngClass]="{'is-active' : globals.toggleHeaderDrawer}" class="navbar-toggler hamburger hamburger--elastic" type="button">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+    </button>
+</div>
+
+<div class="app-drawer-content">
+    <button (click)="toggleHeaderDrawerOpen()" class="close-drawer-btn btn btn-sm" placement="left" tooltip="Close drawer" type="button">
+        <div [ngClass]="{'is-active' : globals.toggleHeaderDrawer}" class="navbar-toggler hamburger hamburger--elastic">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </div>
+    </button>
+    <perfect-scrollbar [autoPropagation]="true" class="shadow-overflow">
+        <div class="p-4">
+            <div class="text-center">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">Today's sales target</div>
+                <p class="text-black-50">Daily statistics regarding your sales targets</p>
+            </div>
+            <div class="rounded p-4 text-white bg-deep-sky">
+                <div class="d-flex justify-content-center">
+                    <ngx-gauge append="%" backgroundColor="rgba(255,255,255,.2)" cap="round" class="img-fluid"
+                               foregroundColor="rgba(255,255,255,1)" max="120" min="0"
+                               size="200" thick="12"
+                               type="arch" value="83.2">
+                    </ngx-gauge>
+                </div>
+                <div class="row no-gutters text-uppercase font-size-sm mb-4">
+                    <div class="col-md-6 d-flex align-items-center justify-content-end">
+                        <span>Available</span>
+                        <span class="badge border-0 badge-circle bg-white-50 mx-2">total</span>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center text-left">
+                        <span class="badge border-0 badge-circle bg-white mx-2">failed</span>
+                        <span>Total</span>
+                    </div>
+                </div>
+                <button class="btn btn-block btn-sm btn-secondary shadow-none text-uppercase font-size-xs font-weight-bold">
+                    Generate report
+                </button>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="p-4 text-center">
+            <h3 class="mb-0 display-3 mt-1 font-weight-bold">
+                $
+                <span [countUp]="458695"></span>
+            </h3>
+            <apx-chart
+                    [chart]="{
+                        type: 'area',
+                        height: '120',
+                        sparkline: {
+                          enabled: true
+                        }
+                    }"
+                    [colors]="['#1bc943']"
+                    [fill]="{
+                        color: '#1bc943',
+                        gradient: {
+                            shade: 'light',
+                            type: 'vertical',
+                            shadeIntensity: 0.3,
+                            inverseColors: false,
+                            opacityFrom: 1,
+                            opacityTo: 0,
+                            stops: [0, 100]
+                        }
+                    }"
+                    [series]="[
+                      {
+                        name: 'Weekly sales',
+                        data: [47, 38, 56, 24, 45, 54, 38, 56, 24, 65]
+                      }
+                    ]"
+                    [stroke]="{
+                        color: '#4191ff',
+                        curve: 'smooth',
+                        width: 2
+                    }"
+                    [xaxis]="{
+                        crosshairs: {
+                            width: 1
+                        }
+                    }"
+                    [yaxis]="{
+                        min: 0
+                    }"
+            ></apx-chart>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Current month</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            46,362
+                        </span>
+                        <span class="badge bg-neutral-danger ml-2 text-danger">-8%</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Last year</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            34,546
+                        </span>
+                        <span class="badge bg-neutral-success ml-2 text-success">+13%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-2 pt-4 text-center">
+                <button class="btn btn-sm btn-outline-second" type="button">
+                    <span class="btn-wrapper--label">
+                        View complete report
+                    </span>
+                    <span class="btn-wrapper--icon">
+                        <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="p-4">
+            <div class="text-center">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">Tasks</div>
+                <p class="text-black-50">Your daily tasks list</p>
+            </div>
+            <div class="rounded p-3 bg-secondary">
+                <div class="task-wrapper">
+                    <div class="task-item">
+                        <div class="align-box-row">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="exampleCustomCheckbox1" type="checkbox">
+                                <label class="custom-control-label" for="exampleCustomCheckbox1">&nbsp;</label>
+                            </div>
+                            <div>
+                                Finish tasks for today
+                                <p class="text-black-50 mt-1 mb-0">
+                                    But I must explain to you how all this mistaken idea.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="align-box-row">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="exampleCustomCheckbox2" type="checkbox">
+                                <label class="custom-control-label" for="exampleCustomCheckbox2">&nbsp;</label>
+                            </div>
+                            <div>
+                                <b>
+                                    Blinded by desire
+                                </b>
+                                <p class="text-black-50 mt-1 mb-0">
+                                    A wonderful serenity has taken possession.
+                                </p>
+                                <div class="timeline-list mt-3">
+                                    <div class="timeline-item timeline-item-icon">
+                                        <div class="timeline-item--content">
+                                            <div class="timeline-item--icon-wrapper bg-danger text-white">
+                                                <fa-icon [icon]="['far', 'gem']"></fa-icon>
+                                            </div>
+                                            <h4 class="timeline-item--label mb-2 font-weight-bold">1998</h4>
+                                            <p>
+                                                Bill Clinton's presidential scandal makes it online.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item--content">
+                                            <div class="timeline-item--icon"></div>
+                                            <h4 class="timeline-item--label mb-2 font-weight-bold">Java exam
+                                                day</h4>
+                                            <p>
+                                                Bill Clinton's presidential scandal makes it online.
+                                            </p>
+                                            <div class="avatar-wrapper-overlap mt-2 mb-1">
+                                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar7.jpg"/></div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar2.jpg"/></div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item--content">
+                                            <div class="timeline-item--icon"></div>
+                                            <h4 class="timeline-item--label mb-2 font-weight-bold">
+                                                Business investor meeting
+                                                <span class="badge badge-neutral-info text-info ml-2">New</span>
+                                            </h4>
+                                            <p>
+                                                Mosaic, the first graphical browser, is introduced to the average
+                                                consumer.
+                                            </p>
+                                            <div class="mt-3">
+                                                <button class="btn btn-sm btn-primary" type="button">Submit Report
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div class="align-box-row">
+                            <div class="custom-checkbox custom-control align-self-start">
+                                <input class="custom-control-input" id="exampleCustomCheckbox3" type="checkbox">
+                                <label class="custom-control-label" for="exampleCustomCheckbox3">&nbsp;</label>
+                            </div>
+                            <div class="w-100">
+                                World among the stalks
+                                <p class="text-black-50 mt-1">
+                                    Who formed us in his own image, and the breath.
+                                </p>
+
+                                <ul class="list-group list-group-flash">
+                                    <li class="list-group-item bg-white d-flex justify-content-between align-items-center p-4">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-wrap justify-content-between mb-2">
+                                                <small class="line-height-xs text-uppercase text-muted">Nov 12,
+                                                    11:25am
+                                                </small>
+                                                <small class="line-height-xs text-uppercase text-success">Due in 12
+                                                    days
+                                                </small>
+                                            </div>
+                                            <h6 class="pt-1 pb-1">
+                                                <a [routerLink]="">#56 - Deploy new website</a>
+                                            </h6>
+                                            <p class="mb-3">This is a dummy text acting ...</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a [routerLink]="" class="badge badge-pill badge-danger pl-3 pr-3">Files
+                                                    ready</a>
+                                                <div>
+                                                    <button class="btn btn-sm btn-first" type="button">
+                                                            <span class="btn-wrapper--icon">
+                                                                <fa-icon [icon]="['fas', 'plus']"
+                                                                         class="font-size-sm"></fa-icon>
+                                                            </span>
+                                                        <span class="btn-wrapper--label">
+                                                                Add
+                                                            </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center align-content-center pl-1">
+                                        <a [routerLink]="" class="btn btn-sm btn-link" placement="top"
+                                           tooltip="There are 653 new comments available!">
+                                                <span class="btn-wrapper--icon">
+                                                    <fa-icon [icon]="['far', 'comments']"></fa-icon>
+                                                </span>
+                                            <span class="btn-wrapper--label ml-1">
+                                                    653
+                                                </span>
+                                        </a>
+                                        <div>
+                                            <small class="text-muted mr-1">(21)</small>
+                                            <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                            <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                            <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                            <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                            <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="p-4">
+            <div class="text-center">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">Latest sales</div>
+                <p class="text-black-50">Latest reports available</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bg-secondary rounded py-2 px-1">
+                        <div class="display-3 text-center line-height-sm text-second text-center d-flex align-items-center pt-3 justify-content-center">
+                            <fa-icon [icon]="['far', 'dot-circle']" class="font-size-sm text-warning mr-2"></fa-icon>
+                            <div>
+                                436
+                            </div>
+                        </div>
+                        <div class="text-black-50 text-center opacity-6 pt-3">
+                            <b>+65%</b> increase
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-secondary rounded py-2 px-1">
+                        <div class="display-3 text-center line-height-sm text-second text-center d-flex align-items-center pt-3 justify-content-center">
+                            <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm text-success mr-2"></fa-icon>
+                            <div>
+                                843
+                            </div>
+                        </div>
+                        <div class="text-black-50 text-center opacity-6 pt-3">
+                            <b>-22%</b> decrease
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </perfect-scrollbar>
+</div>
+
+<div (click)="toggleHeaderDrawerOpen()" [ngClass]="{'is-active' : globals.toggleHeaderDrawer}" class="app-drawer-overlay"></div>

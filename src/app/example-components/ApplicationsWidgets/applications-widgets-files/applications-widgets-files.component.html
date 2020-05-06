@@ -1,0 +1,219 @@
+<div class="card card-box mb-5">
+    <div class="card-header">
+        <div class="card-header--title">
+            <small>File Manager</small>
+            <b>My saved documents</b>
+        </div>
+        <div class="card-header--actions">
+            <a [routerLink]="" class="btn btn-link btn-link-primary p-0 font-size-xl text-primary" tooltip="View options">
+                <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="file-manager-wrapper">
+            <div class="card-body pt-0 pb-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <small class="text-uppercase text-muted"><b>File name</b></small>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <small class="text-uppercase text-muted"><b>Edited</b></small>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-box bg-secondary shadow-none">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item file-manager-item">
+                        <div class="align-box-row">
+                            <div class="d-flex align-items-center">
+                                <fa-icon [icon]="['far', 'folder']"
+                                         class="font-size-lg text-warning mr-2"></fa-icon>
+                                <a [routerLink]="">
+                                    Finance
+                                </a>
+                            </div>
+                            <div class="ml-auto d-flex align-items-center">
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar2.jpg"/>
+                                    </div>
+                                </div>
+                                <small class="text-black-50">1d</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item file-manager-item">
+                        <div class="align-box-row">
+                            <div class="d-flex align-items-center">
+                                <fa-icon [icon]="['far', 'folder']"
+                                         class="font-size-lg text-warning mr-2"></fa-icon>
+                                <a [routerLink]="">
+                                    Bookmarks
+                                </a>
+                            </div>
+                            <div class="ml-auto d-flex align-items-center">
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar2.jpg"/>
+                                    </div>
+                                </div>
+                                <small class="text-black-50">41m</small>
+                            </div>
+                        </div>
+                        <div class="card card-box mt-3 mb-2 shadow-none">
+                            <ul class="list-group list-group-flash">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-wrap justify-content-between mb-2">
+                                            <small class="line-height-xs text-uppercase text-muted">Nov 12,
+                                                11:25am
+                                            </small>
+                                            <small class="line-height-xs text-uppercase text-success">Due in
+                                                12 days
+                                            </small>
+                                        </div>
+                                        <h6 class="pt-1 pb-1">
+                                            <a [routerLink]="">#56 - Deploy new website</a>
+                                        </h6>
+                                        <p class="mb-3">This is a dummy text acting like a small description
+                                            for the above title...</p>
+                                        <div class="d-flex mt-1 justify-content-between align-items-center">
+                                            <div class="avatar-wrapper-overlap">
+                                                <div class="avatar-icon-wrapper">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar1.jpg"/>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar7.jpg"/>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-icon-wrapper">
+                                                    <div class="avatar-icon"><img
+                                                            alt="..." src="assets/images/avatars/avatar6.jpg"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-first" type="button">
+                                                    <span class="btn-wrapper--icon">
+                                                        <fa-icon [icon]="['fas', 'plus']"
+                                                                 class="font-size-sm"></fa-icon>
+                                                    </span>
+                                                    <span class="btn-wrapper--label">
+                                                        Add
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-wrap justify-content-between mb-2">
+                                            <small class="line-height-xs text-uppercase text-muted">Nov 12,
+                                                11:25am
+                                            </small>
+                                            <small class="line-height-xs text-uppercase text-success">Due in
+                                                12 days
+                                            </small>
+                                        </div>
+                                        <h6 class="pt-1 pb-1">
+                                            <a [routerLink]=""
+                                               class="badge badge-pill badge-neutral-warning text-warning">New
+                                                report generated</a>
+                                        </h6>
+                                        <p class="mb-3">This is a dummy text acting like a small description
+                                            for the above title...</p>
+                                        <div class="mb-1">
+                                            <a [routerLink]=""><img alt="Rounded image"
+                                                                    class="img-fluid rounded m-2 shadow-sm"
+                                                                    src="assets/images/stock-photos/people-1.jpg"
+                                                                    width="70"></a>
+                                            <a [routerLink]=""><img alt="Rounded image"
+                                                                    class="img-fluid rounded m-2 shadow-sm"
+                                                                    src="assets/images/stock-photos/people-2.jpg"
+                                                                    width="70"></a>
+                                            <a [routerLink]=""><img alt="Rounded image"
+                                                                    class="img-fluid rounded shadow-sm"
+                                                                    src="assets/images/stock-photos/people-3.jpg"
+                                                                    width="70"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center align-content-center pl-0">
+                                    <a [routerLink]="" class="btn btn-sm btn-link" placement="top"
+                                       tooltip="There are 653 new comments available!">
+                                                    <span class="btn-wrapper--icon">
+                                                        <fa-icon [icon]="['far', 'comments']"></fa-icon>
+                                                    </span>
+                                        <span class="btn-wrapper--label ml-1">
+                                                        653
+                                                    </span>
+                                    </a>
+                                    <div>
+                                        <small class="text-muted mr-1">(21)</small>
+                                        <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                        <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                        <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                        <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                        <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-group-item file-manager-item">
+                        <div class="align-box-row">
+                            <div class="d-flex align-items-center">
+                                <fa-icon [icon]="['far', 'folder']"
+                                         class="font-size-lg text-warning mr-2"></fa-icon>
+                                <a [routerLink]="">
+                                    Business
+                                </a>
+                            </div>
+                            <div class="ml-auto d-flex align-items-center">
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar2.jpg"/>
+                                    </div>
+                                </div>
+                                <small class="text-black-50">5d</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item file-manager-item">
+                        <div class="align-box-row">
+                            <div class="d-flex align-items-center">
+                                <fa-icon [icon]="['far', 'folder']"
+                                         class="font-size-lg text-warning mr-2"></fa-icon>
+                                <a [routerLink]="">
+                                    Images
+                                </a>
+                            </div>
+                            <div class="ml-auto d-flex align-items-center">
+                                <div class="avatar-icon-wrapper avatar-icon-sm">
+                                    <div class="avatar-icon"><img alt="..."
+                                                                  src="assets/images/avatars/avatar2.jpg"/>
+                                    </div>
+                                </div>
+                                <small class="text-black-50">21h</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer bg-secondary pt-5 pb-5 pr-4 pl-4">
+        <h6 class="mb-3"><b>Upload documents</b></h6>
+        <fieldset>
+            <div class="custom-file w-100">
+                <input class="custom-file-input" id="customFile" type="file">
+                <label class="custom-file-label" for="customFile">Choose file...</label>
+            </div>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,198 @@
+<div class="hero-wrapper bg-composed-wrapper bg-midnight-bloom overflow-hidden">
+    <div class="header-nav-wrapper px-4 w-100 bg-white shadow-sm-dark navbar-light">
+            <div class="header-nav-logo">
+                <div class="nav-logo">
+                    <a [routerLink]="" routerLinkActive="active" title="Bamburgh Angular Admin Dashboard with NGX Bootstrap PRO">
+                        <i class="bg-light rounded-circle">
+                            <img alt="Bamburgh Angular Admin Dashboard with NGX Bootstrap PRO" src="assets/images/angular.svg">
+                        </i>
+                        <span>Bamburgh</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-nav-menu d-none d-xl-block">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">Elements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link active">Widgets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="" class="nav-link">Blocks</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-nav-actions flex-grow-0 flex-xl-grow-1">
+        <span class="d-none d-xl-block">
+            <a [routerLink]="" class="btn btn-pill btn-second">
+                My account
+            </a>
+        </span>
+                <span class="d-block d-xl-none">
+            <button class="navbar-toggler is-active hamburger hamburger--elastic" [ngClass]="{'collapsed': isCollapsed}" (click)="isCollapsed = !isCollapsed" type="button" [attr.aria-expanded]="!isCollapsed" aria-controls="nav-inner-header-1">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </span>
+            </div>
+            <div class="nav-collapsed-wrapper navbar-collapse collapse" [collapse]="isCollapsed">
+                <div class="navbar-collapse-inner p-0">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-secondary px-4 py-3">
+                            <div class="d-flex align-items-stretch navbar-light align-content-center">
+                                <div class="header-nav-logo justify-content-start">
+                                    <a [routerLink]="" title="Bamburgh Angular Admin Dashboard with NGX Bootstrap PRO">
+                                        <div class="navbar-brand d-40">
+                                            <img alt="Bamburgh Angular Admin Dashboard with NGX Bootstrap PRO" src="assets/images/angular.svg" class="d-block my-auto">
+                                        </div>
+                                    </a>
+                                </div>
+                                <button (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="nav-inner-header-1" class="navbar-toggler is-active hamburger hamburger--elastic" [ngClass]="{'collapsed': isCollapsed}" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-group-item p-2">
+                            <a class="d-flex px-3 align-items-center dropdown-item rounded" [routerLink]="">
+                                <div class="align-box-row w-100">
+                                    <div class="mr-3">
+                                        <div class="bg-strong-bliss text-center text-white d-40 rounded-circle">
+                                            <fa-icon [icon]="['fas', 'shapes']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold text-primary d-block">UI Elements</div>
+                                        <small class="text-black-50">
+                                            Easy to customise
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-lg"></fa-icon>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-group-item p-2">
+                            <a class="d-flex px-3 align-items-center dropdown-item rounded" [routerLink]="">
+                                <div class="align-box-row w-100">
+                                    <div class="mr-3">
+                                        <div class="bg-plum-plate text-center text-white d-40 rounded-circle">
+                                            <fa-icon [icon]="['fas', 'car-battery']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold text-primary d-block">Form widgets</div>
+                                        <small class="text-black-50">
+                                            Multiple options available
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-lg"></fa-icon>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-group-item p-2">
+                            <a class="d-flex px-3 align-items-center dropdown-item rounded" [routerLink]="">
+                                <div class="align-box-row w-100">
+                                    <div class="mr-3">
+                                        <div class="bg-grow-early text-center text-white d-40 rounded-circle">
+                                            <fa-icon [icon]="['fas', 'table']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold text-primary d-block">Tables</div>
+                                        <small class="text-black-50">
+                                            Dynamic and sortable examples
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-lg"></fa-icon>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-group-item p-2">
+                            <a class="d-flex px-3 align-items-center dropdown-item rounded" [routerLink]="">
+                                <div class="align-box-row w-100">
+                                    <div class="mr-3">
+                                        <div class="bg-ripe-malin text-center text-white d-40 rounded-circle">
+                                            <fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold text-primary d-block">Maps</div>
+                                        <small class="text-black-50">
+                                            Everything you'll need, included
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-lg"></fa-icon>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-group-item p-2">
+                            <a class="d-flex px-3 align-items-center dropdown-item rounded" [routerLink]="">
+                                <div class="align-box-row w-100">
+                                    <div class="mr-3">
+                                        <div class="bg-malibu-beach text-center text-white d-40 rounded-circle">
+                                            <fa-icon [icon]="['fas', 'cubes']"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-weight-bold text-primary d-block">Presentation blocks</div>
+                                        <small class="text-black-50">
+                                            Build perfect websites today
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto card-hover-indicator align-self-center">
+                                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-lg"></fa-icon>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-group-item list-group-item-action align-box-row p-2">
+                            <a [routerLink]="" class="btn btn-pill btn-second btn-block">
+                                My account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="flex-grow-1 w-100 d-flex align-items-center">
+        <div class="bg-composed-wrapper--image" style="background-image: url('assets/images/hero-bg/hero-3.jpg');"></div>
+        <div class="bg-composed-wrapper--bg bg-primary opacity-2"></div>
+        <div class="bg-composed-wrapper--content py-5">
+            <div class="container text-center py-5">
+                <span class="badge badge-pill badge-second px-4 h-auto py-1">Hero Section</span>
+                <div class="text-white mt-3 px-2 px-xl-5">
+                    <h1 class="display-3 py-4 px-2 px-xl-5 mb-0 font-weight-bold">
+                        Pleasure rationally encounter consequences
+                    </h1>
+                    <p class="font-size-lg text-white-50 pb-5 my-0 d-block px-2 px-xl-5">
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.
+                    </p>
+                    <div>
+                        <a [routerLink]="" class="btn btn-lg px-4 btn-success">
+                            <span class="btn-wrapper--icon">
+                                <fa-icon [icon]="['far', 'object-group']"></fa-icon>
+                            </span>
+                            <span class="btn-wrapper--label">
+                                Plans &amp; Pricing
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-indicator animated font-size-xxl text-white opacity-10">
+        <fa-icon [icon]="['fas', 'arrow-down']"></fa-icon>
+    </div>
+</div>

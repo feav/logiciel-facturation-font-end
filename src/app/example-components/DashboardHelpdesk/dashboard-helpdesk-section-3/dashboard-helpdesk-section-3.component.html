@@ -1,0 +1,229 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="row">
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover bg-premium-dark text-white align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 font-weight-bold">
+                            56
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-first rounded border-first"></div>
+                        <div class="font-weight-bold text-white-50 font-size-sm text-uppercase">
+                            Tasks done
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover bg-vicious-stance text-white align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 font-weight-bold">
+                            18
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-danger rounded border-danger"></div>
+                        <div class="font-weight-bold text-white-50 font-size-sm text-uppercase">
+                            Requests
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover bg-midnight-bloom text-white align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 font-weight-bold">
+                            29
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-success rounded border-success"></div>
+                        <div class="font-weight-bold text-white-50 font-size-sm text-uppercase">
+                            Bugfixes
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover bg-night-sky text-white align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 font-weight-bold">
+                            768
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-warning rounded border-success"></div>
+                        <div class="font-weight-bold text-white-50 font-size-sm text-uppercase">
+                            Tickets
+                        </div>
+                    </div>
+
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header">
+                <div class="card-header--title font-weight-bold">
+                    Countries
+                </div>
+                <div class="card-header--actions">
+                    <div class="badge badge-pill badge-neutral-first">
+                        Updates available
+                    </div>
+                </div>
+            </div>
+            <perfect-scrollbar [autoPropagation]="true" class="scroll-area">
+                <div class="table-responsive">
+                    <table class="table table-hover text-nowrap table-borderless mb-0">
+                        <thead>
+                        <tr>
+                            <th style="width: 150px;">Country</th>
+                            <th>Visits</th>
+                            <th>% Visits</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="us"></flag-icon>
+                                    <span>USA</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 t2xt-success"></fa-icon>
+                                    <small class="text-black-50 d-block">45,235</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="55"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">55%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="it"></flag-icon>
+                                    <span>Italy</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 2ext-success"></fa-icon>
+                                    <small class="text-black-50 d-block">3,772</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="65"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">65%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="fr"></flag-icon>
+                                    <span>France</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-2 text-danger"></fa-icon>
+                                    <small class="text-black-50 d-block">56,235</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="87"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">87%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="ch"></flag-icon>
+                                    <span>Switzerland</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-down']" class="mr-2 text-warning"></fa-icon>
+                                    <small class="text-black-50 d-block">6,346</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="29"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">29%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="align-box-row">
+                                    <flag-icon class="font-size-xxl mr-2" country="de"></flag-icon>
+                                    <span>Germany</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center font-size-lg">
+                                    <fa-icon [icon]="['fas', 'angle-up']" class="mr-2 t2xt-success"></fa-icon>
+                                    <small class="text-black-50 d-block">15,366</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="align-box-row">
+                                    <div class="flex-grow-1">
+                                        <progressbar [animate]="true" [value]="33"
+                                                     class="progress-xs"
+                                                     type="first">
+                                        </progressbar>
+                                    </div>
+                                    <div class="text-dark pl-2">33%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+</div>

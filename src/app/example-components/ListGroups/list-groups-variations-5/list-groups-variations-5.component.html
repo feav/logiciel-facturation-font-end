@@ -1,0 +1,210 @@
+<div class="card card-box mb-5">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item p-0">
+            <div class="card-header bg-light">
+                <div class="font-size-lg d-block text-truncate">
+                    <span class="text-black-50 pr-2">#34</span> Hackathon
+                </div>
+                <div class="ml-auto d-flex align-items-center align-content-center">
+                    <div class="avatar-wrapper-overlap">
+                        <div class="avatar-icon-wrapper" containerClass="tooltip-secondary"
+                             placement="top"
+                             tooltip="Rodrigo Barrera">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar1.jpg"/></div>
+                        </div>
+                        <div class="avatar-icon-wrapper" containerClass="tooltip-secondary"
+                             placement="top"
+                             tooltip="Tobi Esparza">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                        </div>
+                    </div>
+                    <a [routerLink]=""
+                       class="btn btn-first font-size-lg ml-3 d-40 p-0 rounded-circle border-0"
+                       tooltip="View all participants">
+                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Users</span>
+                            <b class="font-size-xxl">2,345</b>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Revenue</span>
+                            <b class="font-size-xxl">$9,693</b>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 align-box-row">
+                        <div class="w-100 mt-3 mt-md-0">
+                            <div class="mb-1">
+                                <span class="text-black-50 pr-1">Progress:</span>
+                                                <span class="text-danger">-12</span>
+                            </div>
+                            <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="43"
+                                     class="progress-bar bg-success" role="progressbar"
+                                     style="width: 43%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item p-0">
+            <div class="card-header bg-light">
+                <div class="font-size-lg d-block text-truncate">
+                    <span class="text-black-50 pr-2">#33</span> Gaming center
+                </div>
+                <div class="ml-auto d-flex align-items-center align-content-center">
+                    <div class="avatar-wrapper-overlap">
+                        <div class="avatar-icon-wrapper" containerClass="tooltip-secondary"
+                             placement="top"
+                             tooltip="Karson Kline">
+                            <div class="avatar-icon"><img alt="..." src="assets/images/avatars/avatar6.jpg"/></div>
+                        </div>
+                    </div>
+                    <a [routerLink]=""
+                       class="btn btn-first font-size-lg ml-3 d-40 p-0 rounded-circle border-0"
+                       tooltip="View all participants">
+                        <fa-icon [icon]="['far', 'building']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Users</span>
+                            <b class="font-size-xxl">1,466</b>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="text-center">
+                            <span class="text-black-50 d-block">Revenue</span>
+                            <b class="font-size-xxl text-danger">$6,465</b>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 align-box-row">
+                        <div class="w-100 mt-3 mt-md-0">
+                            <div class="mb-1">
+                                <span class="text-black-50">Progress:</span>
+                                <span class="text-warning">-5</span>
+                            </div>
+                            <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="43"
+                                     class="progress-bar bg-warning" role="progressbar"
+                                     style="width: 43%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-box shadow-none rounded-sm">
+            <div class="pt-3 px-3">
+                <div class="d-flex align-items-center">
+                    <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2" foregroundColor="#1bc943"
+                               max="100" min="0" size="64"
+                               thick="3"
+                               type="full" value="76">
+                    </ngx-gauge>
+                    <div>
+                        <div class="text-black-50">Stocks trading</div>
+                        <div class="font-weight-bold display-4 py-1 text-success">
+                            $<span [countUp]="23874"></span>
+                        </div>
+                        <div class="text-black-50 font-size-sm">
+                            <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm pr-1"></fa-icon>
+                            15% increase compared to 2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider mt-3"></div>
+            <div class="p-3">
+                <div class="d-flex align-items-center">
+                    <ngx-gauge backgroundColor="#edeef1" cap="round" class="img-fluid mr-2" foregroundColor="#4191ff "
+                               max="100" min="0" size="64"
+                               thick="3"
+                               type="full" value="52">
+                    </ngx-gauge>
+                    <div>
+                        <div class="text-black-50">Trading overview</div>
+                        <div class="font-weight-bold text-first display-4 py-1">
+                            $<span [countUp]="75326"></span>
+                        </div>
+                        <div class="opacity-7 font-size-sm">
+                            <fa-icon [icon]="['fas', 'chevron-up']" class="font-size-sm pr-1"></fa-icon>
+                            22% more profit this year
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-box mb-5">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <fa-icon [icon]="['far', 'comment-dots']"
+                             class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                    <b class="text-dark">Reports</b>
+                </div>
+                <div [countUp]="2363" class="font-weight-bold text-danger font-size-lg"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <fa-icon [icon]="['far', 'chart-bar']"
+                             class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                    <b class="text-dark">User</b>
+                </div>
+                <div [countUp]="564" class="font-weight-bold text-success font-size-lg"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <fa-icon [icon]="['far', 'address-card']"
+                             class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                    <b class="text-dark">Sales</b>
+                </div>
+                <div [countUp]="483" class="font-weight-bold text-warning font-size-lg"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="d-flex align-items-center justify-content-between px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <fa-icon [icon]="['far', 'object-group']"
+                             class="font-size-lg d-block mr-3 text-dark opacity-5"></fa-icon>
+                    <b class="text-dark">Stats</b>
+                </div>
+                <div class="font-weight-bold text-first font-size-lg"> $1,23M</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

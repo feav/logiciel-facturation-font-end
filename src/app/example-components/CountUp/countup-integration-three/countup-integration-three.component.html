@@ -1,0 +1,162 @@
+<div class="row">
+    <div class="col-xl-5">
+        <div class="card card-box mb-5 p-4 text-center">
+            <div class="btn-group card-tr-actions" dropdown placement="bottom right">
+                <button class="btn btn-link btn-link-dark p-0 text-dark opacity-8 dropdown-toggle no-caret"
+                        dropdownToggle
+                        type="button">
+                    <fa-icon [icon]="['fas', 'ellipsis-h']" class="font-size-lg"></fa-icon>
+                </button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu-lg overflow-hidden p-0">
+                    <ul class="nav nav-pills flex-column p-3">
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>My Account</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link active">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item--header text-first font-weight-bold">
+                            <span>Heading</span>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Profile settings</span>
+                                <div class="ml-auto badge badge-first">23</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="" class="nav-link">
+                                <span>Active tasks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-header-alt">
+                <div class="font-weight-bold font-size-lg mb-0 text-black">
+                    Financial year
+                </div>
+                <p class="text-black-50">Expenses statistics to date</p>
+            </div>
+            <div class="divider my-4"></div>
+            <h3 class="mb-0 display-3 mt-1 font-weight-bold">
+                <small class="opacity-7">$</small>
+                <span [countUp]="458695"></span>
+            </h3>
+            <div class="divider my-4"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Current month</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            <span [countUp]="466362"></span>
+                        </span>
+                        <span class="badge bg-neutral-danger ml-2 text-danger">-8%</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="opacity-6 pb-2">Last year</span>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="font-weight-bold font-size-lg">
+                            <small class="opacity-6">$</small>
+                            <span [countUp]="34546"></span>
+                        </span>
+                        <span class="badge bg-neutral-success ml-2 text-success">+13%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-box card-shadow-first p-4 mb-5">
+                    <div class="display-3 text-center line-height-sm text-second text-center d-flex align-items-center pt-3 justify-content-center">
+                        <fa-icon [icon]="['fas', 'arrow-down']" class="font-size-sm text-danger mr-2"></fa-icon>
+                        <div [countUp]="34856" [options]="{
+                                        suffix: '',
+                                        prefix: '$ ',
+                                        duration: 6
+                                    }">
+                        </div>
+                    </div>
+                    <div class="text-black-50 text-center opacity-6 pt-3">
+                        <b [countUp]="36" [options]="{
+                                        suffix: '%',
+                                        prefix: '+',
+                                        duration: 6
+                                    }"></b> from last month
+                    </div>
+                </div>
+                <div class="card card-box p-4 mb-5">
+                    <div class="display-3 text-center line-height-sm text-second text-center d-flex align-items-center pt-3 justify-content-center">
+                        <fa-icon [icon]="['far', 'dot-circle']" class="font-size-sm text-warning mr-2"></fa-icon>
+                        <div [countUp]="436" [options]="{
+                                        suffix: '',
+                                        prefix: '',
+                                        duration: 6
+                                    }">
+                        </div>
+                    </div>
+                    <div class="text-black-50 text-center opacity-6 pt-3">
+                        <b [countUp]="65" [options]="{
+                                        suffix: '%',
+                                        prefix: '+',
+                                        duration: 6
+                                    }"></b> from last month
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-box p-4 mb-5">
+                    <div class="display-3 text-center line-height-sm text-second text-center d-flex align-items-center pt-3 justify-content-center">
+                        <fa-icon [icon]="['fas', 'arrow-up']" class="font-size-sm text-success mr-2"></fa-icon>
+                        <div [countUp]="4867" [options]="{
+                                        suffix: '',
+                                        prefix: '',
+                                        duration: 6
+                                    }">
+                        </div>
+                    </div>
+                    <div class="text-black-50 text-center opacity-6 pt-3">
+                        <b [countUp]="22" [options]="{
+                                        suffix: '%',
+                                        prefix: '+',
+                                        duration: 6
+                                    }"></b> from last month
+                    </div>
+                </div>
+                <div class="card card-box bg-premium-dark p-4 mb-5">
+                    <div class="display-3 text-center line-height-sm text-white-50 text-center d-flex align-items-center pt-3 justify-content-center">
+                        <fa-icon [icon]="['fas', 'arrow-down']" class="font-size-sm text-first mr-2"></fa-icon>
+                        <div [countUp]="433" [options]="{
+                                        suffix: '',
+                                        prefix: '',
+                                        duration: 6
+                                    }">
+                            433
+                        </div>
+                    </div>
+                    <div class="text-white-50 text-center opacity-6 pt-3">
+                        <b [countUp]="35" [options]="{
+                                        suffix: '%',
+                                        prefix: '+',
+                                        duration: 6
+                                    }"></b> from last month
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

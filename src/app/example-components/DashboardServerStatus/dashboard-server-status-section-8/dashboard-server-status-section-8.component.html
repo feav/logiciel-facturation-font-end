@@ -1,0 +1,182 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="row">
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover text-black align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 text-first font-weight-bold">
+                            56
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-first rounded border-first"></div>
+                        <div class="font-weight-bold font-size-sm text-uppercase">
+                            Tasks done
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover text-black align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 font-weight-bold text-danger">
+                            18
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-danger rounded border-danger"></div>
+                        <div class="font-weight-bold font-size-sm text-uppercase">
+                            Requests
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover text-black align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 text-success font-weight-bold">
+                            29
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-success rounded border-success"></div>
+                        <div class="font-weight-bold font-size-sm text-uppercase">
+                            Bugfixes
+                        </div>
+                    </div>
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a [routerLink]=""
+                   class="card card-box card-box-hover-rise card-box-hover text-black align-box-row align-items-start mb-5 p-4">
+                    <div>
+                        <div class="display-3 text-warning font-weight-bold">
+                            768
+                        </div>
+                        <div class="divider mt-2 mb-3 border-2 w-25 bg-success rounded border-warning"></div>
+                        <div class="font-weight-bold font-size-sm text-uppercase">
+                            Tickets
+                        </div>
+                    </div>
+
+                    <div class="ml-auto card-hover-indicator align-self-center">
+                        <fa-icon [icon]="['fas', 'chevron-right']" class="font-size-xl"></fa-icon>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card card-box mb-5">
+            <div class="card-header bg-secondary">
+                <div class="card-header--title mb-1">
+                    <h5 class="mb-0 py-2 font-weight-bold">
+                        Pricing Plans
+                    </h5>
+                </div>
+                <div class="card-header--actions">
+                    <button class="btn btn-sm btn-success py-1 px-3 text-uppercase" type="button">
+                        <small>Add new</small>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body px-0 py-1">
+                <div class="list-group my-2 list-group-flush">
+                    <div class="list-group-item list-group-item-action hover-show-hide-container d-flex justify-content-between align-items-center py-3 border-0">
+                        <div class="badge badge-success badge-circle mt-2 mr-2 align-self-start">Basic</div>
+                        <div class="font-weight-bold flex-grow-1">
+                            <div class="text-second font-size-lg">
+                                Basic
+                            </div>
+                            <span class="opacity-8">
+                                <fa-icon [icon]="['far', 'user']" class="mr-1"></fa-icon>
+                                <b>3847</b>
+                                subscribers
+                            </span>
+                        </div>
+                        <div class="text-right hover-hide-wrapper">
+                            <div class="font-weight-bold text-second">$176.00</div>
+                            <span class="opacity-7">per month</span>
+                        </div>
+                        <div class="text-right hover-show-wrapper">
+                            <button class="btn bg-white text-first d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-first"
+                                    tooltip="View details" type="button">
+                                <fa-icon [icon]="['far', 'user']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                            <button class="btn bg-white text-danger d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-danger"
+                                    tooltip="Remove" type="button">
+                                <fa-icon [icon]="['fas', 'times']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action hover-show-hide-container d-flex justify-content-between align-items-center py-3 border-0">
+                        <div class="badge badge-danger badge-circle mt-2 mr-2 align-self-start">Basic</div>
+                        <div class="font-weight-bold flex-grow-1">
+                            <div class="text-second font-size-lg">
+                                Premium
+                            </div>
+                            <span class="opacity-8">
+                                <fa-icon [icon]="['far', 'user']" class="mr-1"></fa-icon>
+                                <b>346</b>
+                                subscribers
+                            </span>
+                        </div>
+                        <div class="text-right hover-hide-wrapper">
+                            <div class="font-weight-bold text-second">$567.00</div>
+                            <span class="opacity-7">per month</span>
+                        </div>
+                        <div class="text-right hover-show-wrapper">
+                            <button class="btn bg-white text-first d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-first"
+                                    tooltip="View details" type="button">
+                                <fa-icon [icon]="['far', 'user']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                            <button class="btn bg-white text-danger d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-danger"
+                                    tooltip="Remove" type="button">
+                                <fa-icon [icon]="['fas', 'times']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action hover-show-hide-container d-flex justify-content-between align-items-center py-3 border-0">
+                        <div class="badge badge-first badge-circle mt-2 mr-2 align-self-start">Basic</div>
+                        <div class="font-weight-bold flex-grow-1">
+                            <div class="text-second font-size-lg">
+                                Ultra
+                            </div>
+                            <span class="opacity-8">
+                                <fa-icon [icon]="['far', 'user']" class="mr-1"></fa-icon>
+                                <b>1,659</b>
+                                subscribers
+                            </span>
+                        </div>
+                        <div class="text-right hover-hide-wrapper">
+                            <div class="font-weight-bold text-second">$893.00</div>
+                            <span class="opacity-7">per month</span>
+                        </div>
+                        <div class="text-right hover-show-wrapper">
+                            <button class="btn bg-white text-first d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-first"
+                                    tooltip="View details" type="button">
+                                <fa-icon [icon]="['far', 'user']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                            <button class="btn bg-white text-danger d-40 rounded-circle p-0 ml-1"
+                                    containerClass="tooltip-danger"
+                                    tooltip="Remove" type="button">
+                                <fa-icon [icon]="['fas', 'times']" class="font-size-md mx-auto"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

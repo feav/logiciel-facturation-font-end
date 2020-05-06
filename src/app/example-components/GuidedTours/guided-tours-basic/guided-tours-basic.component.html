@@ -1,0 +1,101 @@
+<div class="text-center">
+    <button class="btn btn-lg btn-danger m-2" (click)="tour()">Start guided tour</button>
+</div>
+
+<div class="bg-vicious-stance mt-4 mb-5 rounded">
+    <div class="container">
+        <div class="text-center py-5">
+            <h3 class="display-3 mb-4 font-weight-bold text-white" joyrideStep="tourStep1" title="Heading example" text="This is the page heading, section for demonstration purposes.">
+                Guided Tours Heading Example
+            </h3>
+            <p class="font-size-lg px-4 mb-4 text-white-50">
+                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+            </p>
+            <div class="text-center">
+                <button class="btn-first font-size-lg mx-2 btn shadow-none" joyrideStep="tourStep6" title="Buttons" text="Tour example attached to a button element.">
+                    <span class="btn-wrapper--label">
+                        UI Kit Live Preview
+                    </span>
+                </button>
+                <button class="btn-outline-success font-size-lg mx-2 btn shadow-none" joyrideStep="tourStep7" text="Another button guided tour example.">
+                    <span class="btn-wrapper--label">
+                        Buy now
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card card-box mb-5 p-3" joyrideStep="tourStep4" title="Dashboard card 1" text="This is a custom card box that can be used in a dashboard.">
+            <div class="d-flex align-items-center pb-4 justify-content-between">
+                <div>
+                    <div class="font-weight-bold">Deliveries</div>
+                    <span class="text-black-50 d-block">Total deliveries to date</span>
+                </div>
+                <div [countUp]="23485" class="display-4 font-weight-bold text-second"></div>
+            </div>
+            <div>
+                <progressbar [animate]="true" [value]="85"
+                             class="progress-sm progress-bar-rounded progress-animated-alt"
+                             type="second">
+                </progressbar>
+                <div class="align-box-row progress-bar--label mt-2 text-muted">
+                    <div>Target</div>
+                    <div class="ml-auto">100%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5 p-3" joyrideStep="tourStep2" title="Dashboard card 2" text="This is a custom card box that can be used in a dashboard.">
+            <div class="d-flex align-items-center pb-4 justify-content-between">
+                <div>
+                    <div class="font-weight-bold">Orders</div>
+                    <span class="text-black-50 d-block">Total orders to date</span>
+                </div>
+                <div class="display-4 font-weight-bold text-first">
+                    $12,346
+                </div>
+            </div>
+            <div>
+                <progressbar [animate]="true" [value]="87"
+                             class="progress-sm progress-bar-rounded progress-animated-alt" type="first">
+                </progressbar>
+                <div class="align-box-row progress-bar--label mt-2 text-muted">
+                    <div>Target</div>
+                    <div class="ml-auto">100%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-box mb-5 p-3" joyrideStep="tourStep3" title="Dashboard card 3" text="This is a custom card box that can be used in a dashboard.">
+            <div class="d-flex align-items-center pb-4 justify-content-between">
+                <div>
+                    <div class="font-weight-bold">Customers</div>
+                    <span class="text-black-50 d-block">Total customers to date</span>
+                </div>
+                <div class="display-4 font-weight-bold text-warning">
+                    $ 2,3M
+                </div>
+            </div>
+            <div>
+                <progressbar [animate]="true" [value]="55"
+                             class="progress-sm progress-bar-rounded progress-animated-alt" type="warning">
+                </progressbar>
+                <div class="align-box-row progress-bar--label mt-2 text-muted">
+                    <div>Target</div>
+                    <div class="ml-auto">100%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-lg btn-danger m-2" (click)="tour()">Start guided tour</button>
+</div>
+
