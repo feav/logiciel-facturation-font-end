@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DropdownModel } from '../model/dropdown-model';
 import { UserService } from './service/user.service';
+import { ThemeOptions } from '../theme-options';
 
 @Component({
     selector: 'app-user',
@@ -39,7 +40,8 @@ export class UserComponent implements OnInit {
 
     constructor(public userService: UserService,
                 private messageService: MessageService,
-                private formBuilder: FormBuilder) { }
+                private formBuilder: FormBuilder,
+                public globals: ThemeOptions) { }
 
     ngOnInit() {
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);

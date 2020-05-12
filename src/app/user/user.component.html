@@ -1,7 +1,8 @@
 <p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
 
 <p-table [columns]="cols" [value]="users" selectionMode="single" [responsive]="true" [loading]="showLoader"
-        [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize">
+        [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
+        [scrollable]="true" [style]="{width: globals.toggleSidebar ? '1100px' : '900px'}">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
             <div>        
@@ -10,6 +11,11 @@
             </div>
             <button type="button" pButton icon="pi pi-plus" (click)="showModalToAdd()" label="Ajouteur un Utilisateur"></button>
         </div>
+    </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:200px">
+        </colgroup>
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>

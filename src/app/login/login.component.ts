@@ -40,13 +40,13 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 (resp:any) => {
                     //console.log(resp)
-                    this.showLoader = false;
                     if(resp.code == 200){
                         localStorage.setItem("gidai_user_profile", btoa(JSON.stringify(resp.user)));
                         this.cookieService.set('access_token', resp.tokens.access_token, resp.tokens.expires_in);
                         this.cookieService.set('refresh_token', resp.tokens.refresh_token);
                         this.cookieService.set('token_type', resp.tokens.token_type);
                         this.router.navigate(['/']);
+                        this.showLoader = false;
                     }else
                         this.messageService.add({severity:'error', summary:'Connexion', detail:"L'e-mail et le mot de passe ne correspondent pas !"});
                 },
@@ -55,6 +55,10 @@ export class LoginComponent implements OnInit {
                     this.messageService.add({severity:'error', summary:'Connexion', detail:"Une erreur est survenue durant la tentative de connexion !"});
                 }
             );
+    }
+
+    getButtonType(){
+        this.showLoader ? 'button' : 'submit'
     }
 
 }

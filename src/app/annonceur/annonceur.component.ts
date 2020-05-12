@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { AnnonceurService } from './service/annonceur.service';
+import { ThemeOptions } from '../theme-options';
 
 @Component({
     selector: 'app-annonceur',
     templateUrl: './annonceur.component.html',
-    styleUrls: ['./annonceur.component.scss']
+    styleUrls: ['./annonceur.component.css']
 })
 export class AnnonceurComponent implements OnInit {
 
@@ -36,7 +37,8 @@ export class AnnonceurComponent implements OnInit {
 
     constructor(public annonceurService: AnnonceurService,
                 private messageService: MessageService,
-                private formBuilder: FormBuilder) { }
+                private formBuilder: FormBuilder,
+                public globals: ThemeOptions) { }
 
     ngOnInit() {
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);

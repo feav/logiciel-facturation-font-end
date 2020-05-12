@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet><ng-progress></ng-progress>'
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
 

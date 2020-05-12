@@ -2,7 +2,7 @@
 
 <p-table [columns]="cols" [value]="annonceurs" selectionMode="single" [loading]="showLoader"
     [(selection)]="selectedAnnonceur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
-    [scrollable]="true" [style]="{width:'900px'}">
+    [scrollable]="true" [style]="{width: globals.toggleSidebar ? '1100px' : '900px'}">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
             <div>
@@ -16,7 +16,7 @@
     </ng-template>
     <ng-template pTemplate="colgroup" let-columns>
         <colgroup>
-            <col *ngFor="let col of columns" style="width:200px">
+            <col *ngFor="let col of columns" style="width:250px">
         </colgroup>
     </ng-template>
     <ng-template pTemplate="header" let-columns>

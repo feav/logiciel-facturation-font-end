@@ -42,11 +42,14 @@
                                                             moi</label>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-lg btn-danger btn-animated-icon--second btn-block" type="submit">
+                                                <button *ngIf="!showLoader" class="btn btn-lg btn-danger btn-animated-icon--second btn-block" type="submit">
                                                     <span class="btn-wrapper--label">Connexion</span>
                                                     <span class="btn-wrapper--icon">
-                                                        <i class="ion-md-log-in"></i>
+                                                        <i class="ion-md-log-in text-white"></i>
                                                     </span>
+                                                </button>
+                                                <button *ngIf="showLoader" class="btn btn-lg btn-danger btn-block" type="button" disabled>
+                                                    <span class="btn-wrapper--icon spinner-border" role="status" aria-hidden="true"></span>
                                                 </button>
                                             </form>
                                         </div>
