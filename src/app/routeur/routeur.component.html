@@ -1,7 +1,8 @@
 <p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
 
-<p-table [columns]="cols" [value]="routeurs" selectionMode="single" [responsive]="true" [loading]="showLoader"
-        [(selection)]="selectedRouteur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize">
+<p-table [columns]="cols" [value]="routeurs" selectionMode="single" [loading]="showLoader"
+        [(selection)]="selectedRouteur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
+        [scrollable]="true" [style]="{width: '100%'}" [responsive]="true">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
             <div>        
@@ -11,9 +12,14 @@
             <button type="button" pButton icon="pi pi-plus" (click)="showModalToAdd()" label="Ajouteur un Routeur"></button>
         </div>
     </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:250px">
+        </colgroup>
+    </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">{{col.header}}</th>
+            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">

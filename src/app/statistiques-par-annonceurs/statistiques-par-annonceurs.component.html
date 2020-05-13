@@ -24,7 +24,8 @@
 </div>
 
 <p-table [columns]="cols" [value]="tab" [paginator]="true" [responsive]="true"
-        [rows]="pagingOptions.pageSize" [loading]="showLoader">
+        [rows]="pagingOptions.pageSize" [loading]="showLoader"
+        [scrollable]="true" [style]="{width: '100%'}">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
             <div id="reportrange">
@@ -35,9 +36,14 @@
             <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltre()">Valider Filtre</button>
         </div>
     </ng-template>
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:250px">
+        </colgroup>
+    </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">{{col.header}}</th>
+            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">

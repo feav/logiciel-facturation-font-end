@@ -2,7 +2,7 @@
 
 <p-table [columns]="cols" [value]="plannings" selectionMode="single" [loading]="showLoader"
     [(selection)]="selectedPlanning" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
-    [scrollable]="true" [style]="{width:'900px'}">
+    [scrollable]="true" [style]="{width: '100%'}" [responsive]="true">
     <ng-template pTemplate="caption">
         <div class="d-flex mb-1 flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
             <div id="reportrange">
@@ -24,12 +24,12 @@
     </ng-template>
     <ng-template pTemplate="colgroup" let-columns>
         <colgroup>
-            <col *ngFor="let col of columns" style="width:100px">
+            <col *ngFor="let col of columns" style="width:250px">
         </colgroup>
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">{{col.header}}</th>
+            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
