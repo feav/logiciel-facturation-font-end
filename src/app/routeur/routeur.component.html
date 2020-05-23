@@ -2,7 +2,7 @@
 
 <p-table [columns]="cols" [value]="routeurs" selectionMode="single" [loading]="showLoader"
         [(selection)]="selectedRouteur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
-        [scrollable]="true" [style]="{width: '100%'}" [responsive]="true">
+        [scrollable]="false" [style]="{width: '100%'}" [responsive]="true">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
             <div>        
@@ -14,7 +14,7 @@
     </ng-template>
     <ng-template pTemplate="colgroup" let-columns>
         <colgroup>
-            <col *ngFor="let col of columns" style="width:250px">
+            <col *ngFor="let col of columns" style="width:auto">
         </colgroup>
     </ng-template>
     <ng-template pTemplate="header" let-columns>

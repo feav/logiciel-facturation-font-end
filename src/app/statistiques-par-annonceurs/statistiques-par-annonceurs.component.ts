@@ -108,8 +108,9 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
         // this.tab = data.body;
         // this.totalServerItems = data.total;
         // this.totalCurrentPageItems = data.total_current_page;
-        var pagedData = resp.data.body.slice((page - 1) * pageSize, page * pageSize);
-        this.tab = pagedData;
+        // var pagedData = resp.data.body.slice((page - 1) * pageSize, page * pageSize);
+        // this.tab = pagedData;
+        this.tab = resp.data.body;
         this.totalServerItems = resp.data.body.length;
         this.totalVolume = resp.totalVolume;
         this.totalPA = resp.totalPA;

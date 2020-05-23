@@ -2,7 +2,8 @@ export const environment = {
     production: false
 };
 
-const url = 'http://localhost:8000/api/';
+    const url = 'http://localhost:8000/api/';
+//  const url = 'http://api.gidai.fr/api/';
 
 export function getLoggedUser() {
     let storage = localStorage.getItem('gidai_user_profile');

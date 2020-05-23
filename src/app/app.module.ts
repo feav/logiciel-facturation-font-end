@@ -3,7 +3,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -111,9 +111,11 @@ import { FooterComponent } from './layout-components/footer/footer.component';
 import { ThemeConfiguratorComponent } from './layout-components/theme-configurator/theme-configurator.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { MessageService } from 'primeng/api';
 import { AuthGuard } from './auth/auth-guard';
 import { LoginGuard } from './auth/login-guard';
-import { XhrInterceptor } from './auth/xhr';
+import { XHRInterceptor } from './auth/xhr';
+import { XHRErrorHandler } from './auth/xhr-error';
 
 @NgModule({
     declarations: [
@@ -150,6 +152,11 @@ import { XhrInterceptor } from './auth/xhr';
         BsDropdownModule.forRoot(),
     ],
     providers: [
+        ThemeOptions,
+        AuthGuard,
+        LoginGuard,
+        CookieService,
+        MessageService,
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
             useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
@@ -160,13 +167,13 @@ import { XhrInterceptor } from './auth/xhr';
         },
         {
             provide: HTTP_INTERCEPTORS,
-            useClass: XhrInterceptor,
+            useClass: XHRInterceptor,
             multi: true
         },
-        ThemeOptions,
-        AuthGuard,
-        LoginGuard,
-        CookieService
+        // {
+        //     provide: ErrorHandler,
+        //     useClass: XHRErrorHandler
+        // }
     ],
     bootstrap: [AppComponent]
 })

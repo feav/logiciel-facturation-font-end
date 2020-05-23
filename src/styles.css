@@ -1,3 +1,9 @@
 td{
     text-align: center;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+th{
+    word-wrap: break-word;
 }

@@ -5,6 +5,7 @@ import { MessageService } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { LoginService } from './service/login.service';
 import { CookieService } from "ngx-cookie-service";
+import * as moment from 'moment';
 
 @Component({
     selector: 'app-login',
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
             'password': new FormControl('r007@dm1n', Validators.required),
             'remember_me': new FormControl(false)
         });
-        this.titleService.setTitle("Page de Connexion à GIDAI")
+        this.titleService.setTitle("Page de Connexion à GIDAI");
     }
 
     loginUser(credentials){
@@ -42,9 +43,9 @@ export class LoginComponent implements OnInit {
                     //console.log(resp)
                     if(resp.code == 200){
                         localStorage.setItem("gidai_user_profile", btoa(JSON.stringify(resp.user)));
-                        this.cookieService.set('access_token', resp.tokens.access_token, resp.tokens.expires_in);
-                        this.cookieService.set('refresh_token', resp.tokens.refresh_token);
-                        this.cookieService.set('token_type', resp.tokens.token_type);
+                        this.cookieService.set('access_token', resp.tokens.access_token, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));
+                        this.cookieService.set('refresh_token', resp.tokens.refresh_token, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));
+                        this.cookieService.set('token_type', resp.tokens.token_type, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));
                         this.router.navigate(['/']);
                         this.showLoader = false;
                     }else
