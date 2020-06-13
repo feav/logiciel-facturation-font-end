@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<p-table [columns]="cols" [value]="tab" [paginator]="true" [responsive]="true"
+<p-table [columns]="cols" [value]="tab" [responsive]="true"
         [rows]="pagingOptions.pageSize" [loading]="showLoader"
         [scrollable]="false" [style]="{width: '100%'}">
     <ng-template pTemplate="caption">
@@ -55,6 +55,6 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-        <!-- <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator> -->
+        <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
     </ng-template>
 </p-table>

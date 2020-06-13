@@ -9,11 +9,11 @@ export class StatistiquesParCampagnesService {
 
     constructor(private httpClient: HttpClient) { }
 
-    getPagedData() {
-        return this.httpClient.get(`${API.READ_All_CAMPAGNE_FOR_STATISTICS}`);
+    getPagedData(page, pageSize) {
+        return this.httpClient.get(`${API.READ_All_CAMPAGNE_FOR_STATISTICS}/${page}/${pageSize}`);
     }
 
-    applyFilter(data) {
-        return this.httpClient.post(`${API.APPLY_FILTER_CAMPAGNE_FOR_STATISTICS}`, data);
+    applyFilter(data, page, pageSize) {
+        return this.httpClient.post(`${API.APPLY_FILTER_CAMPAGNE_FOR_STATISTICS}/${page}/${pageSize}`, data);
     }
 }

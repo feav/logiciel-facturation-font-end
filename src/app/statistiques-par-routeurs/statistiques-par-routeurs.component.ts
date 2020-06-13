@@ -92,7 +92,7 @@ export class StatistiquesParRouteursComponent implements OnInit {
     validerFiltre(){
         this.showLoader = true;
         this.service
-            .applyFilter(this.filter_data)
+            .applyFilter(this.filter_data, this.pagingOptions.currentPage, this.pagingOptions.pageSize)
             .subscribe(
                 (resp:any) => {
                     this.setPagingData(resp, this.pagingOptions.currentPage, this.pagingOptions.pageSize);
@@ -107,13 +107,9 @@ export class StatistiquesParRouteursComponent implements OnInit {
     }
 
     setPagingData(resp, page, pageSize){  
-         // this.tab = data.body;
-        // this.totalServerItems = data.total;
-        // this.totalCurrentPageItems = data.total_current_page;
-        // var pagedData = resp.data.body.slice((page - 1) * pageSize, page * pageSize);
-        // this.tab = pagedData;
         this.tab = resp.data.body;
-        this.totalServerItems = resp.data.body.length;
+        this.totalServerItems = resp.total;
+        this.totalCurrentPageItems = resp.data.body.length;
         this.totalVolume = resp.totalVolume;
         this.totalPA = resp.totalPA;
         this.totalCA = resp.totalCA;
@@ -131,7 +127,7 @@ export class StatistiquesParRouteursComponent implements OnInit {
     getPagedDataAsync(pageSize, page) {
         this.showLoader = true;
         this.service
-            .getPagedData()
+            .getPagedData(page, pageSize)
             .subscribe(
                 (resp:any) => {
                     this.setPagingData(resp, page, pageSize);
