@@ -28,7 +28,7 @@ export class XHRInterceptor implements HttpInterceptor {
             tap(evt => {}),
             catchError( (err: any) => {
                 if(err instanceof HttpErrorResponse && err.status==401){
-                    localStorage.removeItem('gidai_session');
+                    localStorage.removeItem('gidai_user_profile');
                     localStorage.clear();
                     this.cookieService.delete('access_token');
                     this.cookieService.delete('refresh_token');
