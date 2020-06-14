@@ -46,7 +46,10 @@ export class StatistiquesParCampagnesComponent implements OnInit {
     totalPA = 0;
     totalCA = 0;
     totalMarge = 0;
-
+    totalVolumePartiel = 0;
+    totalPAPartiel = 0;
+    totalCAPartiel = 0;
+    totalMargePartiel = 0;
 
     pagingOptions = {
         pageSizes: [15, 25, 50, 100],
@@ -105,10 +108,6 @@ export class StatistiquesParCampagnesComponent implements OnInit {
     }
 
     setPagingData(resp, page, pageSize){  
-        // this.totalServerItems = data.total;
-        // this.totalCurrentPageItems = data.total_current_page;
-        // var pagedData = resp.data.body.slice((page - 1) * pageSize, page * pageSize);
-        // this.tab = pagedData;
         this.tab = resp.data.body;
         this.totalServerItems = resp.total;
         this.totalCurrentPageItems = resp.data.body.length;
@@ -116,6 +115,10 @@ export class StatistiquesParCampagnesComponent implements OnInit {
         this.totalPA = resp.totalPA;
         this.totalCA = resp.totalCA;
         this.totalMarge = resp.totalMarge;
+        this.totalVolumePartiel = resp.totalVolumePartiel;
+        this.totalPAPartiel = resp.totalPAPartiel;
+        this.totalCAPartiel = resp.totalCAPartiel;
+        this.totalMargePartiel = resp.totalMargePartiel;
     }
 
     onPageChange(event){

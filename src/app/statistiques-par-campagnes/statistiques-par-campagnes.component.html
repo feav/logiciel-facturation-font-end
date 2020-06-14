@@ -49,9 +49,25 @@
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
             <td>{{ rowData.nom }}</td>
-            <td>{{ rowData.resultat == null ? '0' : (rowData.resultat*rowData.rem).toFixed(2) }} €</td>
+            <td>{{ rowData.ca.toFixed(2) }} €</td>
             <td>{{ rowData.pa.toFixed(2) }} €</td>
-            <td>{{ ((rowData.resultat*rowData.rem) - rowData.pa).toFixed(2) }} €</td>
+            <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <tr>
+            <td class="bg-sunny-morning text-white">
+                Total Volume Partiel:<br>{{ totalVolumePartiel }}
+            </td>
+            <td class="bg-grow-early text-white">
+                Total Chiffre d'Affaires Partiel:<br>{{ totalCAPartiel.toFixed(2) }} €
+            </td>
+            <td class="bg-love-kiss text-white">
+                Total Prix d'Achat Partiel:<br>{{ totalPAPartiel.toFixed(2) }} €
+            </td>
+            <td class="bg-night-sky text-white">
+                Total Prix Marge Partiel:<br>{{ totalMargePartiel.toFixed(2) }} €
+            </td>
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">

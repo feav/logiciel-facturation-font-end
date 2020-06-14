@@ -46,7 +46,10 @@ export class StatistiquesParBasesComponent implements OnInit {
     totalPA = 0;
     totalCA = 0;
     totalMarge = 0;
-
+    totalVolumePartiel = 0;
+    totalPAPartiel = 0;
+    totalCAPartiel = 0;
+    totalMargePartiel = 0;
 
     pagingOptions = {
         pageSizes: [15, 25, 50, 100],
@@ -112,6 +115,10 @@ export class StatistiquesParBasesComponent implements OnInit {
         this.totalPA = resp.totalPA;
         this.totalCA = resp.totalCA;
         this.totalMarge = resp.totalMarge;
+        this.totalVolumePartiel = resp.totalVolumePartiel;
+        this.totalPAPartiel = resp.totalPAPartiel;
+        this.totalCAPartiel = resp.totalCAPartiel;
+        this.totalMargePartiel = resp.totalMargePartiel;
     }
 
     onPageChange(event){
