@@ -11,6 +11,7 @@ interface MenuItem {
     active?: boolean;
     icon?: string;
     submenus?: MenuItem[];
+    visible: boolean;
 }
 
 @Injectable({
@@ -18,87 +19,100 @@ interface MenuItem {
 })
 export class SidebarMenuService {
 
-  menus: MenuItem[] = [
-  {
-    "title": "Tableau de Bord",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-home\"> </i>",
-    "link": "/dashboard"
-  },
-  {
-    "title": "Routeurs",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-network\"> </i>",
-    "link": "/routeurs"
-  },
-  {
-    "title": "Bases",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-server\"> </i>",
-    "link": "/bases"
-  },
-  {
-    "title": "Annonceurs",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-flag\"> </i>",
-    "link": "/annonceurs"
-  },
-  {
-    "title": "Campagnes",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-portfolio\"> </i>",
-    "link": "/campagnes"
-  },
-  {
-    "title": "Plannings",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-date\"> </i>",
-    "link": "/plannings"
-  },
-  {
-    "title": "Résultats",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-display2\"> </i>",
-    "link": "/resultats"
-  },
-  {
-    "title": "Statistiques",
-    "type": "dropdown",
-    "icon": "<i class=\"pe-7s-graph3\"> </i>",
-    "submenus": [
-      {
-        "title": "Par Routeurs",
-        "type": "simple",
-        "icon": "<i class=\"pe-7s-network\"> </i>",
-        "link": "/statistiques-par-routeurs"
-      },
-      {
-        "title": "Par Bases",
-        "type": "simple",
-        "icon": "<i class=\"pe-7s-server\"> </i>",
-        "link": "/statistiques-par-bases"
-      },
-      {
-        "title": "Par Annonceurs",
-        "type": "simple",
-        "icon": "<i class=\"pe-7s-flag\"> </i>",
-        "link": "/statistiques-par-annonceurs"
-      },
-      {
-        "title": "Par Campagnes",
-        "type": "simple",
-        "icon": "<i class=\"pe-7s-portfolio\"> </i>",
-        "link": "/statistiques-par-campagnes"
-      }
-    ]
-  },
-  {
-    "title": "Gestion des Utilisateurs",
-    "type": "simple",
-    "icon": "<i class=\"pe-7s-users\"> </i>",
-    "link": "/users"
-  }
-];
+    menus: MenuItem[] = [
+        {
+            "title": "Tableau de Bord",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-home\"> </i>",
+            "link": "/dashboard",
+            "visible": true
+        },
+        {
+            "title": "Routeurs",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-network\"> </i>",
+            "link": "/routeurs",
+            "visible": true
+        },
+        {
+            "title": "Bases",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-server\"> </i>",
+            "link": "/bases",
+            "visible": true
+        },
+        {
+            "title": "Annonceurs",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-flag\"> </i>",
+            "link": "/annonceurs",
+            "visible": true
+        },
+        {
+            "title": "Campagnes",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-portfolio\"> </i>",
+            "link": "/campagnes",
+            "visible": true
+        },
+        {
+            "title": "Plannings",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-date\"> </i>",
+            "link": "/plannings",
+            "visible": true
+        },
+        {
+            "title": "Résultats",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-display2\"> </i>",
+            "link": "/resultats",
+            "visible": true
+        },
+        {
+            "title": "Statistiques",
+            "type": "dropdown",
+            "icon": "<i class=\"pe-7s-graph3\"> </i>",
+            "submenus": [
+                {
+                    "title": "Par Routeurs",
+                    "type": "simple",
+                    "icon": "<i class=\"pe-7s-network\"> </i>",
+                    "link": "/statistiques-par-routeurs",
+                    "visible": true
+                },
+                {
+                    "title": "Par Bases",
+                    "type": "simple",
+                    "icon": "<i class=\"pe-7s-server\"> </i>",
+                    "link": "/statistiques-par-bases",
+                    "visible": true
+                },
+                {
+                    "title": "Par Annonceurs",
+                    "type": "simple",
+                    "icon": "<i class=\"pe-7s-flag\"> </i>",
+                    "link": "/statistiques-par-annonceurs",
+                    "visible": true
+                },
+                {
+                    "title": "Par Campagnes",
+                    "type": "simple",
+                    "icon": "<i class=\"pe-7s-portfolio\"> </i>",
+                    "link": "/statistiques-par-campagnes",
+                    "visible": true
+                }
+            ],
+            "visible": true
+        },
+        {
+            "title": "Gestion des Utilisateurs",
+            "type": "simple",
+            "icon": "<i class=\"pe-7s-users\"> </i>",
+            "link": "/users",
+            "visible": true
+        }
+    ];
 
     constructor() { }
 

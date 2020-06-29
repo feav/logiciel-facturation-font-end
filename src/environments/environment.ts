@@ -43,8 +43,6 @@ export const API = {
     READ_ONE_ROUTEUR: `${url}routeurs/`,
     UPDATE_ROUTEUR: `${url}routeurs/update/`,
     DELETE_ROUTEUR: `${url}routeurs/delete/`,
-    READ_All_ROUTEUR_FOR_STATISTICS: `${url}routeurs/forStatistics`,
-    APPLY_FILTER_ROUTEUR_FOR_STATISTICS: `${url}routeurs/applyFilterForStatistics`,
 
     //Toutes les URLs en rapport avec les Bases
     CREATE_BASE: `${url}bases`,
@@ -53,8 +51,6 @@ export const API = {
     READ_ONE_BASE: `${url}bases/`,
     UPDATE_BASE: `${url}bases/update/`,
     DELETE_BASE: `${url}bases/delete/`,
-    READ_All_BASE_FOR_STATISTICS: `${url}bases/forStatistics`,
-    APPLY_FILTER_BASE_FOR_STATISTICS: `${url}bases/applyFilterForStatistics`,
 
     //Toutes les URLs en rapport avec les Annonceurs
     CREATE_ANNONCEUR: `${url}annonceurs`,
@@ -62,8 +58,6 @@ export const API = {
     READ_ONE_ANNONCEUR: `${url}annonceurs/`,
     UPDATE_ANNONCEUR: `${url}annonceurs/update/`,
     DELETE_ANNONCEUR: `${url}annonceurs/delete/`,
-    READ_All_ANNONCEUR_FOR_STATISTICS: `${url}annonceurs/forStatistics`,
-    APPLY_FILTER_ANNONCEUR_FOR_STATISTICS: `${url}annonceurs/applyFilterForStatistics`,
 
     //Toutes les URLs en rapport avec les Campagnes
     CREATE_CAMPAGNE: `${url}campagnes`,
@@ -72,8 +66,6 @@ export const API = {
     READ_ONE_CAMPAGNE: `${url}campagnes/`,
     UPDATE_CAMPAGNE: `${url}campagnes/update/`,
     DELETE_CAMPAGNE: `${url}campagnes/delete/`,
-    READ_All_CAMPAGNE_FOR_STATISTICS: `${url}campagnes/forStatistics`,
-    APPLY_FILTER_CAMPAGNE_FOR_STATISTICS: `${url}campagnes/applyFilterForStatistics`,
 
     //Toutes les URLs en rapport avec les Plannings
     CREATE_PLANNING: `${url}plannings`,
@@ -90,4 +82,44 @@ export const API = {
     UPDATE_RESULTAT: `${url}resultats/update/`,
     DELETE_RESULTAT: `${url}resultats/delete/`,
     APPLY_FILTER_RESULTAT: `${url}resultats/applyFilter`,
+
+    //Toutes les URLs en rapport avec les Statistiques par Annonceurs
+    READ_All_ANNONCEUR_FOR_STATISTICS: `${url}annonceurs/forStatistics`,
+    READ_All_CAMPAGNE_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/forStatisticsForCampagnes`,
+    READ_All_ROUTEUR_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/forStatisticsForRouteurs`,
+    READ_All_BASE_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/forStatisticsForBases`,
+    APPLY_FILTER_ANNONCEUR_FOR_STATISTICS: `${url}annonceurs/applyFilterForStatistics`,
+    APPLY_FILTER_CAMPAGNE_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/applyFilterForStatisticsForCampagnes`,
+    APPLY_FILTER_ROUTEUR_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/applyFilterForStatisticsForRouteurs`,
+    APPLY_FILTER_BASE_FOR_STATISTICS_FOR_ANNONCEURS: `${url}annonceurs/applyFilterForStatisticsForBases`,
+
+    //Toutes les URLs en rapport avec les Statistiques par Routeurs
+    READ_All_ROUTEUR_FOR_STATISTICS: `${url}routeurs/forStatistics`,
+    READ_All_BASE_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/forStatisticsForBases`,
+    READ_All_ANNONCEUR_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/forStatisticsForAnnonceurs`,
+    READ_All_CAMPAGNE_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/forStatisticsForCampagnes`,
+    APPLY_FILTER_ROUTEUR_FOR_STATISTICS: `${url}routeurs/applyFilterForStatistics`,
+    APPLY_FILTER_BASE_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/applyFilterForStatisticsForBases`,
+    APPLY_FILTER_ANNONCEUR_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/applyFilterForStatisticsForAnnonceurs`,
+    APPLY_FILTER_CAMPAGNE_FOR_STATISTICS_FOR_ROUTEURS: `${url}routeurs/applyFilterForStatisticsForCampagnes`,
+
+    //Toutes les URLs en rapport avec les Statistiques par Bases
+    READ_All_BASE_FOR_STATISTICS: `${url}bases/forStatistics`,
+    READ_All_ANNONCEUR_FOR_STATISTICS_FOR_BASES: `${url}bases/forStatisticsForAnnonceurs`,
+    READ_All_CAMPAGNE_FOR_STATISTICS_FOR_BASES: `${url}bases/forStatisticsForCampagnes`,
+    READ_All_ROUTEUR_FOR_STATISTICS_FOR_BASES: `${url}bases/forStatisticsForRouteurs`,
+    APPLY_FILTER_BASE_FOR_STATISTICS: `${url}bases/applyFilterForStatistics`,
+    APPLY_FILTER_ANNONCEUR_FOR_STATISTICS_FOR_BASES: `${url}bases/applyFilterForStatisticsForAnnonceurs`,
+    APPLY_FILTER_CAMPAGNE_FOR_STATISTICS_FOR_BASES: `${url}bases/applyFilterForStatisticsForCampagnes`,
+    APPLY_FILTER_ROUTEUR_FOR_STATISTICS_FOR_BASES: `${url}bases/applyFilterForStatisticsForRouteurs`,
+
+    //Toutes les URLs en rapport avec les Statistiques par Campagnes
+    READ_All_CAMPAGNE_FOR_STATISTICS: `${url}campagnes/forStatistics`,
+    READ_All_ROUTEUR_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/forStatisticsForRouteurs`,
+    READ_All_BASE_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/forStatisticsForBases`,
+    READ_All_ANNONCEUR_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/forStatisticsForAnnonceurs`,
+    APPLY_FILTER_CAMPAGNE_FOR_STATISTICS: `${url}campagnes/applyFilterForStatistics`,
+    APPLY_FILTER_ROUTEUR_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/applyFilterForStatisticsForRouteurs`,
+    APPLY_FILTER_BASE_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/applyFilterForStatisticsForBases`,
+    APPLY_FILTER_ANNONCEUR_FOR_STATISTICS_FOR_CAMPAGNES: `${url}campagnes/applyFilterForStatisticsForAnnonceurs`,
 }

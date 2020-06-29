@@ -23,9 +23,9 @@
     </div>
 </div>
 
-<p-table [columns]="cols" [value]="tab" [responsive]="true"
-        [rows]="pagingOptions.pageSize" [loading]="showLoader"
-        [scrollable]="false" [style]="{width: '100%'}">
+<p-table [columns]="colsRouteurs" [value]="tab" [responsive]="true"
+        [rows]="pagingOptions.pageSize" [loading]="showLoader" selectionMode="single"
+        [scrollable]="false" [style]="{width: '100%'}" (onRowSelect)="onRowSelect($event)">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
             <div id="reportrange">
@@ -48,7 +48,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
-            <td>{{ rowData.nom }}</td>
+            <td>{{ rowData.routeur.nom }}</td>
             <td>{{ rowData.prix }} €</td>
             <td>{{ rowData.volume }}</td>
             <td>{{ rowData.ca.toFixed(2) }} €</td>
@@ -76,3 +76,256 @@
         <p-paginator (onPageChange)="onPageChange($event)" [rows]="pagingOptions.pageSize" [totalRecords]="totalServerItems" [rowsPerPageOptions]="pagingOptions.pageSizes"></p-paginator>
     </ng-template>
 </p-table>
+
+
+
+<p-dialog [header]="dialogHeaderBases" [(visible)]="showDialogBases"
+        [draggable]="false" position="top" [style]="{width: '100%', minHeight:'100%', margin: '0px'}" 
+        [modal]="true" [resizable]="false" showEffect="fade" baseZIndex="999">
+
+    <div class="row mb-3">
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient btn-gradient-inverse bg-sunny-morning" style="width: 100%;">
+                Total Volume:<br>{{ totalVolumeBases }}
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-grow-early" style="width: 100%;">
+                Total Chiffre d'Affaires:<br>{{ totalCABases.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-love-kiss" style="width: 100%;">
+                Total Prix d'Achat:<br>{{ totalPABases.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-night-sky" style="width: 100%;">
+                Total Prix Marge:<br>{{ totalMargeBases.toFixed(2) }} €
+            </button>
+        </div>
+    </div>
+    <p-table [columns]="cols" [value]="tabBases" [responsive]="true"
+        [rows]="pagingOptionsBases.pageSize" [loading]="showLoaderBases"
+        selectionMode="single" [scrollable]="false" [style]="{width: '100%'}"
+        (onRowSelect)="onRowSelectBases($event)">
+        <ng-template pTemplate="caption">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
+                <div id="reportrangeBases" class="daterange">
+                    <i class="pi pi-calendar"></i>&nbsp;
+                    <span>{{ cbBases() }}</span>
+                    <i class="pi pi-caret-down"></i>
+                </div>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreBases()">Valider Filtre</button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="colgroup" let-columns>
+            <colgroup>
+                <col *ngFor="let col of columns" style="width:auto">
+            </colgroup>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td>{{ rowData.base.nom }}</td>
+                <td>{{ rowData.ca.toFixed(2) }} €</td>
+                <td>{{ rowData.pa.toFixed(2) }} €</td>
+                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td class="bg-sunny-morning text-white">
+                    Total Volume Partiel:<br>{{ totalVolumePartielBases }}
+                </td>
+                <td class="bg-grow-early text-white">
+                    Total Chiffre d'Affaires Partiel:<br>{{ totalCAPartielBases.toFixed(2) }} €
+                </td>
+                <td class="bg-love-kiss text-white">
+                    Total Prix d'Achat Partiel:<br>{{ totalPAPartielBases.toFixed(2) }} €
+                </td>
+                <td class="bg-night-sky text-white">
+                    Total Prix Marge Partiel:<br>{{ totalMargePartielBases.toFixed(2) }} €
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <p-paginator (onPageChange)="onPageChangeBases($event)" [rows]="pagingOptionsBases.pageSize" [totalRecords]="totalServerItemsBases" [rowsPerPageOptions]="pagingOptionsBases.pageSizes"></p-paginator>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <span style="text-align: center; margin: 3px;">Aucune donnée à afficher !</span>
+        </ng-template>
+    </p-table>
+
+</p-dialog>
+
+<p-dialog [header]="dialogHeaderAnnonceurs" [(visible)]="showDialogAnnonceurs"
+        [draggable]="false" position="top" [style]="{width: '100%', minHeight:'100%', margin: '0px'}" 
+        [modal]="true" [resizable]="false" showEffect="fade" baseZIndex="999">
+
+    <div class="row mb-3">
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient btn-gradient-inverse bg-sunny-morning" style="width: 100%;">
+                Total Volume:<br>{{ totalVolumeAnnonceurs }}
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-grow-early" style="width: 100%;">
+                Total Chiffre d'Affaires:<br>{{ totalCAAnnonceurs.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-love-kiss" style="width: 100%;">
+                Total Prix d'Achat:<br>{{ totalPAAnnonceurs.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-night-sky" style="width: 100%;">
+                Total Prix Marge:<br>{{ totalMargeAnnonceurs.toFixed(2) }} €
+            </button>
+        </div>
+    </div>
+    <p-table [columns]="cols" [value]="tabAnnonceurs" [responsive]="true"
+        [rows]="pagingOptionsAnnonceurs.pageSize" [loading]="showLoaderAnnonceurs"
+        [scrollable]="false" [style]="{width: '100%'}" selectionMode="single"
+        (onRowSelect)="onRowSelectAnnonceurs($event)">
+        <ng-template pTemplate="caption">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
+                <div id="reportrangeAnnonceurs" class="daterange">
+                    <i class="pi pi-calendar"></i>&nbsp;
+                    <span>{{ cbAnnonceurs() }}</span>
+                    <i class="pi pi-caret-down"></i>
+                </div>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreAnnonceurs()">Valider Filtre</button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="colgroup" let-columns>
+            <colgroup>
+                <col *ngFor="let col of columns" style="width:auto">
+            </colgroup>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td>{{ rowData.annonceur.nom }}</td>
+                <td>{{ rowData.ca.toFixed(2) }} €</td>
+                <td>{{ rowData.pa.toFixed(2) }} €</td>
+                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td class="bg-sunny-morning text-white">
+                    Total Volume Partiel:<br>{{ totalVolumePartielAnnonceurs }}
+                </td>
+                <td class="bg-grow-early text-white">
+                    Total Chiffre d'Affaires Partiel:<br>{{ totalCAPartielAnnonceurs.toFixed(2) }} €
+                </td>
+                <td class="bg-love-kiss text-white">
+                    Total Prix d'Achat Partiel:<br>{{ totalPAPartielAnnonceurs.toFixed(2) }} €
+                </td>
+                <td class="bg-night-sky text-white">
+                    Total Prix Marge Partiel:<br>{{ totalMargePartielAnnonceurs.toFixed(2) }} €
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <p-paginator (onPageChange)="onPageChangeAnnonceurs($event)" [rows]="pagingOptionsAnnonceurs.pageSize" [totalRecords]="totalServerItemsAnnonceurs" [rowsPerPageOptions]="pagingOptionsAnnonceurs.pageSizes"></p-paginator>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <span style="text-align: center; margin: 3px;">Aucune donnée à afficher !</span>
+        </ng-template>
+    </p-table>
+
+</p-dialog>
+
+<p-dialog [header]="dialogHeaderCampagnes" [(visible)]="showDialogCampagnes"
+        [draggable]="false" position="top" [style]="{width: '100%', minHeight:'100%', margin: '0px'}" 
+        [modal]="true" [resizable]="false" showEffect="fade" baseZIndex="999">
+
+    <div class="row mb-3">
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient btn-gradient-inverse bg-sunny-morning" style="width: 100%;">
+                Total Volume:<br>{{ totalVolumeCampagnes }}
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-grow-early" style="width: 100%;">
+                Total Chiffre d'Affaires:<br>{{ totalCACampagnes.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-love-kiss" style="width: 100%;">
+                Total Prix d'Achat:<br>{{ totalPACampagnes.toFixed(2) }} €
+            </button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <button class="btn btn-gradient bg-night-sky" style="width: 100%;">
+                Total Prix Marge:<br>{{ totalMargeCampagnes.toFixed(2) }} €
+            </button>
+        </div>
+    </div>
+    <p-table [columns]="cols" [value]="tabCampagnes" [responsive]="true"
+        [rows]="pagingOptionsCampagnes.pageSize" [loading]="showLoaderCampagnes"
+        [scrollable]="false" [style]="{width: '100%'}">
+        <ng-template pTemplate="caption">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
+                <div id="reportrangeCampagnes" class="daterange">
+                    <i class="pi pi-calendar"></i>&nbsp;
+                    <span>{{ cbCampagnes() }}</span>
+                    <i class="pi pi-caret-down"></i>
+                </div>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreCampagnes()">Valider Filtre</button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="colgroup" let-columns>
+            <colgroup>
+                <col *ngFor="let col of columns" style="width:auto">
+            </colgroup>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td>{{ rowData.campagne.nom }}</td>
+                <td>{{ rowData.ca.toFixed(2) }} €</td>
+                <td>{{ rowData.pa.toFixed(2) }} €</td>
+                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td class="bg-sunny-morning text-white">
+                    Total Volume Partiel:<br>{{ totalVolumePartielCampagnes }}
+                </td>
+                <td class="bg-grow-early text-white">
+                    Total Chiffre d'Affaires Partiel:<br>{{ totalCAPartielCampagnes.toFixed(2) }} €
+                </td>
+                <td class="bg-love-kiss text-white">
+                    Total Prix d'Achat Partiel:<br>{{ totalPAPartielCampagnes.toFixed(2) }} €
+                </td>
+                <td class="bg-night-sky text-white">
+                    Total Prix Marge Partiel:<br>{{ totalMargePartielCampagnes.toFixed(2) }} €
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <p-paginator (onPageChange)="onPageChangeCampagnes($event)" [rows]="pagingOptionsCampagnes.pageSize" [totalRecords]="totalServerItemsCampagnes" [rowsPerPageOptions]="pagingOptionsCampagnes.pageSizes"></p-paginator>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <span style="text-align: center; margin: 3px;">Aucune donnée à afficher !</span>
+        </ng-template>
+    </p-table>
+
+</p-dialog>
