@@ -43,15 +43,18 @@
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
-            <td>{{ rowData.campagne.nom }}</td>
+            <td>{{ rowData.nom }}</td>
             <td>{{ rowData.ca.toFixed(2) }} €</td>
             <td>{{ rowData.pa.toFixed(2) }} €</td>
-            <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+            <td>{{ rowData.pm.toFixed(2) }} €</td>
         </tr>
     </ng-template>
     <ng-template pTemplate="footer">
@@ -108,13 +111,14 @@
         [scrollable]="false" [style]="{width: '100%'}" selectionMode="single"
         (onRowSelect)="onRowSelectRouteurs($event)">
         <ng-template pTemplate="caption">
-            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
-                <div id="reportrangeRouteurs" class="daterange">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-center justify-content-sm-around">
+                Filtre: {{ filterMode ? cb() : 'Aucun' }}
+                <!-- <div id="reportrangeRouteurs" class="daterange">
                     <i class="pi pi-calendar"></i>&nbsp;
                     <span>{{ cbRouteurs() }}</span>
                     <i class="pi pi-caret-down"></i>
                 </div>
-                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreRouteurs()">Valider Filtre</button>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreRouteurs()">Valider Filtre</button> -->
             </div>
         </ng-template>
         <ng-template pTemplate="colgroup" let-columns>
@@ -124,17 +128,20 @@
         </ng-template>
         <ng-template pTemplate="header" let-columns>
             <tr>
-                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+                </th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr [pSelectableRow]="rowData">
-                <td>{{ rowData.routeur.nom }}</td>
-                <td>{{ rowData.routeur.prix }} €</td>
+                <td>{{ rowData.nom }}</td>
+                <td>{{ rowData.prix }} €</td>
                 <td>{{ rowData.volume }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>
-                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+                <td>{{ rowData.pm.toFixed(2) }} €</td>
             </tr>
         </ng-template>
         <ng-template pTemplate="footer">
@@ -194,13 +201,14 @@
         [scrollable]="false" [style]="{width: '100%'}" selectionMode="single"
         (onRowSelect)="onRowSelectBases($event)">
         <ng-template pTemplate="caption">
-            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
-                <div id="reportrangeBases" class="daterange">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-center justify-content-sm-around">
+                Filtre: {{ filterMode ? cb() : 'Aucun' }}
+                <!-- <div id="reportrangeBases" class="daterange">
                     <i class="pi pi-calendar"></i>&nbsp;
                     <span>{{ cbBases() }}</span>
                     <i class="pi pi-caret-down"></i>
                 </div>
-                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreBases()">Valider Filtre</button>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreBases()">Valider Filtre</button> -->
             </div>
         </ng-template>
         <ng-template pTemplate="colgroup" let-columns>
@@ -210,15 +218,18 @@
         </ng-template>
         <ng-template pTemplate="header" let-columns>
             <tr>
-                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+                </th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr [pSelectableRow]="rowData">
-                <td>{{ rowData.base.nom }}</td>
+                <td>{{ rowData.nom }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>
-                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+                <td>{{ rowData.pm.toFixed(2) }} €</td>
             </tr>
         </ng-template>
         <ng-template pTemplate="footer">
@@ -277,13 +288,14 @@
         [rows]="pagingOptionsAnnonceurs.pageSize" [loading]="showLoaderAnnonceurs"
         [scrollable]="false" [style]="{width: '100%'}">
         <ng-template pTemplate="caption">
-            <div class="d-flex flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
-                <div id="reportrangeAnnonceurs" class="daterange">
+            <div class="d-flex flex-md-row flex-sm-column justify-content-md-center justify-content-sm-around">
+                Filtre: {{ filterMode ? cb() : 'Aucun' }}
+                <!-- <div id="reportrangeAnnonceurs" class="daterange">
                     <i class="pi pi-calendar"></i>&nbsp;
                     <span>{{ cbAnnonceurs() }}</span>
                     <i class="pi pi-caret-down"></i>
                 </div>
-                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreAnnonceurs()">Valider Filtre</button>
+                <button style="margin: 0 5px;" type="button" class="btn btn-first" (click)="validerFiltreAnnonceurs()">Valider Filtre</button> -->
             </div>
         </ng-template>
         <ng-template pTemplate="colgroup" let-columns>
@@ -293,15 +305,18 @@
         </ng-template>
         <ng-template pTemplate="header" let-columns>
             <tr>
-                <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+                </th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr [pSelectableRow]="rowData">
-                <td>{{ rowData.annonceur.nom }}</td>
+                <td>{{ rowData.nom }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>
-                <td>{{ (rowData.ca - rowData.pa).toFixed(2) }} €</td>
+                <td>{{ rowData.pm.toFixed(2) }} €</td>
             </tr>
         </ng-template>
         <ng-template pTemplate="footer">

@@ -22,6 +22,8 @@ import { ToastModule } from 'primeng/toast';
 import { PlanningRoutingModule } from './planning-routing.module';
 import { PlanningComponent } from './planning.component';
 
+import { DatePipe } from '@angular/common';
+
 
 @NgModule({
     declarations: [PlanningComponent],
@@ -46,6 +48,6 @@ import { PlanningComponent } from './planning.component';
         PaginatorModule,
         ToastModule
     ],
-    providers: [MessageService]
+    providers: [MessageService, DatePipe]
 })
 export class PlanningModule { }

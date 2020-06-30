@@ -41,9 +41,9 @@ export class PlanningService {
         return this.httpClient.post(`${API.CREATE_PLANNING}`, data);
     }
 
-    // update(id, data) {
-    //     return this.httpClient.post(`${API.UPDATE_ANNONCEUR}` + id, data);
-    // }
+    update(id, data) {
+        return this.httpClient.post(`${API.UPDATE_PLANNING}` + id, data);
+    }
 
     delete(id) {
         return this.httpClient.post(`${API.DELETE_PLANNING}` + id, null);

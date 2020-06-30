@@ -34,6 +34,7 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
         filtre_date_debut : moment().subtract('days', 30),
         filtre_date_fin : moment()
     };
+    filterMode: Boolean = false;
     showLoader: Boolean = true;
     tab: any[] = [];
     cols: any[];
@@ -200,6 +201,7 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
 
     validerFiltre(){
         this.showLoader = true;
+        this.filterMode = true;
         this.service
             .applyFilter(this.filter_data, this.pagingOptions.currentPage, this.pagingOptions.pageSize)
             .subscribe(
@@ -255,11 +257,15 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
 
     onRowSelect(event){
         //console.log(event);
-        this.dialogHeaderCampagnes = "Annonceur : " + event.data.annonceur.nom + " / Campagnes";
-        this.selectedAnnonceur = event.data.annonceur;
+        this.dialogHeaderCampagnes = "Annonceur : " + event.data.nom + " / Campagnes";
+        this.selectedAnnonceur = event.data;
         this.reinitializeStatsForCampagnes();
         this.showDialogCampagnes = true;
-        this.getPagedDataAsyncCampagnes(this.pagingOptionsCampagnes.pageSize, this.pagingOptionsCampagnes.currentPage);
+        if(this.filterMode){
+            this.filter_dataCampagnes = this.filter_data;
+            this.validerFiltreCampagnes();
+        }else
+            this.getPagedDataAsyncCampagnes(this.pagingOptionsCampagnes.pageSize, this.pagingOptionsCampagnes.currentPage);
     }
 
 
@@ -338,11 +344,15 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
     }
 
     onRowSelectCampagnes(event){
-        this.dialogHeaderRouteurs = "Campagne : " + event.data.campagne.nom + " / Routeurs";
+        this.dialogHeaderRouteurs = "Campagne : " + event.data.nom + " / Routeurs";
         this.reinitializeStatsForRouteurs();
         this.showDialogRouteurs = true;
-        this.selectedCampagne = event.data.campagne;
-        this.getPagedDataAsyncRouteurs(this.pagingOptionsRouteurs.pageSize, this.pagingOptionsRouteurs.currentPage)
+        this.selectedCampagne = event.data;
+        if(this.filterMode){
+            this.filter_dataRouteurs = this.filter_data;
+            this.validerFiltreRouteurs();
+        }else
+            this.getPagedDataAsyncRouteurs(this.pagingOptionsRouteurs.pageSize, this.pagingOptionsRouteurs.currentPage)
     }
 
 
@@ -419,11 +429,15 @@ export class StatistiquesParAnnonceursComponent implements OnInit {
     }
 
     onRowSelectRouteurs(event){
-        this.dialogHeaderBases = "Routeur : " + event.data.routeur.nom + " / Bases";
+        this.dialogHeaderBases = "Routeur : " + event.data.nom + " / Bases";
         this.reinitializeStatsForBases();
         this.showDialogBases = true;
-        this.selectedRouteur = event.data.routeur;
-        this.getPagedDataAsyncBases(this.pagingOptionsBases.pageSize, this.pagingOptionsBases.currentPage);
+        this.selectedRouteur = event.data;
+        if(this.filterMode){
+            this.filter_dataBases = this.filter_data;
+            this.validerFiltreBases();
+        }else
+            this.getPagedDataAsyncBases(this.pagingOptionsBases.pageSize, this.pagingOptionsBases.currentPage);
     }
 
 

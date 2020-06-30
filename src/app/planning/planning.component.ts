@@ -6,6 +6,7 @@ import { PlanningService } from './service/planning.service';
 import * as moment from 'moment';
 import * as $ from 'jquery';
 import * as drp from 'src/assets/daterangepicker/daterangepicker';
+import { DatePipe } from '@angular/common';
 
 var daterangepicker : any =  drp;
 
@@ -67,7 +68,8 @@ export class PlanningComponent implements OnInit {
 
     constructor(public planningService: PlanningService,
                 private messageService: MessageService,
-                private formBuilder: FormBuilder) { }
+                private formBuilder: FormBuilder,
+                public datepipe: DatePipe) { }
 
     ngOnInit() {
         var self = this;
@@ -160,43 +162,89 @@ export class PlanningComponent implements OnInit {
     }
 
     onRowSelect(event) {
+        this.showLoader = true;
         this.createMode = false;
-        this.dialogHeader = "Supprimer ce Planning";
+        this.dialogHeader = "Modifier / Supprimer ce Planning";
         this.annonceurs = [];
         this.routeurs = [];
         this.basesPourPlanning = [];
         this.campagnesPourPlanning = [];
-        let dropdownModel = new DropdownModel();
-        dropdownModel.label = event.data.routeur.nom;
-        dropdownModel.value = event.data.routeur.id;
-        this.routeurs.push(dropdownModel);
-        dropdownModel.label = event.data.annonceur.nom;
-        dropdownModel.value = event.data.annonceur.id;
-        this.annonceurs.push(dropdownModel);
-        dropdownModel.label = event.data.base.nom;
-        dropdownModel.value = event.data.base.id;
-        this.basesPourPlanning.push(dropdownModel);
-        dropdownModel.label = event.data.campagne.nom;
-        dropdownModel.value = event.data.campagne.id;
-        this.campagnesPourPlanning.push(dropdownModel);
-        this.createPlanningFormGroup.controls['annonceur'].disable();
-        this.createPlanningFormGroup.controls['routeur'].disable();
-        this.createPlanningFormGroup.controls['campagne'].disable();
-        this.createPlanningFormGroup.controls['base'].disable();
-        this.createPlanningFormGroup.controls['volume'].disable();
-        this.createPlanningFormGroup.controls['date_envoi'].disable();
-        this.createPlanningFormGroup.controls['heure_envoi'].disable();
-        this.createPlanningFormGroup.setValue({
-            id: event.data.id,
-            annonceur: event.data.annonceur.id,
-            campagne: event.data.campagne.id,
-            routeur: event.data.routeur.id,
-            base: event.data.base.id,
-            volume: event.data.volume,
-            date_envoi: event.data.date,
-            heure_envoi: event.data.heure,
-        });
-        this.showCreatePlanningModalForm = true;
+
+        // this.createPlanningFormGroup.controls['campagne'].disable();
+        // this.createPlanningFormGroup.controls['base'].disable();
+        
+        this.planningService
+            .getAllRouteurs()
+            .subscribe(
+                (resp:any) => { 
+                    for(let routeur of resp.body){
+                        let dropdownModel = new DropdownModel();
+                        dropdownModel.label = routeur.nom;
+                        dropdownModel.value = routeur.id;
+                        this.routeurs.push(dropdownModel);
+                    }
+                    this.planningService
+                        .getAllAnnonceurs()
+                        .subscribe(
+                            (resp:any) => { 
+                                for(let annonceur of resp.body){
+                                    let dropdownModel = new DropdownModel();
+                                    dropdownModel.label = annonceur.nom;
+                                    dropdownModel.value = annonceur.id;
+                                    this.annonceurs.push(dropdownModel);
+                                }
+                                this.planningService
+                                    .getAllCampagnesForOneAnnonceur(event.data.annonceur.id)
+                                    .subscribe(
+                                        (resp:any) => {
+                                            for(let campagne of resp.body){
+                                                let dropdownModel = new DropdownModel();
+                                                dropdownModel.label = campagne.nom;
+                                                dropdownModel.value = campagne.id;
+                                                this.campagnesPourPlanning.push(dropdownModel);
+                                            }
+                                            this.planningService
+                                                .getAllBasesForOneRouteur(event.data.routeur.id)
+                                                .subscribe(
+                                                    (resp:any) => {
+                                                        for(let base of resp.body){
+                                                            let dropdownModel = new DropdownModel();
+                                                            dropdownModel.label = base.nom;
+                                                            dropdownModel.value = base.id;
+                                                            this.basesPourPlanning.push(dropdownModel);
+                                                        }
+                                                        this.createPlanningFormGroup.setValue({
+                                                            id: event.data.id,
+                                                            annonceur: event.data.annonceur.id,
+                                                            campagne: event.data.campagne.id,
+                                                            routeur: event.data.routeur.id,
+                                                            base: event.data.base.id,
+                                                            volume: event.data.volume,
+                                                            date_envoi: this.datepipe.transform(event.data.date, 'yyyy-dd-MM'),
+                                                            heure_envoi: event.data.heure,
+                                                        });
+                                                        this.showCreatePlanningModalForm = true;
+                                                        this.showLoader = false;
+                                                    },
+                                                    (error) => { 
+                                                        this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la récupération des bases pour ce routeur !'});
+                                                    },
+                                                );
+                                        },
+                                        (error) => { 
+                                            this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la récupération des campagnes pour cet annonceur !'});
+                                        },
+                                    );
+                            },
+                            (error) => {
+                                this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la récupération des annonceurs !'});
+                            }
+                        );
+                },
+                (error) => {
+                    this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la récupération des routeurs !'});
+                }
+            );
     }
       
     setPagingData(data){  
@@ -323,22 +371,22 @@ export class PlanningComponent implements OnInit {
             );
     }
 
-    // updatePlanning() {
-    //     //console.log("updatePlanning"); console.log(this.createPlanningFormGroup.value);
-    //     this.planningService
-    //         .update(this.createPlanningFormGroup.value.id, this.createPlanningFormGroup.value)
-    //         .subscribe(
-    //             (resp:any) => {
-    //                 this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
-    //                 this.messageService.add({severity:'success', summary:'Plannings', detail:'Planning modifié avec succès !'});
-    //                 this.showCreatePlanningModalForm = false;
-    //             },
-    //             (error) => { 
-    //                 this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
-    //                 this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la mise à jour !'});
-    //             },
-    //         );
-    // }
+    updatePlanning() {
+        //console.log("updatePlanning"); console.log(this.createPlanningFormGroup.value);
+        this.planningService
+            .update(this.createPlanningFormGroup.value.id, this.createPlanningFormGroup.value)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Plannings', detail:'Planning modifié avec succès !'});
+                    this.showCreatePlanningModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Plannings', detail:'Une erreur est survenue durant la mise à jour !'});
+                },
+            );
+    }
 
     deletePlanning() {
         this.planningService

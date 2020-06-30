@@ -163,8 +163,8 @@
         <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
             <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode"
                 (click)="deletePlanning()" label="Supprimer"></button>
-            <!-- <button type="button" class="ui-button-info" [disabled]="!createPlanningFormGroup.valid" pButton
-                icon="pi pi-refresh" *ngIf="!createMode" (click)="updatePlanning()" label="Modifier"></button> -->
+            <button type="button" class="ui-button-info" [disabled]="!createPlanningFormGroup.valid" pButton
+                icon="pi pi-refresh" *ngIf="!createMode" (click)="updatePlanning()" label="Modifier"></button>
             <button type="button" class="ui-button-success" [disabled]="!createPlanningFormGroup.valid" pButton
                 icon="pi pi-check" *ngIf="createMode" (click)="createPlanning()" label="Créer"></button>
             <button type="button" class="ui-button-secondary" pButton icon="pi pi-times"
