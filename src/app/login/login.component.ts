@@ -47,9 +47,11 @@ export class LoginComponent implements OnInit {
                         this.cookieService.set('refresh_token', resp.tokens.refresh_token, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));
                         this.cookieService.set('token_type', resp.tokens.token_type, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));
                         this.router.navigate(['/']);
-                        this.showLoader = false;
-                    }else
+                    }else if(resp.code == 401)
                         this.messageService.add({severity:'error', summary:'Connexion', detail:"L'e-mail et le mot de passe ne correspondent pas !"});
+                    else
+                        this.messageService.add({severity:'error', summary:'Connexion', detail:"Vous n'êtes pas autorisé à vous connecter !"});
+                    this.showLoader = false;
                 },
                 (error) => { 
                     this.showLoader = false;

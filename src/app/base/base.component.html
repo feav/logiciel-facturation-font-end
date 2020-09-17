@@ -26,10 +26,13 @@
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
-            <td>{{rowData.nom}}</td>
+            <td>{{ rowData.nom }}</td>
             <td>
-                <span *ngIf="rowData.nom_routeur != null">{{ rowData.nom_routeur }}</span>
-                <span *ngIf="rowData.nom_routeur == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_routeur != null && rowData.routeur.deleted == 0">{{ rowData.nom_routeur }}</span>
+                <span *ngIf="rowData.nom_routeur != null && rowData.routeur.deleted == 1" class="text-danger" style="font-style: italic;">
+                    {{ rowData.nom_routeur }}
+                </span>
+                <span *ngIf="rowData.nom_routeur == null && rowData.routeur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>
