@@ -18,7 +18,10 @@
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
@@ -27,7 +30,7 @@
             <td>{{rowData.type_remuneration}}</td>
             <td>{{rowData.remuneration}}</td>
             <td>
-                <span *ngIf="rowData.annonceur != null">{{ rowData.annonceur.nom }}</span>
+                <span *ngIf="rowData.annonceur != null">{{ rowData.annonceur }}</span>
                 <span *ngIf="rowData.annonceur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>

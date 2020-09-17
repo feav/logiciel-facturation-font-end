@@ -46,7 +46,7 @@ export class CampagneComponent implements OnInit {
         this.cols = [
             { field: 'nom', header: 'Nom' },
             { field: 'type_remuneration', header: 'Type de Rémunération' },
-            { field: 'rem', header: 'Rémunération' },
+            { field: 'remuneration', header: 'Rémunération' },
             { field: 'annonceur', header: 'Annonceur' },
             { field: 'cree_le', header: 'Créée le' },
             { field: 'cree_par', header: 'Créée par' },

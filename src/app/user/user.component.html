@@ -19,14 +19,17 @@
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns" style="text-align: center">{{col.header}}</th>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field" style="text-align: center">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Cliquez pour trier" ariaLabelDesc="Cliquez pour trier dans l'ordre Décroissant" ariaLabelAsc="Cliquez pour trier dans l'ordre Croissant"></p-sortIcon>
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
             <td>{{rowData.nom}}</td>
             <td>{{rowData.email}}</td>
-            <td>{{rowData.role.intitule}}</td>
+            <td>{{rowData.role}}</td>
             <td>{{rowData.cree_le}}</td>
             <td>
                 <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
