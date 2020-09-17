@@ -30,8 +30,8 @@
             <td>{{rowData.type_remuneration}}</td>
             <td>{{rowData.remuneration}}</td>
             <td>
-                <span *ngIf="rowData.annonceur != null">{{ rowData.annonceur }}</span>
-                <span *ngIf="rowData.annonceur == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_annonceur != null">{{ rowData.nom_annonceur }}</span>
+                <span *ngIf="rowData.nom_annonceur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>

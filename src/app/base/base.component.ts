@@ -45,7 +45,7 @@ export class BaseComponent implements OnInit {
 
         this.cols = [
             { field: 'nom', header: 'Nom' },
-            { field: 'routeur', header: 'Routeur' },
+            { field: 'nom_routeur', header: 'Routeur' },
             { field: 'cree_le', header: 'Créée le' },
             { field: 'cree_par', header: 'Créée par' },
             { field: 'modifie_le', header: 'Modifiée le' },

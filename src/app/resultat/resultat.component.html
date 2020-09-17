@@ -59,26 +59,26 @@
             <td>{{rowData.date}}</td>
             <td>{{rowData.heure}}</td>
             <td>
-                <span *ngIf="rowData.cree_par != null">{{ rowData.routeur }}</span>
-                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_routeur != null">{{ rowData.nom_routeur }}</span>
+                <span *ngIf="rowData.nom_routeur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.cree_par != null">{{ rowData.base }}</span>
-                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_base != null">{{ rowData.nom_base }}</span>
+                <span *ngIf="rowData.nom_base == null" class="text-danger" style="font-style: italic;">
                     Non-Assignée<br>ou<br>Supprimée
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.cree_par != null">{{ rowData.annonceur }}</span>
-                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_annonceur != null">{{ rowData.nom_annonceur }}</span>
+                <span *ngIf="rowData.nom_annonceur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.cree_par != null">{{ rowData.campagne }}</span>
-                <span *ngIf="rowData.cree_par == null" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_campagne != null">{{ rowData.nom_campagne }}</span>
+                <span *ngIf="rowData.nom_campagne == null" class="text-danger" style="font-style: italic;">
                     Non-Assignée<br>ou<br>Supprimée
                 </span>
             </td>

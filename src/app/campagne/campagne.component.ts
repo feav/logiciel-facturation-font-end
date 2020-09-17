@@ -47,7 +47,7 @@ export class CampagneComponent implements OnInit {
             { field: 'nom', header: 'Nom' },
             { field: 'type_remuneration', header: 'Type de Rémunération' },
             { field: 'remuneration', header: 'Rémunération' },
-            { field: 'annonceur', header: 'Annonceur' },
+            { field: 'nom_annonceur', header: 'nom_annonceur' },
             { field: 'cree_le', header: 'Créée le' },
             { field: 'cree_par', header: 'Créée par' },
             { field: 'modifie_le', header: 'Modifiée le' },

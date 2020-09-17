@@ -49,7 +49,7 @@ export class UserComponent implements OnInit {
         this.cols = [
             { field: 'nom', header: 'Nom' },
             { field: 'email', header: 'Adresse e-mail' },
-            { field: 'role', header: 'Poste' },
+            { field: 'nom_role', header: 'Poste' },
             { field: 'cree_le', header: 'Créé le' },
             { field: 'cree_par', header: 'Créé par' },
             { field: 'modifie_le', header: 'Modifié le' },

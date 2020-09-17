@@ -27,7 +27,12 @@
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr [pSelectableRow]="rowData">
             <td>{{rowData.nom}}</td>
-            <td>{{rowData.routeur}}</td>
+            <td>
+                <span *ngIf="rowData.nom_routeur != null">{{ rowData.nom_routeur }}</span>
+                <span *ngIf="rowData.nom_routeur == null" class="text-danger" style="font-style: italic;">
+                    Non-Assigné<br>ou<br>Supprimé
+                </span>
+            </td>
             <td>{{rowData.cree_le}}</td>
             <td>
                 <span *ngIf="rowData.cree_par != null">{{ rowData.cree_par }}</span>
