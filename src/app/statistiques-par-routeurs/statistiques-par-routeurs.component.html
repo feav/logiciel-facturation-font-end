@@ -50,7 +50,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr [pSelectableRow]="rowData">
+        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
             <td>{{ rowData.nom }}</td>
             <td>{{ rowData.prix }} €</td>
             <td>{{ rowData.volume }}</td>
@@ -137,7 +137,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
-            <tr [pSelectableRow]="rowData">
+            <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
                 <td>{{ rowData.nom }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>
@@ -225,7 +225,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
-            <tr [pSelectableRow]="rowData">
+            <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
                 <td>{{ rowData.nom }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>
@@ -312,7 +312,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
-            <tr [pSelectableRow]="rowData">
+            <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
                 <td>{{ rowData.nom }}</td>
                 <td>{{ rowData.ca.toFixed(2) }} €</td>
                 <td>{{ rowData.pa.toFixed(2) }} €</td>

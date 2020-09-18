@@ -7,3 +7,7 @@ td{
 th{
     word-wrap: break-word;
 }
+
+.deleted-row{
+    background-color: #ff9966;
+}

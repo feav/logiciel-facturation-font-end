@@ -81,6 +81,9 @@ export class AnnonceurComponent implements OnInit {
     }
 
     onRowSelect(event) {
+        // if(event.data.deleted)
+        //     this.messageService.add({severity:'error', summary:'Annonceurs', detail:'Vous ne pouvez pas modifier cetle ligne !'});
+        // else{
         this.createMode = false;
         this.dialogHeader = "Modifier le Annonceur: "+event.data.nom;
         this.createAnnonceurFormGroup.setValue({
