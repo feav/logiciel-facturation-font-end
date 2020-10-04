@@ -8,6 +8,7 @@ import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
 import { LightboxModule } from 'primeng/lightbox';
 import { ToastModule } from 'primeng/toast';
+import { ContextMenuModule } from 'primeng/contextmenu';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
@@ -23,6 +24,7 @@ import { LoginComponent } from './login.component';
         MessageModule,
         LightboxModule,
         ToastModule,
+        ContextMenuModule,
         ReactiveFormsModule
     ],
     providers: [

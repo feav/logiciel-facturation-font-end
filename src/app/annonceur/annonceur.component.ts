@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { AnnonceurService } from './service/annonceur.service';
 import { ThemeOptions } from '../theme-options';
+import { getLoggedUser } from 'src/environments/environment';
 
 @Component({
     selector: 'app-annonceur',
@@ -10,10 +12,14 @@ import { ThemeOptions } from '../theme-options';
     styleUrls: ['./annonceur.component.css']
 })
 export class AnnonceurComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showCreateAnnonceurModalForm: Boolean = false;
     createMode: Boolean = false;
+    
+    disabledMenuItems: MenuItem[];
 
     createAnnonceurFormGroup: FormGroup;
 
@@ -21,6 +27,7 @@ export class AnnonceurComponent implements OnInit {
     cols: any[];
 
     selectedAnnonceur: any;
+    selectedDeletedAnnonceur: any;
 
     filterText = "";
     dialogHeader = "";
@@ -41,7 +48,17 @@ export class AnnonceurComponent implements OnInit {
                 public globals: ThemeOptions) { }
 
     ngOnInit() {
+        this.currentUser = getLoggedUser();
+        
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+
+        this.disabledMenuItems = [
+            {
+                label: 'Re-activer',
+                icon: 'pi pi-fw pi-refresh',
+                command: (event) => this.enableAnnonceur()
+            }
+        ];
 
         this.cols = [
             { field: 'nom', header: 'Nom' },
@@ -201,4 +218,19 @@ export class AnnonceurComponent implements OnInit {
             );
     }
 
+    enableAnnonceur() {
+        this.annonceurService
+            .enable(this.selectedDeletedAnnonceur.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Annonceurs', detail:'Utilisateur activé avec succès !'});
+                    this.showCreateAnnonceurModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Annonceurs', detail:"Une erreur est survenue durant l'activation !"});
+                },
+            );
+    };
 }

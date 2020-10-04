@@ -18,6 +18,7 @@ import { PanelModule } from 'primeng/panel';
 import { CalendarModule } from 'primeng/calendar';
 import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
+import { ContextMenuModule } from 'primeng/contextmenu';
 
 import { PlanningRoutingModule } from './planning-routing.module';
 import { PlanningComponent } from './planning.component';
@@ -46,7 +47,8 @@ import { DatePipe } from '@angular/common';
         PanelModule,
         CalendarModule,
         PaginatorModule,
-        ToastModule
+        ToastModule,
+        ContextMenuModule
     ],
     providers: [MessageService, DatePipe]
 })

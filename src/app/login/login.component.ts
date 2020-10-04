@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
             .login(credentials)
             .subscribe(
                 (resp:any) => {
-                    //console.log(resp.tokens.expires_in)
+                    // console.log(resp.user)
                     if(resp.code == 200){
                         localStorage.setItem("gidai_user_profile", btoa(JSON.stringify(resp.user)));
                         this.cookieService.set('access_token', resp.tokens.access_token, new Date( (new Date()).getTime() + resp.tokens.expires_in*1000 ));

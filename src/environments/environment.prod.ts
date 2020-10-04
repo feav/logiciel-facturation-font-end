@@ -32,6 +32,7 @@ export const API = {
     READ_ONE_USER_BY_EMAIL: `${url}users/`,
     UPDATE_USER: `${url}users/update/`,
     DELETE_USER: `${url}users/delete/`,
+    ENABLE_USER: `${url}users/enable/`,
 
     //Toutes les URLs en rapport avec la gestion des Postes/Rôles
     READ_All_ROLE: `${url}roles`,
@@ -42,6 +43,7 @@ export const API = {
     READ_ONE_ROUTEUR: `${url}routeurs/`,
     UPDATE_ROUTEUR: `${url}routeurs/update/`,
     DELETE_ROUTEUR: `${url}routeurs/delete/`,
+    ENABLE_ROUTEUR: `${url}routeurs/enable/`,
 
     //Toutes les URLs en rapport avec les Bases
     CREATE_BASE: `${url}bases`,
@@ -50,6 +52,7 @@ export const API = {
     READ_ONE_BASE: `${url}bases/`,
     UPDATE_BASE: `${url}bases/update/`,
     DELETE_BASE: `${url}bases/delete/`,
+    ENABLE_BASE: `${url}bases/enable/`,
 
     //Toutes les URLs en rapport avec les Annonceurs
     CREATE_ANNONCEUR: `${url}annonceurs`,
@@ -57,6 +60,7 @@ export const API = {
     READ_ONE_ANNONCEUR: `${url}annonceurs/`,
     UPDATE_ANNONCEUR: `${url}annonceurs/update/`,
     DELETE_ANNONCEUR: `${url}annonceurs/delete/`,
+    ENABLE_ANNONCEUR: `${url}annonceurs/enable/`,
 
     //Toutes les URLs en rapport avec les Campagnes
     CREATE_CAMPAGNE: `${url}campagnes`,
@@ -65,6 +69,7 @@ export const API = {
     READ_ONE_CAMPAGNE: `${url}campagnes/`,
     UPDATE_CAMPAGNE: `${url}campagnes/update/`,
     DELETE_CAMPAGNE: `${url}campagnes/delete/`,
+    ENABLE_CAMPAGNE: `${url}campagnes/enable/`,
 
     //Toutes les URLs en rapport avec les Plannings
     CREATE_PLANNING: `${url}plannings`,
@@ -72,6 +77,8 @@ export const API = {
     READ_ONE_PLANNING: `${url}plannings/`,
     UPDATE_PLANNING: `${url}plannings/update/`,
     DELETE_PLANNING: `${url}plannings/delete/`,
+    ENABLE_PLANNING: `${url}plannings/enable/`,
+    HIDE_PLANNING: `${url}plannings/hide/`,
     APPLY_FILTER_PLANNING: `${url}plannings/applyFilter`,
 
     //Toutes les URLs en rapport avec les Résultats

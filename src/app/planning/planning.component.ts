@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DropdownModel } from '../model/dropdown-model';
 import { PlanningService } from './service/planning.service';
@@ -7,6 +8,7 @@ import * as moment from 'moment';
 import * as $ from 'jquery';
 import * as drp from 'src/assets/daterangepicker/daterangepicker';
 import { DatePipe } from '@angular/common';
+import { getLoggedUser } from 'src/environments/environment';
 
 var daterangepicker : any =  drp;
 
@@ -16,10 +18,14 @@ var daterangepicker : any =  drp;
     styleUrls: ['./planning.component.css']
 })
 export class PlanningComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showCreatePlanningModalForm: Boolean = false;
     createMode: Boolean = false;
+    
+    disabledMenuItems: MenuItem[];
 
     createPlanningFormGroup: FormGroup;
 
@@ -52,6 +58,7 @@ export class PlanningComponent implements OnInit {
     };
 
     selectedPlanning: any;
+    selectedDeletedPlanning: any;
 
     filterText = "";
     dialogHeader = "";
@@ -86,7 +93,22 @@ export class PlanningComponent implements OnInit {
             });
         });
 
+        this.currentUser = getLoggedUser();
+
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+
+        this.disabledMenuItems = [
+            {
+                label: 'Re-activer',
+                icon: 'pi pi-fw pi-refresh',
+                command: (event) => this.enablePlanning()
+            },
+            {
+                label: 'Faire disparaître',
+                icon: 'pi pi-fw pi-eye-slash',
+                command: (event) => this.hidePlanning()
+            }
+        ];
 
         this.cols = [
             { field: 'date', header: "Date d'envoi" },
@@ -404,4 +426,35 @@ export class PlanningComponent implements OnInit {
             );
     }
 
+    enablePlanning() {
+        this.planningService
+            .enable(this.selectedDeletedPlanning.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Plannings', detail:'Planning activé avec succès !'});
+                    this.showCreatePlanningModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Planning', detail:"Une erreur est survenue durant l'activation !"});
+                },
+            );
+    };
+
+    hidePlanning() {
+        this.planningService
+            .hide(this.selectedDeletedPlanning.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Plannings', detail:'Planning caché avec succès !'});
+                    this.showCreatePlanningModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Planning', detail:"Une erreur est survenue durant l'opération' !"});
+                },
+            );
+    };
 }

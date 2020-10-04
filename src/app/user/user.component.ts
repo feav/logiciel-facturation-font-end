@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DropdownModel } from '../model/dropdown-model';
 import { UserService } from './service/user.service';
 import { ThemeOptions } from '../theme-options';
+import { getLoggedUser } from 'src/environments/environment';
 
 @Component({
     selector: 'app-user',
@@ -11,10 +13,14 @@ import { ThemeOptions } from '../theme-options';
     styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showCreateUserModalForm: Boolean = false;
     createMode: Boolean = false;
+    
+    disabledMenuItems: MenuItem[];
 
     createUserFormGroup: FormGroup;
     updateUserFormGroup: FormGroup;
@@ -24,6 +30,7 @@ export class UserComponent implements OnInit {
     cols: any[];
 
     selectedUser: any;
+    selectedDeletedUser: any;
 
     filterText = "";
     dialogHeader = "";
@@ -44,7 +51,17 @@ export class UserComponent implements OnInit {
                 public globals: ThemeOptions) { }
 
     ngOnInit() {
+        this.currentUser = getLoggedUser();
+        
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+
+        this.disabledMenuItems = [
+            {
+                label: 'Re-activer',
+                icon: 'pi pi-fw pi-refresh',
+                command: (event) => this.enableUser()
+            }
+        ];
 
         this.cols = [
             { field: 'nom', header: 'Nom' },
@@ -222,6 +239,22 @@ export class UserComponent implements OnInit {
                 (error) => { 
                     this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
                     this.messageService.add({severity:'error', summary:'Utilisateurs', detail:'Une erreur est survenue durant la suppression !'});
+                },
+            );
+    };
+
+    enableUser() {
+        this.userService
+            .enable(this.selectedDeletedUser.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Utilisateurs', detail:'Utilisateur activé avec succès !'});
+                    this.showCreateUserModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Utilisateurs', detail:"Une erreur est survenue durant l'activation !"});
                 },
             );
     };

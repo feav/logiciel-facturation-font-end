@@ -32,4 +32,8 @@ export class UserService {
     delete(id) {
         return this.httpClient.post(`${API.DELETE_USER}` + id, null);
     }
+
+    enable(id) {
+        return this.httpClient.post(`${API.ENABLE_USER}` + id, null);
+    }
 }

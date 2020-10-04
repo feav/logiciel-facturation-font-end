@@ -18,6 +18,7 @@ import { PanelModule } from 'primeng/panel';
 import { CalendarModule } from 'primeng/calendar';
 import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
+import { ContextMenuModule } from 'primeng/contextmenu';
 
 import { CampagneRoutingModule } from './campagne-routing.module';
 import { CampagneComponent } from './campagne.component';
@@ -44,7 +45,8 @@ import { CampagneComponent } from './campagne.component';
         PanelModule,
         CalendarModule,
         PaginatorModule,
-        ToastModule
+        ToastModule,
+        ContextMenuModule
     ],
     providers: [MessageService]
 })

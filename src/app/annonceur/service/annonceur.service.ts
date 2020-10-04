@@ -28,4 +28,8 @@ export class AnnonceurService {
     delete(id) {
         return this.httpClient.post(`${API.DELETE_ANNONCEUR}` + id, null);
     }
+
+    enable(id) {
+        return this.httpClient.post(`${API.ENABLE_ANNONCEUR}` + id, null);
+    }
 }

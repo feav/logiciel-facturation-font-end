@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { RouteurService } from './service/routeur.service';
+import { getLoggedUser } from 'src/environments/environment';
 
 @Component({
     selector: 'app-routeur',
@@ -9,10 +11,14 @@ import { RouteurService } from './service/routeur.service';
     styleUrls: ['./routeur.component.scss']
 })
 export class RouteurComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showCreateRouteurModalForm: Boolean = false;
     createMode: Boolean = false;
+    
+    disabledMenuItems: MenuItem[];
 
     createRouteurFormGroup: FormGroup;
 
@@ -20,6 +26,7 @@ export class RouteurComponent implements OnInit {
     cols: any[];
 
     selectedRouteur: any;
+    selectedDeletedRouteur: any;
 
     filterText = "";
     dialogHeader = "";
@@ -39,7 +46,17 @@ export class RouteurComponent implements OnInit {
                 private formBuilder: FormBuilder) { }
 
     ngOnInit() {
+        this.currentUser = getLoggedUser();
+        
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+
+        this.disabledMenuItems = [
+            {
+                label: 'Re-activer',
+                icon: 'pi pi-fw pi-refresh',
+                command: (event) => this.enableRouteur()
+            }
+        ];
 
         this.cols = [
             { field: 'nom', header: 'Nom' },
@@ -167,6 +184,22 @@ export class RouteurComponent implements OnInit {
                 (error) => { 
                     this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
                     this.messageService.add({severity:'error', summary:'Routeurs', detail:'Une erreur est survenue durant la suppression !'});
+                },
+            );
+    };
+
+    enableRouteur() {
+        this.routeurService
+            .enable(this.selectedDeletedRouteur.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Routeurs', detail:'Routeur activé avec succès !'});
+                    this.showCreateRouteurModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Routeurs', detail:"Une erreur est survenue durant l'activation !"});
                 },
             );
     };

@@ -19,6 +19,7 @@ import { PanelModule } from 'primeng/panel';
 import { CalendarModule } from 'primeng/calendar';
 import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
+import { ContextMenuModule } from 'primeng/contextmenu';
 import { TreeTableModule } from 'primeng/treetable';
 
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
@@ -49,6 +50,7 @@ import { StatistiquesParCampagnesComponent } from './statistiques-par-campagnes.
         CalendarModule,
         PaginatorModule,
         ToastModule,
+        ContextMenuModule,
         NgxDaterangepickerMd.forRoot(),
         TreeTableModule
     ],

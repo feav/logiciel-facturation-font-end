@@ -20,6 +20,7 @@ import { PanelModule } from 'primeng/panel';
 import { CalendarModule } from 'primeng/calendar';
 import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
+import { ContextMenuModule } from 'primeng/contextmenu';
 import { TreeTableModule } from 'primeng/treetable';
 
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
@@ -50,6 +51,7 @@ import { StatistiquesParAnnonceursComponent } from './statistiques-par-annonceur
         CalendarModule,
         PaginatorModule,
         ToastModule,
+        ContextMenuModule,
         TreeTableModule
     ],
     providers: [MessageService]

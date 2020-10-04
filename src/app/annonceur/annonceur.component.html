@@ -1,8 +1,10 @@
 <p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+<p-contextMenu #disabledItems [model]="disabledMenuItems"></p-contextMenu>
 
 <p-table [columns]="cols" [value]="annonceurs" selectionMode="single" [loading]="showLoader"
     [(selection)]="selectedAnnonceur" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
-    [scrollable]="false" [style]="{width: '100%'}" [responsive]="true">
+    [scrollable]="false" [style]="{width: '100%'}" [responsive]="true"
+    [(contextMenuSelection)]="selectedDeletedAnnonceur" [contextMenu]="disabledItems">
     <ng-template pTemplate="caption">
         <div class="d-flex flex-md-row flex-sm-column justify-content-md-between justify-content-sm-around">
             <div>
@@ -28,7 +30,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
+        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [pContextMenuRowDisabled]="currentUser.role_id != 1 || rowData.deleted == 0" [pContextMenuRow]="rowData" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
             <td>{{rowData.nom}}</td>
             <td>{{rowData.url}}</td>
             <td>{{rowData.login}}</td>
@@ -141,7 +143,7 @@
     </form>
     <p-footer>
         <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
-            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode"
+            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="currentUser.role_id == 1 && !createMode"
                 (click)="deleteAnnonceur()" label="Supprimer"></button>
             <button type="button" class="ui-button-info" [disabled]="!createAnnonceurFormGroup.valid" pButton
                 icon="pi pi-refresh" *ngIf="!createMode" (click)="updateAnnonceur()" label="Modifier"></button>

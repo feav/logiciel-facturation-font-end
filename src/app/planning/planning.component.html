@@ -1,8 +1,10 @@
 <p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+<p-contextMenu #disabledItems [model]="disabledMenuItems"></p-contextMenu>
 
 <p-table [columns]="cols" [value]="plannings" selectionMode="single" [loading]="showLoader"
     [(selection)]="selectedPlanning" (onRowSelect)="onRowSelect($event)" [rows]="pagingOptions.pageSize"
-    [scrollable]="false" [style]="{width: '100%'}" [responsive]="true">
+    [scrollable]="false" [style]="{width: '100%'}" [responsive]="true"
+    [(contextMenuSelection)]="selectedDeletedPlanning" [contextMenu]="disabledItems">
     <ng-template pTemplate="caption">
         <div class="d-flex mb-1 flex-md-row flex-sm-column justify-content-md-start justify-content-sm-around">
             <div id="reportrange">
@@ -36,41 +38,41 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
+        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [pContextMenuRowDisabled]="currentUser.role_id != 1 || rowData.deleted == 0" [pContextMenuRow]="rowData" [ngStyle]="rowData.deleted == 1 || rowData.routeur.deleted == 1 || rowData.base.deleted == 1 || rowData.annonceur.deleted == 1 || rowData.campagne.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
             <td>{{rowData.date}}</td>
             <td>{{rowData.heure}}</td>
             <td>
-                <span *ngIf="rowData.nom_routeur != null && rowData.routeur.deleted == 0">{{ rowData.nom_routeur }}</span>
-                <span *ngIf="rowData.nom_routeur != null && rowData.routeur.deleted == 1" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_routeur != null">{{ rowData.nom_routeur }}</span>
+                <!-- <span *ngIf="rowData.nom_routeur != null && rowData.routeur.deleted == 1" class="text-danger" style="font-style: italic;">
                     {{ rowData.nom_routeur }}
-                </span>
+                </span> -->
                 <span *ngIf="rowData.nom_routeur == null && rowData.routeur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.nom_base != null && rowData.base.deleted == 0">{{ rowData.nom_base }}</span>
-                <span *ngIf="rowData.nom_base != null && rowData.base.deleted == 1" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_base != null">{{ rowData.nom_base }}</span>
+                <!-- <span *ngIf="rowData.nom_base != null && rowData.base.deleted == 1" class="text-danger" style="font-style: italic;">
                     {{ rowData.nom_base }}
-                </span>
+                </span> -->
                 <span *ngIf="rowData.nom_base == null && rowData.base == null" class="text-danger" style="font-style: italic;">
                     Non-Assignée<br>ou<br>Supprimée
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.nom_annonceur != null && rowData.annonceur.deleted == 0">{{ rowData.nom_annonceur }}</span>
-                <span *ngIf="rowData.nom_annonceur != null && rowData.annonceur.deleted == 1" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_annonceur != null">{{ rowData.nom_annonceur }}</span>
+                <!-- <span *ngIf="rowData.nom_annonceur != null && rowData.annonceur.deleted == 1" class="text-danger" style="font-style: italic;">
                     {{ rowData.nom_annonceur }}
-                </span>
+                </span> -->
                 <span *ngIf="rowData.nom_annonceur == null && rowData.annonceur == null" class="text-danger" style="font-style: italic;">
                     Non-Assigné<br>ou<br>Supprimé
                 </span>
             </td>
             <td>
-                <span *ngIf="rowData.nom_campagne != null && rowData.campagne.deleted == 0">{{ rowData.nom_campagne }}</span>
-                <span *ngIf="rowData.nom_campagne != null && rowData.campagne.deleted == 1" class="text-danger" style="font-style: italic;">
+                <span *ngIf="rowData.nom_campagne != null">{{ rowData.nom_campagne }}</span>
+                <!-- <span *ngIf="rowData.nom_campagne != null && rowData.campagne.deleted == 1" class="text-danger" style="font-style: italic;">
                     {{ rowData.nom_campagne }}
-                </span>
+                </span> -->
                 <span *ngIf="rowData.nom_campagne == null && rowData.campagne == null" class="text-danger" style="font-style: italic;">
                     Non-Assignée<br>ou<br>Supprimée
                 </span>
@@ -176,7 +178,7 @@
     </form>
     <p-footer>
         <div class="ui-dialog-buttonpane ui-helper-clearfix" style="text-align: right;">
-            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="!createMode"
+            <button type="button" class="ui-button-danger" pButton icon="pi pi-trash" *ngIf="currentUser.role_id == 1 && !createMode"
                 (click)="deletePlanning()" label="Supprimer"></button>
             <button type="button" class="ui-button-info" [disabled]="!createPlanningFormGroup.valid" pButton
                 icon="pi pi-refresh" *ngIf="!createMode" (click)="updatePlanning()" label="Modifier"></button>

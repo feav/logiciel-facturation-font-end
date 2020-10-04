@@ -48,4 +48,12 @@ export class PlanningService {
     delete(id) {
         return this.httpClient.post(`${API.DELETE_PLANNING}` + id, null);
     }
+
+    enable(id) {
+        return this.httpClient.post(`${API.ENABLE_PLANNING}` + id, null);
+    }
+    
+    hide(id) {
+        return this.httpClient.post(`${API.HIDE_PLANNING}` + id, null);
+    }
 }

@@ -28,4 +28,8 @@ export class RouteurService {
     delete(id){
         return this.httpClient.post(`${API.DELETE_ROUTEUR}`+id, null);
     }
+
+    enable(id) {
+        return this.httpClient.post(`${API.ENABLE_ROUTEUR}` + id, null);
+    }
 }

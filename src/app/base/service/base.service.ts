@@ -32,4 +32,8 @@ export class BaseService {
     delete(id){
         return this.httpClient.post(`${API.DELETE_BASE}`+id, null);
     }
+
+    enable(id) {
+        return this.httpClient.post(`${API.ENABLE_BASE}` + id, null);
+    }
 }

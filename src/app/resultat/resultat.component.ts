@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DropdownModel } from '../model/dropdown-model';
 import { ResultatService } from './service/resultat.service';
 import * as moment from 'moment';
 import * as $ from 'jquery';
 import * as drp from 'src/assets/daterangepicker/daterangepicker';
+import { getLoggedUser } from 'src/environments/environment';
 
 var daterangepicker : any =  drp;
 
@@ -15,6 +17,8 @@ var daterangepicker : any =  drp;
     styleUrls: ['./resultat.component.css']
 })
 export class ResultatComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showResultatModalForm: Boolean = false;

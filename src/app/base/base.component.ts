@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DropdownModel } from '../model/dropdown-model';
-import { BaseService } from './service/base.service'
+import { BaseService } from './service/base.service';
+import { getLoggedUser } from 'src/environments/environment';
 
 @Component({
     selector: 'app-base',
@@ -10,10 +12,14 @@ import { BaseService } from './service/base.service'
     styleUrls: ['./base.component.scss']
 })
 export class BaseComponent implements OnInit {
+    
+    currentUser: any;
 
     showLoader: Boolean = true;
     showCreateBaseModalForm: Boolean = false;
     createMode: Boolean = false;
+    
+    disabledMenuItems: MenuItem[];
 
     createBaseFormGroup: FormGroup;
 
@@ -22,6 +28,7 @@ export class BaseComponent implements OnInit {
     cols: any[];
 
     selectedBase: any;
+    selectedDeletedBase:any;
 
     filterText = "";
     dialogHeader = "";
@@ -41,7 +48,17 @@ export class BaseComponent implements OnInit {
                 private formBuilder: FormBuilder) { }
 
     ngOnInit() {
+        this.currentUser = getLoggedUser();
+        
         this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+
+        this.disabledMenuItems = [
+            {
+                label: 'Re-activer',
+                icon: 'pi pi-fw pi-refresh',
+                command: (event) => this.enableBase()
+            }
+        ];
 
         this.cols = [
             { field: 'nom', header: 'Nom' },
@@ -203,6 +220,22 @@ export class BaseComponent implements OnInit {
                 (error) => { 
                     this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
                     this.messageService.add({severity:'error', summary:'Bases', detail:'Une erreur est survenue durant la suppression !'});
+                },
+            );
+    };
+    
+    enableBase() {
+        this.baseService
+            .enable(this.selectedDeletedBase.id)
+            .subscribe(
+                (resp:any) => {
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'success', summary:'Bases', detail:'Utilisateur activée avec succès !'});
+                    this.showCreateBaseModalForm = false;
+                },
+                (error) => { 
+                    this.getPagedDataAsync(this.pagingOptions.pageSize, this.pagingOptions.currentPage, this.filterText);
+                    this.messageService.add({severity:'error', summary:'Bases', detail:"Une erreur est survenue durant l'activation !"});
                 },
             );
     };
