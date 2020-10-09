@@ -55,7 +55,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 || rowData.routeur.deleted == 1 || rowData.base.deleted == 1 || rowData.annonceur.deleted == 1 || rowData.campagne.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
+        <tr [pSelectableRow]="rowData" [pSelectableRowDisabled]="rowData.deleted == 1" [ngStyle]="rowData.deleted == 1 || rowData.routeur==null || rowData.routeur.deleted == 1 || rowData.base==null || rowData.base.deleted == 1 || rowData.annonceur==null || rowData.annonceur.deleted == 1 || rowData.campagne==null || rowData.campagne.deleted == 1 ? {'background-color':'#F32013', 'color':'#FFF'} : {}">
             <td>{{rowData.date}}</td>
             <td>{{rowData.heure}}</td>
             <td>
